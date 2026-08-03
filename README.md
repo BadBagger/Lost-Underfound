@@ -34,9 +34,21 @@ from day one.
 - **`art/cast_scale.json`** — the actual roster's declared relative scale (Pip = 1.0
   baseline, Grommet = 2.4 deliberately huge, Scuttle = 0.35 deliberately tiny, etc).
   Registration paths inside it are placeholders until real character sheets exist.
+- **`script/ACT_01_SCRIPT.json`** — the actual Act 1 script ("The Crack Under the
+  Couch"), 49 lines: location intro, every hotspot's examine/use text (including
+  failure/success variants), Bramble's full dialogue tree, the Old Bottlecap toll-gate
+  puzzle exchange, idle/fallback lines, and the transition out.
+- **`docs/ACT_01_DESIGN.md`** — the structured puzzle logic the script plugs into:
+  location description, cast/idle-behavior table, the `HotspotId`/`ItemId`/`TopicId`/
+  `EventId` data (what Codex should build `scene-data.ts`-equivalent types from), and
+  an animation-cue table mapping every beat to which `ANIMATION_BIBLE.md` rule governs
+  it. Acts 2 and 3 don't have this treatment yet.
 
 ## Status
 
-Pre-production only. No engine code, no script, no character art. Next step is
-handing `docs/CODEX_BUILD_PROMPT.md` to Codex to start the project scaffold and prove
-the registration tooling against a real (not synthetic) test sheet.
+Pre-production, with Act 1 fully scripted. No engine code, no character art yet.
+Acts 2 ("The Button Sovereignty") and 3 ("The Roar") still only exist as the loose
+outline in `docs/GAME_CONCEPT.md` — do those as a follow-up pass once Act 1 has been
+built and played. Next step is handing `docs/CODEX_BUILD_PROMPT.md` to Codex to start
+the project scaffold, prove the registration tooling against a real test sheet, and
+build Act 1 against `script/ACT_01_SCRIPT.json` + `docs/ACT_01_DESIGN.md`.

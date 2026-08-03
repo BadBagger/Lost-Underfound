@@ -106,11 +106,17 @@ them before shipping.
 3. One furniture-anchored character (Old Bottlecap is the simplest test case) using
    the layered rig, same proof-before-trust approach, plus a `cast-scale` check
    against Pip.
-4. First playable area (Act 1, "The Crack Under the Couch," per `docs/GAME_CONCEPT.md`)
-   once both actor types pass QA clean — UI, then room functionality (hotspots,
-   items, the Bramble conversation), then ambiance (dust, light, the first hints of
-   The Roar), following the same phased approach: UI → functionality → ambiance →
-   next area.
-5. Repeat for Act 2 (introduces Grommet — the real test of the layered rig at extreme
-   scale) and Act 3 (introduces The Roar as an environmental threat, no character rig
-   needed, ambiance/tension-only).
+4. First playable area (Act 1, "The Crack Under the Couch") once both actor types
+   pass QA clean — build directly from `script/ACT_01_SCRIPT.json` (the actual
+   line-by-line script) and `docs/ACT_01_DESIGN.md` (the hotspot/item/topic/event
+   structure that script plugs into, plus the animation-cue table). Follow the same
+   phased approach as before: UI → room functionality (hotspots, items, the Bramble
+   conversation, the toll-gate puzzle) → ambiance (dust, light, the first hints of
+   The Roar) → next area. Do not invent placeholder dialogue where the script already
+   has the real line — use it verbatim.
+5. Acts 2 ("The Button Sovereignty") and 3 ("The Roar") don't have this level of
+   script/design detail yet — only the loose outline in `docs/GAME_CONCEPT.md`. Once
+   Act 1 is built and played, that same script-writing pass needs to happen for Acts
+   2 and 3 before building them — don't build ahead of the script. Act 2 introduces
+   Grommet (the real test of the layered rig at extreme scale); Act 3 introduces The
+   Roar as an environmental threat, no character rig needed, ambiance/tension-only.
