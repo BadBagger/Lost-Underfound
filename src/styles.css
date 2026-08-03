@@ -99,8 +99,7 @@ h1 {
   pointer-events: none;
 }
 
-.scene-bg,
-.scene-fg-mask {
+.scene-bg {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -114,10 +113,6 @@ h1 {
   z-index: 1;
 }
 
-.scene-fg-mask {
-  z-index: 12;
-}
-
 .prop {
   position: absolute;
   pointer-events: none;
@@ -126,22 +121,22 @@ h1 {
 
 .dust-prop {
   left: 3.5%;
-  top: 61%;
-  width: 12%;
+  top: 70%;
+  width: 9%;
   z-index: 6;
 }
 
 .grate-prop {
-  left: 72.5%;
-  top: 39%;
-  width: 17%;
+  left: 75%;
+  top: 55%;
+  width: 10%;
   z-index: 6;
 }
 
 .pip {
-  left: 40%;
-  top: 51%;
-  width: 14%;
+  left: 48%;
+  top: 66%;
+  width: 7.5%;
   z-index: 9;
   filter: drop-shadow(0 14px 8px rgba(0, 0, 0, 0.32));
 }
@@ -154,16 +149,16 @@ h1 {
 }
 
 .bramble-rig {
-  left: 37.5%;
-  top: 35%;
-  width: 20%;
+  left: 41%;
+  top: 47%;
+  width: 12%;
   height: 35%;
 }
 
 .bottlecap-rig {
-  left: 69.5%;
-  top: 51%;
-  width: 14%;
+  left: 75.5%;
+  top: 64%;
+  width: 8%;
   height: 26%;
 }
 
@@ -177,17 +172,21 @@ h1 {
 .desk-mask,
 .gate-mask {
   position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 22%;
-  background: rgba(156, 116, 79, 0.88);
-  border-top: 5px solid #50391f;
+  left: 8%;
+  right: 8%;
+  bottom: 35%;
+  height: 10%;
+  background: #9c744f;
+  border-top: 3px solid #50391f;
   z-index: 10;
 }
 
 .gate-mask {
-  background: rgba(90, 73, 57, 0.8);
+  left: 12%;
+  right: 12%;
+  bottom: 32%;
+  height: 8%;
+  background: #5a4939;
   border-top-color: #32281f;
 }
 
@@ -205,8 +204,8 @@ h1 {
 .hotspot,
 .exit {
   position: absolute;
-  border: 1px solid rgba(255, 236, 181, 0.12);
-  background: rgba(255, 236, 181, 0.02);
+  border: 1px solid transparent;
+  background: transparent;
   color: transparent;
   cursor: pointer;
   z-index: 20;
@@ -372,18 +371,21 @@ h1 {
   }
 
   .pip {
-    width: 22%;
-    left: 40%;
+    width: 13%;
+    left: 45%;
+    top: 66%;
   }
 
   .bramble-rig {
-    width: 31%;
-    left: 31%;
+    width: 22%;
+    left: 39%;
+    top: 45%;
   }
 
   .bottlecap-rig {
-    width: 25%;
-    left: 68%;
+    width: 15%;
+    left: 72%;
+    top: 64%;
   }
 
   .dialogue span {

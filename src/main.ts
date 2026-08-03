@@ -37,7 +37,6 @@ const byId = (id: string): DialogueLine => {
 const assets = {
   scene: {
     bg: new URL("../art/act01-production/scene/entry-chamber-bg.png", import.meta.url).href,
-    foregroundMask: new URL("../art/act01-production/scene/entry-chamber-foreground-mask.png", import.meta.url).href,
   },
   pipWalk: [
     "pip_walk_01.png",
@@ -390,7 +389,6 @@ const render = () => {
           <img class="actor bottlecap body" src="${bottlecapFrame}" alt="Old Bottlecap" />
           <div class="gate-mask"></div>
         </div>
-        <img class="scene-fg-mask" src="${assets.scene.foregroundMask}" alt="" />
         ${
           state.scuttleDash
             ? `<img class="actor scuttle dash" src="${frameAt(assets.scuttleDash, 100)}" alt="Scuttle" />`
