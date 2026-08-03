@@ -37,7 +37,12 @@ const byId = (id: string): DialogueLine => {
 const assets = {
   scene: {
     bg: new URL("../art/act01-production/scene/entry-chamber-bg.png", import.meta.url).href,
+    cubbyWall: new URL("../art/act01-production/scene/entry-chamber-cubby-wall.png", import.meta.url).href,
+    cobwebCurtain: new URL("../art/act01-production/scene/entry-chamber-cobweb-curtain.png", import.meta.url).href,
+    popcornBoulder: new URL("../art/act01-production/scene/entry-chamber-popcorn-boulder.png", import.meta.url).href,
+    deskBack: new URL("../art/act01-production/scene/entry-chamber-desk-back.png", import.meta.url).href,
     deskForeground: new URL("../art/act01-production/scene/entry-chamber-desk-foreground.png", import.meta.url).href,
+    gateBack: new URL("../art/act01-production/scene/entry-chamber-gate-back.png", import.meta.url).href,
     gateForeground: new URL("../art/act01-production/scene/entry-chamber-gate-foreground.png", import.meta.url).href,
   },
   pipWalk: [
@@ -380,12 +385,17 @@ const render = () => {
       </header>
       <section class="stage ${state.current ? "dialogue-open" : ""}" aria-label="Underneath entry chamber">
         <img class="scene-bg" data-layer="background-plate" src="${assets.scene.bg}" alt="" />
+        <img class="scene-layer cubby-wall-layer" data-layer="cubby-wall" src="${assets.scene.cubbyWall}" alt="" />
+        <img class="scene-layer cobweb-curtain-layer" data-layer="cobweb-curtain" src="${assets.scene.cobwebCurtain}" alt="" />
+        <img class="scene-layer popcorn-boulder-layer" data-layer="popcorn-boulder" src="${assets.scene.popcornBoulder}" alt="" />
         <img class="prop dust-prop" data-layer="dust-prop" src="${dustFrame}" alt="" />
+        <img class="scene-layer desk-back-layer" data-layer="desk-back" src="${assets.scene.deskBack}" alt="" />
+        <img class="scene-layer gate-back-layer" data-layer="gate-back" src="${assets.scene.gateBack}" alt="" />
         <div class="bramble-rig" data-layer="bramble-body">
           <img class="actor bramble body" src="${frameAt(brambleFrames, 220)}" alt="Bramble" />
         </div>
-        <img class="scene-foreground desk-foreground" data-layer="desk-foreground" src="${assets.scene.deskForeground}" alt="" />
-        <img class="scene-foreground gate-foreground" data-layer="gate-foreground" src="${assets.scene.gateForeground}" alt="" />
+        <img class="scene-layer desk-foreground" data-layer="desk-foreground" src="${assets.scene.deskForeground}" alt="" />
+        <img class="scene-layer gate-foreground" data-layer="gate-foreground" src="${assets.scene.gateForeground}" alt="" />
         <div class="bottlecap-rig" data-layer="old-bottlecap-body">
           <img class="actor bottlecap body" src="${bottlecapFrame}" alt="Old Bottlecap" />
         </div>

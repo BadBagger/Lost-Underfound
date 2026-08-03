@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -11,6 +12,20 @@ ROOT = Path(__file__).resolve().parents[1]
 def fail(message: str) -> None:
     print(f"FAIL - {message}")
     raise SystemExit(1)
+
+
+def css_z_indexes(css: str) -> dict[str, int]:
+    z_indexes: dict[str, int] = {}
+    for match in re.finditer(r"(?P<selectors>[^{}]+)\{(?P<body>[^{}]*)\}", css, re.MULTILINE):
+        z_match = re.search(r"z-index:\s*(?P<z>-?\d+)\s*;", match.group("body"))
+        if not z_match:
+            continue
+        z = int(z_match.group("z"))
+        for selector in match.group("selectors").split(","):
+            selector = selector.strip()
+            if selector.startswith(".") and " " not in selector and ":" not in selector:
+                z_indexes[selector[1:]] = z
+    return z_indexes
 
 
 def main() -> int:
@@ -25,7 +40,12 @@ def main() -> int:
 
     required_ids = {
         "background-plate",
+        "cubby-wall",
+        "cobweb-curtain",
+        "popcorn-boulder",
         "dust-prop",
+        "desk-back",
+        "gate-back",
         "bramble-body",
         "desk-foreground",
         "old-bottlecap-body",
@@ -50,7 +70,26 @@ def main() -> int:
         if needle not in src:
             fail(f"runtime does not render layer slot {layer_id}")
 
-    print(f"PASS - {len(layers)} scene layer(s) declared and runtime layer slots are present.")
+    css = (ROOT / "src" / "styles.css").read_text(encoding="utf-8")
+    z_indexes = css_z_indexes(css)
+    manifest_z = {layer["id"]: layer.get("z") for layer in layers}
+    for layer_id in sorted(required_ids - {"hotspot-masks"}):
+        class_match = re.search(
+            rf'class="(?P<classes>[^"]+)"\s+data-layer="{re.escape(layer_id)}"',
+            src,
+        )
+        if not class_match:
+            continue
+        classes = class_match.group("classes").split()
+        runtime_z = [z_indexes[class_name] for class_name in classes if class_name in z_indexes]
+        if not runtime_z:
+            fail(f"runtime layer {layer_id} has no CSS z-index on classes: {', '.join(classes)}")
+        if max(runtime_z) != manifest_z[layer_id]:
+            fail(
+                f"runtime layer {layer_id} z-index {max(runtime_z)} does not match manifest z {manifest_z[layer_id]}"
+            )
+
+    print(f"PASS - {len(layers)} scene layer(s) declared and runtime layer slots match manifest z-order.")
     return 0
 
 

@@ -497,22 +497,119 @@ def make_props() -> None:
 def make_scene_assets() -> None:
     scene = OUT / "scene"
     ensure(scene)
-    source = OUT / "source" / "ai-room-source.png"
-    if source.exists():
-        with Image.open(source) as img:
-            img.convert("RGB").resize((1600, 900), Image.Resampling.LANCZOS).save(scene / "entry-chamber-bg.png")
-    else:
-        Image.new("RGB", (1600, 900), "#3d2c22").save(scene / "entry-chamber-bg.png")
-    with Image.open(scene / "entry-chamber-bg.png") as bg:
-        bg_rgba = bg.convert("RGBA")
-        mask = Image.new("RGBA", (1600, 900), (0, 0, 0, 0))
-        desk_box = (485, 520, 920, 640)
-        mask.paste(bg_rgba.crop(desk_box), desk_box)
-        mask.save(scene / "entry-chamber-desk-foreground.png")
-        gate_mask = Image.new("RGBA", (1600, 900), (0, 0, 0, 0))
-        gate_box = (1060, 315, 1365, 665)
-        gate_mask.paste(bg_rgba.crop(gate_box), gate_box)
-        gate_mask.save(scene / "entry-chamber-gate-foreground.png")
+    bg = Image.new("RGB", (1600, 900), "#2f2219")
+    d = ImageDraw.Draw(bg)
+    for y in range(0, 900):
+        shade = int(22 + 48 * (y / 900))
+        d.line((0, y, 1600, y), fill=(shade + 24, shade + 12, shade + 4))
+    d.rectangle((0, 0, 1600, 190), fill="#2a1c15")
+    for y in range(0, 190, 16):
+        d.line((0, y, 1600, y + 22), fill="#3c2a24", width=3)
+    for x in range(120, 1600, 260):
+        d.arc((x, 25, x + 130, 105), 20, 160, fill="#8b6a58", width=5)
+    d.rectangle((0, 150, 1600, 218), fill="#5b321d")
+    d.line((0, 214, 1600, 214), fill="#170d08", width=8)
+    d.polygon([(320, 92), (470, 70), (488, 180), (338, 190)], fill="#cab88e", outline="#5b4630")
+    d.text((350, 116), "DO NOT", fill="#3d2a1c")
+    d.text((350, 146), "REMOVE", fill="#3d2a1c")
+    d.rectangle((0, 650, 1600, 900), fill="#6d4528")
+    d.polygon([(0, 650), (1600, 650), (1600, 900), (0, 900)], fill="#7b4b29")
+    for x in range(-80, 1680, 160):
+        d.line((x, 655, x + 250, 900), fill="#513119", width=4)
+    for y in [695, 735, 780, 830, 875]:
+        d.line((0, y, 1600, y + 12), fill="#8d5c35", width=3)
+    for row, y in enumerate(range(245, 610, 70)):
+        for x in range(-40 + (row % 2) * 70, 1600, 140):
+            d.rounded_rectangle((x, y, x + 132, y + 68), radius=10, fill="#6b5039", outline="#3d2a1f", width=2)
+    d.rectangle((0, 180, 1600, 245), fill="#3a2418")
+    d.line((0, 245, 1600, 245), fill="#130d09", width=10)
+    overlay = Image.new("RGBA", bg.size, (0, 0, 0, 0))
+    od = ImageDraw.Draw(overlay)
+    od.polygon([(720, 245), (775, 245), (610, 650), (565, 650)], fill=(255, 222, 140, 62))
+    od.polygon([(1060, 245), (1120, 245), (1000, 650), (930, 650)], fill=(255, 222, 140, 48))
+    for x, y, r in [(80, 805, 48), (120, 790, 36), (95, 755, 24)]:
+        od.ellipse((x - r, y - r, x + r, y + r), fill=(110, 105, 98, 92))
+    for x, y in [(210, 785), (280, 820), (1110, 735), (1195, 760), (1320, 790)]:
+        od.ellipse((x - 9, y - 5, x + 9, y + 5), fill=(214, 172, 80, 130))
+    bg = Image.alpha_composite(bg.convert("RGBA"), overlay).convert("RGB")
+    bg.save(scene / "entry-chamber-bg.png")
+
+    def transparent_layer() -> tuple[Image.Image, ImageDraw.ImageDraw]:
+        img = Image.new("RGBA", (1600, 900), (0, 0, 0, 0))
+        return img, ImageDraw.Draw(img)
+
+    cubby, cd = transparent_layer()
+    cd.rounded_rectangle((36, 260, 390, 690), radius=16, fill="#6b4325", outline="#2b1a10", width=8)
+    colors = ["#8b2b22", "#2f6746", "#5b3d86", "#c59432", "#9d3121", "#a5a09a", "#325f86", "#af5628", "#7d8b34", "#8f323e", "#b1955d", "#754a66"]
+    for idx, color in enumerate(colors):
+        col = idx % 3
+        row = idx // 3
+        x = 68 + col * 102
+        y = 290 + row * 88
+        cd.rounded_rectangle((x - 38, y - 38, x + 38, y + 38), radius=12, fill="#2d2018", outline="#8f653b", width=5)
+        cd.ellipse((x - 31, y - 31, x + 31, y + 31), fill=color, outline="#25170f", width=5)
+        cd.ellipse((x - 19, y - 19, x + 19, y + 19), outline="#00000055", width=3)
+    cubby.save(scene / "entry-chamber-cubby-wall.png")
+
+    desk_back, dd = transparent_layer()
+    dd.rounded_rectangle((500, 430, 880, 535), radius=8, fill="#a3472d", outline="#371c12", width=6)
+    dd.rectangle((540, 525, 830, 585), fill="#8a3f25")
+    dd.rectangle((610, 535, 650, 705), fill="#452819")
+    dd.rectangle((720, 535, 760, 705), fill="#4e351b")
+    for x, color in [(575, "#3b2853"), (748, "#477331")]:
+        dd.rounded_rectangle((x, 560, x + 74, 745), radius=16, fill=color, outline="#2c2016", width=4)
+        for yy in range(574, 735, 18):
+            dd.line((x + 5, yy, x + 69, yy), fill="#00000022", width=2)
+    dd.rectangle((590, 420, 875, 455), fill="#bd8d54", outline="#5c341b", width=4)
+    dd.rectangle((640, 390, 805, 428), fill="#d8c57e", outline="#6b4b24", width=3)
+    dd.rectangle((735, 366, 875, 430), fill="#a55228", outline="#522714", width=4)
+    for x, y, color in [(770, 380, "#9d4c24"), (810, 370, "#d1a848"), (845, 350, "#c94233")]:
+        dd.line((x, y + 56, x + 35, y), fill="#4d2a18", width=8)
+        dd.line((x + 4, y + 52, x + 39, y - 4), fill=color, width=10)
+    desk_back.save(scene / "entry-chamber-desk-back.png")
+
+    desk_front, dfd = transparent_layer()
+    dfd.rounded_rectangle((500, 472, 890, 620), radius=8, fill="#8f3f27", outline="#3b1d11", width=6)
+    dfd.rectangle((640, 470, 770, 515), fill="#d7c9a6", outline="#755334", width=3)
+    dfd.line((500, 472, 890, 472), fill="#d69656", width=6)
+    desk_front.save(scene / "entry-chamber-desk-foreground.png")
+
+    gate_back, gd = transparent_layer()
+    gd.rounded_rectangle((1050, 285, 1360, 650), radius=44, fill="#6a5138", outline="#241912", width=10)
+    gd.rounded_rectangle((1090, 320, 1320, 610), radius=18, fill="#2e2b23", outline="#20140e", width=4)
+    gd.rectangle((1110, 340, 1300, 590), fill="#2a3831")
+    for x in range(1120, 1305, 20):
+        gd.line((x, 333, x, 598), fill="#c5cdbf", width=5)
+    for y in range(350, 595, 20):
+        gd.line((1104, y, 1306, y), fill="#c5cdbf", width=5)
+    gd.rectangle((1320, 420, 1400, 470), fill="#9d7036", outline="#2c1c10", width=5)
+    gd.ellipse((1340, 432, 1360, 452), fill="#27190e")
+    gate_back.save(scene / "entry-chamber-gate-back.png")
+
+    gate_front, gfd = transparent_layer()
+    for x in [1052, 1358]:
+        gfd.line((x, 320, x, 625), fill="#1e1813", width=12)
+    for y in [285, 650]:
+        gfd.line((1080, y, 1330, y), fill="#1e1813", width=12)
+    gate_front.save(scene / "entry-chamber-gate-foreground.png")
+
+    popcorn, pd = transparent_layer()
+    for i, (x, y, r) in enumerate([(1365, 590, 62), (1420, 610, 78), (1480, 585, 55), (1410, 535, 58), (1325, 635, 42), (1500, 650, 38)]):
+        pd.ellipse((x - r, y - r, x + r, y + r), fill="#d8aa58", outline="#875a26", width=5)
+        pd.ellipse((x - r // 3, y - r // 4, x + r // 4, y + r // 5), fill="#f0d486")
+    popcorn.save(scene / "entry-chamber-popcorn-boulder.png")
+
+    cobweb, cwd = transparent_layer()
+    for center in [(1450, 320), (1515, 420), (1420, 515)]:
+        cx, cy = center
+        for radius in [40, 75, 115, 155]:
+            cwd.arc((cx - radius, cy - radius, cx + radius, cy + radius), 210, 355, fill="#d8d4c688", width=3)
+        for angle in [-65, -35, 0, 35, 65]:
+            ex = cx + int(170 * math.cos(math.radians(angle)))
+            ey = cy + int(170 * math.sin(math.radians(angle)))
+            cwd.line((cx, cy, ex, ey), fill="#d8d4c688", width=3)
+    cobweb.save(scene / "entry-chamber-cobweb-curtain.png")
+
     save_json(
         scene / "layers.json",
         {
@@ -520,11 +617,16 @@ def make_scene_assets() -> None:
             "coordinate_space": {"width": 1600, "height": 900},
             "layers": [
                 {"id": "background-plate", "kind": "background", "asset": "entry-chamber-bg.png", "z": 1},
+                {"id": "cubby-wall", "kind": "midground-prop", "asset": "entry-chamber-cubby-wall.png", "z": 4},
+                {"id": "cobweb-curtain", "kind": "midground-prop", "asset": "entry-chamber-cobweb-curtain.png", "z": 4},
+                {"id": "popcorn-boulder", "kind": "midground-prop", "asset": "entry-chamber-popcorn-boulder.png", "z": 5},
                 {"id": "dust-prop", "kind": "midground-prop", "slot": "floor-left", "z": 6},
+                {"id": "desk-back", "kind": "furniture-back", "asset": "entry-chamber-desk-back.png", "z": 7},
+                {"id": "gate-back", "kind": "furniture-back", "asset": "entry-chamber-gate-back.png", "z": 7},
                 {"id": "bramble-body", "kind": "furniture-anchored-actor", "slot": "behind-desk", "z": 8},
                 {"id": "desk-foreground", "kind": "foreground-occluder", "asset": "entry-chamber-desk-foreground.png", "z": 10},
-                {"id": "old-bottlecap-body", "kind": "furniture-anchored-actor", "slot": "at-gate-front", "z": 11},
                 {"id": "gate-foreground", "kind": "foreground-occluder", "asset": "entry-chamber-gate-foreground.png", "z": 11},
+                {"id": "old-bottlecap-body", "kind": "furniture-anchored-actor", "slot": "at-gate-front", "z": 12},
                 {"id": "pip-body", "kind": "walk-plane-actor", "slot": "floor", "z": 12},
                 {"id": "hotspot-masks", "kind": "interaction-mask", "source": "src/main.ts", "z": 20}
             ],
@@ -544,6 +646,12 @@ Generated source files:
 
 - `art/act01-production/source/ai-room-source.png` - Act 1 room/background source.
 - `art/act01-production/source/ai-cast-source.png` - Act 1 cast/source style board.
+- `art/act01-production/source/character-reference-sheet.png` - Act 1 character
+  model/reference sheet used for the current normalized sprite pass.
+
+The current Act 1 room is rebuilt as project-local separated raster layers from
+the deterministic asset generator so actors can render behind or in front of
+furniture instead of depending on one baked background plate.
 
 The shipped in-game sprite frames are normalized derivatives with fixed canvases,
 explicit anchors, onion-skin QA output, and contact sheets. They are not accepted as
@@ -563,7 +671,12 @@ def make_manifest() -> None:
         {
             "scene": {
                 "background": "scene/entry-chamber-bg.png",
+                "cubbyWall": "scene/entry-chamber-cubby-wall.png",
+                "cobwebCurtain": "scene/entry-chamber-cobweb-curtain.png",
+                "popcornBoulder": "scene/entry-chamber-popcorn-boulder.png",
+                "deskBack": "scene/entry-chamber-desk-back.png",
                 "deskForeground": "scene/entry-chamber-desk-foreground.png",
+                "gateBack": "scene/entry-chamber-gate-back.png",
                 "gateForeground": "scene/entry-chamber-gate-foreground.png",
                 "layers": "scene/layers.json",
             },

@@ -11,14 +11,16 @@ The generated layer manifest lives at:
 Required layer order:
 
 1. `background-plate` - the room plate.
-2. `dust-prop` - floor prop animation.
-3. `bramble-body` - Bramble's furniture-anchored actor slot, behind the desk front.
-4. `desk-foreground` - the real painted desk-front occlusion layer.
-5. `gate-foreground` - the gate/bar foreground layer for future gate-window staging.
-6. `old-bottlecap-body` - Old Bottlecap's fixed gate-front actor slot.
-7. `gate-animation` - visible only when the toll gate opens.
-8. `pip-body` - Pip's walk-plane actor layer.
-9. `hotspot-masks` - invisible interaction layer.
+2. `cubby-wall`, `cobweb-curtain`, `popcorn-boulder` - separated room props.
+3. `dust-prop` - floor prop animation.
+4. `desk-back`, `gate-back` - furniture backing layers behind fixed actors.
+5. `bramble-body` - Bramble's furniture-anchored actor slot, behind the desk front.
+6. `desk-foreground` - the desk-front occlusion layer.
+7. `gate-foreground` - the gate/bar foreground layer.
+8. `old-bottlecap-body` - Old Bottlecap's fixed gate-front actor slot.
+9. `gate-animation` - visible only when the toll gate opens.
+10. `pip-body` - Pip's walk-plane actor layer.
+11. `hotspot-masks` - invisible interaction layer.
 
 `npm run qa:layers` verifies that the layer manifest exists, required layer IDs are
 declared, referenced layer assets exist, and the runtime renders the expected layer

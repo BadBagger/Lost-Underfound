@@ -12,10 +12,40 @@
       "z": 1
     },
     {
+      "id": "cubby-wall",
+      "kind": "midground-prop",
+      "asset": "entry-chamber-cubby-wall.png",
+      "z": 4
+    },
+    {
+      "id": "cobweb-curtain",
+      "kind": "midground-prop",
+      "asset": "entry-chamber-cobweb-curtain.png",
+      "z": 4
+    },
+    {
+      "id": "popcorn-boulder",
+      "kind": "midground-prop",
+      "asset": "entry-chamber-popcorn-boulder.png",
+      "z": 5
+    },
+    {
       "id": "dust-prop",
       "kind": "midground-prop",
       "slot": "floor-left",
       "z": 6
+    },
+    {
+      "id": "desk-back",
+      "kind": "furniture-back",
+      "asset": "entry-chamber-desk-back.png",
+      "z": 7
+    },
+    {
+      "id": "gate-back",
+      "kind": "furniture-back",
+      "asset": "entry-chamber-gate-back.png",
+      "z": 7
     },
     {
       "id": "bramble-body",
@@ -30,16 +60,16 @@
       "z": 10
     },
     {
-      "id": "old-bottlecap-body",
-      "kind": "furniture-anchored-actor",
-      "slot": "at-gate-front",
-      "z": 11
-    },
-    {
       "id": "gate-foreground",
       "kind": "foreground-occluder",
       "asset": "entry-chamber-gate-foreground.png",
       "z": 11
+    },
+    {
+      "id": "old-bottlecap-body",
+      "kind": "furniture-anchored-actor",
+      "slot": "at-gate-front",
+      "z": 12
     },
     {
       "id": "pip-body",

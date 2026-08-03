@@ -1,7 +1,12 @@
 {
   "scene": {
     "background": "scene/entry-chamber-bg.png",
+    "cubbyWall": "scene/entry-chamber-cubby-wall.png",
+    "cobwebCurtain": "scene/entry-chamber-cobweb-curtain.png",
+    "popcornBoulder": "scene/entry-chamber-popcorn-boulder.png",
+    "deskBack": "scene/entry-chamber-desk-back.png",
     "deskForeground": "scene/entry-chamber-desk-foreground.png",
+    "gateBack": "scene/entry-chamber-gate-back.png",
     "gateForeground": "scene/entry-chamber-gate-foreground.png",
     "layers": "scene/layers.json"
   },

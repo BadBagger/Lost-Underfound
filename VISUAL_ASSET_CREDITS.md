@@ -11,6 +11,10 @@ Generated source files:
 - `art/act01-production/source/character-reference-sheet.png` - Act 1 character
   model/reference sheet used for the current normalized sprite pass.
 
+The current Act 1 room is rebuilt as project-local separated raster layers from
+the deterministic asset generator so actors can render behind or in front of
+furniture instead of depending on one baked background plate.
+
 The shipped in-game sprite frames are normalized derivatives with fixed canvases,
 explicit anchors, onion-skin QA output, and contact sheets. They are not accepted as
 final solely because they were AI-generated or visually polished; each sheet must pass

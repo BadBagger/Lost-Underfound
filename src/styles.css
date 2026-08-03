@@ -115,7 +115,7 @@ h1 {
   z-index: 1;
 }
 
-.scene-foreground {
+.scene-layer {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -125,12 +125,26 @@ h1 {
   user-select: none;
 }
 
+.cubby-wall-layer,
+.cobweb-curtain-layer {
+  z-index: 4;
+}
+
+.popcorn-boulder-layer {
+  z-index: 5;
+}
+
+.desk-back-layer,
+.gate-back-layer {
+  z-index: 7;
+}
+
 .desk-foreground {
   z-index: 10;
 }
 
 .gate-foreground {
-  z-index: 7;
+  z-index: 11;
 }
 
 .prop {
@@ -166,7 +180,6 @@ h1 {
 .bottlecap-rig {
   position: absolute;
   pointer-events: none;
-  z-index: 8;
 }
 
 .bramble-rig {
@@ -175,6 +188,7 @@ h1 {
   width: 19%;
   aspect-ratio: 320 / 260;
   transform: translate(-50%, -78.846%);
+  z-index: 8;
 }
 
 .bottlecap-rig {
@@ -183,6 +197,7 @@ h1 {
   width: 18%;
   aspect-ratio: 320 / 260;
   transform: translate(-50%, -80.769%);
+  z-index: 12;
 }
 
 .bramble,
