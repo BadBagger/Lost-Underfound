@@ -30,6 +30,35 @@ a hand preparing, a coat catching up, a face reacting, or an object moving. If t
 only visible difference is image noise, framing drift, or a tiny redraw variation, it
 is not an in-between; reject it.
 
+Dense animation is a production requirement, but density only counts when frames
+carry motion. Engine-generated in-betweens are acceptable for provisional builds
+when they warp or move the source pose toward the next pose and pass contact/scale
+QA. Duplicates, crossfades, tiny redraw noise, and blur-only frames do not count
+toward the frame budget.
+
+Optical-flow or crossfade-assisted in-betweens are review-only if they leave
+translucent trails, double limbs, ghost boots, or blended hands. Ghost-free
+registration beats smooth-looking interpolation. Runtime sheets must use clean
+authored or deformation-based cels until a dense pass can move forms without
+leaving residual silhouettes.
+
+Limited clean sheets must not be forced to 24 fps by default. If the runtime
+has only a small number of usable cels, set playback timing so each pose reads
+before advancing; otherwise the animation becomes a fast repeated cycle instead
+of motion. Prefer a slower readable loop over a high-frame-rate flicker.
+
+Readable motion must affect the major mass of the actor when the action calls for
+it. A writing, talking, turning, or stamping cycle that only offsets a hand,
+mouth, or tiny limb detail will still read as a static portrait with flicker. Key
+poses must include the torso, head, shoulder line, clothing, and prop path where
+appropriate, then use secondary-action timing to keep those parts from moving in
+lockstep.
+
+Adventure-game tooling must produce a motion-delta report for generated or
+assisted animation sheets. The report does not replace human review, but it must
+catch fake density: if a writing loop, walk cycle, or stamp action has too little
+measured per-frame change, it fails before playtest.
+
 Held frames are allowed only when they have a timing purpose: a beat before a reveal,
 a weighted landing, a readable reaction, or a deliberate pause. They are never
 padding.
@@ -220,6 +249,25 @@ independently-generated images.
    frames on top of ungoverned registration only produces more visible drift, not
    better animation.
 
+### Full-construction contract
+
+Registration proves that cels share a peg; it does **not** prove that the actor was
+drawn completely. Before a character state is admitted, review the source strip and
+the extracted frames on a contrasting background at 100% scale. Every cel must retain
+the complete intended construction for that state: no missing lower body, clipped head,
+truncated stack/object, or arbitrary horizontal/vertical cut through the silhouette.
+
+Intentional scene occlusion happens only after the complete actor frame is rendered in
+the final layer stack. A counter, gate, chair, or UI may hide a complete actor in the
+scene; it must never be used to excuse geometry that is already absent from the cel.
+Padding, re-centering, or rescaling cannot repair a cropped actor. Quarantine the
+source frame or the entire state and regenerate/re-draw it with generous margins.
+
+The admission record for every generated actor state must name its full-construction
+review artifact (source strip plus extracted-frame contact sheet) and the reviewer who
+approved it. A state without that review is provisional and cannot be bound to a
+playable export.
+
 ## Known failure definitions
 
 These are hard rejects, even if the loop looks busy at full speed:
@@ -249,6 +297,12 @@ These are hard rejects, even if the loop looks busy at full speed:
 - **Per-frame rescue crop:** a single broken cel is fixed by changing its crop,
   origin, display size, or offset differently from the rest of the sheet. Re-pad or
   redraw the art instead; every allowed cel shares the same registration contract.
+- **Truncated construction:** a frame is consistently registered but an intended part
+  of the actor is absent or cut off inside the bitmap: for example, only the top half
+  of a bottle-cap stack, a missing torso, clipped shoes, or a horizontally sliced
+  prop. This is a hard reject for the whole affected state, not a crop/scale problem
+  for the runtime to hide. Quarantine it, regenerate with generous margins, and pass a
+  fresh full-construction review before using it.
 
 ## Furniture and counter actor QA
 
@@ -273,6 +327,10 @@ Before a furniture-anchored actor is admitted:
 - Review one frozen frame from every action with the UI visible. If the body covers
   the counter wrong, clips off the edge, overhangs the window, or hides behind the
   wrong layer, reject the sheet before motion review.
+- Review the actor-only source and its extracted cels before the furniture composite.
+  Verify the complete intended silhouette exists before any desk, chair, gate, or UI
+  layer can obscure it. A partially drawn actor that happens to look acceptable behind
+  furniture is still a truncated-construction failure.
 
 ## Hard gate
 
@@ -281,6 +339,10 @@ Before a furniture-anchored actor is admitted:
 advisory — wire both checks into CI or, at minimum, a documented pre-merge checklist,
 so every character sheet in every project that adopts this Bible goes through them
 before shipping.
+
+The hard gate also includes documented full-construction review: a source-strip and
+extracted-frame contact-sheet check at 100% scale, signed off before the state is
+bound. Passing anchors and cast scale cannot waive a cropped or incomplete actor.
 
 ## Bug-to-Bible rule
 
@@ -312,6 +374,8 @@ rule before they repeat the mistake.
 Before a new animation is called playable or published as final, provide:
 
 - A labelled contact sheet showing the key-pose purpose of every cel.
+- A full-construction contact-sheet review on a contrasting background, proving every
+  intended actor part is present before scene occlusion is applied.
 - A normal-speed loop and a half-speed loop reviewed for at least two complete cycles.
 - A mobile capture confirming stable scale, anchored feet, and a shadow directly under
   the actor.
@@ -345,10 +409,10 @@ Before a new animation is called playable or published as final, provide:
 ## Current status
 
 Project-specific, not synced from upstream. This section records each sheet's name,
-approval state (provisional/rejected/final), and why as sheets are produced and
-reviewed. Act 1 has provisional production sheets wired into the playable scene; they
-remain provisional until final human review accepts the required motion, mobile,
-composite, and dialogue-staging evidence.
+approval state (provisional/rejected/final), and the evidence used for review. Act 1
+has provisional production sheets wired into the playable scene; none is final until
+motion, mobile, composite, dialogue-staging, secondary-motion, and full-construction
+evidence are reviewed.
 
 ### Current sheet evidence
 
@@ -363,33 +427,24 @@ composite, and dialogue-staging evidence.
 | `art/grommet-idle` | furniture-anchored placeholder | provisional/pass | Cast-scale placeholder only; not playable until Acts 2-3 get a script/design pass. |
 
 `npm run qa:cast` passes against the full declared cast at 220 px/world unit. None of
-these sheets are final production animation approval; final status still requires the
-contact-sheet, normal/half-speed loop, mobile capture, dialogue-staging, and secondary
-motion review evidence listed above.
+these sheets are final production animation approval.
 
 ### Act 1 production visual pass
 
-Act 1 now has a provisional production visual pass under `art/act01-production/`.
-These sheets pass registration and cast-scale, include onion skins/contact sheets/loop
-captures, and are wired into the playable Act 1 scene. They are still marked
-provisional because final human approval requires reviewing the evidence listed above.
+Act 1 has provisional production visual sheets under `art/act01-production/`. These
+pass registration and cast-scale and are wired into the playable scene, but remain
+provisional pending the evidence above.
 
 | Sheet | Actor type | State | Evidence |
 |---|---|---|---|
-| `art/act01-production/characters/pip/walk` | walk-plane | provisional-production/pass | 9-role walk-cycle contract sheet; `npm run qa:prod:pip-walk` passes. |
-| `art/act01-production/characters/pip/idle` | walk-plane | provisional-production/pass | 8-frame bottom-anchored breathing, blink, and alert beat on pink QA plates; `npm run qa:prod:pip-idle` passes. |
-| `art/act01-production/characters/pip/dust-reach` | walk-plane | provisional-production/pass | 8-frame dust rummage with squash, reach smear, button reveal, and settle; `npm run qa:prod:pip-dust` passes. |
-| `art/act01-production/characters/pip/toll-paid` | walk-plane | provisional-production/pass | 6-frame inventory handoff with button read, throw smear, follow-through, and settle; `npm run qa:prod:pip-toll` passes. |
-| `art/act01-production/characters/bramble/idle` | furniture-anchored | provisional-production/pass | 10-frame bottom-anchored breathing desk loop with paper slide, stamp anticipation, stamp smear, impact, and recoil on pink QA plates; `npm run qa:prod:bramble-idle` passes. |
-| `art/act01-production/characters/bramble/talk` | furniture-anchored | provisional-production/pass | 6-frame talk gesture sheet, runtime-phased into gesture then settle loop; `npm run qa:prod:bramble-talk` passes. |
-| `art/act01-production/characters/old-bottlecap/idle` | furniture-anchored | provisional-production/pass | 8-frame bottom-anchored heavy breathing, blink, and eye-shift loop on pink QA plates; `npm run qa:prod:bottlecap-idle` passes. |
-| `art/act01-production/characters/old-bottlecap/toll-refused` | furniture-anchored | provisional-production/pass | 5-frame weighted refusal with squash and deadpan settle; `npm run qa:prod:bottlecap-refused` passes. |
-| `art/act01-production/characters/old-bottlecap/toll-paid` | furniture-anchored | provisional-production/pass | 7-frame toll receipt with reach anticipation, arm smear, catch, inspect, approval, and settle; `npm run qa:prod:bottlecap-paid` passes. |
-| `art/act01-production/characters/scuttle/dash` | walk-plane | provisional-production/pass | 5-frame dash with anticipation, long smear, rolling smear, and solid exit pose; `npm run qa:prod:scuttle-dash` passes. |
-| `art/act01-production/props/dust-clump-reveal` | furniture-anchored prop | provisional-production/pass | Squash/stretch reveal; `npm run qa:prod:dust` passes. |
-| `art/act01-production/props/grate-open` | furniture-anchored prop | provisional-production/pass | Mechanical lift/open frames; `npm run qa:prod:grate` passes. |
+| `characters/pip/walk`, `idle`, `dust-reach`, `toll-paid` | walk-plane | provisional-production/pass | 9-key walk and staged idle, pickup, and handoff sheets; production QA passes. |
+| `characters/bramble/idle`, `talk` | furniture-anchored | provisional-production/pass | Desk loop and talk gesture sheets; production QA passes. |
+| `characters/old-bottlecap/idle`, `toll-refused`, `toll-paid` | furniture-anchored | provisional-production/pass | Weighted guard reactions; production QA passes. |
+| `characters/scuttle/dash` | walk-plane | provisional-production/pass | Dash with readable solid poses around smears; production QA passes. |
+| `props/dust-clump-reveal`, `props/grate-open` | furniture-anchored prop | provisional-production/pass | Reveal and mechanical-open clips; production QA passes. |
+| `characters-sprite-v2/old-bottlecap/talk` | furniture-anchored | **rejected/quarantined** | 2026-08-03: every extracted cel truncates the lower cap stack. Registration cannot waive incomplete geometry. Removed from Forge and importer; regenerate a complete actor-only strip and obtain a signed full-construction review before binding. |
 
-`npm run qa:cast` passes against the full declared cast at 220 px/world unit with Act
-1 production sheets for Pip, Bramble, Scuttle, and Old Bottlecap, and the existing
-Grommet placeholder.
-
+Forge currently uses the complete Bottlecap idle construction as a temporary talk
+fallback. It is deliberately not a final talk-animation approval. `npm run qa:cast`
+passes with Act 1 production sheets for Pip, Bramble, Scuttle, and Old Bottlecap, and
+the existing Grommet placeholder.
