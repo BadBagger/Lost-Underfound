@@ -49,6 +49,12 @@ from day one.
   before wiring this up anywhere public. The 4 unvoiced lines are the least-critical
   generic fallbacks (`act01-046` through `act01-049`); the entire core playable path
   — location, every hotspot, Bramble's full tree, the toll-gate puzzle — is voiced.
+- **`public/audio/AUDIO_MANIFEST.json`** + **`public/audio/music/`** / **`sfx/`** —
+  real music and SFX for Act 1: one ambience bed, one success stinger, and 15 SFX
+  covering every hotspot interaction, UI feedback, and footsteps. Built from curated
+  Freesound.org recordings (CC0/CC-BY), gain-matched by functional category (ui /
+  footstep / interaction / reward / ambient_character / music) from the start — see
+  `AUDIO_CREDITS.md` for full per-file attribution.
 
 ## Voice audio
 
@@ -71,12 +77,26 @@ this pass started. Regenerating the last 4 lines, or upgrading to a paid tier an
 redoing the whole batch for commercial clearance, both work as drop-in replacements
 by `line_id`/filename, no code changes needed.
 
+## Music & SFX audio
+
+`public/audio/music/` (ambience loop + a success stinger) and `public/audio/sfx/`
+(15 cues — UI feedback, footsteps, and every Act 1 hotspot interaction) are real
+Freesound.org recordings, CC0 or CC-BY only, no NC/ND/SA/Sampling+. Unlike the voice
+audio above, **this material is commercially usable now** — CC0/CC-BY carries no
+non-commercial restriction — but the CC-BY sources (7 of 17 files) require
+attribution if the game ships publicly; the full credit list is in
+`AUDIO_CREDITS.md` and must ship with the game. Levels are gain-matched by
+functional category (not left at each recording's inconsistent source loudness) and
+capped so nothing clips — see `public/audio/AUDIO_MANIFEST.json` for the full cue
+list with triggers, volumes, and durations.
+
 ## Status
 
-Pre-production, with Act 1 fully scripted and mostly voiced (45/49 lines). No engine
-code, no character art yet. Acts 2 ("The Button Sovereignty") and 3 ("The Roar")
-still only exist as the loose outline in `docs/GAME_CONCEPT.md` — do those as a
-follow-up pass once Act 1 has been built and played. Next step is handing
-`docs/CODEX_BUILD_PROMPT.md` to Codex to start the project scaffold, prove the
-registration tooling against a real test sheet, and build Act 1 against
-`script/ACT_01_SCRIPT.json` + `docs/ACT_01_DESIGN.md` + the recorded voice.
+Pre-production, with Act 1 fully scripted, mostly voiced (45/49 lines), and fully
+scored (all music/SFX for Act 1's hotspots and UI). No engine code, no character art
+yet. Acts 2 ("The Button Sovereignty") and 3 ("The Roar") still only exist as the
+loose outline in `docs/GAME_CONCEPT.md` — do those as a follow-up pass once Act 1
+has been built and played. Next step is handing `docs/CODEX_BUILD_PROMPT.md` to
+Codex to start the project scaffold, prove the registration tooling against a real
+test sheet, and build Act 1 against
+`script/ACT_01_SCRIPT.json` + `docs/ACT_01_DESIGN.md` + the recorded voice and audio.

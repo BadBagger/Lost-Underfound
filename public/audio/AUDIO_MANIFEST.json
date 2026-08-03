@@ -1,0 +1,196 @@
+{
+  "project": "Lost & Underfound",
+  "slice": "Act 1 -- The Crack Under the Couch",
+  "sampleRate": "44100 Hz (music/SFX render) / 44100 Hz (voice TTS render), all exported mono OGG Vorbis",
+  "cues": [
+    {
+      "filename": "music/underneath-ambience-loop.ogg",
+      "type": "music",
+      "scene": "The Crack Under the Couch",
+      "trigger": "scene_underneath_ambience",
+      "volume": 0.5,
+      "loop": true,
+      "purpose": "Quiet, dusty room-tone bed for the entry chamber -- loops under all Act 1 gameplay.",
+      "sourced": "freesound",
+      "duration_s": 38.5
+    },
+    {
+      "filename": "music/toll-paid-stinger.ogg",
+      "type": "music",
+      "scene": "Global / Sting",
+      "trigger": "toll-paid",
+      "volume": 0.65,
+      "loop": false,
+      "purpose": "Short goofy success sting layered with sfx/toll-gate-open.ogg when Old Bottlecap accepts the button.",
+      "sourced": "freesound",
+      "duration_s": 1.242
+    },
+    {
+      "filename": "sfx/ui-hover.ogg",
+      "type": "sfx",
+      "scene": "Global / UI",
+      "trigger": "ui_hover",
+      "volume": 0.35,
+      "loop": false,
+      "purpose": "Soft blip on menu/hotspot hover.",
+      "sourced": "freesound",
+      "duration_s": 0.167
+    },
+    {
+      "filename": "sfx/ui-select.ogg",
+      "type": "sfx",
+      "scene": "Global / UI",
+      "trigger": "ui_select",
+      "volume": 0.45,
+      "loop": false,
+      "purpose": "Confirmation blip when a hotspot or dialogue choice is selected.",
+      "sourced": "freesound",
+      "duration_s": 0.171
+    },
+    {
+      "filename": "sfx/ui-cancel.ogg",
+      "type": "sfx",
+      "scene": "Global / UI",
+      "trigger": "ui_cancel",
+      "volume": 0.4,
+      "loop": false,
+      "purpose": "Descending blip when backing out of a menu or dialogue.",
+      "sourced": "freesound",
+      "duration_s": 0.199
+    },
+    {
+      "filename": "sfx/footstep-01.ogg",
+      "type": "sfx",
+      "scene": "The Crack Under the Couch",
+      "trigger": "footstep",
+      "volume": 0.4,
+      "loop": false,
+      "purpose": "Pip's footstep on the under-couch floor, variant 1; alternate with variant 2.",
+      "sourced": "freesound",
+      "duration_s": 0.347
+    },
+    {
+      "filename": "sfx/footstep-02.ogg",
+      "type": "sfx",
+      "scene": "The Crack Under the Couch",
+      "trigger": "footstep",
+      "volume": 0.4,
+      "loop": false,
+      "purpose": "Pip's footstep, variant 2; alternate with variant 1.",
+      "sourced": "freesound",
+      "duration_s": 0.383
+    },
+    {
+      "filename": "sfx/dust-clump-reveal.ogg",
+      "type": "sfx",
+      "scene": "The Crack Under the Couch",
+      "trigger": "found-button",
+      "volume": 0.5,
+      "loop": false,
+      "purpose": "Soft reveal chime when searching the dust clump uncovers the button (act01-005).",
+      "sourced": "freesound",
+      "duration_s": 0.324
+    },
+    {
+      "filename": "sfx/button-pickup.ogg",
+      "type": "sfx",
+      "scene": "The Crack Under the Couch",
+      "trigger": "button_pickup",
+      "volume": 0.45,
+      "loop": false,
+      "purpose": "Small metallic clink when the button is actually added to inventory.",
+      "sourced": "freesound",
+      "duration_s": 0.842
+    },
+    {
+      "filename": "sfx/cubby-open.ogg",
+      "type": "sfx",
+      "scene": "The Crack Under the Couch",
+      "trigger": "cubby_wall_inspect",
+      "volume": 0.4,
+      "loop": false,
+      "purpose": "Soft cardboard creak when inspecting the Lost & Found Cubby Wall.",
+      "sourced": "freesound",
+      "duration_s": 0.551
+    },
+    {
+      "filename": "sfx/signinlog-open.ogg",
+      "type": "sfx",
+      "scene": "The Crack Under the Couch",
+      "trigger": "sign_in_log_inspect",
+      "volume": 0.4,
+      "loop": false,
+      "purpose": "Page-turn when inspecting the Sign-In Log (act01-011).",
+      "sourced": "freesound",
+      "duration_s": 0.258
+    },
+    {
+      "filename": "sfx/popcorn-thud.ogg",
+      "type": "sfx",
+      "scene": "The Crack Under the Couch",
+      "trigger": "popcorn_boulder_use",
+      "volume": 0.45,
+      "loop": false,
+      "purpose": "Soft heavy thud on the popcorn-kernel boulder's permanent use-fail (act01-013).",
+      "sourced": "freesound",
+      "duration_s": 0.854
+    },
+    {
+      "filename": "sfx/cobweb-rustle.ogg",
+      "type": "sfx",
+      "scene": "The Crack Under the Couch",
+      "trigger": "cobweb_curtain_inspect",
+      "volume": 0.4,
+      "loop": false,
+      "purpose": "Soft cloth/web rustle when inspecting the cobweb curtain, just before Scuttle's cameo.",
+      "sourced": "freesound",
+      "duration_s": 0.244
+    },
+    {
+      "filename": "sfx/scuttle-dash.ogg",
+      "type": "sfx",
+      "scene": "The Crack Under the Couch",
+      "trigger": "scuttle_cameo",
+      "volume": 0.45,
+      "loop": false,
+      "purpose": "Fast skitter under Scuttle's one-shot cameo dash-through (act01-015).",
+      "sourced": "freesound",
+      "duration_s": 0.561
+    },
+    {
+      "filename": "sfx/toll-refused.ogg",
+      "type": "sfx",
+      "scene": "The Crack Under the Couch",
+      "trigger": "toll-refused",
+      "volume": 0.5,
+      "loop": false,
+      "purpose": "Soft dismissive knock when Old Bottlecap refuses entry without the toll (act01-038).",
+      "sourced": "freesound",
+      "duration_s": 0.095
+    },
+    {
+      "filename": "sfx/toll-gate-open.ogg",
+      "type": "sfx",
+      "scene": "The Crack Under the Couch",
+      "trigger": "toll-paid",
+      "volume": 0.6,
+      "loop": false,
+      "purpose": "Grate sliding open, layered with music/toll-paid-stinger.ogg -- the act's climax beat.",
+      "sourced": "freesound",
+      "duration_s": 1.375
+    },
+    {
+      "filename": "sfx/bramble-paper-shuffle.ogg",
+      "type": "sfx",
+      "scene": "The Crack Under the Couch",
+      "trigger": "bramble_idle_shuffle",
+      "volume": 0.3,
+      "loop": false,
+      "purpose": "Ambient paper-shuffle one-shot during Bramble's passive furniture-anchored idle loop, played periodically, not player-triggered.",
+      "sourced": "freesound",
+      "duration_s": 0.296
+    }
+  ],
+  "voiceDialogueNote": "Voice lines are ElevenLabs TTS, free tier -- non-commercial, requires ElevenLabs attribution, not cleared to ship as-is. See script/ACT_01_DIALOGUE.json and README.md's Voice audio section. 45 of 49 Act 1 lines are voiced; the free-tier monthly quota ran out on the last 4 generic fallback lines.",
+  "sourcingNote": "All music and SFX are Freesound.org recordings (CC0 or CC-BY only), trimmed/normalized/gain-matched by functional category (footstep/ui/interaction/reward/ambient_character/music_loop/music_stinger targets) rather than used verbatim or left at inconsistent source loudness. See AUDIO_CREDITS.md for full attribution."
+}
