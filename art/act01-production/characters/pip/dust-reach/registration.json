@@ -1,0 +1,49 @@
+{
+  "sheet": "pip-dust-reach",
+  "actor_type": "walk-plane",
+  "canvas": {
+    "width": 320,
+    "height": 360
+  },
+  "anchor_tolerance_px": 1,
+  "frames": [
+    {
+      "file": "pip_dust_01.png",
+      "anchor": [
+        160,
+        300
+      ],
+      "role": "anticipation-crouch",
+      "canonical": true,
+      "scale_reference": [
+        160,
+        80
+      ]
+    },
+    {
+      "file": "pip_dust_02.png",
+      "anchor": [
+        160,
+        300
+      ],
+      "role": "reach-arc"
+    },
+    {
+      "file": "pip_dust_03.png",
+      "anchor": [
+        160,
+        300
+      ],
+      "role": "contact-hold"
+    },
+    {
+      "file": "pip_dust_04.png",
+      "anchor": [
+        160,
+        300
+      ],
+      "role": "found-reaction"
+    }
+  ],
+  "approval_state": "provisional-production-pass"
+}

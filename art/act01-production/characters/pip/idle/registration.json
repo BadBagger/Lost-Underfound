@@ -1,0 +1,33 @@
+{
+  "sheet": "pip-idle",
+  "actor_type": "walk-plane",
+  "canvas": {
+    "width": 320,
+    "height": 360
+  },
+  "anchor_tolerance_px": 1,
+  "frames": [
+    {
+      "file": "pip_idle_01.png",
+      "anchor": [
+        160,
+        300
+      ],
+      "role": "alive-held-idle",
+      "canonical": true,
+      "scale_reference": [
+        160,
+        80
+      ]
+    },
+    {
+      "file": "pip_idle_02.png",
+      "anchor": [
+        160,
+        300
+      ],
+      "role": "breath-secondary-motion"
+    }
+  ],
+  "approval_state": "provisional-production-pass"
+}

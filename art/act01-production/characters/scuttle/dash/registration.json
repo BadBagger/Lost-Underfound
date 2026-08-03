@@ -1,0 +1,41 @@
+{
+  "sheet": "scuttle-dash",
+  "actor_type": "walk-plane",
+  "canvas": {
+    "width": 180,
+    "height": 160
+  },
+  "anchor_tolerance_px": 1,
+  "frames": [
+    {
+      "file": "scuttle_dash_01.png",
+      "anchor": [
+        90,
+        120
+      ],
+      "role": "solid-pre-dash",
+      "canonical": true,
+      "scale_reference": [
+        90,
+        43
+      ]
+    },
+    {
+      "file": "scuttle_dash_02.png",
+      "anchor": [
+        90,
+        120
+      ],
+      "role": "single-smear-cel"
+    },
+    {
+      "file": "scuttle_dash_03.png",
+      "anchor": [
+        90,
+        120
+      ],
+      "role": "solid-exit-pose"
+    }
+  ],
+  "approval_state": "provisional-production-pass"
+}

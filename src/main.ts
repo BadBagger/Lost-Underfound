@@ -35,7 +35,11 @@ const byId = (id: string): DialogueLine => {
 };
 
 const assets = {
-  pip: [
+  scene: {
+    bg: new URL("../art/act01-production/scene/entry-chamber-bg.png", import.meta.url).href,
+    foregroundMask: new URL("../art/act01-production/scene/entry-chamber-foreground-mask.png", import.meta.url).href,
+  },
+  pipWalk: [
     "pip_walk_01.png",
     "pip_walk_02.png",
     "pip_walk_03.png",
@@ -45,18 +49,40 @@ const assets = {
     "pip_walk_07.png",
     "pip_walk_08.png",
     "pip_walk_09.png",
-  ].map((name) => new URL(`../art/pip-walk/${name}`, import.meta.url).href),
-  bramble: ["bramble_idle_01.png", "bramble_idle_02.png", "bramble_idle_03.png", "bramble_idle_04.png"].map(
-    (name) => new URL(`../art/bramble-idle/${name}`, import.meta.url).href,
+  ].map((name) => new URL(`../art/act01-production/characters/pip/walk/${name}`, import.meta.url).href),
+  pipIdle: ["pip_idle_01.png", "pip_idle_02.png"].map((name) => new URL(`../art/act01-production/characters/pip/idle/${name}`, import.meta.url).href),
+  pipDust: ["pip_dust_01.png", "pip_dust_02.png", "pip_dust_03.png", "pip_dust_04.png"].map(
+    (name) => new URL(`../art/act01-production/characters/pip/dust-reach/${name}`, import.meta.url).href,
   ),
-  bottlecap: [
+  pipToll: ["pip_toll_01.png", "pip_toll_02.png"].map(
+    (name) => new URL(`../art/act01-production/characters/pip/toll-paid/${name}`, import.meta.url).href,
+  ),
+  brambleIdle: ["bramble_idle_01.png", "bramble_idle_02.png", "bramble_idle_03.png", "bramble_idle_04.png"].map(
+    (name) => new URL(`../art/act01-production/characters/bramble/idle/${name}`, import.meta.url).href,
+  ),
+  brambleTalk: ["bramble_talk_01.png", "bramble_talk_02.png", "bramble_talk_03.png"].map(
+    (name) => new URL(`../art/act01-production/characters/bramble/talk/${name}`, import.meta.url).href,
+  ),
+  bottlecapIdle: [
     "old_bottlecap_idle_01.png",
     "old_bottlecap_idle_02.png",
     "old_bottlecap_idle_03.png",
     "old_bottlecap_idle_04.png",
-  ].map((name) => new URL(`../art/old-bottlecap-idle/${name}`, import.meta.url).href),
-  scuttle: ["scuttle-walk_01.png", "scuttle-walk_02.png", "scuttle-walk_03.png", "scuttle-walk_04.png"].map(
-    (name) => new URL(`../art/scuttle-walk/${name}`, import.meta.url).href,
+  ].map((name) => new URL(`../art/act01-production/characters/old-bottlecap/idle/${name}`, import.meta.url).href),
+  bottlecapRefused: ["old_bottlecap_refuse_01.png", "old_bottlecap_refuse_02.png", "old_bottlecap_refuse_03.png"].map(
+    (name) => new URL(`../art/act01-production/characters/old-bottlecap/toll-refused/${name}`, import.meta.url).href,
+  ),
+  bottlecapPaid: ["old_bottlecap_paid_01.png", "old_bottlecap_paid_02.png", "old_bottlecap_paid_03.png"].map(
+    (name) => new URL(`../art/act01-production/characters/old-bottlecap/toll-paid/${name}`, import.meta.url).href,
+  ),
+  scuttleDash: ["scuttle_dash_01.png", "scuttle_dash_02.png", "scuttle_dash_03.png"].map(
+    (name) => new URL(`../art/act01-production/characters/scuttle/dash/${name}`, import.meta.url).href,
+  ),
+  dustReveal: ["dust_reveal_01.png", "dust_reveal_02.png", "dust_reveal_03.png", "dust_reveal_04.png"].map(
+    (name) => new URL(`../art/act01-production/props/dust-clump-reveal/${name}`, import.meta.url).href,
+  ),
+  grateOpen: ["grate_open_01.png", "grate_open_02.png", "grate_open_03.png", "grate_open_04.png"].map(
+    (name) => new URL(`../art/act01-production/props/grate-open/${name}`, import.meta.url).href,
   ),
 };
 
@@ -89,6 +115,7 @@ const state = {
   queue: [] as DialogueLine[],
   current: null as DialogueLine | null,
   scuttleDash: false,
+  action: null as null | { type: "found-button" | "toll-refused" | "toll-paid"; startedAt: number; durationMs: number },
 };
 
 const cubbyLoop = [
@@ -108,6 +135,25 @@ const advanceDialogue = () => {
 };
 
 const speak = (...ids: string[]) => enqueue(ids);
+
+const playAction = (type: NonNullable<typeof state.action>["type"], durationMs: number) => {
+  state.action = { type, startedAt: Date.now(), durationMs };
+  window.setTimeout(() => {
+    if (state.action?.type === type) {
+      state.action = null;
+      render();
+    }
+  }, durationMs);
+};
+
+const actionProgress = (type: NonNullable<typeof state.action>["type"]) => {
+  if (state.action?.type !== type) return null;
+  return Math.min(1, Math.max(0, (Date.now() - state.action.startedAt) / state.action.durationMs));
+};
+
+const frameAt = (frames: string[], speedMs: number) => frames[Math.floor(Date.now() / speedMs) % frames.length];
+
+const frameProgress = (frames: string[], progress: number) => frames[Math.min(frames.length - 1, Math.floor(progress * frames.length))];
 
 const hasItem = (item: ItemId) => state.inventory.includes(item);
 
@@ -175,6 +221,7 @@ const useHotspot = (id: HotspotId) => {
     }
     state.flags.dustSearched = true;
     addItem("button");
+    playAction("found-button", 1100);
     speak("act01-005-pip-dustclump-search-success");
     return;
   }
@@ -193,6 +240,7 @@ const useHotspot = (id: HotspotId) => {
     if (state.selectedItem === "button" && hasItem("button")) {
       state.flags.gateOpen = true;
       removeItem("button");
+      playAction("toll-paid", 1700);
       speak(
         "act01-039-bottlecap-toll-accepted",
         "act01-040-bottlecap-toll-close",
@@ -203,6 +251,7 @@ const useHotspot = (id: HotspotId) => {
       state.flags.actComplete = true;
       return;
     }
+    playAction("toll-refused", 900);
     speak("act01-038-bottlecap-no-toll");
     return;
   }
@@ -279,6 +328,27 @@ const renderTopics = () => {
 };
 
 const render = () => {
+  const dustProgress = actionProgress("found-button");
+  const tollRefusedProgress = actionProgress("toll-refused");
+  const tollPaidProgress = actionProgress("toll-paid");
+  const pipFrames = dustProgress !== null ? assets.pipDust : tollPaidProgress !== null ? assets.pipToll : assets.pipIdle;
+  const pipFrame =
+    dustProgress !== null
+      ? frameProgress(pipFrames, dustProgress)
+      : tollPaidProgress !== null
+        ? frameProgress(pipFrames, tollPaidProgress)
+        : frameAt(pipFrames, 420);
+  const brambleFrames = state.current?.speaker === "BRAMBLE" ? assets.brambleTalk : assets.brambleIdle;
+  const bottlecapFrames =
+    tollPaidProgress !== null ? assets.bottlecapPaid : tollRefusedProgress !== null ? assets.bottlecapRefused : assets.bottlecapIdle;
+  const bottlecapFrame =
+    tollPaidProgress !== null
+      ? frameProgress(bottlecapFrames, tollPaidProgress)
+      : tollRefusedProgress !== null
+        ? frameProgress(bottlecapFrames, tollRefusedProgress)
+        : frameAt(bottlecapFrames, 360);
+  const dustFrame = dustProgress !== null ? frameProgress(assets.dustReveal, dustProgress) : assets.dustReveal[state.flags.dustSearched ? 3 : 0];
+  const grateFrame = state.flags.gateOpen ? frameProgress(assets.grateOpen, tollPaidProgress ?? 1) : assets.grateOpen[0];
   const bubble = state.current
     ? `<button class="dialogue ${speakerClass(state.current.speaker)}" type="button">
         <strong>${state.current.speaker.replaceAll("_", " ")}</strong>
@@ -308,24 +378,22 @@ const render = () => {
         </div>
       </header>
       <section class="stage ${state.current ? "dialogue-open" : ""}" aria-label="Underneath entry chamber">
-        <div class="ceiling-tag">DO NOT REMOVE</div>
-        <div class="dust-beam beam-a"></div>
-        <div class="dust-beam beam-b"></div>
-        <div class="cubby-visual"></div>
-        <div class="desk-visual"></div>
-        <div class="gate-visual ${state.flags.gateOpen ? "open" : ""}"></div>
-        <img class="actor pip" src="${assets.pip[Math.floor(Date.now() / 130) % assets.pip.length]}" alt="Pip" />
+        <img class="scene-bg" src="${assets.scene.bg}" alt="" />
+        <img class="prop dust-prop" src="${dustFrame}" alt="" />
+        <img class="prop grate-prop" src="${grateFrame}" alt="" />
+        <img class="actor pip" src="${pipFrame}" alt="Pip" />
         <div class="bramble-rig">
-          <img class="actor bramble body" src="${assets.bramble[Math.floor(Date.now() / 260) % assets.bramble.length]}" alt="Bramble" />
+          <img class="actor bramble body" src="${frameAt(brambleFrames, 220)}" alt="Bramble" />
           <div class="desk-mask"></div>
         </div>
         <div class="bottlecap-rig">
-          <img class="actor bottlecap body" src="${assets.bottlecap[Math.floor(Date.now() / 360) % assets.bottlecap.length]}" alt="Old Bottlecap" />
+          <img class="actor bottlecap body" src="${bottlecapFrame}" alt="Old Bottlecap" />
           <div class="gate-mask"></div>
         </div>
+        <img class="scene-fg-mask" src="${assets.scene.foregroundMask}" alt="" />
         ${
           state.scuttleDash
-            ? `<img class="actor scuttle dash" src="${assets.scuttle[Math.floor(Date.now() / 80) % assets.scuttle.length]}" alt="Scuttle" />`
+            ? `<img class="actor scuttle dash" src="${frameAt(assets.scuttleDash, 100)}" alt="Scuttle" />`
             : ""
         }
         ${Object.entries(hotspots)

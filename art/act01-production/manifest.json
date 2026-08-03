@@ -1,0 +1,35 @@
+{
+  "scene": {
+    "background": "scene/entry-chamber-bg.png",
+    "foregroundMask": "scene/entry-chamber-foreground-mask.png"
+  },
+  "characters": {
+    "pip": [
+      "walk",
+      "idle",
+      "dust-reach",
+      "toll-paid"
+    ],
+    "bramble": [
+      "idle",
+      "talk"
+    ],
+    "old-bottlecap": [
+      "idle",
+      "toll-refused",
+      "toll-paid"
+    ],
+    "scuttle": [
+      "dash"
+    ]
+  },
+  "props": [
+    "dust-clump-reveal",
+    "grate-open"
+  ],
+  "source": [
+    "source/ai-room-source.png",
+    "source/ai-cast-source.png"
+  ],
+  "state": "provisional-production-pass"
+}

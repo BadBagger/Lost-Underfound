@@ -1,0 +1,41 @@
+{
+  "sheet": "old-bottlecap-toll-refused",
+  "actor_type": "furniture-anchored",
+  "canvas": {
+    "width": 320,
+    "height": 260
+  },
+  "anchor_tolerance_px": 1,
+  "frames": [
+    {
+      "file": "old_bottlecap_refuse_01.png",
+      "anchor": [
+        160,
+        210
+      ],
+      "role": "dismissive-left",
+      "canonical": true,
+      "scale_reference": [
+        160,
+        78
+      ]
+    },
+    {
+      "file": "old_bottlecap_refuse_02.png",
+      "anchor": [
+        160,
+        210
+      ],
+      "role": "dismissive-right"
+    },
+    {
+      "file": "old_bottlecap_refuse_03.png",
+      "anchor": [
+        160,
+        210
+      ],
+      "role": "deadpan-settle"
+    }
+  ],
+  "approval_state": "provisional-production-pass"
+}

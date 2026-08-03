@@ -4,12 +4,12 @@
   "actors": [
     {
       "name": "pip",
-      "registration": "pip-walk/registration.json",
+      "registration": "act01-production/characters/pip/walk/registration.json",
       "world_height_units": 1.0
     },
     {
       "name": "bramble",
-      "registration": "bramble-idle/registration.json",
+      "registration": "act01-production/characters/bramble/idle/registration.json",
       "world_height_units": 0.85
     },
     {
@@ -19,12 +19,12 @@
     },
     {
       "name": "scuttle",
-      "registration": "scuttle-walk/registration.json",
+      "registration": "act01-production/characters/scuttle/dash/registration.json",
       "world_height_units": 0.35
     },
     {
       "name": "old-bottlecap",
-      "registration": "old-bottlecap-idle/registration.json",
+      "registration": "act01-production/characters/old-bottlecap/idle/registration.json",
       "world_height_units": 0.6
     }
   ]

@@ -1,0 +1,49 @@
+{
+  "sheet": "dust-clump-reveal",
+  "actor_type": "furniture-anchored",
+  "canvas": {
+    "width": 220,
+    "height": 180
+  },
+  "anchor_tolerance_px": 1,
+  "frames": [
+    {
+      "file": "dust_reveal_01.png",
+      "anchor": [
+        110,
+        125
+      ],
+      "role": "compact-hiding-button",
+      "canonical": true,
+      "scale_reference": [
+        110,
+        70
+      ]
+    },
+    {
+      "file": "dust_reveal_02.png",
+      "anchor": [
+        110,
+        125
+      ],
+      "role": "anticipation-puff-squash"
+    },
+    {
+      "file": "dust_reveal_03.png",
+      "anchor": [
+        110,
+        125
+      ],
+      "role": "stretch-disperse"
+    },
+    {
+      "file": "dust_reveal_04.png",
+      "anchor": [
+        110,
+        125
+      ],
+      "role": "button-revealed-settle"
+    }
+  ],
+  "approval_state": "provisional-production-pass"
+}

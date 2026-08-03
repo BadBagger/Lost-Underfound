@@ -25,6 +25,9 @@ scaffold.
   recorded voice for 45 of Act 1's 49 lines.
 - **`public/audio/AUDIO_MANIFEST.json`** + **`public/audio/music/`** / **`sfx/`** -
   Act 1 music and SFX sourced from Freesound; see `AUDIO_CREDITS.md`.
+- **`art/act01-production/`** - Act 1 production visual source art, scene plates,
+  registered character/prop sheets, onion skins, contact sheets, and loop captures;
+  see `VISUAL_ASSET_CREDITS.md`.
 - **`src/`** - the current Vite/TypeScript playable Act 1 scaffold.
 - **`art/qa-placeholder`** and **`art/qa-broken`** - fixtures proving the registration
   gate passes clean art and rejects bad art.
@@ -62,9 +65,10 @@ publicly. The full credit list is in `AUDIO_CREDITS.md` and must ship with the g
 
 Act 1 is now a playable local web slice built from `script/ACT_01_SCRIPT.json` and
 `docs/ACT_01_DESIGN.md`, with the recorded Act 1 voice/audio pass available in
-`public/audio/`. The project scaffold wires the registration gate into `npm test`,
-GitHub Actions, and per-sheet QA scripts. The checked-in art is provisional generated
-cel art, not final production character art, but it is registered from the start:
+`public/audio/` and a provisional production visual pass in `art/act01-production/`.
+The project scaffold wires the registration gate into `npm test`, GitHub Actions, and
+per-sheet QA scripts. The production visual pass is still provisional pending human
+review of the required Animation Bible evidence, but it is registered from the start:
 
 - `art/qa-placeholder` proves the frame gate passes a clean placeholder sheet.
 - `art/qa-broken` is an intentionally bad fixture that fails on canvas size and
@@ -72,7 +76,10 @@ cel art, not final production character art, but it is registered from the start
 - `art/pip-walk` is the first walk-plane actor sheet and passes registration.
 - `art/old-bottlecap-idle` is the first furniture-anchored rig sheet and passes
   registration with a foreground mask in the playable scene.
-- `art/cast_scale.json` now resolves every declared cast registration path and passes
+- `art/act01-production/` contains the AI-source-derived background plate, layered
+  Bramble and Old Bottlecap rigs, Pip action sheets, Scuttle smear-rule dash, dust
+  reveal, grate opening, and QA evidence.
+- `art/cast_scale.json` now resolves Act 1 production registration paths and passes
   cast-scale. Grommet remains placeholder scale art only; Acts 2 and 3 are not built.
 
 Acts 2 ("The Button Sovereignty") and 3 ("The Roar") still only exist as the loose

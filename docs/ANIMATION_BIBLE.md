@@ -214,3 +214,29 @@ here, per the build order in `docs/CODEX_BUILD_PROMPT.md`.
 these sheets are final production animation approval; final status still requires the
 contact-sheet, normal/half-speed loop, mobile capture, dialogue-staging, and secondary
 motion review evidence listed above.
+
+### Act 1 production visual pass
+
+Act 1 now has a provisional production visual pass under `art/act01-production/`.
+These sheets pass registration and cast-scale, include onion skins/contact sheets/loop
+captures, and are wired into the playable Act 1 scene. They are still marked
+provisional because final human approval requires reviewing the evidence listed above.
+
+| Sheet | Actor type | State | Evidence |
+|---|---|---|---|
+| `art/act01-production/characters/pip/walk` | walk-plane | provisional-production/pass | 9-role walk-cycle contract sheet; `npm run qa:prod:pip-walk` passes. |
+| `art/act01-production/characters/pip/idle` | walk-plane | provisional-production/pass | Alive held idle; `npm run qa:prod:pip-idle` passes. |
+| `art/act01-production/characters/pip/dust-reach` | walk-plane | provisional-production/pass | Anticipation/reach/found reaction; `npm run qa:prod:pip-dust` passes. |
+| `art/act01-production/characters/pip/toll-paid` | walk-plane | provisional-production/pass | Relief/excitement reaction; `npm run qa:prod:pip-toll` passes. |
+| `art/act01-production/characters/bramble/idle` | furniture-anchored | provisional-production/pass | Desk-fixed layered work loop; `npm run qa:prod:bramble-idle` passes. |
+| `art/act01-production/characters/bramble/talk` | furniture-anchored | provisional-production/pass | Talk loop that interrupts idle; `npm run qa:prod:bramble-talk` passes. |
+| `art/act01-production/characters/old-bottlecap/idle` | furniture-anchored | provisional-production/pass | Slow heavy rock loop; `npm run qa:prod:bottlecap-idle` passes. |
+| `art/act01-production/characters/old-bottlecap/toll-refused` | furniture-anchored | provisional-production/pass | Small deadpan head-shake; `npm run qa:prod:bottlecap-refused` passes. |
+| `art/act01-production/characters/old-bottlecap/toll-paid` | furniture-anchored | provisional-production/pass | Button take/inspect/approval beat; `npm run qa:prod:bottlecap-paid` passes. |
+| `art/act01-production/characters/scuttle/dash` | walk-plane | provisional-production/pass | Solid pre/post poses plus one smear cel; `npm run qa:prod:scuttle-dash` passes. |
+| `art/act01-production/props/dust-clump-reveal` | furniture-anchored prop | provisional-production/pass | Squash/stretch reveal; `npm run qa:prod:dust` passes. |
+| `art/act01-production/props/grate-open` | furniture-anchored prop | provisional-production/pass | Mechanical lift/open frames; `npm run qa:prod:grate` passes. |
+
+`npm run qa:cast` passes against the full declared cast at 220 px/world unit with Act
+1 production sheets for Pip, Bramble, Scuttle, and Old Bottlecap, and the existing
+Grommet placeholder.

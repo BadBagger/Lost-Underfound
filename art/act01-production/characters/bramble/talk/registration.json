@@ -1,0 +1,41 @@
+{
+  "sheet": "bramble-talk",
+  "actor_type": "furniture-anchored",
+  "canvas": {
+    "width": 320,
+    "height": 260
+  },
+  "anchor_tolerance_px": 1,
+  "frames": [
+    {
+      "file": "bramble_talk_01.png",
+      "anchor": [
+        160,
+        205
+      ],
+      "role": "talk-closed-mouth",
+      "canonical": true,
+      "scale_reference": [
+        160,
+        18
+      ]
+    },
+    {
+      "file": "bramble_talk_02.png",
+      "anchor": [
+        160,
+        205
+      ],
+      "role": "talk-open-mouth"
+    },
+    {
+      "file": "bramble_talk_03.png",
+      "anchor": [
+        160,
+        205
+      ],
+      "role": "talk-settle"
+    }
+  ],
+  "approval_state": "provisional-production-pass"
+}

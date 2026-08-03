@@ -1,0 +1,49 @@
+{
+  "sheet": "old-bottlecap-idle",
+  "actor_type": "furniture-anchored",
+  "canvas": {
+    "width": 320,
+    "height": 260
+  },
+  "anchor_tolerance_px": 1,
+  "frames": [
+    {
+      "file": "old_bottlecap_idle_01.png",
+      "anchor": [
+        160,
+        210
+      ],
+      "role": "heavy-rock-center",
+      "canonical": true,
+      "scale_reference": [
+        160,
+        78
+      ]
+    },
+    {
+      "file": "old_bottlecap_idle_02.png",
+      "anchor": [
+        160,
+        210
+      ],
+      "role": "heavy-rock-left"
+    },
+    {
+      "file": "old_bottlecap_idle_03.png",
+      "anchor": [
+        160,
+        210
+      ],
+      "role": "weighted-return"
+    },
+    {
+      "file": "old_bottlecap_idle_04.png",
+      "anchor": [
+        160,
+        210
+      ],
+      "role": "heavy-rock-right"
+    }
+  ],
+  "approval_state": "provisional-production-pass"
+}
