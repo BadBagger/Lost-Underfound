@@ -14,16 +14,19 @@ from day one.
 
 - **`docs/GAME_CONCEPT.md`** — the pitch: premise, tone, full cast with personalities,
   and the target ~1 hour, 3-act structure.
-- **`docs/ANIMATION_BIBLE.md`** — binding animation production rules (adapted from a
-  prior project's Animation Bible, which is why it reads as production-tested rather
-  than theoretical). Twelve principles, walk-cycle contract, turnaround contract,
-  scene-character contract, smear-frame rule, required approval evidence.
+- **`docs/ANIMATION_BIBLE.md`** — binding animation production rules. This is a synced
+  copy of [`BadBagger/Animation-Bible`](https://github.com/BadBagger/Animation-Bible),
+  the shared source of truth across projects — edit rules upstream there, not here.
+  Twelve principles, walk-cycle contract, turnaround contract, scene-character
+  contract, smear-frame rule, registration/normalization gate, required approval
+  evidence, plus a project-specific "Current status" section that isn't synced.
 - **`docs/CODEX_BUILD_PROMPT.md`** — the actual prompt to hand Codex to start building.
   Explains the specific animation-quality bugs this pipeline is designed to prevent
   (frame-to-frame scale drift, furniture-anchored characters clipping/misregistering)
   and the build order.
-- **`tools/check_registration.py`** — the QA gate. Two checks: `frames` (does every
-  frame in one character's sheet share the same canvas size and contact anchor) and
+- **`tools/check_registration.py`** — the QA gate, also sourced from
+  `BadBagger/Animation-Bible` (`tools/`). Two checks: `frames` (does every frame in
+  one character's sheet share the same canvas size and contact anchor) and
   `cast-scale` (does every character's source art match the cast's intended relative
   proportions, so nobody renders accidentally huge or tiny next to the rest of the
   cast). Tested against synthetic fixtures before being added here — see the script's

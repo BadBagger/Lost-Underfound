@@ -1,10 +1,11 @@
-# Lost & Underfound — Animation Bible
+# Animation Bible — Lost & Underfound
 
-Adapted from the Department of Impossible Complaints project's Animation Bible. The
-rules below are unchanged in substance — only the character examples are swapped for
-this project's own cast (Pip, Bramble, Grommet, Scuttle, Old Bottlecap). This is
-carried over specifically because it worked: treat it as a binding production rule
-from day one, not something to relax for a "smaller" or "cuter" game.
+> **Source of truth: [`BadBagger/Animation-Bible`](https://github.com/BadBagger/Animation-Bible).**
+> This file is a synced local copy of that repo's `ANIMATION_BIBLE.md`, kept here so
+> Codex (and anyone else working in this repo) has the rules on hand without needing
+> cross-repo access. **Do not edit the rules below directly** — if a rule needs to
+> change, change it upstream in `Animation-Bible`, then re-sync this file. The
+> "Current status" section at the bottom is this project's own and is not synced.
 
 **This is a binding production rule.** A sequence is not animation because it has a
 high frame count. Every non-held frame must deliberately lead from the preceding
@@ -27,11 +28,12 @@ padding.
 
 1. **Squash and stretch** — Use drawn deformation to show material and weight while
    preserving volume: when an element widens, it must shorten by a corresponding
-   amount. A bottle-cap coin can compress under Grommet's footstep; Bramble's fur can
-   flex. Never fake life by scaling the whole character up and down.
-2. **Anticipation** — Show the preparation before the primary action: Bramble lifts a
-   stamp before it lands, Pip shifts onto the back foot before walking, Scuttle
-   crouches before a fast scuttle-dash.
+   amount. A stamped page can compress; a coat can flex; a stack of coins can
+   compress under a footstep. Never fake life by scaling the whole character up and
+   down.
+2. **Anticipation** — Show the preparation before the primary action: a hand lifts a
+   tool before it lands, a character shifts onto the back foot before walking, a hand
+   hovers before opening a drawer.
 3. **Staging** — The action, actor, camera, dialogue, and hotspots must read at a
    glance. Scene dialogue is placed beside the speaker and never covers their face,
    body, or the needed interaction.
@@ -39,21 +41,22 @@ padding.
    author the in-betweens that connect them. Do not ask an image generator to create a
    batch of unrelated almost-identical poses and call the result a cycle.
 5. **Follow-through and overlapping action** — Loose parts do not stop at the same
-   time as the body. Bramble's ears, Grommet's loose stitching, Pip's shoelaces trail
-   the torso by one or more frames, then settle.
+   time as the body. Coat tails, sleeves, hair, ears, carried props, and loose
+   stitching trail the torso by one or more frames, then settle.
 6. **Slow in and slow out** — Space poses closer together as an action begins and
    ends, and farther apart through the middle. Frame count follows the action's
    weight and comic timing; 24 fps alone proves nothing.
-7. **Arcs** — Hands, heads, and thrown or carried objects travel through believable
-   curved paths rather than mechanically straight lines.
-8. **Secondary action** — Add supporting motion without hiding the main idea: a
-   whisker twitch, a stack-of-bottlecaps wobble after Old Bottlecap sets one down, a
-   dust-mote drift while Bramble writes.
+7. **Arcs** — Hands, heads, bags, and thrown or carried objects travel through
+   believable curved paths rather than mechanically straight lines.
+8. **Secondary action** — Add supporting motion without hiding the main idea: a coat
+   tail lag during a step, a wobble after an impact, an ambient head-bob or twitch
+   while a fixed character performs their idle loop.
 9. **Timing** — Choose the number and spacing of cels to communicate mass, intent,
-   speed, and humor. Grommet's slow lumbering step gets a long prepared weight-shift;
-   Scuttle's dash may need only a few purposeful cels.
-10. **Exaggeration** — Push key poses enough to be readable and funny, while retaining
-    each character's weight and the scene's perspective.
+   speed, and humor. A heavy action gets a prepared lift, impact, and settling beat; a
+   quick glance may need only a few purposeful cels. A larger/heavier character's
+   timing should read as heavier than a smaller/lighter one performing the same verb.
+10. **Exaggeration** — Push key poses enough to be readable and funny, while
+    retaining each character's weight and the scene's perspective.
 11. **Solid drawing** — Keep the character's construction, lighting, scale, foot
     contact, and camera perspective stable across every cel. An actor must not grow,
     shrink, float, or change anatomy because frames were generated separately.
@@ -72,13 +75,14 @@ The exact number of cels is decided by the spacing needed for that action. Addit
 cels must make a visible, intentional contribution to the step; they may not repeat a
 pose with only incidental redraw changes.
 
-For Pip, legs, hips, shoulders, and any carried/worn secondary elements must
-participate. Each foot has a clear contact/passing/off-ground role. The torso leads
-the step; loose elements lag and settle. The foot anchor stays on the scene's walk
-plane, the engine supplies the contact shadow, and perspective scale changes only
-with floor position — not with the animation frame. The same contract applies to
-Scuttle's multi-legged scuttle-cycle, adapted for however many legs are actually
-authored to move.
+For any freely-walking actor, legs, hips, shoulders, and any carried/worn secondary
+elements must participate. Each foot has a clear contact/passing/off-ground role. The
+torso leads the step; loose elements lag and settle. The foot anchor stays on the
+scene's walk plane, the engine supplies the contact shadow, and perspective scale
+changes only with floor position — never with the animation frame. This contract
+applies regardless of leg count; a multi-legged actor adapts the same
+contact/passing/off-ground logic across however many legs are actually authored to
+move.
 
 ## Turnaround contract
 
@@ -93,27 +97,83 @@ snap or backward walk.
 **A background plate is fixed.** A scene character is an isolated actor layer,
 composited into a stable camera view and clipped or occluded by the real desk,
 window, chair, or foreground furniture. Animating a resident character must never
-swap, regenerate, or otherwise alter the whole room. The result must be that the
-actor lives in the room — not that a different room appears behind them every few
-frames.
+swap, regenerate, or otherwise alter the whole room. The result must be that the actor
+lives in the room — not that a different room appears behind them every few frames.
 
-Fixed characters (for example, Old Bottlecap at a toll gate) receive a passive
-role-based loop even when the player is not talking to them, and talk/reaction
-actions interrupt and resume that loop naturally.
+Fixed/furniture-anchored characters receive a passive role-based idle loop even when
+the player is not interacting with them — writing, tinkering, checking a result,
+returning to the loop. Talk and reaction actions interrupt and resume that loop
+naturally.
+
+Any furniture-anchored or "windowed" character (behind a counter, desk, gate, or
+similar) must use a layered rig, not a single loose full-body sprite composited over
+the background:
+
+- a fixed background plate with that character absent
+- the character's body layer, composited behind the counter/furniture contact line
+- a foreground occlusion mask (the counter/desk/gate edge) on top of the character's
+  lower body
+- hands/tools/props allowed to render above the contact surface as a separate top
+  layer
+- every frame in the rig shares one canvas, one origin, one contact guide — no
+  per-frame crop or resize hacks, ever
 
 ### Smear-frame rule
 
 A smear is a single, intentionally distorted transition cel for an unusually fast
 motion. It is not a motion-blur filter and it is never a substitute for an
-in-between. Use it only at a fast, sudden motion — Scuttle's dash, a stamp
-descent/impact, a recoil — with solid readable drawings immediately before and after.
-Preserve the performer's anchored head/torso while the moving limb, tool, or prop
-stretches along its arc; restore normal volume on the next solid cel. Do not use a
-smear for idle, dialogue, a hold, or ordinary walking.
+in-between. Use it only at a fast, sudden motion — a pen flick, a stamp
+descent/impact, a recoil, a dash — with solid readable drawings immediately before and
+after. Preserve the performer's anchored head/torso while the moving limb, tool,
+sleeve, or paper stretches along its arc; restore normal volume on the next solid
+cel. Do not use a smear for idle, dialogue, a hold, or ordinary walking.
 
-All motion remains subordinate to scene staging. Background and prop motion — dust
-motes, distant light shifts, background creatures, machinery — can make a room feel
-alive, but it must not distract from the current player action.
+All motion remains subordinate to scene staging. Background and prop motion —
+creatures, lamps, rain, drifting objects, machines, indicator lights — can make a room
+feel alive, but it must not distract from the current player action.
+
+## Registration and normalization (the gate before animation)
+
+Generated or hand-drawn frames are not finished sprites until they pass registration —
+treat every sheet like a traditional animation cel set with real pegs, not a folder of
+independently-generated images.
+
+1. **Separate actor placement from animation art.** Placement (anchor point, display
+   size, world position) is engine-controlled and fixed per actor. The frame sheet
+   itself must never be resized or repositioned per-frame to compensate for bad
+   source art — if a frame doesn't fit the shared anchor/scale, the frame is wrong,
+   not the code.
+2. **Registration guides per actor sheet.** Every character sheet needs an explicit,
+   documented baseline: a feet/contact line for a freely-walking actor, a
+   furniture-contact line for a fixed/anchored actor. Every frame in that sheet is
+   authored or normalized against that same guide.
+3. **A frame normalization step, not manual eyeballing.** Before any frame enters a
+   game, run `tools/check_registration.py frames <sheet>/registration.json` — it
+   verifies identical canvas size and identical contact/anchor point across every
+   frame in a sheet, within tolerance. Reject or re-pad any frame that doesn't match.
+4. **Cast-wide scale parity, checked, not eyeballed.** A cast can absolutely include
+   characters of very different sizes on purpose — that's a design choice, not a bug.
+   What must never happen by accident is source art authored at the wrong real-world
+   scale relative to the rest of the cast. `tools/check_registration.py cast-scale
+   <cast_scale.json>` verifies every character's measured source-art scale agrees with
+   its director-declared proportion in the roster, catching accidental mis-scale
+   without flagging intentional size differences.
+5. **A visual QA page before anything is called playable.**
+   `tools/check_registration.py frames <sheet>/registration.json --onion-skin out.png`
+   overlays every frame of a sheet on top of each other, aligned by anchor. If feet,
+   head, or the contact anchor visibly jumps between frames, this is where it gets
+   caught — not after it ships as a visible glitch.
+6. **Animate last, not first.** 24fps timing, in-betweens, and smear frames only get
+   added once a sheet has passed registration/normalization/cast-scale/QA. More
+   frames on top of ungoverned registration only produces more visible drift, not
+   better animation.
+
+## Hard gate
+
+**A frame that does not pass both `check_registration.py frames` and
+`check_registration.py cast-scale` does not get merged into the game.** This is not
+advisory — wire both checks into CI or, at minimum, a documented pre-merge checklist,
+so every character sheet in this project goes through them before shipping.
 
 ## Required approval evidence
 
@@ -128,12 +188,12 @@ Before a new animation is called playable or published as final, provide:
 - Explicit review of the primary motion plus secondary motion; no crossfade, blur, or
   duplicated imagery may be used to conceal missing action. A deliberate one-cel smear
   is allowed only under the Smear-frame rule above.
-- Both the `frames` and `cast-scale` checks from `tools/check_registration.py` passing
-  (see `docs/CODEX_BUILD_PROMPT.md`) — no sheet is "final" while either is red.
+- Both `check_registration.py` checks passing — no sheet is "final" while either is
+  red.
 
 ## Current status
 
-No character sheets have been authored yet. This section gets filled in as sheets are
-produced and reviewed — record each sheet's name, its approval state
-(provisional/rejected/final), and why, the same way the reference project tracked its
-walk-sheet history.
+Project-specific, not synced from upstream. No character sheets have been authored
+yet. Record each sheet's name, its approval state (provisional/rejected/final), and
+why, as sheets are produced and reviewed — Pip's walk cycle should be the first entry
+here, per the build order in `docs/CODEX_BUILD_PROMPT.md`.
