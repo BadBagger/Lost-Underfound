@@ -231,6 +231,32 @@ const scuttleStyle = (progress: number) => {
   return `style="transform: translateX(${easeOutCubic(progress) * 112}vw) scaleX(${squash}) scaleY(${yScale});"`;
 };
 
+const loopProgress = (periodMs: number, phaseMs = 0) => ((Date.now() + phaseMs) % periodMs) / periodMs;
+
+const brambleWorkFx = () => {
+  const progress = loopProgress(1540);
+  const stampLift = progress < 0.28 ? progress / 0.28 : progress < 0.44 ? 1 - (progress - 0.28) / 0.16 : 0;
+  const impact = progress > 0.42 && progress < 0.52 ? Math.sin(((progress - 0.42) / 0.1) * Math.PI) : 0;
+  const paperSlide = progress > 0.62 ? Math.sin(((progress - 0.62) / 0.38) * Math.PI) : 0;
+  return `
+    <span class="bramble-fx paper" style="transform: translate(${paperSlide * -16}%, ${paperSlide * 10}%) rotate(${-7 + paperSlide * -9}deg);"></span>
+    <span class="bramble-fx stamp" style="transform: translateY(${-42 * stampLift + 7 * impact}%) rotate(${stampLift * -8 + impact * 5}deg);"></span>
+    <span class="bramble-fx impact" style="opacity:${impact};transform: translate(-50%, -50%) scale(${0.7 + impact * 0.55});"></span>
+  `;
+};
+
+const bottlecapIdleFx = () => {
+  const progress = loopProgress(2300, 310);
+  const glance = Math.sin(progress * Math.PI * 2);
+  const blink = progress > 0.72 && progress < 0.79 ? 1 : 0;
+  return `
+    <span class="bottlecap-fx brow left" style="transform: translate(${glance * 4}%, ${blink * 12}%) rotate(-9deg);"></span>
+    <span class="bottlecap-fx brow right" style="transform: translate(${glance * 4}%, ${blink * 12}%) rotate(9deg);"></span>
+    <span class="bottlecap-fx eye left" style="opacity:${blink ? 0 : 1};transform: translateX(${glance * 18}%);"></span>
+    <span class="bottlecap-fx eye right" style="opacity:${blink ? 0 : 1};transform: translateX(${glance * 18}%);"></span>
+  `;
+};
+
 const hasItem = (item: ItemId) => state.inventory.includes(item);
 
 const addItem = (item: ItemId) => {
@@ -415,7 +441,7 @@ const render = () => {
       : tollPaidProgress !== null
         ? frameProgress(pipFrames, tollPaidProgress)
         : frameAt(pipFrames, 420);
-  const brambleFrame = state.current?.speaker === "BRAMBLE" ? brambleTalkFrame() : frameAt(assets.brambleIdle, 145);
+  const brambleFrame = state.current?.speaker === "BRAMBLE" ? brambleTalkFrame() : frameAt(assets.brambleIdle, 220);
   const bottlecapFrames =
     tollPaidProgress !== null ? assets.bottlecapPaid : tollRefusedProgress !== null ? assets.bottlecapRefused : assets.bottlecapIdle;
   const bottlecapFrame =
@@ -465,11 +491,13 @@ const render = () => {
         <img class="scene-layer gate-back-layer" data-layer="gate-back" src="${assets.scene.gateBack}" alt="" />
         <div class="bramble-rig" data-layer="bramble-body">
           <img class="actor bramble body" src="${brambleFrame}" alt="Bramble" />
+          ${state.current?.speaker === "BRAMBLE" ? "" : brambleWorkFx()}
         </div>
         <img class="scene-layer desk-foreground" data-layer="desk-foreground" src="${assets.scene.deskForeground}" alt="" />
         <img class="scene-layer gate-foreground" data-layer="gate-foreground" src="${assets.scene.gateForeground}" alt="" />
         <div class="bottlecap-rig" data-layer="old-bottlecap-body">
           <img class="actor bottlecap body" src="${bottlecapFrame}" alt="Old Bottlecap" />
+          ${state.action ? "" : bottlecapIdleFx()}
         </div>
         ${state.flags.gateOpen || state.action?.type === "toll-paid" ? `<img class="prop grate-prop" data-layer="gate-animation" src="${grateFrame}" alt="" />` : ""}
         ${tollPaidProgress !== null && tollPaidProgress < 0.58 ? `<span class="button-flight" ${buttonFlightStyle(tollPaidProgress)} aria-hidden="true"></span>` : ""}

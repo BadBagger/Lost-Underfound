@@ -176,6 +176,15 @@ def draw_pip_inventory_effect(draw: ImageDraw.ImageDraw, pose: str, scale: int =
         draw_button_token(draw, *button_positions[pose], scale=scale)
 
 
+def draw_pip_idle_effect(draw: ImageDraw.ImageDraw, pose: str, scale: int = 3) -> None:
+    if pose == "idle-02":
+        # Local blink/settle only. Do not move the whole cutout for idle.
+        line(draw, (141, 116, 154, 118), "#2b1b10", 3, scale)
+        line(draw, (172, 116, 185, 118), "#2b1b10", 3, scale)
+        line(draw, (128, 58, 120, 50), "#6b3a1c", 3, scale)
+        line(draw, (194, 58, 203, 51), "#6b3a1c", 3, scale)
+
+
 def draw_bramble_desk_effect(draw: ImageDraw.ImageDraw, pose: str, scale: int = 3) -> None:
     if pose in ("shuffle-left", "shuffle-right", "talk-wide", "talk-settle"):
         y = {"shuffle-left": 206, "shuffle-right": 202, "talk-wide": 198, "talk-settle": 204}[pose]
@@ -186,6 +195,13 @@ def draw_bramble_desk_effect(draw: ImageDraw.ImageDraw, pose: str, scale: int = 
 
 
 def draw_bottlecap_effect(draw: ImageDraw.ImageDraw, pose: str, scale: int = 3) -> None:
+    if pose in ("idle-02", "idle-03", "idle-04"):
+        brow = {"idle-02": -2, "idle-03": 0, "idle-04": 2}[pose]
+        line(draw, (125 + brow, 116, 145 + brow, 112), "#25190f", 3, scale)
+        line(draw, (175 + brow, 112, 195 + brow, 116), "#25190f", 3, scale)
+        if pose == "idle-03":
+            line(draw, (133, 128, 143, 129), "#25190f", 3, scale)
+            line(draw, (177, 129, 187, 128), "#25190f", 3, scale)
     if pose == "arm-smear":
         draw_motion_streak(draw, [(214, 184), (236, 156), (265, 128)], "#5b351eaa", scale)
     button_positions = {
@@ -376,7 +392,6 @@ def make_pip_sheets() -> None:
                 cutout = reference_cutout(cutout_name)
                 if cutout:
                     bob = {
-                        "idle-02": -3,
                         "walk-left-recoil-down": 4,
                         "walk-left-passing": 2,
                         "walk-left-high": -4,
@@ -413,6 +428,8 @@ def make_pip_sheets() -> None:
                         "cheer": -3,
                     }.get(pose, 0)
                     paste_registered_cutout(img, cutout, (160, 300), 220, y_offset=bob, mirror=mirror, tilt_degrees=tilt)
+                    if action == "idle":
+                        draw_pip_idle_effect(d, pose)
                     draw_dust_puffs(d, (160, 300), pose)
                     draw_pip_inventory_effect(d, pose)
                 else:
@@ -495,36 +512,11 @@ def make_bramble_sheets() -> None:
             if REFERENCE_SHEET.exists():
                 cutout = reference_cutout("bramble-talk" if action == "talk" else "bramble-idle")
                 if cutout:
-                    xoff = {
-                        "shuffle-left": -3,
-                        "idle-02": -2,
-                        "stamp-up": 2,
-                        "stamp-smear": 1,
-                        "stamp-down": 0,
-                        "stamp-recoil": -1,
-                        "talk-open": 3,
-                        "talk-wide": 5,
-                        "talk-settle": -2,
-                    }.get(pose, 0)
-                    yoff = {
-                        "shuffle-left": 1,
-                        "idle-02": 2,
-                        "stamp-up": -4,
-                        "stamp-smear": -1,
-                        "stamp-down": 2,
-                        "stamp-recoil": 1,
-                        "talk-open": -2,
-                        "talk-wide": -3,
-                        "talk-settle": 1,
-                    }.get(pose, 0)
                     paste_registered_cutout(
                         img,
                         cutout,
                         (160, 205),
                         187,
-                        x_offset=xoff,
-                        y_offset=yoff,
-                        tilt_degrees={"stamp-up": -2, "stamp-smear": 5, "stamp-down": 2, "talk-wide": -2}.get(pose, 0),
                     )
                     draw_bramble_desk_effect(d, pose)
                 else:
@@ -624,8 +616,6 @@ def make_bottlecap_sheets() -> None:
                 cutout = reference_cutout("old-bottlecap-open" if action == "toll-paid" and idx >= 4 else "old-bottlecap")
                 if cutout:
                     tilt = {
-                        "idle-02": -2,
-                        "idle-04": 2,
                         "refuse-left": -5,
                         "refuse-right": 5,
                         "refuse-squash": 0,
@@ -635,7 +625,9 @@ def make_bottlecap_sheets() -> None:
                         "approve": 2,
                         "settle": 1,
                     }.get(pose, 0)
-                    yoff = -4 if pose in ("approve", "settle") else (4 if pose == "refuse-squash" else 0)
+                    if action == "idle":
+                        tilt = 0
+                    yoff = 0 if action == "idle" else (-4 if pose in ("approve", "settle") else (4 if pose == "refuse-squash" else 0))
                     paste_registered_cutout(img, cutout, (160, 210), 132, y_offset=yoff, tilt_degrees=tilt)
                     draw_bottlecap_effect(d, pose)
                 else:
