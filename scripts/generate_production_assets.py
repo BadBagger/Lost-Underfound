@@ -226,7 +226,6 @@ def draw_bramble(draw: ImageDraw.ImageDraw, anchor: tuple[int, int], top_y: int,
     polygon(draw, [(ax - 24, top_y + 99), (ax, top_y + 118), (ax + 24, top_y + 99), (ax + 16, top_y + 130), (ax - 16, top_y + 130)], "#8b3549", "#4d1d2a", scale)
     line(draw, (ax + 32, top_y + 105, ax + 62, ay - 20 - stamp), "#7a7067", 9, scale)
     rect(draw, (ax + 50, ay - 45 - stamp, ax + 75, ay - 14 - stamp), "#7b2e2d", "#3d1716", 2, scale)
-    rect(draw, (36, ay - 13, 284, ay + 30), "#9c744f", "#4f371e", 4, scale)
 
 
 def make_bramble_sheets() -> None:
@@ -271,7 +270,6 @@ def draw_bottlecap(draw: ImageDraw.ImageDraw, anchor: tuple[int, int], top_y: in
         by = top_y + (100 if pose == "take" else 58)
         line(draw, (ax + 52, top_y + 112, bx, by), "#5b351e", 5, scale)
         ellipse(draw, (bx - 13, by - 13, bx + 13, by + 13), "#69a19b", "#2f2117", 3, scale)
-    line(draw, (28, ay, 292, ay), "#754920", 8, scale)
 
 
 def make_bottlecap_sheets() -> None:

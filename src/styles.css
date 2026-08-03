@@ -169,27 +169,6 @@ h1 {
   top: 0;
 }
 
-.desk-mask,
-.gate-mask {
-  position: absolute;
-  left: 8%;
-  right: 8%;
-  bottom: 35%;
-  height: 10%;
-  background: #9c744f;
-  border-top: 3px solid #50391f;
-  z-index: 10;
-}
-
-.gate-mask {
-  left: 12%;
-  right: 12%;
-  bottom: 32%;
-  height: 8%;
-  background: #5a4939;
-  border-top-color: #32281f;
-}
-
 .scuttle {
   width: 6%;
   top: 54%;

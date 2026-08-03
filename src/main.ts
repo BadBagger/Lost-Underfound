@@ -383,11 +383,9 @@ const render = () => {
         <img class="actor pip" src="${pipFrame}" alt="Pip" />
         <div class="bramble-rig">
           <img class="actor bramble body" src="${frameAt(brambleFrames, 220)}" alt="Bramble" />
-          <div class="desk-mask"></div>
         </div>
         <div class="bottlecap-rig">
           <img class="actor bottlecap body" src="${bottlecapFrame}" alt="Old Bottlecap" />
-          <div class="gate-mask"></div>
         </div>
         ${
           state.scuttleDash
