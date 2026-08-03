@@ -8,10 +8,8 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "art" / "act01-production" / "scene" / "layered-v2"
 
 SOURCES = {
-    "bg_room": Path(r"C:\Users\KyleB\.codex\generated_images\019fc7c5-b162-7760-b53c-8c20e100dab9\call_LeOqxKRpJLYlxiS4W1u1dVtt.png"),
-    "folder_wall": Path(r"C:\Users\KyleB\.codex\generated_images\019fc7c5-b162-7760-b53c-8c20e100dab9\call_rdEtcMRhV6keexA7Z32NEWgp.png"),
-    "note_desk": Path(r"C:\Users\KyleB\.codex\generated_images\019fc7c5-b162-7760-b53c-8c20e100dab9\call_Giy9YHEtH67eQyava2OATSe1.png"),
-    "gate_cobweb": Path(r"C:\Users\KyleB\.codex\generated_images\019fc7c5-b162-7760-b53c-8c20e100dab9\call_zuVNfhlMpwgbArdekPSPmBSP.png"),
+    "bg_room": Path(r"C:\Users\KyleB\.codex\generated_images\019fc7c5-b162-7760-b53c-8c20e100dab9\call_b35cGGiSBIeck0521DTjZinH.png"),
+    "occluder_set": Path(r"C:\Users\KyleB\.codex\generated_images\019fc7c5-b162-7760-b53c-8c20e100dab9\call_12UIha2rh4DJQkVSt1S95qBy.png"),
     "dust_reveal": Path(r"C:\Users\KyleB\.codex\generated_images\019fc7c5-b162-7760-b53c-8c20e100dab9\call_OQBv6d1nXbAq5fTxGiWhE1cZ.png"),
     "grate_open": Path(r"C:\Users\KyleB\.codex\generated_images\019fc7c5-b162-7760-b53c-8c20e100dab9\call_uVeedkDmkKMHGxbq0XcdYlFB.png"),
     "button": Path(r"C:\Users\KyleB\.codex\generated_images\019fc7c5-b162-7760-b53c-8c20e100dab9\call_tN2ngkrAsoTg2EQ7rM8qI4kS.png"),
@@ -19,7 +17,7 @@ SOURCES = {
 
 
 def ensure_dirs() -> None:
-    for child in ["source", "occluders", "dust", "grate", "button"]:
+    for child in ["source", "occluders", "dust", "grate", "button", "fx"]:
         (OUT / child).mkdir(parents=True, exist_ok=True)
 
 
@@ -157,6 +155,27 @@ def write_dark_qa(entries: list[tuple[str, Path]], dest: Path) -> None:
     sheet.convert("RGB").save(dest)
 
 
+def write_shadow_sprite(dest: Path) -> None:
+    width, height = 256, 96
+    image = Image.new("RGBA", (width, height), (0, 0, 0, 0))
+    pixels = image.load()
+    center_x = (width - 1) / 2
+    center_y = (height - 1) / 2
+    radius_x = width * 0.44
+    radius_y = height * 0.32
+    for y in range(height):
+        for x in range(width):
+            dx = (x - center_x) / radius_x
+            dy = (y - center_y) / radius_y
+            distance = dx * dx + dy * dy
+            if distance >= 1:
+                continue
+            alpha = int(92 * (1 - distance) ** 1.8)
+            pixels[x, y] = (25, 14, 8, alpha)
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    image.save(dest)
+
+
 def main() -> None:
     ensure_dirs()
     for name, source in SOURCES.items():
@@ -167,19 +186,15 @@ def main() -> None:
     bg = Image.open(SOURCES["bg_room"]).convert("RGB").resize((1280, 720), Image.Resampling.LANCZOS)
     bg.save(OUT / "bg_room.png")
 
-    folder = Image.open(SOURCES["folder_wall"])
-    save_alpha_crop(folder, (0, 0, folder.width, folder.height), OUT / "bg_folder_wall.png", (290, 540))
-
-    note_desk = Image.open(SOURCES["note_desk"])
-    save_alpha_crop(note_desk, (0, 0, note_desk.width // 3, note_desk.height), OUT / "wall_note.png", (150, 130))
-    save_alpha_crop(note_desk, (note_desk.width // 3, 0, note_desk.width, note_desk.height), OUT / "occluders" / "desk_front.png", (450, 230))
-
-    gate_cobweb = Image.open(SOURCES["gate_cobweb"])
-    save_alpha_crop(gate_cobweb, (0, 0, gate_cobweb.width // 2, gate_cobweb.height), OUT / "occluders" / "gate_front.png", (280, 360))
-    cobweb = alpha_green_partial(gate_cobweb.crop((gate_cobweb.width // 2, 0, gate_cobweb.width, gate_cobweb.height)))
+    occluders = Image.open(SOURCES["occluder_set"])
+    third = occluders.width // 3
+    save_alpha_crop(occluders, (0, 0, third, occluders.height), OUT / "occluders" / "desk_front.png", (465, 255))
+    save_alpha_crop(occluders, (third, 0, third * 2, occluders.height), OUT / "occluders" / "gate_front.png", (285, 350))
+    cobweb = alpha_green_partial(occluders.crop((third * 2 + 110, 0, occluders.width, occluders.height)))
     cobweb = crop_alpha(cobweb)
     cobweb = resize_fit(cobweb, 340, 360)
     cobweb.save(OUT / "cobweb.png")
+    write_shadow_sprite(OUT / "fx" / "soft_oval_shadow.png")
 
     button = Image.open(SOURCES["button"])
     for index, name in enumerate(["icon", "held", "tossed"]):
