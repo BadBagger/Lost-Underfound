@@ -1,7 +1,7 @@
 {
   "scene": {
     "background": "scene/entry-chamber-bg.png",
-    "foregroundMask": "scene/entry-chamber-foreground-mask.png"
+    "deskForeground": "scene/entry-chamber-desk-foreground.png"
   },
   "characters": {
     "pip": [

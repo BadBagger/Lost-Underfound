@@ -386,12 +386,12 @@ def make_scene_assets() -> None:
             img.convert("RGB").resize((1600, 900), Image.Resampling.LANCZOS).save(scene / "entry-chamber-bg.png")
     else:
         Image.new("RGB", (1600, 900), "#3d2c22").save(scene / "entry-chamber-bg.png")
-    mask = Image.new("RGBA", (1600, 900), (0, 0, 0, 0))
-    d = ImageDraw.Draw(mask)
-    d.rectangle((570, 500, 910, 574), fill=(145, 99, 58, 230))
-    d.rectangle((1210, 455, 1460, 710), fill=(83, 68, 54, 180))
-    d.rectangle((0, 770, 1600, 900), fill=(50, 35, 25, 180))
-    mask.save(scene / "entry-chamber-foreground-mask.png")
+    with Image.open(scene / "entry-chamber-bg.png") as bg:
+        bg_rgba = bg.convert("RGBA")
+        mask = Image.new("RGBA", (1600, 900), (0, 0, 0, 0))
+        desk_box = (485, 520, 920, 640)
+        mask.paste(bg_rgba.crop(desk_box), desk_box)
+        mask.save(scene / "entry-chamber-desk-foreground.png")
 
 
 def make_visual_credits() -> None:
@@ -425,7 +425,7 @@ def make_manifest() -> None:
         {
             "scene": {
                 "background": "scene/entry-chamber-bg.png",
-                "foregroundMask": "scene/entry-chamber-foreground-mask.png",
+                "deskForeground": "scene/entry-chamber-desk-foreground.png",
             },
             "characters": {
                 "pip": ["walk", "idle", "dust-reach", "toll-paid"],

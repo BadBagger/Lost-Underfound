@@ -37,6 +37,7 @@ const byId = (id: string): DialogueLine => {
 const assets = {
   scene: {
     bg: new URL("../art/act01-production/scene/entry-chamber-bg.png", import.meta.url).href,
+    deskForeground: new URL("../art/act01-production/scene/entry-chamber-desk-foreground.png", import.meta.url).href,
   },
   pipWalk: [
     "pip_walk_01.png",
@@ -86,14 +87,14 @@ const assets = {
 };
 
 const hotspots: Record<HotspotId, { label: string; x: number; y: number; w: number; h: number }> = {
-  "couch-ceiling": { label: "Couch-Bottom Ceiling", x: 12, y: 4, w: 76, h: 20 },
-  "dust-clump": { label: "Dust Clump", x: 7, y: 69, w: 18, h: 14 },
-  "cubby-wall": { label: "Lost & Found Cubby Wall", x: 7, y: 25, w: 25, h: 29 },
-  "sign-in-log": { label: "Sign-In Log", x: 34, y: 54, w: 15, h: 10 },
-  "popcorn-boulder": { label: "Popcorn Kernel Boulder", x: 67, y: 69, w: 18, h: 14 },
-  "cobweb-curtain": { label: "Cobweb Curtain", x: 82, y: 28, w: 13, h: 30 },
-  "bramble-desk": { label: "Bramble's Desk", x: 36, y: 34, w: 24, h: 23 },
-  "toll-gate": { label: "The Grate / Old Bottlecap", x: 72, y: 39, w: 24, h: 25 },
+  "couch-ceiling": { label: "Couch-Bottom Ceiling", x: 12, y: 4, w: 76, h: 17 },
+  "dust-clump": { label: "Dust Clump", x: 2, y: 68, w: 11, h: 12 },
+  "cubby-wall": { label: "Lost & Found Cubby Wall", x: 0, y: 20, w: 20, h: 48 },
+  "sign-in-log": { label: "Sign-In Log", x: 36, y: 48, w: 16, h: 9 },
+  "popcorn-boulder": { label: "Popcorn Kernel Boulder", x: 79, y: 57, w: 13, h: 21 },
+  "cobweb-curtain": { label: "Cobweb Curtain", x: 91, y: 32, w: 8, h: 30 },
+  "bramble-desk": { label: "Bramble's Desk", x: 35, y: 43, w: 24, h: 18 },
+  "toll-gate": { label: "The Grate / Old Bottlecap", x: 69, y: 31, w: 21, h: 39 },
 };
 
 const state = {
@@ -379,14 +380,15 @@ const render = () => {
       <section class="stage ${state.current ? "dialogue-open" : ""}" aria-label="Underneath entry chamber">
         <img class="scene-bg" src="${assets.scene.bg}" alt="" />
         <img class="prop dust-prop" src="${dustFrame}" alt="" />
-        <img class="prop grate-prop" src="${grateFrame}" alt="" />
-        <img class="actor pip" src="${pipFrame}" alt="Pip" />
         <div class="bramble-rig">
           <img class="actor bramble body" src="${frameAt(brambleFrames, 220)}" alt="Bramble" />
         </div>
+        <img class="scene-foreground desk-foreground" src="${assets.scene.deskForeground}" alt="" />
         <div class="bottlecap-rig">
           <img class="actor bottlecap body" src="${bottlecapFrame}" alt="Old Bottlecap" />
         </div>
+        ${state.flags.gateOpen || state.action?.type === "toll-paid" ? `<img class="prop grate-prop" src="${grateFrame}" alt="" />` : ""}
+        <img class="actor pip" src="${pipFrame}" alt="Pip" />
         ${
           state.scuttleDash
             ? `<img class="actor scuttle dash" src="${frameAt(assets.scuttleDash, 100)}" alt="Scuttle" />`
@@ -398,7 +400,7 @@ const render = () => {
               `<button class="hotspot" style="left:${h.x}%;top:${h.y}%;width:${h.w}%;height:${h.h}%;" data-hotspot="${id}" type="button"><span>${h.label}</span></button>`,
           )
           .join("")}
-        <button class="exit" type="button">To Underneath</button>
+        ${state.flags.gateOpen ? `<button class="exit" type="button">To Underneath</button>` : ""}
         ${bubble}
         <div class="topics"></div>
       </section>
