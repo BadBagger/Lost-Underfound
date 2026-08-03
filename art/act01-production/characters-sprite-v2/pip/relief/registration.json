@@ -1,0 +1,58 @@
+{
+  "sheet": "pip-relief",
+  "actor_type": "walk-plane",
+  "canvas": {
+    "width": 320,
+    "height": 360
+  },
+  "anchor_tolerance_px": 1,
+  "frames": [
+    {
+      "file": "pip_relief_01.png",
+      "anchor": [
+        160,
+        300
+      ],
+      "role": "tense",
+      "canonical": true,
+      "scale_reference": [
+        160,
+        80
+      ]
+    },
+    {
+      "file": "pip_relief_02.png",
+      "anchor": [
+        160,
+        300
+      ],
+      "role": "realization"
+    },
+    {
+      "file": "pip_relief_03.png",
+      "anchor": [
+        160,
+        300
+      ],
+      "role": "exhale"
+    },
+    {
+      "file": "pip_relief_04.png",
+      "anchor": [
+        160,
+        300
+      ],
+      "role": "bounce"
+    },
+    {
+      "file": "pip_relief_05.png",
+      "anchor": [
+        160,
+        300
+      ],
+      "role": "grin-settle"
+    }
+  ],
+  "approval_state": "concept-grid-import-production-pass",
+  "identity_source": "art/concept-sheets/act01-interactions/pip-handoff-old-bottlecap-36-grid.png"
+}

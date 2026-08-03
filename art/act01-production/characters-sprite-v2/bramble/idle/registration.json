@@ -1,0 +1,66 @@
+{
+  "sheet": "bramble-idle",
+  "actor_type": "furniture-anchored",
+  "canvas": {
+    "width": 320,
+    "height": 260
+  },
+  "anchor_tolerance_px": 1,
+  "frames": [
+    {
+      "file": "bramble_idle_01.png",
+      "anchor": [
+        160,
+        205
+      ],
+      "role": "idle-neutral",
+      "canonical": true,
+      "scale_reference": [
+        160,
+        18
+      ]
+    },
+    {
+      "file": "bramble_idle_02.png",
+      "anchor": [
+        160,
+        205
+      ],
+      "role": "talk-open"
+    },
+    {
+      "file": "bramble_idle_03.png",
+      "anchor": [
+        160,
+        205
+      ],
+      "role": "talk-closed"
+    },
+    {
+      "file": "bramble_idle_04.png",
+      "anchor": [
+        160,
+        205
+      ],
+      "role": "inspect"
+    },
+    {
+      "file": "bramble_idle_05.png",
+      "anchor": [
+        160,
+        205
+      ],
+      "role": "handoff"
+    },
+    {
+      "file": "bramble_idle_06.png",
+      "anchor": [
+        160,
+        205
+      ],
+      "role": "turnaround"
+    }
+  ],
+  "approval_state": "concept-grid-import-production-pass",
+  "identity_source": "art/act01-production/source/generated-sprite-strips/bramble-clean-actor-strip.png"
+}

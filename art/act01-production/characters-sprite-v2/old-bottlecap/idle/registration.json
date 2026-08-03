@@ -1,0 +1,82 @@
+{
+  "sheet": "old-bottlecap-idle",
+  "actor_type": "furniture-anchored",
+  "canvas": {
+    "width": 320,
+    "height": 260
+  },
+  "anchor_tolerance_px": 1,
+  "frames": [
+    {
+      "file": "old_bottlecap_idle_01.png",
+      "anchor": [
+        160,
+        210
+      ],
+      "role": "neutral-heavy",
+      "canonical": true,
+      "scale_reference": [
+        160,
+        78
+      ]
+    },
+    {
+      "file": "old_bottlecap_idle_02.png",
+      "anchor": [
+        160,
+        210
+      ],
+      "role": "slow-rock"
+    },
+    {
+      "file": "old_bottlecap_idle_03.png",
+      "anchor": [
+        160,
+        210
+      ],
+      "role": "blink"
+    },
+    {
+      "file": "old_bottlecap_idle_04.png",
+      "anchor": [
+        160,
+        210
+      ],
+      "role": "eye-shift"
+    },
+    {
+      "file": "old_bottlecap_idle_05.png",
+      "anchor": [
+        160,
+        210
+      ],
+      "role": "judgment"
+    },
+    {
+      "file": "old_bottlecap_idle_06.png",
+      "anchor": [
+        160,
+        210
+      ],
+      "role": "tilt"
+    },
+    {
+      "file": "old_bottlecap_idle_07.png",
+      "anchor": [
+        160,
+        210
+      ],
+      "role": "breath-out"
+    },
+    {
+      "file": "old_bottlecap_idle_08.png",
+      "anchor": [
+        160,
+        210
+      ],
+      "role": "return-neutral"
+    }
+  ],
+  "approval_state": "concept-grid-import-production-pass",
+  "identity_source": "art/concept-sheets/act01-idle-72/old-bottlecap-idle-72-grid.png"
+}

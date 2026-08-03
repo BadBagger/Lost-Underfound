@@ -1,0 +1,58 @@
+{
+  "sheet": "scuttle-dash",
+  "actor_type": "walk-plane",
+  "canvas": {
+    "width": 180,
+    "height": 160
+  },
+  "anchor_tolerance_px": 1,
+  "frames": [
+    {
+      "file": "scuttle_dash_01.png",
+      "anchor": [
+        90,
+        120
+      ],
+      "role": "ready",
+      "canonical": true,
+      "scale_reference": [
+        90,
+        43
+      ]
+    },
+    {
+      "file": "scuttle_dash_02.png",
+      "anchor": [
+        90,
+        120
+      ],
+      "role": "launch"
+    },
+    {
+      "file": "scuttle_dash_03.png",
+      "anchor": [
+        90,
+        120
+      ],
+      "role": "smear-roll"
+    },
+    {
+      "file": "scuttle_dash_04.png",
+      "anchor": [
+        90,
+        120
+      ],
+      "role": "landing"
+    },
+    {
+      "file": "scuttle_dash_05.png",
+      "anchor": [
+        90,
+        120
+      ],
+      "role": "skitter-off"
+    }
+  ],
+  "approval_state": "concept-grid-import-production-pass",
+  "identity_source": "art/concept-sheets/act01-idle-72/scuttle-idle-72-grid.png"
+}
