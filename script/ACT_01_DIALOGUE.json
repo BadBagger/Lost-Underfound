@@ -1,0 +1,454 @@
+{
+  "act": 1,
+  "title": "The Crack Under the Couch",
+  "voice_map": {
+    "PIP": "Jessica - Playful, Bright, Warm (cgSgspJ2msm6clMCkdW9)",
+    "BRAMBLE": "Alice - Clear, Engaging Educator (Xb7hH8MSUJpSbSDYk0k2)",
+    "OLD_BOTTLECAP": "Bill - Wise, Mature, Balanced (pqHfZKP75CvOlQylNhV4)",
+    "SCUTTLE": "Liam - Energetic, Social Media Creator (TX3LPaxmHKxFdv7VOQHJ)"
+  },
+  "notes": "Per-line dialogue/timing manifest for Act 1. Voice is ElevenLabs TTS (eleven_multilingual_v2), generated on the FREE tier -- non-commercial, requires ElevenLabs attribution, NOT cleared to ship as-is (see project README). 45 of 49 lines are voiced -- the free-tier monthly quota ran out mid-batch. The 4 unvoiced lines are the generic fallback/transition lines (act01-046 through act01-049: use-item-on-scenery, examine-self, try-exit-lobby, and the Act 1->2 transition line) -- least critical to the core playable path (location, all hotspots, full Bramble tree, the toll-gate puzzle, and idle re-engagement are all voiced). Regenerate the remaining 4 once quota allows, same line_ids, no code changes needed.",
+  "lines": [
+    {
+      "line_id": "act01-001-pip-cold-open-landing",
+      "speaker": "PIP",
+      "context": "Sec 0, Cold Open",
+      "text": "Whoa\u2014 okay. Okay! That is a lot of down there is now up there. Or, I'm just really small. One of those.",
+      "audio_filename": "public/audio/voice/act-01/act01-001-pip-cold-open-landing.ogg",
+      "duration_s": 10.454,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act01-002-pip-cold-open-goal",
+      "speaker": "PIP",
+      "context": "Sec 0, Cold Open",
+      "text": "Right. Marble. Find marble. Then never mention any of this to anyone, ever.",
+      "audio_filename": "public/audio/voice/act-01/act01-002-pip-cold-open-goal.ogg",
+      "duration_s": 5.126,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act01-003-pip-ceiling-examine",
+      "speaker": "PIP",
+      "context": "Sec 1, Couch-Bottom Ceiling / examine",
+      "text": "The underside of the couch. Staples, a tag that says 'DO NOT REMOVE UNDER PENALTY OF LAW,' and something that might be a Cheeto from a previous administration.",
+      "audio_filename": "public/audio/voice/act-01/act01-003-pip-ceiling-examine.ogg",
+      "duration_s": 8.6,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act01-004-pip-dustclump-examine",
+      "speaker": "PIP",
+      "context": "Sec 1, Dust Clump / examine 1st",
+      "text": "A dust clump. The good kind. The kind that's hiding something.",
+      "audio_filename": "public/audio/voice/act-01/act01-004-pip-dustclump-examine.ogg",
+      "duration_s": 4.77,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act01-005-pip-dustclump-search-success",
+      "speaker": "PIP",
+      "context": "Sec 1, Dust Clump / search, reveals button",
+      "text": "Ooh, a button! Bet that's worth something down here.",
+      "audio_filename": "public/audio/voice/act-01/act01-005-pip-dustclump-search-success.ogg",
+      "duration_s": 2.932,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act01-006-pip-dustclump-search-again",
+      "speaker": "PIP",
+      "context": "Sec 1, Dust Clump / search after button taken",
+      "text": "Just dust now. Respectfully, dust.",
+      "audio_filename": "public/audio/voice/act-01/act01-006-pip-dustclump-search-again.ogg",
+      "duration_s": 2.655,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act01-007-pip-cubbywall-examine-1st",
+      "speaker": "PIP",
+      "context": "Sec 1, Cubby Wall / examine 1st",
+      "text": "A whole wall of cubbies. The Lost and Underfound, official archive.",
+      "audio_filename": "public/audio/voice/act-01/act01-007-pip-cubbywall-examine-1st.ogg",
+      "duration_s": 3.807,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act01-008-pip-cubbywall-rotate-1",
+      "speaker": "PIP",
+      "context": "Sec 1, Cubby Wall / flavor rotate 1",
+      "text": "Cubby four: one earring, shaped like a question mark. Still waiting on its pair.",
+      "audio_filename": "public/audio/voice/act-01/act01-008-pip-cubbywall-rotate-1.ogg",
+      "duration_s": 4.626,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act01-009-pip-cubbywall-rotate-2",
+      "speaker": "PIP",
+      "context": "Sec 1, Cubby Wall / flavor rotate 2",
+      "text": "Cubby seven: a dead watch battery, labeled 'MIGHT STILL WORK.' It's been three years.",
+      "audio_filename": "public/audio/voice/act-01/act01-009-pip-cubbywall-rotate-2.ogg",
+      "duration_s": 5.269,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act01-010-pip-cubbywall-rotate-3",
+      "speaker": "PIP",
+      "context": "Sec 1, Cubby Wall / flavor rotate 3",
+      "text": "Cubby twelve: a single Lego. The most dangerous object in this entire building, respected accordingly.",
+      "audio_filename": "public/audio/voice/act-01/act01-010-pip-cubbywall-rotate-3.ogg",
+      "duration_s": 6.123,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act01-011-pip-signinlog-examine",
+      "speaker": "PIP",
+      "context": "Sec 1, Sign-In Log / examine (foreshadowing, no mechanic yet)",
+      "text": "A sign-in log. Everyone who's come through today... huh. Somebody signed in carrying something 'round and shiny.' That's not nothing.",
+      "audio_filename": "public/audio/voice/act-01/act01-011-pip-signinlog-examine.ogg",
+      "duration_s": 9.069,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act01-012-pip-popcorn-examine",
+      "speaker": "PIP",
+      "context": "Sec 1, Popcorn Kernel Boulder / examine",
+      "text": "A popcorn kernel. The size of my head. This explains so much about Tuesdays in this house.",
+      "audio_filename": "public/audio/voice/act-01/act01-012-pip-popcorn-examine.ogg",
+      "duration_s": 6.432,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act01-013-pip-popcorn-use-fail",
+      "speaker": "PIP",
+      "context": "Sec 1, Popcorn Kernel Boulder / use, permanent flavor fail",
+      "text": "Nope. Not budging. I respect its commitment.",
+      "audio_filename": "public/audio/voice/act-01/act01-013-pip-popcorn-use-fail.ogg",
+      "duration_s": 2.53,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act01-014-pip-cobweb-examine",
+      "speaker": "PIP",
+      "context": "Sec 1, Cobweb Curtain / examine",
+      "text": "A cobweb curtain, and a tunnel behind it. Tiny tunnel. Extremely not-Pip-sized tunnel.",
+      "audio_filename": "public/audio/voice/act-01/act01-014-pip-cobweb-examine.ogg",
+      "duration_s": 5.669,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act01-015-scuttle-cameo-bark",
+      "speaker": "SCUTTLE",
+      "context": "Sec 1, Cobweb Curtain / Scuttle cameo, non-interactive, plays once",
+      "text": "'Scuse! Coming through! Delivery! No time, no time\u2014",
+      "audio_filename": "public/audio/voice/act-01/act01-015-scuttle-cameo-bark.ogg",
+      "duration_s": 3.124,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act01-016-pip-cobweb-reaction",
+      "speaker": "PIP",
+      "context": "Sec 1, Cobweb Curtain / Pip reaction to Scuttle",
+      "text": "...okay then.",
+      "audio_filename": "public/audio/voice/act-01/act01-016-pip-cobweb-reaction.ogg",
+      "duration_s": 0.44,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act01-017-bramble-greeting",
+      "speaker": "BRAMBLE",
+      "context": "Sec 2, Greeting (auto, first contact)",
+      "text": "Oh! A visitor. A big one. Well, big for here. Do you have an appointment, a claim ticket, or a very good reason?",
+      "audio_filename": "public/audio/voice/act-01/act01-017-bramble-greeting.ogg",
+      "duration_s": 7.508,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act01-018-pip-greeting-response",
+      "speaker": "PIP",
+      "context": "Sec 2, Greeting response",
+      "text": "None of those. I'm looking for a marble. It rolled under here like ten minutes ago.",
+      "audio_filename": "public/audio/voice/act-01/act01-018-pip-greeting-response.ogg",
+      "duration_s": 4.52,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act01-019-bramble-marble-common",
+      "speaker": "BRAMBLE",
+      "context": "Sec 2, Greeting, part 1",
+      "text": "A marble! Round, shiny, catastrophically easy to lose. Very common. Very popular around here, actually.",
+      "audio_filename": "public/audio/voice/act-01/act01-019-bramble-marble-common.ogg",
+      "duration_s": 7.986,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act01-020-pip-popular-how",
+      "speaker": "PIP",
+      "context": "Sec 2, Greeting response 2",
+      "text": "...popular how?",
+      "audio_filename": "public/audio/voice/act-01/act01-020-pip-popular-how.ogg",
+      "duration_s": 0.805,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act01-021-bramble-deflect",
+      "speaker": "BRAMBLE",
+      "context": "Sec 2, Greeting close",
+      "text": "Nothing! Nothing to worry about! Let's get you processed.",
+      "audio_filename": "public/audio/voice/act-01/act01-021-bramble-deflect.ogg",
+      "duration_s": 2.869,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act01-022-bramble-teach-verbs",
+      "speaker": "BRAMBLE",
+      "context": "Sec 2, Verb tutorial",
+      "text": "Now, you'll want to look at things. Closely. And touch things, when appropriate. And occasionally put two things together, when the universe allows it.",
+      "audio_filename": "public/audio/voice/act-01/act01-022-bramble-teach-verbs.ogg",
+      "duration_s": 8.96,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act01-023-pip-already-do-that",
+      "speaker": "PIP",
+      "context": "Sec 2, Verb tutorial response",
+      "text": "That's just... how I already do things.",
+      "audio_filename": "public/audio/voice/act-01/act01-023-pip-already-do-that.ogg",
+      "duration_s": 2.008,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act01-024-bramble-natural-claimant",
+      "speaker": "BRAMBLE",
+      "context": "Sec 2, Verb tutorial close",
+      "text": "Wonderful! You're a natural claimant.",
+      "audio_filename": "public/audio/voice/act-01/act01-024-bramble-natural-claimant.ogg",
+      "duration_s": 2.148,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act01-025-bramble-quest-lead",
+      "speaker": "BRAMBLE",
+      "context": "Sec 2, Quest lead, part 1",
+      "text": "Your marble likely rolled through the Grate. Everything shiny does, eventually.",
+      "audio_filename": "public/audio/voice/act-01/act01-025-bramble-quest-lead.ogg",
+      "duration_s": 4.603,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act01-026-pip-quest-lead-interrupt",
+      "speaker": "PIP",
+      "context": "Sec 2, Quest lead, part 2",
+      "text": "Great! I'll just\u2014",
+      "audio_filename": "public/audio/voice/act-01/act01-026-pip-quest-lead-interrupt.ogg",
+      "duration_s": 0.755,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act01-027-bramble-quest-lead-gate",
+      "speaker": "BRAMBLE",
+      "context": "Sec 2, Quest lead, part 3",
+      "text": "The Grate is guarded. By Old Bottlecap. Who does not open for just anyone.",
+      "audio_filename": "public/audio/voice/act-01/act01-027-bramble-quest-lead-gate.ogg",
+      "duration_s": 4.778,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act01-028-pip-what-does-he-want",
+      "speaker": "PIP",
+      "context": "Sec 2, Quest lead, part 4",
+      "text": "What does he open for?",
+      "audio_filename": "public/audio/voice/act-01/act01-028-pip-what-does-he-want.ogg",
+      "duration_s": 0.893,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act01-029-bramble-toll",
+      "speaker": "BRAMBLE",
+      "context": "Sec 2, Quest lead, part 5",
+      "text": "A toll. He's very serious about the toll. It's the only thing he's serious about, other than being disappointed in everyone.",
+      "audio_filename": "public/audio/voice/act-01/act01-029-bramble-toll.ogg",
+      "duration_s": 7.311,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act01-030-pip-any-tips",
+      "speaker": "PIP",
+      "context": "Sec 2, Quest lead, part 6",
+      "text": "Any tips on what the toll actually is?",
+      "audio_filename": "public/audio/voice/act-01/act01-030-pip-any-tips.ogg",
+      "duration_s": 1.746,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act01-031-bramble-toll-hint",
+      "speaker": "BRAMBLE",
+      "context": "Sec 2, Quest lead close (puzzle hint)",
+      "text": "Something small. Something round. Something you'll probably find lying around, if you look in the sort of place nobody looks.",
+      "audio_filename": "public/audio/voice/act-01/act01-031-bramble-toll-hint.ogg",
+      "duration_s": 7.066,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act01-032-bramble-about-herself",
+      "speaker": "BRAMBLE",
+      "context": "Sec 2, Topic: about herself",
+      "text": "Me? Self-appointed Lost and Underfound Clerk, three years running. Someone has to file things. I have chosen to be that someone.",
+      "audio_filename": "public/audio/voice/act-01/act01-032-bramble-about-herself.ogg",
+      "duration_s": 7.666,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act01-033-pip-nobody-made-you",
+      "speaker": "PIP",
+      "context": "Sec 2, Topic: about herself, response",
+      "text": "Nobody made you do this?",
+      "audio_filename": "public/audio/voice/act-01/act01-033-pip-nobody-made-you.ogg",
+      "duration_s": 1.137,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act01-034-bramble-the-tragedy",
+      "speaker": "BRAMBLE",
+      "context": "Sec 2, Topic: about herself, close",
+      "text": "Nobody had to. That's the tragedy.",
+      "audio_filename": "public/audio/voice/act-01/act01-034-bramble-the-tragedy.ogg",
+      "duration_s": 1.922,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act01-035-bramble-about-bottlecap",
+      "speaker": "BRAMBLE",
+      "context": "Sec 2, Topic: about Old Bottlecap",
+      "text": "Old Bottlecap predates the filing system. Predates me, probably. Predates the couch, if you ask him, though I wouldn't recommend asking him things.",
+      "audio_filename": "public/audio/voice/act-01/act01-035-bramble-about-bottlecap.ogg",
+      "duration_s": 8.999,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act01-036-bramble-wrong-action",
+      "speaker": "BRAMBLE",
+      "context": "Sec 2, Wrong-action fallback",
+      "text": "That's not really a form, is it. That's just, a thing you're holding at me.",
+      "audio_filename": "public/audio/voice/act-01/act01-036-bramble-wrong-action.ogg",
+      "duration_s": 3.783,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act01-037-pip-gate-examine",
+      "speaker": "PIP",
+      "context": "Sec 3, Grate / examine",
+      "text": "The Grate. And someone very old, very round, and very unimpressed, sitting right in front of it.",
+      "audio_filename": "public/audio/voice/act-01/act01-037-pip-gate-examine.ogg",
+      "duration_s": 6.196,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act01-038-bottlecap-no-toll",
+      "speaker": "OLD_BOTTLECAP",
+      "context": "Sec 3, Use wrong item / nothing on gate, fail",
+      "text": "No toll, no through. Come back when you've got something worth my time.",
+      "audio_filename": "public/audio/voice/act-01/act01-038-bottlecap-no-toll.ogg",
+      "duration_s": 4.746,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act01-039-bottlecap-toll-accepted",
+      "speaker": "OLD_BOTTLECAP",
+      "context": "Sec 3, Use Button on gate, success part 1",
+      "text": "...a button. Acceptable. Barely.",
+      "audio_filename": "public/audio/voice/act-01/act01-039-bottlecap-toll-accepted.ogg",
+      "duration_s": 2.378,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act01-040-bottlecap-toll-close",
+      "speaker": "OLD_BOTTLECAP",
+      "context": "Sec 3, Use Button on gate, success part 2",
+      "text": "Fine. Go on. Try not to get lost. It'd be embarrassing for both of us.",
+      "audio_filename": "public/audio/voice/act-01/act01-040-bottlecap-toll-close.ogg",
+      "duration_s": 5.54,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act01-041-pip-lost-and-underfound-joke",
+      "speaker": "PIP",
+      "context": "Sec 3, Success close, part 1",
+      "text": "It's the Lost and Underfound, isn't it, that's kind of the whole\u2014",
+      "audio_filename": "public/audio/voice/act-01/act01-041-pip-lost-and-underfound-joke.ogg",
+      "duration_s": 2.853,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act01-042-bottlecap-go",
+      "speaker": "OLD_BOTTLECAP",
+      "context": "Sec 3, Success close, part 2",
+      "text": "Go.",
+      "audio_filename": "public/audio/voice/act-01/act01-042-bottlecap-go.ogg",
+      "duration_s": 0.29,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act01-043-pip-gate-reexamine-open",
+      "speaker": "PIP",
+      "context": "Sec 4, Idle / re-examine gate after opened",
+      "text": "Open now. He's still glaring, though. I think that's just his face.",
+      "audio_filename": "public/audio/voice/act-01/act01-043-pip-gate-reexamine-open.ogg",
+      "duration_s": 4.956,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act01-044-pip-return-to-bramble",
+      "speaker": "PIP",
+      "context": "Sec 4, Idle / talk to Bramble post-gate",
+      "text": "Made it past the Grate.",
+      "audio_filename": "public/audio/voice/act-01/act01-044-pip-return-to-bramble.ogg",
+      "duration_s": 0.861,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act01-045-bramble-almost-disappointed",
+      "speaker": "BRAMBLE",
+      "context": "Sec 4, Idle / Bramble reply post-gate",
+      "text": "Already? I'm almost disappointed. I had a whole speech prepared.",
+      "audio_filename": "public/audio/voice/act-01/act01-045-bramble-almost-disappointed.ogg",
+      "duration_s": 4.364,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act01-046-pip-fallback-use-scenery",
+      "speaker": "PIP",
+      "context": "Sec 4, Fallback / use item on scenery",
+      "text": "That's not going to help. Probably. Let's not test it.",
+      "audio_filename": null,
+      "duration_s": null,
+      "voice_engine": null
+    },
+    {
+      "line_id": "act01-047-pip-fallback-examine-self",
+      "speaker": "PIP",
+      "context": "Sec 4, Fallback / examine self",
+      "text": "Same shirt as this morning. Considerably smaller than this morning.",
+      "audio_filename": null,
+      "duration_s": null,
+      "voice_engine": null
+    },
+    {
+      "line_id": "act01-048-pip-fallback-try-exit",
+      "speaker": "PIP",
+      "context": "Sec 4, Fallback / try to leave before gate opened",
+      "text": "Not done here. There's a marble with my name on it. Metaphorically. It's just a marble.",
+      "audio_filename": null,
+      "duration_s": null,
+      "voice_engine": null
+    },
+    {
+      "line_id": "act01-049-pip-transition-out",
+      "speaker": "PIP",
+      "context": "Sec 5, Transition to Act 2",
+      "text": "Okay. Underneath, for real now. Marble, here I come.",
+      "audio_filename": null,
+      "duration_s": null,
+      "voice_engine": null
+    }
+  ]
+}
