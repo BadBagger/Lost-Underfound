@@ -8,6 +8,8 @@ Generated source files:
 
 - `art/act01-production/source/ai-room-source.png` - Act 1 room/background source.
 - `art/act01-production/source/ai-cast-source.png` - Act 1 cast/source style board.
+- `art/act01-production/source/character-reference-sheet.png` - Act 1 character
+  model/reference sheet used for the current normalized sprite pass.
 
 The shipped in-game sprite frames are normalized derivatives with fixed canvases,
 explicit anchors, onion-skin QA output, and contact sheets. They are not accepted as

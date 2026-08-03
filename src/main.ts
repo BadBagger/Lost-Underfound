@@ -38,6 +38,7 @@ const assets = {
   scene: {
     bg: new URL("../art/act01-production/scene/entry-chamber-bg.png", import.meta.url).href,
     deskForeground: new URL("../art/act01-production/scene/entry-chamber-desk-foreground.png", import.meta.url).href,
+    gateForeground: new URL("../art/act01-production/scene/entry-chamber-gate-foreground.png", import.meta.url).href,
   },
   pipWalk: [
     "pip_walk_01.png",
@@ -378,17 +379,18 @@ const render = () => {
         </div>
       </header>
       <section class="stage ${state.current ? "dialogue-open" : ""}" aria-label="Underneath entry chamber">
-        <img class="scene-bg" src="${assets.scene.bg}" alt="" />
-        <img class="prop dust-prop" src="${dustFrame}" alt="" />
-        <div class="bramble-rig">
+        <img class="scene-bg" data-layer="background-plate" src="${assets.scene.bg}" alt="" />
+        <img class="prop dust-prop" data-layer="dust-prop" src="${dustFrame}" alt="" />
+        <div class="bramble-rig" data-layer="bramble-body">
           <img class="actor bramble body" src="${frameAt(brambleFrames, 220)}" alt="Bramble" />
         </div>
-        <img class="scene-foreground desk-foreground" src="${assets.scene.deskForeground}" alt="" />
-        <div class="bottlecap-rig">
+        <img class="scene-foreground desk-foreground" data-layer="desk-foreground" src="${assets.scene.deskForeground}" alt="" />
+        <img class="scene-foreground gate-foreground" data-layer="gate-foreground" src="${assets.scene.gateForeground}" alt="" />
+        <div class="bottlecap-rig" data-layer="old-bottlecap-body">
           <img class="actor bottlecap body" src="${bottlecapFrame}" alt="Old Bottlecap" />
         </div>
-        ${state.flags.gateOpen || state.action?.type === "toll-paid" ? `<img class="prop grate-prop" src="${grateFrame}" alt="" />` : ""}
-        <img class="actor pip" src="${pipFrame}" alt="Pip" />
+        ${state.flags.gateOpen || state.action?.type === "toll-paid" ? `<img class="prop grate-prop" data-layer="gate-animation" src="${grateFrame}" alt="" />` : ""}
+        <img class="actor pip" data-layer="pip-body" src="${pipFrame}" alt="Pip" />
         ${
           state.scuttleDash
             ? `<img class="actor scuttle dash" src="${frameAt(assets.scuttleDash, 100)}" alt="Scuttle" />`

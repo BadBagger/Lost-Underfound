@@ -10,8 +10,19 @@ from PIL import Image, ImageDraw, ImageFont
 ROOT = Path(__file__).resolve().parents[1]
 ART = ROOT / "art"
 OUT = ART / "act01-production"
+REFERENCE_SHEET = OUT / "source" / "character-reference-sheet.png"
 
 PX_PER_UNIT = 220
+REFERENCE_CROPS = {
+    "pip-front": (118, 41, 246, 321),
+    "pip-walk": (1123, 61, 1283, 315),
+    "pip-run": (1305, 117, 1493, 322),
+    "bramble-idle": (1043, 390, 1219, 545),
+    "bramble-talk": (1258, 377, 1460, 544),
+    "old-bottlecap": (71, 604, 295, 777),
+    "old-bottlecap-open": (997, 571, 1216, 782),
+    "scuttle": (101, 805, 232, 967),
+}
 
 
 def ensure(path: Path) -> None:
@@ -53,6 +64,74 @@ def polygon(draw: ImageDraw.ImageDraw, points: list[tuple[int, int]], fill: str,
 def save_sheet_frame(sheet: Path, name: str, img: Image.Image, size: tuple[int, int]) -> None:
     ensure(sheet)
     down(img, size).save(sheet / name)
+
+
+def reference_cutout(name: str) -> Image.Image | None:
+    if not REFERENCE_SHEET.exists():
+        return None
+    with Image.open(REFERENCE_SHEET) as source:
+        crop = source.convert("RGBA").crop(REFERENCE_CROPS[name])
+    alpha = crop.getchannel("A")
+    pixels = crop.load()
+    width, height = crop.size
+    background: set[tuple[int, int]] = set()
+    stack: list[tuple[int, int]] = []
+
+    def is_paper(x: int, y: int) -> bool:
+        r, g, b, a = pixels[x, y]
+        return a > 0 and r > 224 and g > 214 and b > 196
+
+    for x in range(width):
+        if is_paper(x, 0):
+            stack.append((x, 0))
+        if is_paper(x, height - 1):
+            stack.append((x, height - 1))
+    for y in range(height):
+        if is_paper(0, y):
+            stack.append((0, y))
+        if is_paper(width - 1, y):
+            stack.append((width - 1, y))
+
+    while stack:
+        x, y = stack.pop()
+        if (x, y) in background or not is_paper(x, y):
+            continue
+        background.add((x, y))
+        for nx, ny in ((x + 1, y), (x - 1, y), (x, y + 1), (x, y - 1)):
+            if 0 <= nx < width and 0 <= ny < height and (nx, ny) not in background:
+                stack.append((nx, ny))
+
+    matte = Image.new("L", crop.size, 255)
+    matte_pixels = matte.load()
+    for x, y in background:
+        matte_pixels[x, y] = 0
+    crop.putalpha(Image.composite(alpha, matte, matte))
+    bbox = crop.getbbox()
+    if not bbox:
+        return None
+    return crop.crop(bbox)
+
+
+def paste_registered_cutout(
+    canvas_img: Image.Image,
+    cutout: Image.Image,
+    anchor: tuple[int, int],
+    target_height: int,
+    x_offset: int = 0,
+    y_offset: int = 0,
+    mirror: bool = False,
+    tilt_degrees: float = 0,
+    render_scale: int = 3,
+) -> None:
+    sprite = cutout.transpose(Image.Transpose.FLIP_LEFT_RIGHT) if mirror else cutout.copy()
+    scaled_height = target_height * render_scale
+    scale = scaled_height / sprite.height
+    sprite = sprite.resize((max(1, round(sprite.width * scale)), scaled_height), Image.Resampling.LANCZOS)
+    if tilt_degrees:
+        sprite = sprite.rotate(tilt_degrees, expand=True, resample=Image.Resampling.BICUBIC)
+    x = anchor[0] * render_scale - sprite.width // 2 + x_offset * render_scale
+    y = anchor[1] * render_scale - sprite.height + y_offset * render_scale
+    canvas_img.alpha_composite(sprite, (x, y))
 
 
 def write_registration(sheet: Path, sheet_name: str, actor_type: str, size: tuple[int, int], frames: list[dict]) -> None:
@@ -194,7 +273,20 @@ def make_pip_sheets() -> None:
         frames = []
         for idx, (file, role, pose) in enumerate(roles):
             img, d = canvas(size)
-            draw_pip(d, (160, 300), 80, pose)
+            if REFERENCE_SHEET.exists():
+                cutout_name = "pip-front" if action in ("idle", "dust-reach", "toll-paid") else "pip-walk"
+                if action == "toll-paid" and idx == 1:
+                    cutout_name = "pip-run"
+                cutout = reference_cutout(cutout_name)
+                if cutout:
+                    bob = {"idle-02": -3, "walk-left-recoil-down": 4, "walk-left-passing": 2, "walk-left-high": -4, "walk-right-recoil-down": 4, "walk-right-passing": 2, "walk-right-high": -4, "found-pop": -8, "cheer": -10}.get(pose, 0)
+                    mirror = pose in ("walk-right-contact", "walk-right-recoil-down", "walk-right-passing", "walk-right-high")
+                    tilt = {"crouch-anticipate": -4, "crouch-reach": -8, "crouch-contact": -10, "found-pop": 4, "cheer": -3}.get(pose, 0)
+                    paste_registered_cutout(img, cutout, (160, 300), 220, y_offset=bob, mirror=mirror, tilt_degrees=tilt)
+                else:
+                    draw_pip(d, (160, 300), 80, pose)
+            else:
+                draw_pip(d, (160, 300), 80, pose)
             save_sheet_frame(sheet, file, img, size)
             entry = {"file": file, "anchor": [160, 300], "role": role}
             if idx == 0:
@@ -240,7 +332,16 @@ def make_bramble_sheets() -> None:
         frames = []
         for idx, (file, role, pose) in enumerate(roles):
             img, d = canvas(size)
-            draw_bramble(d, (160, 205), 18, pose)
+            if REFERENCE_SHEET.exists():
+                cutout = reference_cutout("bramble-talk" if action == "talk" else "bramble-idle")
+                if cutout:
+                    xoff = {"idle-02": -2, "stamp-up": 2, "stamp-down": 0, "talk-02": 3}.get(pose, 0)
+                    yoff = {"idle-02": 2, "stamp-up": -4, "stamp-down": 2, "talk-02": -2}.get(pose, 0)
+                    paste_registered_cutout(img, cutout, (160, 205), 187, x_offset=xoff, y_offset=yoff, tilt_degrees={"stamp-up": -2, "stamp-down": 2}.get(pose, 0))
+                else:
+                    draw_bramble(d, (160, 205), 18, pose)
+            else:
+                draw_bramble(d, (160, 205), 18, pose)
             save_sheet_frame(sheet, file, img, size)
             entry = {"file": file, "anchor": [160, 205], "role": role}
             if idx == 0:
@@ -285,7 +386,16 @@ def make_bottlecap_sheets() -> None:
         frames = []
         for idx, (file, role, pose) in enumerate(roles):
             img, d = canvas(size)
-            draw_bottlecap(d, (160, 210), 78, pose)
+            if REFERENCE_SHEET.exists():
+                cutout = reference_cutout("old-bottlecap-open" if action == "toll-paid" and idx == 1 else "old-bottlecap")
+                if cutout:
+                    tilt = {"idle-02": -2, "idle-04": 2, "refuse-left": -5, "refuse-right": 5, "approve": 2}.get(pose, 0)
+                    yoff = -4 if pose == "approve" else 0
+                    paste_registered_cutout(img, cutout, (160, 210), 132, y_offset=yoff, tilt_degrees=tilt)
+                else:
+                    draw_bottlecap(d, (160, 210), 78, pose)
+            else:
+                draw_bottlecap(d, (160, 210), 78, pose)
             save_sheet_frame(sheet, file, img, size)
             entry = {"file": file, "anchor": [160, 210], "role": role}
             if idx == 0:
@@ -325,7 +435,14 @@ def make_scuttle_sheets() -> None:
     frames = []
     for idx, (file, role, pose) in enumerate(roles):
         img, d = canvas(size)
-        draw_scuttle(d, (90, 120), 43, pose)
+        if REFERENCE_SHEET.exists() and pose != "smear":
+            cutout = reference_cutout("scuttle")
+            if cutout:
+                paste_registered_cutout(img, cutout, (90, 120), 77, mirror=pose == "land", tilt_degrees=4 if pose == "land" else 0)
+            else:
+                draw_scuttle(d, (90, 120), 43, pose)
+        else:
+            draw_scuttle(d, (90, 120), 43, pose)
         save_sheet_frame(sheet, file, img, size)
         entry = {"file": file, "anchor": [90, 120], "role": role}
         if idx == 0:
@@ -392,6 +509,27 @@ def make_scene_assets() -> None:
         desk_box = (485, 520, 920, 640)
         mask.paste(bg_rgba.crop(desk_box), desk_box)
         mask.save(scene / "entry-chamber-desk-foreground.png")
+        gate_mask = Image.new("RGBA", (1600, 900), (0, 0, 0, 0))
+        gate_box = (1060, 315, 1365, 665)
+        gate_mask.paste(bg_rgba.crop(gate_box), gate_box)
+        gate_mask.save(scene / "entry-chamber-gate-foreground.png")
+    save_json(
+        scene / "layers.json",
+        {
+            "scene": "act01-entry-chamber",
+            "coordinate_space": {"width": 1600, "height": 900},
+            "layers": [
+                {"id": "background-plate", "kind": "background", "asset": "entry-chamber-bg.png", "z": 1},
+                {"id": "dust-prop", "kind": "midground-prop", "slot": "floor-left", "z": 6},
+                {"id": "bramble-body", "kind": "furniture-anchored-actor", "slot": "behind-desk", "z": 8},
+                {"id": "desk-foreground", "kind": "foreground-occluder", "asset": "entry-chamber-desk-foreground.png", "z": 10},
+                {"id": "old-bottlecap-body", "kind": "furniture-anchored-actor", "slot": "at-gate-front", "z": 11},
+                {"id": "gate-foreground", "kind": "foreground-occluder", "asset": "entry-chamber-gate-foreground.png", "z": 11},
+                {"id": "pip-body", "kind": "walk-plane-actor", "slot": "floor", "z": 12},
+                {"id": "hotspot-masks", "kind": "interaction-mask", "source": "src/main.ts", "z": 20}
+            ],
+        },
+    )
 
 
 def make_visual_credits() -> None:
@@ -426,6 +564,8 @@ def make_manifest() -> None:
             "scene": {
                 "background": "scene/entry-chamber-bg.png",
                 "deskForeground": "scene/entry-chamber-desk-foreground.png",
+                "gateForeground": "scene/entry-chamber-gate-foreground.png",
+                "layers": "scene/layers.json",
             },
             "characters": {
                 "pip": ["walk", "idle", "dust-reach", "toll-paid"],

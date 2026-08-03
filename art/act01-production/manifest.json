@@ -1,7 +1,9 @@
 {
   "scene": {
     "background": "scene/entry-chamber-bg.png",
-    "deskForeground": "scene/entry-chamber-desk-foreground.png"
+    "deskForeground": "scene/entry-chamber-desk-foreground.png",
+    "gateForeground": "scene/entry-chamber-gate-foreground.png",
+    "layers": "scene/layers.json"
   },
   "characters": {
     "pip": [

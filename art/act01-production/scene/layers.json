@@ -1,0 +1,57 @@
+{
+  "scene": "act01-entry-chamber",
+  "coordinate_space": {
+    "width": 1600,
+    "height": 900
+  },
+  "layers": [
+    {
+      "id": "background-plate",
+      "kind": "background",
+      "asset": "entry-chamber-bg.png",
+      "z": 1
+    },
+    {
+      "id": "dust-prop",
+      "kind": "midground-prop",
+      "slot": "floor-left",
+      "z": 6
+    },
+    {
+      "id": "bramble-body",
+      "kind": "furniture-anchored-actor",
+      "slot": "behind-desk",
+      "z": 8
+    },
+    {
+      "id": "desk-foreground",
+      "kind": "foreground-occluder",
+      "asset": "entry-chamber-desk-foreground.png",
+      "z": 10
+    },
+    {
+      "id": "old-bottlecap-body",
+      "kind": "furniture-anchored-actor",
+      "slot": "at-gate-front",
+      "z": 11
+    },
+    {
+      "id": "gate-foreground",
+      "kind": "foreground-occluder",
+      "asset": "entry-chamber-gate-foreground.png",
+      "z": 11
+    },
+    {
+      "id": "pip-body",
+      "kind": "walk-plane-actor",
+      "slot": "floor",
+      "z": 12
+    },
+    {
+      "id": "hotspot-masks",
+      "kind": "interaction-mask",
+      "source": "src/main.ts",
+      "z": 20
+    }
+  ]
+}
