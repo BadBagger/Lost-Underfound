@@ -57,16 +57,33 @@ const assets = {
     "pip_walk_09.png",
   ].map((name) => new URL(`../art/act01-production/characters/pip/walk/${name}`, import.meta.url).href),
   pipIdle: ["pip_idle_01.png", "pip_idle_02.png"].map((name) => new URL(`../art/act01-production/characters/pip/idle/${name}`, import.meta.url).href),
-  pipDust: ["pip_dust_01.png", "pip_dust_02.png", "pip_dust_03.png", "pip_dust_04.png"].map(
+  pipDust: [
+    "pip_dust_01.png",
+    "pip_dust_02.png",
+    "pip_dust_03.png",
+    "pip_dust_04.png",
+    "pip_dust_05.png",
+    "pip_dust_06.png",
+    "pip_dust_07.png",
+    "pip_dust_08.png",
+  ].map(
     (name) => new URL(`../art/act01-production/characters/pip/dust-reach/${name}`, import.meta.url).href,
   ),
-  pipToll: ["pip_toll_01.png", "pip_toll_02.png"].map(
+  pipToll: ["pip_toll_01.png", "pip_toll_02.png", "pip_toll_03.png", "pip_toll_04.png", "pip_toll_05.png", "pip_toll_06.png"].map(
     (name) => new URL(`../art/act01-production/characters/pip/toll-paid/${name}`, import.meta.url).href,
   ),
-  brambleIdle: ["bramble_idle_01.png", "bramble_idle_02.png", "bramble_idle_03.png", "bramble_idle_04.png"].map(
+  brambleIdle: [
+    "bramble_idle_01.png",
+    "bramble_idle_02.png",
+    "bramble_idle_03.png",
+    "bramble_idle_04.png",
+    "bramble_idle_05.png",
+    "bramble_idle_06.png",
+    "bramble_idle_07.png",
+  ].map(
     (name) => new URL(`../art/act01-production/characters/bramble/idle/${name}`, import.meta.url).href,
   ),
-  brambleTalk: ["bramble_talk_01.png", "bramble_talk_02.png", "bramble_talk_03.png"].map(
+  brambleTalk: ["bramble_talk_01.png", "bramble_talk_02.png", "bramble_talk_03.png", "bramble_talk_04.png", "bramble_talk_05.png", "bramble_talk_06.png"].map(
     (name) => new URL(`../art/act01-production/characters/bramble/talk/${name}`, import.meta.url).href,
   ),
   bottlecapIdle: [
@@ -75,13 +92,27 @@ const assets = {
     "old_bottlecap_idle_03.png",
     "old_bottlecap_idle_04.png",
   ].map((name) => new URL(`../art/act01-production/characters/old-bottlecap/idle/${name}`, import.meta.url).href),
-  bottlecapRefused: ["old_bottlecap_refuse_01.png", "old_bottlecap_refuse_02.png", "old_bottlecap_refuse_03.png"].map(
+  bottlecapRefused: [
+    "old_bottlecap_refuse_01.png",
+    "old_bottlecap_refuse_02.png",
+    "old_bottlecap_refuse_03.png",
+    "old_bottlecap_refuse_04.png",
+    "old_bottlecap_refuse_05.png",
+  ].map(
     (name) => new URL(`../art/act01-production/characters/old-bottlecap/toll-refused/${name}`, import.meta.url).href,
   ),
-  bottlecapPaid: ["old_bottlecap_paid_01.png", "old_bottlecap_paid_02.png", "old_bottlecap_paid_03.png"].map(
+  bottlecapPaid: [
+    "old_bottlecap_paid_01.png",
+    "old_bottlecap_paid_02.png",
+    "old_bottlecap_paid_03.png",
+    "old_bottlecap_paid_04.png",
+    "old_bottlecap_paid_05.png",
+    "old_bottlecap_paid_06.png",
+    "old_bottlecap_paid_07.png",
+  ].map(
     (name) => new URL(`../art/act01-production/characters/old-bottlecap/toll-paid/${name}`, import.meta.url).href,
   ),
-  scuttleDash: ["scuttle_dash_01.png", "scuttle_dash_02.png", "scuttle_dash_03.png"].map(
+  scuttleDash: ["scuttle_dash_01.png", "scuttle_dash_02.png", "scuttle_dash_03.png", "scuttle_dash_04.png", "scuttle_dash_05.png"].map(
     (name) => new URL(`../art/act01-production/characters/scuttle/dash/${name}`, import.meta.url).href,
   ),
   dustReveal: ["dust_reveal_01.png", "dust_reveal_02.png", "dust_reveal_03.png", "dust_reveal_04.png"].map(
@@ -120,7 +151,8 @@ const state = {
   cubbyIndex: 0,
   queue: [] as DialogueLine[],
   current: null as DialogueLine | null,
-  scuttleDash: false,
+  currentStartedAt: 0,
+  scuttleDash: null as null | { startedAt: number; durationMs: number },
   action: null as null | { type: "found-button" | "toll-refused" | "toll-paid"; startedAt: number; durationMs: number },
 };
 
@@ -137,6 +169,7 @@ const enqueue = (ids: string[]) => {
 
 const advanceDialogue = () => {
   state.current = state.queue.shift() ?? null;
+  state.currentStartedAt = state.current ? Date.now() : 0;
   render();
 };
 
@@ -157,9 +190,46 @@ const actionProgress = (type: NonNullable<typeof state.action>["type"]) => {
   return Math.min(1, Math.max(0, (Date.now() - state.action.startedAt) / state.action.durationMs));
 };
 
+const scuttleProgress = () => {
+  if (!state.scuttleDash) return null;
+  return Math.min(1, Math.max(0, (Date.now() - state.scuttleDash.startedAt) / state.scuttleDash.durationMs));
+};
+
 const frameAt = (frames: string[], speedMs: number) => frames[Math.floor(Date.now() / speedMs) % frames.length];
 
 const frameProgress = (frames: string[], progress: number) => frames[Math.min(frames.length - 1, Math.floor(progress * frames.length))];
+
+const brambleTalkFrame = () => {
+  const elapsed = Date.now() - state.currentStartedAt;
+  const gesture = [0, 1, 2, 3, 4, 5, 4, 3, 1, 0];
+  if (elapsed < gesture.length * 92) return assets.brambleTalk[gesture[Math.floor(elapsed / 92)]];
+  const settle = [4, 5, 4, 0, 5, 4, 0];
+  return assets.brambleTalk[settle[Math.floor((elapsed - gesture.length * 92) / 240) % settle.length]];
+};
+
+const easeOutCubic = (value: number) => 1 - Math.pow(1 - value, 3);
+
+const dustTransform = (progress: number | null) => {
+  if (progress === null) return "";
+  const shake = Math.sin(progress * Math.PI * 8) * (1 - progress);
+  const squash = progress < 0.35 ? 1 + progress * 0.48 : 1.22 - (progress - 0.35) * 0.35;
+  return `style="transform: translate(${shake * 5}%, ${Math.sin(progress * Math.PI * 4) * -5}%) scale(${squash}, ${1 / squash});"`;
+};
+
+const buttonFlightStyle = (progress: number) => {
+  const local = Math.min(1, progress / 0.58);
+  const arc = Math.sin(local * Math.PI);
+  const x = 58 + easeOutCubic(local) * 19;
+  const y = 65 - arc * 12 - local * 6;
+  const opacity = local < 0.08 ? local / 0.08 : local > 0.88 ? (1 - local) / 0.12 : 1;
+  return `style="left:${x}%;top:${y}%;opacity:${Math.max(0, opacity)};transform: translate(-50%, -50%) rotate(${local * 460 - 30}deg) scale(${0.7 + arc * 0.36});"`;
+};
+
+const scuttleStyle = (progress: number) => {
+  const squash = progress < 0.16 ? 1 - progress * 1.6 : progress < 0.62 ? 1.85 - progress * 0.5 : 1 + (1 - progress) * 0.28;
+  const yScale = progress < 0.16 ? 1.2 : progress < 0.62 ? 0.86 : 1;
+  return `style="transform: translateX(${easeOutCubic(progress) * 112}vw) scaleX(${squash}) scaleY(${yScale});"`;
+};
 
 const hasItem = (item: ItemId) => state.inventory.includes(item);
 
@@ -200,11 +270,11 @@ const inspectHotspot = (id: HotspotId) => {
     case "cobweb-curtain":
       if (!state.flags.cobwebCameo) {
         state.flags.cobwebCameo = true;
-        state.scuttleDash = true;
+        state.scuttleDash = { startedAt: Date.now(), durationMs: 1450 };
         window.setTimeout(() => {
-          state.scuttleDash = false;
+          state.scuttleDash = null;
           render();
-        }, 1300);
+        }, 1450);
         speak("act01-014-pip-cobweb-examine", "act01-015-scuttle-cameo-bark", "act01-016-pip-cobweb-reaction");
       } else {
         speak("act01-014-pip-cobweb-examine");
@@ -227,7 +297,7 @@ const useHotspot = (id: HotspotId) => {
     }
     state.flags.dustSearched = true;
     addItem("button");
-    playAction("found-button", 1100);
+    playAction("found-button", 1600);
     speak("act01-005-pip-dustclump-search-success");
     return;
   }
@@ -246,7 +316,7 @@ const useHotspot = (id: HotspotId) => {
     if (state.selectedItem === "button" && hasItem("button")) {
       state.flags.gateOpen = true;
       removeItem("button");
-      playAction("toll-paid", 1700);
+      playAction("toll-paid", 2300);
       speak(
         "act01-039-bottlecap-toll-accepted",
         "act01-040-bottlecap-toll-close",
@@ -257,7 +327,7 @@ const useHotspot = (id: HotspotId) => {
       state.flags.actComplete = true;
       return;
     }
-    playAction("toll-refused", 900);
+    playAction("toll-refused", 1200);
     speak("act01-038-bottlecap-no-toll");
     return;
   }
@@ -337,6 +407,7 @@ const render = () => {
   const dustProgress = actionProgress("found-button");
   const tollRefusedProgress = actionProgress("toll-refused");
   const tollPaidProgress = actionProgress("toll-paid");
+  const currentScuttleProgress = scuttleProgress();
   const pipFrames = dustProgress !== null ? assets.pipDust : tollPaidProgress !== null ? assets.pipToll : assets.pipIdle;
   const pipFrame =
     dustProgress !== null
@@ -344,7 +415,7 @@ const render = () => {
       : tollPaidProgress !== null
         ? frameProgress(pipFrames, tollPaidProgress)
         : frameAt(pipFrames, 420);
-  const brambleFrames = state.current?.speaker === "BRAMBLE" ? assets.brambleTalk : assets.brambleIdle;
+  const brambleFrame = state.current?.speaker === "BRAMBLE" ? brambleTalkFrame() : frameAt(assets.brambleIdle, 145);
   const bottlecapFrames =
     tollPaidProgress !== null ? assets.bottlecapPaid : tollRefusedProgress !== null ? assets.bottlecapRefused : assets.bottlecapIdle;
   const bottlecapFrame =
@@ -355,6 +426,7 @@ const render = () => {
         : frameAt(bottlecapFrames, 360);
   const dustFrame = dustProgress !== null ? frameProgress(assets.dustReveal, dustProgress) : assets.dustReveal[state.flags.dustSearched ? 3 : 0];
   const grateFrame = state.flags.gateOpen ? frameProgress(assets.grateOpen, tollPaidProgress ?? 1) : assets.grateOpen[0];
+  const actionClass = state.action ? ` action-${state.action.type}` : "";
   const bubble = state.current
     ? `<button class="dialogue ${speakerClass(state.current.speaker)}" type="button">
         <strong>${state.current.speaker.replaceAll("_", " ")}</strong>
@@ -383,16 +455,16 @@ const render = () => {
           <button class="${state.mode === "use" ? "active" : ""}" data-mode="use" type="button">Use</button>
         </div>
       </header>
-      <section class="stage ${state.current ? "dialogue-open" : ""}" aria-label="Underneath entry chamber">
+      <section class="stage ${state.current ? "dialogue-open" : ""}${actionClass}" aria-label="Underneath entry chamber">
         <img class="scene-bg" data-layer="background-plate" src="${assets.scene.bg}" alt="" />
         <img class="scene-layer cubby-wall-layer" data-layer="cubby-wall" src="${assets.scene.cubbyWall}" alt="" />
         <img class="scene-layer cobweb-curtain-layer" data-layer="cobweb-curtain" src="${assets.scene.cobwebCurtain}" alt="" />
         <img class="scene-layer popcorn-boulder-layer" data-layer="popcorn-boulder" src="${assets.scene.popcornBoulder}" alt="" />
-        <img class="prop dust-prop" data-layer="dust-prop" src="${dustFrame}" alt="" />
+        <img class="prop dust-prop" data-layer="dust-prop" src="${dustFrame}" alt="" ${dustTransform(dustProgress)} />
         <img class="scene-layer desk-back-layer" data-layer="desk-back" src="${assets.scene.deskBack}" alt="" />
         <img class="scene-layer gate-back-layer" data-layer="gate-back" src="${assets.scene.gateBack}" alt="" />
         <div class="bramble-rig" data-layer="bramble-body">
-          <img class="actor bramble body" src="${frameAt(brambleFrames, 220)}" alt="Bramble" />
+          <img class="actor bramble body" src="${brambleFrame}" alt="Bramble" />
         </div>
         <img class="scene-layer desk-foreground" data-layer="desk-foreground" src="${assets.scene.deskForeground}" alt="" />
         <img class="scene-layer gate-foreground" data-layer="gate-foreground" src="${assets.scene.gateForeground}" alt="" />
@@ -400,10 +472,11 @@ const render = () => {
           <img class="actor bottlecap body" src="${bottlecapFrame}" alt="Old Bottlecap" />
         </div>
         ${state.flags.gateOpen || state.action?.type === "toll-paid" ? `<img class="prop grate-prop" data-layer="gate-animation" src="${grateFrame}" alt="" />` : ""}
+        ${tollPaidProgress !== null && tollPaidProgress < 0.58 ? `<span class="button-flight" ${buttonFlightStyle(tollPaidProgress)} aria-hidden="true"></span>` : ""}
         <img class="actor pip" data-layer="pip-body" src="${pipFrame}" alt="Pip" />
         ${
-          state.scuttleDash
-            ? `<img class="actor scuttle dash" src="${frameAt(assets.scuttleDash, 100)}" alt="Scuttle" />`
+          currentScuttleProgress !== null
+            ? `<img class="actor scuttle dash" src="${frameProgress(assets.scuttleDash, currentScuttleProgress)}" alt="Scuttle" ${scuttleStyle(currentScuttleProgress)} />`
             : ""
         }
         ${Object.entries(hotspots)

@@ -26,7 +26,7 @@
         160,
         205
       ],
-      "role": "stamp-preparation"
+      "role": "paper-slide-overlap"
     },
     {
       "file": "bramble_idle_03.png",
@@ -34,7 +34,7 @@
         160,
         205
       ],
-      "role": "stamp-up-anticipation"
+      "role": "stamp-preparation"
     },
     {
       "file": "bramble_idle_04.png",
@@ -42,7 +42,31 @@
         160,
         205
       ],
-      "role": "stamp-impact-settle"
+      "role": "stamp-up-anticipation"
+    },
+    {
+      "file": "bramble_idle_05.png",
+      "anchor": [
+        160,
+        205
+      ],
+      "role": "single-stamp-smear"
+    },
+    {
+      "file": "bramble_idle_06.png",
+      "anchor": [
+        160,
+        205
+      ],
+      "role": "stamp-impact-contact"
+    },
+    {
+      "file": "bramble_idle_07.png",
+      "anchor": [
+        160,
+        205
+      ],
+      "role": "stamp-recoil-settle"
     }
   ],
   "approval_state": "provisional-production-pass"

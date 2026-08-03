@@ -26,7 +26,7 @@
         160,
         300
       ],
-      "role": "reach-arc"
+      "role": "squash-weight-drop"
     },
     {
       "file": "pip_dust_03.png",
@@ -34,7 +34,7 @@
         160,
         300
       ],
-      "role": "contact-hold"
+      "role": "reach-arc"
     },
     {
       "file": "pip_dust_04.png",
@@ -42,7 +42,39 @@
         160,
         300
       ],
-      "role": "found-reaction"
+      "role": "single-goofy-reach-smear"
+    },
+    {
+      "file": "pip_dust_05.png",
+      "anchor": [
+        160,
+        300
+      ],
+      "role": "contact-hold"
+    },
+    {
+      "file": "pip_dust_06.png",
+      "anchor": [
+        160,
+        300
+      ],
+      "role": "rummage-overlap"
+    },
+    {
+      "file": "pip_dust_07.png",
+      "anchor": [
+        160,
+        300
+      ],
+      "role": "button-pop-reveal"
+    },
+    {
+      "file": "pip_dust_08.png",
+      "anchor": [
+        160,
+        300
+      ],
+      "role": "recoil-found-settle"
     }
   ],
   "approval_state": "provisional-production-pass"

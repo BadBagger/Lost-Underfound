@@ -167,6 +167,23 @@ h1 {
   z-index: 11;
 }
 
+.button-flight {
+  position: absolute;
+  left: 59%;
+  top: 63%;
+  width: 2.2%;
+  aspect-ratio: 1;
+  z-index: 12;
+  border: 2px solid #2f2117;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 45% 38%, #2f2117 0 10%, transparent 11%),
+    radial-gradient(circle at 60% 55%, #2f2117 0 8%, transparent 9%),
+    #70aaa3;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.28);
+  pointer-events: none;
+}
+
 .pip {
   left: 52%;
   top: 86%;
@@ -212,10 +229,6 @@ h1 {
   top: 54%;
   left: -10%;
   z-index: 11;
-}
-
-.scuttle.dash {
-  animation: dash 1.15s cubic-bezier(0.16, 0.84, 0.4, 1) forwards;
 }
 
 .hotspot,
@@ -350,21 +363,6 @@ h1 {
   border: 1px solid #f0cf89;
   color: #f8ead4;
   background: #49331e;
-}
-
-@keyframes dash {
-  0% {
-    transform: translateX(0) scaleX(1);
-    filter: none;
-  }
-  45% {
-    transform: translateX(54vw) scaleX(1.8);
-    filter: blur(1px);
-  }
-  100% {
-    transform: translateX(112vw) scaleX(1);
-    filter: none;
-  }
 }
 
 @keyframes mote {

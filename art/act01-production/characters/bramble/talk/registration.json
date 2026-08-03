@@ -34,7 +34,31 @@
         160,
         205
       ],
-      "role": "talk-settle"
+      "role": "talk-wide-emphasis"
+    },
+    {
+      "file": "bramble_talk_04.png",
+      "anchor": [
+        160,
+        205
+      ],
+      "role": "talk-return-passing"
+    },
+    {
+      "file": "bramble_talk_05.png",
+      "anchor": [
+        160,
+        205
+      ],
+      "role": "talk-settle-paper"
+    },
+    {
+      "file": "bramble_talk_06.png",
+      "anchor": [
+        160,
+        205
+      ],
+      "role": "talk-neutral-hold"
     }
   ],
   "approval_state": "provisional-production-pass"

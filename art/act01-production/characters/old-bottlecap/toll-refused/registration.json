@@ -13,7 +13,7 @@
         160,
         210
       ],
-      "role": "dismissive-left",
+      "role": "anticipation-glare",
       "canonical": true,
       "scale_reference": [
         160,
@@ -26,10 +26,26 @@
         160,
         210
       ],
-      "role": "dismissive-right"
+      "role": "dismissive-left"
     },
     {
       "file": "old_bottlecap_refuse_03.png",
+      "anchor": [
+        160,
+        210
+      ],
+      "role": "dismissive-right"
+    },
+    {
+      "file": "old_bottlecap_refuse_04.png",
+      "anchor": [
+        160,
+        210
+      ],
+      "role": "heavy-squash-no"
+    },
+    {
+      "file": "old_bottlecap_refuse_05.png",
       "anchor": [
         160,
         210

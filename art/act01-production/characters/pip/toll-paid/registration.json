@@ -13,7 +13,7 @@
         160,
         300
       ],
-      "role": "relief-read",
+      "role": "button-read-before-handoff",
       "canonical": true,
       "scale_reference": [
         160,
@@ -22,6 +22,38 @@
     },
     {
       "file": "pip_toll_02.png",
+      "anchor": [
+        160,
+        300
+      ],
+      "role": "handoff-anticipation"
+    },
+    {
+      "file": "pip_toll_03.png",
+      "anchor": [
+        160,
+        300
+      ],
+      "role": "button-release-smear"
+    },
+    {
+      "file": "pip_toll_04.png",
+      "anchor": [
+        160,
+        300
+      ],
+      "role": "follow-through"
+    },
+    {
+      "file": "pip_toll_05.png",
+      "anchor": [
+        160,
+        300
+      ],
+      "role": "relief-read"
+    },
+    {
+      "file": "pip_toll_06.png",
       "anchor": [
         160,
         300
