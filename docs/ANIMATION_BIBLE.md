@@ -377,12 +377,12 @@ provisional because final human approval requires reviewing the evidence listed 
 | Sheet | Actor type | State | Evidence |
 |---|---|---|---|
 | `art/act01-production/characters/pip/walk` | walk-plane | provisional-production/pass | 9-role walk-cycle contract sheet; `npm run qa:prod:pip-walk` passes. |
-| `art/act01-production/characters/pip/idle` | walk-plane | provisional-production/pass | Alive held idle; `npm run qa:prod:pip-idle` passes. |
+| `art/act01-production/characters/pip/idle` | walk-plane | provisional-production/pass | 8-frame bottom-anchored breathing, blink, and alert beat on pink QA plates; `npm run qa:prod:pip-idle` passes. |
 | `art/act01-production/characters/pip/dust-reach` | walk-plane | provisional-production/pass | 8-frame dust rummage with squash, reach smear, button reveal, and settle; `npm run qa:prod:pip-dust` passes. |
 | `art/act01-production/characters/pip/toll-paid` | walk-plane | provisional-production/pass | 6-frame inventory handoff with button read, throw smear, follow-through, and settle; `npm run qa:prod:pip-toll` passes. |
-| `art/act01-production/characters/bramble/idle` | furniture-anchored | provisional-production/pass | 7-frame desk work loop with paper slide, stamp anticipation, stamp smear, impact, and recoil; `npm run qa:prod:bramble-idle` passes. |
+| `art/act01-production/characters/bramble/idle` | furniture-anchored | provisional-production/pass | 10-frame bottom-anchored breathing desk loop with paper slide, stamp anticipation, stamp smear, impact, and recoil on pink QA plates; `npm run qa:prod:bramble-idle` passes. |
 | `art/act01-production/characters/bramble/talk` | furniture-anchored | provisional-production/pass | 6-frame talk gesture sheet, runtime-phased into gesture then settle loop; `npm run qa:prod:bramble-talk` passes. |
-| `art/act01-production/characters/old-bottlecap/idle` | furniture-anchored | provisional-production/pass | Slow heavy rock loop; `npm run qa:prod:bottlecap-idle` passes. |
+| `art/act01-production/characters/old-bottlecap/idle` | furniture-anchored | provisional-production/pass | 8-frame bottom-anchored heavy breathing, blink, and eye-shift loop on pink QA plates; `npm run qa:prod:bottlecap-idle` passes. |
 | `art/act01-production/characters/old-bottlecap/toll-refused` | furniture-anchored | provisional-production/pass | 5-frame weighted refusal with squash and deadpan settle; `npm run qa:prod:bottlecap-refused` passes. |
 | `art/act01-production/characters/old-bottlecap/toll-paid` | furniture-anchored | provisional-production/pass | 7-frame toll receipt with reach anticipation, arm smear, catch, inspect, approval, and settle; `npm run qa:prod:bottlecap-paid` passes. |
 | `art/act01-production/characters/scuttle/dash` | walk-plane | provisional-production/pass | 5-frame dash with anticipation, long smear, rolling smear, and solid exit pose; `npm run qa:prod:scuttle-dash` passes. |

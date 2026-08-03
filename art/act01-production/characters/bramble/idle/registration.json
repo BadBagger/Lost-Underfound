@@ -13,7 +13,7 @@
         160,
         205
       ],
-      "role": "folder-shuffle-start",
+      "role": "breath-neutral-desk",
       "canonical": true,
       "scale_reference": [
         160,
@@ -26,7 +26,7 @@
         160,
         205
       ],
-      "role": "paper-slide-overlap"
+      "role": "breath-in-paper-slide"
     },
     {
       "file": "bramble_idle_03.png",
@@ -34,7 +34,7 @@
         160,
         205
       ],
-      "role": "stamp-preparation"
+      "role": "breath-full-paper-settle"
     },
     {
       "file": "bramble_idle_04.png",
@@ -42,7 +42,7 @@
         160,
         205
       ],
-      "role": "stamp-up-anticipation"
+      "role": "stamp-preparation"
     },
     {
       "file": "bramble_idle_05.png",
@@ -50,7 +50,7 @@
         160,
         205
       ],
-      "role": "single-stamp-smear"
+      "role": "stamp-up-anticipation"
     },
     {
       "file": "bramble_idle_06.png",
@@ -58,7 +58,7 @@
         160,
         205
       ],
-      "role": "stamp-impact-contact"
+      "role": "single-stamp-smear"
     },
     {
       "file": "bramble_idle_07.png",
@@ -66,7 +66,31 @@
         160,
         205
       ],
+      "role": "stamp-impact-contact"
+    },
+    {
+      "file": "bramble_idle_08.png",
+      "anchor": [
+        160,
+        205
+      ],
       "role": "stamp-recoil-settle"
+    },
+    {
+      "file": "bramble_idle_09.png",
+      "anchor": [
+        160,
+        205
+      ],
+      "role": "breath-out-ease"
+    },
+    {
+      "file": "bramble_idle_10.png",
+      "anchor": [
+        160,
+        205
+      ],
+      "role": "return-neutral"
     }
   ],
   "approval_state": "provisional-production-pass"

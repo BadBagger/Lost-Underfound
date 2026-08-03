@@ -13,7 +13,7 @@
         160,
         300
       ],
-      "role": "alive-held-idle",
+      "role": "breath-neutral",
       "canonical": true,
       "scale_reference": [
         160,
@@ -26,7 +26,55 @@
         160,
         300
       ],
-      "role": "breath-secondary-motion"
+      "role": "breath-in-ease"
+    },
+    {
+      "file": "pip_idle_03.png",
+      "anchor": [
+        160,
+        300
+      ],
+      "role": "breath-in-full"
+    },
+    {
+      "file": "pip_idle_04.png",
+      "anchor": [
+        160,
+        300
+      ],
+      "role": "breath-out-ease"
+    },
+    {
+      "file": "pip_idle_05.png",
+      "anchor": [
+        160,
+        300
+      ],
+      "role": "blink-contact"
+    },
+    {
+      "file": "pip_idle_06.png",
+      "anchor": [
+        160,
+        300
+      ],
+      "role": "blink-release"
+    },
+    {
+      "file": "pip_idle_07.png",
+      "anchor": [
+        160,
+        300
+      ],
+      "role": "small-alert-beat"
+    },
+    {
+      "file": "pip_idle_08.png",
+      "anchor": [
+        160,
+        300
+      ],
+      "role": "return-neutral"
     }
   ],
   "approval_state": "provisional-production-pass"

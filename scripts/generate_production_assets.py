@@ -13,6 +13,7 @@ OUT = ART / "act01-production"
 REFERENCE_SHEET = OUT / "source" / "character-reference-sheet.png"
 
 PX_PER_UNIT = 220
+QA_BG = "#ff4fd8"
 REFERENCE_CROPS = {
     "pip-front": (118, 41, 246, 321),
     "pip-walk": (1123, 61, 1283, 315),
@@ -134,6 +135,50 @@ def paste_registered_cutout(
     canvas_img.alpha_composite(sprite, (x, y))
 
 
+def paste_breathing_cutout(
+    canvas_img: Image.Image,
+    cutout: Image.Image,
+    anchor: tuple[int, int],
+    target_height: int,
+    breath: float,
+    x_offset: int = 0,
+    y_offset: int = 0,
+    mirror: bool = False,
+    tilt_degrees: float = 0,
+    render_scale: int = 3,
+) -> None:
+    sprite = cutout.transpose(Image.Transpose.FLIP_LEFT_RIGHT) if mirror else cutout.copy()
+    base_height = target_height * render_scale
+    source_scale = base_height / sprite.height
+    base_width = max(1, round(sprite.width * source_scale))
+    scaled_height = max(1, round(base_height * (1 + breath)))
+    scaled_width = max(1, round(base_width * (1 - breath * 0.34)))
+    sprite = sprite.resize((scaled_width, scaled_height), Image.Resampling.LANCZOS)
+    if tilt_degrees:
+        sprite = sprite.rotate(tilt_degrees, expand=True, resample=Image.Resampling.BICUBIC)
+    x = anchor[0] * render_scale - sprite.width // 2 + x_offset * render_scale
+    y = anchor[1] * render_scale - sprite.height + y_offset * render_scale
+    canvas_img.alpha_composite(sprite, (x, y))
+
+
+def clear_pale_matte_band(
+    img: Image.Image,
+    anchor: tuple[int, int],
+    top_y: int,
+    render_scale: int = 3,
+) -> None:
+    pixels = img.load()
+    x1 = max(0, (anchor[0] - 95) * render_scale)
+    x2 = min(img.width, (anchor[0] + 95) * render_scale)
+    y1 = max(0, (top_y + 128) * render_scale)
+    y2 = min(img.height, (anchor[1] + 4) * render_scale)
+    for y in range(y1, y2):
+        for x in range(x1, x2):
+            r, g, b, a = pixels[x, y]
+            if a > 24 and r > 224 and g > 210 and b > 188 and max(r, g, b) - min(r, g, b) < 42:
+                pixels[x, y] = (r, g, b, 0)
+
+
 def draw_motion_streak(draw: ImageDraw.ImageDraw, points: list[tuple[int, int]], color: str = "#f3d07d99", scale: int = 3) -> None:
     for idx in range(len(points) - 1):
         width = max(2, 10 - idx * 2)
@@ -177,31 +222,67 @@ def draw_pip_inventory_effect(draw: ImageDraw.ImageDraw, pose: str, scale: int =
 
 
 def draw_pip_idle_effect(draw: ImageDraw.ImageDraw, pose: str, scale: int = 3) -> None:
-    if pose == "idle-02":
+    if pose == "idle-breathe-2":
+        line(draw, (198, 185, 214, 173), "#e8aa80", 5, scale)
+        line(draw, (211, 174, 218, 182), "#2a2019", 3, scale)
+    if pose == "idle-breathe-1":
+        line(draw, (198, 188, 211, 181), "#e8aa80", 4, scale)
+    if pose in ("idle-blink", "idle-alert"):
         # Local blink/settle only. Do not move the whole cutout for idle.
-        line(draw, (141, 116, 154, 118), "#2b1b10", 3, scale)
-        line(draw, (172, 116, 185, 118), "#2b1b10", 3, scale)
+        line(draw, (138, 116, 156, 118), "#2b1b10", 4, scale)
+        line(draw, (170, 116, 188, 118), "#2b1b10", 4, scale)
+    if pose == "idle-alert":
         line(draw, (128, 58, 120, 50), "#6b3a1c", 3, scale)
         line(draw, (194, 58, 203, 51), "#6b3a1c", 3, scale)
+        ellipse(draw, (136, 106, 157, 128), "#f8efe0", "#2b1b10", 2, scale)
+        ellipse(draw, (169, 106, 190, 128), "#f8efe0", "#2b1b10", 2, scale)
+        ellipse(draw, (144, 113, 151, 121), "#17120f", scale=scale)
+        ellipse(draw, (177, 113, 184, 121), "#17120f", scale=scale)
 
 
 def draw_bramble_desk_effect(draw: ImageDraw.ImageDraw, pose: str, scale: int = 3) -> None:
-    if pose in ("shuffle-left", "shuffle-right", "talk-wide", "talk-settle"):
-        y = {"shuffle-left": 206, "shuffle-right": 202, "talk-wide": 198, "talk-settle": 204}[pose]
-        polygon(draw, [(68, y), (138, y - 8), (152, y + 22), (82, y + 30)], "#efe0b9", "#5f4931", scale)
-        line(draw, (82, y + 7, 136, y), "#a28058", 2, scale)
+    if pose in ("shuffle-left", "shuffle-right", "stamp-prep", "talk-wide", "talk-settle"):
+        y = {"shuffle-left": 206, "shuffle-right": 202, "stamp-prep": 204, "talk-wide": 198, "talk-settle": 204}[pose]
+        x = {"shuffle-left": 68, "shuffle-right": 82, "stamp-prep": 74, "talk-wide": 68, "talk-settle": 76}[pose]
+        polygon(draw, [(x, y), (x + 70, y - 8), (x + 84, y + 22), (x + 14, y + 30)], "#efe0b9", "#5f4931", scale)
+        line(draw, (x + 14, y + 7, x + 68, y), "#a28058", 2, scale)
+    if pose in ("stamp-up", "stamp-smear", "stamp-down", "stamp-recoil"):
+        lift = {"stamp-up": -34, "stamp-smear": -12, "stamp-down": 5, "stamp-recoil": -8}[pose]
+        rect(draw, (214, 150 + lift, 239, 181 + lift), "#7b2e2d", "#3d1716", 2, scale)
     if pose == "stamp-smear":
         draw_motion_streak(draw, [(224, 120), (225, 150), (224, 178)], "#7b2e2daa", scale)
+    if pose == "stamp-down":
+        ellipse(draw, (214, 176, 242, 187), "#f0c36a66", "#7b2e2d99", 2, scale)
 
 
 def draw_bottlecap_effect(draw: ImageDraw.ImageDraw, pose: str, scale: int = 3) -> None:
-    if pose in ("idle-02", "idle-03", "idle-04"):
-        brow = {"idle-02": -2, "idle-03": 0, "idle-04": 2}[pose]
+    if pose in ("idle-02", "idle-03", "idle-04", "idle-blink", "idle-glance-left", "idle-glance-right", "idle-breathe-out"):
+        brow = {
+            "idle-02": -2,
+            "idle-03": 0,
+            "idle-04": 2,
+            "idle-blink": 0,
+            "idle-glance-left": -4,
+            "idle-glance-right": 4,
+            "idle-breathe-out": 0,
+        }[pose]
         line(draw, (125 + brow, 116, 145 + brow, 112), "#25190f", 3, scale)
         line(draw, (175 + brow, 112, 195 + brow, 116), "#25190f", 3, scale)
-        if pose == "idle-03":
+        if pose in ("idle-03", "idle-blink"):
+            ellipse(draw, (121, 111, 150, 133), "#b08b45", scale=scale)
+            ellipse(draw, (170, 111, 199, 133), "#b08b45", scale=scale)
             line(draw, (133, 128, 143, 129), "#25190f", 3, scale)
             line(draw, (177, 129, 187, 128), "#25190f", 3, scale)
+        if pose == "idle-glance-left":
+            ellipse(draw, (118, 114, 150, 139), "#e8d6a4", "#25190f", 2, scale)
+            ellipse(draw, (166, 114, 198, 139), "#e8d6a4", "#25190f", 2, scale)
+            ellipse(draw, (126, 123, 138, 135), "#17120f", scale=scale)
+            ellipse(draw, (174, 123, 186, 135), "#17120f", scale=scale)
+        if pose == "idle-glance-right":
+            ellipse(draw, (118, 114, 150, 139), "#e8d6a4", "#25190f", 2, scale)
+            ellipse(draw, (166, 114, 198, 139), "#e8d6a4", "#25190f", 2, scale)
+            ellipse(draw, (134, 123, 146, 135), "#17120f", scale=scale)
+            ellipse(draw, (182, 123, 194, 135), "#17120f", scale=scale)
     if pose == "arm-smear":
         draw_motion_streak(draw, [(214, 184), (236, 156), (265, 128)], "#5b351eaa", scale)
     button_positions = {
@@ -234,7 +315,7 @@ def draw_contact_sheet(sheet: Path, title: str, frames: list[dict], cols: int = 
         with Image.open(sheet / frame["file"]) as img:
             thumbs.append((frame, img.convert("RGBA").resize((160, 180), Image.Resampling.LANCZOS)))
     rows = math.ceil(len(thumbs) / cols)
-    out = Image.new("RGB", (cols * 210, rows * 230 + 48), "#f3e7cf")
+    out = Image.new("RGB", (cols * 210, rows * 230 + 48), QA_BG)
     d = ImageDraw.Draw(out)
     d.text((16, 14), title, fill="#2b1b10")
     for idx, (frame, img) in enumerate(thumbs):
@@ -250,7 +331,7 @@ def draw_loop_capture(sheet: Path, title: str, frames: list[dict], duration_ms: 
     imgs = []
     for frame in frames:
         with Image.open(sheet / frame["file"]) as img:
-            plate = Image.new("RGBA", (360, 360), "#f3e7cf")
+            plate = Image.new("RGBA", (360, 360), QA_BG)
             sprite = img.convert("RGBA")
             plate.alpha_composite(sprite, ((360 - sprite.width) // 2, (330 - sprite.height) // 2))
             imgs.append(plate.convert("P", palette=Image.Palette.ADAPTIVE))
@@ -361,7 +442,16 @@ def make_pip_sheets() -> None:
     ]
     for action, roles in {
         "walk": walk_roles,
-        "idle": [("pip_idle_01.png", "alive-held-idle", "idle-01"), ("pip_idle_02.png", "breath-secondary-motion", "idle-02")],
+        "idle": [
+            ("pip_idle_01.png", "breath-neutral", "idle-01"),
+            ("pip_idle_02.png", "breath-in-ease", "idle-breathe-1"),
+            ("pip_idle_03.png", "breath-in-full", "idle-breathe-2"),
+            ("pip_idle_04.png", "breath-out-ease", "idle-breathe-1"),
+            ("pip_idle_05.png", "blink-contact", "idle-blink"),
+            ("pip_idle_06.png", "blink-release", "idle-breathe-1"),
+            ("pip_idle_07.png", "small-alert-beat", "idle-alert"),
+            ("pip_idle_08.png", "return-neutral", "idle-01"),
+        ],
         "dust-reach": [
             ("pip_dust_01.png", "anticipation-crouch", "crouch-anticipate"),
             ("pip_dust_02.png", "squash-weight-drop", "crouch-squash"),
@@ -391,6 +481,18 @@ def make_pip_sheets() -> None:
                     cutout_name = "pip-run"
                 cutout = reference_cutout(cutout_name)
                 if cutout:
+                    breath = {
+                        "idle-breathe-1": 0.045,
+                        "idle-breathe-2": 0.08,
+                        "idle-blink": 0.03,
+                        "idle-alert": 0.02,
+                    }.get(pose, 0)
+                    idle_x = {
+                        "idle-breathe-1": -2,
+                        "idle-breathe-2": -3,
+                        "idle-blink": 1,
+                        "idle-alert": 3,
+                    }.get(pose, 0)
                     bob = {
                         "walk-left-recoil-down": 4,
                         "walk-left-passing": 2,
@@ -413,6 +515,10 @@ def make_pip_sheets() -> None:
                     }.get(pose, 0)
                     mirror = pose in ("walk-right-contact", "walk-right-recoil-down", "walk-right-passing", "walk-right-high")
                     tilt = {
+                        "idle-breathe-1": -1,
+                        "idle-breathe-2": -2,
+                        "idle-blink": 1,
+                        "idle-alert": 2,
                         "crouch-anticipate": -4,
                         "crouch-squash": -7,
                         "crouch-reach": -10,
@@ -427,7 +533,9 @@ def make_pip_sheets() -> None:
                         "found-pop": 4,
                         "cheer": -3,
                     }.get(pose, 0)
-                    paste_registered_cutout(img, cutout, (160, 300), 220, y_offset=bob, mirror=mirror, tilt_degrees=tilt)
+                    paste_breathing_cutout(img, cutout, (160, 300), 220, breath, x_offset=idle_x if action == "idle" else 0, y_offset=bob, mirror=mirror, tilt_degrees=tilt)
+                    if action in ("walk", "idle"):
+                        clear_pale_matte_band(img, (160, 300), 80)
                     if action == "idle":
                         draw_pip_idle_effect(d, pose)
                     draw_dust_puffs(d, (160, 300), pose)
@@ -445,7 +553,7 @@ def make_pip_sheets() -> None:
         write_registration(sheet, f"pip-{action}", "walk-plane", size, frames)
         draw_contact_sheet(sheet, f"pip {action}", frames)
         if action in ("walk", "idle"):
-            draw_loop_capture(sheet, f"pip {action}", frames, 120 if action == "walk" else 420)
+            draw_loop_capture(sheet, f"pip {action}", frames, 120)
 
 
 def draw_bramble(draw: ImageDraw.ImageDraw, anchor: tuple[int, int], top_y: int, pose: str, scale: int = 3) -> None:
@@ -453,7 +561,10 @@ def draw_bramble(draw: ImageDraw.ImageDraw, anchor: tuple[int, int], top_y: int,
     stamp = {
         "idle-01": 0,
         "shuffle-left": 5,
+        "shuffle-right": 8,
+        "stamp-prep": 12,
         "idle-02": 8,
+        "idle-breathe-out": 0,
         "stamp-up": 28,
         "stamp-smear": 10,
         "stamp-down": -4,
@@ -487,13 +598,16 @@ def make_bramble_sheets() -> None:
     base = OUT / "characters" / "bramble"
     specs = {
         "idle": [
-            ("bramble_idle_01.png", "folder-shuffle-start", "idle-01"),
-            ("bramble_idle_02.png", "paper-slide-overlap", "shuffle-left"),
-            ("bramble_idle_03.png", "stamp-preparation", "idle-02"),
-            ("bramble_idle_04.png", "stamp-up-anticipation", "stamp-up"),
-            ("bramble_idle_05.png", "single-stamp-smear", "stamp-smear"),
-            ("bramble_idle_06.png", "stamp-impact-contact", "stamp-down"),
-            ("bramble_idle_07.png", "stamp-recoil-settle", "stamp-recoil"),
+            ("bramble_idle_01.png", "breath-neutral-desk", "idle-01"),
+            ("bramble_idle_02.png", "breath-in-paper-slide", "shuffle-left"),
+            ("bramble_idle_03.png", "breath-full-paper-settle", "shuffle-right"),
+            ("bramble_idle_04.png", "stamp-preparation", "stamp-prep"),
+            ("bramble_idle_05.png", "stamp-up-anticipation", "stamp-up"),
+            ("bramble_idle_06.png", "single-stamp-smear", "stamp-smear"),
+            ("bramble_idle_07.png", "stamp-impact-contact", "stamp-down"),
+            ("bramble_idle_08.png", "stamp-recoil-settle", "stamp-recoil"),
+            ("bramble_idle_09.png", "breath-out-ease", "idle-breathe-out"),
+            ("bramble_idle_10.png", "return-neutral", "idle-01"),
         ],
         "talk": [
             ("bramble_talk_01.png", "talk-closed-mouth", "talk-01"),
@@ -512,12 +626,20 @@ def make_bramble_sheets() -> None:
             if REFERENCE_SHEET.exists():
                 cutout = reference_cutout("bramble-talk" if action == "talk" else "bramble-idle")
                 if cutout:
-                    paste_registered_cutout(
-                        img,
-                        cutout,
-                        (160, 205),
-                        187,
-                    )
+                    breath = {
+                        "shuffle-left": 0.04,
+                        "shuffle-right": 0.07,
+                        "stamp-prep": 0.05,
+                        "stamp-up": 0.025,
+                        "stamp-smear": 0.008,
+                        "stamp-recoil": 0.04,
+                        "idle-breathe-out": 0.02,
+                    }.get(pose, 0)
+                    if action == "idle":
+                        x_offset = {"shuffle-left": -3, "shuffle-right": 2, "stamp-prep": 1, "stamp-recoil": -1}.get(pose, 0)
+                        paste_breathing_cutout(img, cutout, (160, 205), 187, breath, x_offset=x_offset)
+                    else:
+                        paste_registered_cutout(img, cutout, (160, 205), 187)
                     draw_bramble_desk_effect(d, pose)
                 else:
                     draw_bramble(d, (160, 205), 18, pose)
@@ -531,7 +653,7 @@ def make_bramble_sheets() -> None:
             frames.append(entry)
         write_registration(sheet, f"bramble-{action}", "furniture-anchored", size, frames)
         draw_contact_sheet(sheet, f"bramble {action}", frames)
-        draw_loop_capture(sheet, f"bramble {action}", frames, 260)
+        draw_loop_capture(sheet, f"bramble {action}", frames, 140 if action == "idle" else 180)
 
 
 def draw_bottlecap(draw: ImageDraw.ImageDraw, anchor: tuple[int, int], top_y: int, pose: str, scale: int = 3) -> None:
@@ -541,6 +663,12 @@ def draw_bottlecap(draw: ImageDraw.ImageDraw, anchor: tuple[int, int], top_y: in
         "idle-02": -4,
         "idle-03": 0,
         "idle-04": 4,
+        "idle-breathe-1": 0,
+        "idle-breathe-2": 0,
+        "idle-blink": 0,
+        "idle-glance-left": 0,
+        "idle-glance-right": 0,
+        "idle-breathe-out": 0,
         "refuse-left": -8,
         "refuse-right": 8,
         "refuse-squash": 0,
@@ -589,7 +717,16 @@ def make_bottlecap_sheets() -> None:
     size = (320, 260)
     base = OUT / "characters" / "old-bottlecap"
     specs = {
-        "idle": [("old_bottlecap_idle_01.png", "heavy-rock-center", "idle-01"), ("old_bottlecap_idle_02.png", "heavy-rock-left", "idle-02"), ("old_bottlecap_idle_03.png", "weighted-return", "idle-03"), ("old_bottlecap_idle_04.png", "heavy-rock-right", "idle-04")],
+        "idle": [
+            ("old_bottlecap_idle_01.png", "breath-neutral-heavy", "idle-01"),
+            ("old_bottlecap_idle_02.png", "breath-in-ease", "idle-breathe-1"),
+            ("old_bottlecap_idle_03.png", "breath-in-full", "idle-breathe-2"),
+            ("old_bottlecap_idle_04.png", "blink-contact", "idle-blink"),
+            ("old_bottlecap_idle_05.png", "eye-shift-left", "idle-glance-left"),
+            ("old_bottlecap_idle_06.png", "eye-shift-right", "idle-glance-right"),
+            ("old_bottlecap_idle_07.png", "breath-out-heavy", "idle-breathe-out"),
+            ("old_bottlecap_idle_08.png", "return-neutral", "idle-01"),
+        ],
         "toll-refused": [
             ("old_bottlecap_refuse_01.png", "anticipation-glare", "idle-01"),
             ("old_bottlecap_refuse_02.png", "dismissive-left", "refuse-left"),
@@ -615,6 +752,14 @@ def make_bottlecap_sheets() -> None:
             if REFERENCE_SHEET.exists():
                 cutout = reference_cutout("old-bottlecap-open" if action == "toll-paid" and idx >= 4 else "old-bottlecap")
                 if cutout:
+                    breath = {
+                        "idle-breathe-1": 0.04,
+                        "idle-breathe-2": 0.08,
+                        "idle-blink": 0.025,
+                        "idle-glance-left": 0.015,
+                        "idle-glance-right": 0.015,
+                        "idle-breathe-out": 0.005,
+                    }.get(pose, 0)
                     tilt = {
                         "refuse-left": -5,
                         "refuse-right": 5,
@@ -626,9 +771,20 @@ def make_bottlecap_sheets() -> None:
                         "settle": 1,
                     }.get(pose, 0)
                     if action == "idle":
-                        tilt = 0
+                        tilt = {
+                            "idle-breathe-1": -2,
+                            "idle-breathe-2": -3,
+                            "idle-blink": 1,
+                            "idle-glance-left": -4,
+                            "idle-glance-right": 4,
+                            "idle-breathe-out": 1,
+                        }.get(pose, 0)
                     yoff = 0 if action == "idle" else (-4 if pose in ("approve", "settle") else (4 if pose == "refuse-squash" else 0))
-                    paste_registered_cutout(img, cutout, (160, 210), 132, y_offset=yoff, tilt_degrees=tilt)
+                    if action == "idle":
+                        x_offset = {"idle-breathe-1": -2, "idle-breathe-2": -4, "idle-glance-left": -5, "idle-glance-right": 5}.get(pose, 0)
+                        paste_breathing_cutout(img, cutout, (160, 210), 132, breath, x_offset=x_offset, y_offset=yoff, tilt_degrees=tilt)
+                    else:
+                        paste_registered_cutout(img, cutout, (160, 210), 132, y_offset=yoff, tilt_degrees=tilt)
                     draw_bottlecap_effect(d, pose)
                 else:
                     draw_bottlecap(d, (160, 210), 78, pose)
@@ -643,7 +799,7 @@ def make_bottlecap_sheets() -> None:
         write_registration(sheet, f"old-bottlecap-{action}", "furniture-anchored", size, frames)
         draw_contact_sheet(sheet, f"old bottlecap {action}", frames)
         if action == "idle":
-            draw_loop_capture(sheet, f"old bottlecap {action}", frames, 360)
+            draw_loop_capture(sheet, f"old bottlecap {action}", frames, 180)
 
 
 def draw_scuttle(draw: ImageDraw.ImageDraw, anchor: tuple[int, int], top_y: int, pose: str, scale: int = 3) -> None:

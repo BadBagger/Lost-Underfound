@@ -13,7 +13,7 @@
         160,
         210
       ],
-      "role": "heavy-rock-center",
+      "role": "breath-neutral-heavy",
       "canonical": true,
       "scale_reference": [
         160,
@@ -26,7 +26,7 @@
         160,
         210
       ],
-      "role": "heavy-rock-left"
+      "role": "breath-in-ease"
     },
     {
       "file": "old_bottlecap_idle_03.png",
@@ -34,7 +34,7 @@
         160,
         210
       ],
-      "role": "weighted-return"
+      "role": "breath-in-full"
     },
     {
       "file": "old_bottlecap_idle_04.png",
@@ -42,7 +42,39 @@
         160,
         210
       ],
-      "role": "heavy-rock-right"
+      "role": "blink-contact"
+    },
+    {
+      "file": "old_bottlecap_idle_05.png",
+      "anchor": [
+        160,
+        210
+      ],
+      "role": "eye-shift-left"
+    },
+    {
+      "file": "old_bottlecap_idle_06.png",
+      "anchor": [
+        160,
+        210
+      ],
+      "role": "eye-shift-right"
+    },
+    {
+      "file": "old_bottlecap_idle_07.png",
+      "anchor": [
+        160,
+        210
+      ],
+      "role": "breath-out-heavy"
+    },
+    {
+      "file": "old_bottlecap_idle_08.png",
+      "anchor": [
+        160,
+        210
+      ],
+      "role": "return-neutral"
     }
   ],
   "approval_state": "provisional-production-pass"
