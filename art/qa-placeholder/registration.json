@@ -1,0 +1,32 @@
+{
+  "sheet": "qa-placeholder",
+  "actor_type": "walk-plane",
+  "canvas": {
+    "width": 120,
+    "height": 120
+  },
+  "anchor_tolerance_px": 1,
+  "frames": [
+    {
+      "file": "fixture_01.png",
+      "anchor": [
+        60,
+        96
+      ],
+      "role": "fixture",
+      "canonical": true,
+      "scale_reference": [
+        60,
+        30
+      ]
+    },
+    {
+      "file": "fixture_02.png",
+      "anchor": [
+        60,
+        96
+      ],
+      "role": "fixture"
+    }
+  ]
+}

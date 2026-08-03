@@ -1,0 +1,27 @@
+{
+  "name": "lost-underfound",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "assets": "python scripts/generate_assets.py",
+    "qa:placeholder": "python tools/check_registration.py frames art/qa-placeholder/registration.json --onion-skin art/qa-placeholder/onion.png",
+    "qa:broken": "python tools/check_registration.py frames art/qa-broken/registration.json",
+    "qa:pip": "python tools/check_registration.py frames art/pip-walk/registration.json --onion-skin art/pip-walk/onion.png",
+    "qa:bottlecap": "python tools/check_registration.py frames art/old-bottlecap-idle/registration.json --onion-skin art/old-bottlecap-idle/onion.png",
+    "qa:bramble": "python tools/check_registration.py frames art/bramble-idle/registration.json --onion-skin art/bramble-idle/onion.png",
+    "qa:scuttle": "python tools/check_registration.py frames art/scuttle-walk/registration.json --onion-skin art/scuttle-walk/onion.png",
+    "qa:grommet-placeholder": "python tools/check_registration.py frames art/grommet-idle/registration.json --onion-skin art/grommet-idle/onion.png",
+    "qa:cast": "python tools/check_registration.py cast-scale art/cast_scale.json",
+    "qa": "npm run qa:placeholder && npm run qa:pip && npm run qa:bottlecap && npm run qa:bramble && npm run qa:scuttle && npm run qa:grommet-placeholder && npm run qa:cast",
+    "test": "npm run qa && tsc --noEmit",
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 127.0.0.1"
+  },
+  "dependencies": {
+    "vite": "^7.0.0",
+    "typescript": "^5.8.0"
+  },
+  "devDependencies": {}
+}

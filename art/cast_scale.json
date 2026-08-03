@@ -2,10 +2,30 @@
   "world_unit": "Pip's shrunk-down standing height = 1.0",
   "tolerance_pct": 8,
   "actors": [
-    { "name": "pip", "registration": "pip-walk/registration.json", "world_height_units": 1.0 },
-    { "name": "bramble", "registration": "bramble-idle/registration.json", "world_height_units": 0.85 },
-    { "name": "grommet", "registration": "grommet-idle/registration.json", "world_height_units": 2.4 },
-    { "name": "scuttle", "registration": "scuttle-walk/registration.json", "world_height_units": 0.35 },
-    { "name": "old-bottlecap", "registration": "old-bottlecap-idle/registration.json", "world_height_units": 0.6 }
+    {
+      "name": "pip",
+      "registration": "pip-walk/registration.json",
+      "world_height_units": 1.0
+    },
+    {
+      "name": "bramble",
+      "registration": "bramble-idle/registration.json",
+      "world_height_units": 0.85
+    },
+    {
+      "name": "grommet",
+      "registration": "grommet-idle/registration.json",
+      "world_height_units": 2.4
+    },
+    {
+      "name": "scuttle",
+      "registration": "scuttle-walk/registration.json",
+      "world_height_units": 0.35
+    },
+    {
+      "name": "old-bottlecap",
+      "registration": "old-bottlecap-idle/registration.json",
+      "world_height_units": 0.6
+    }
   ]
 }

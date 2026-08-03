@@ -197,3 +197,20 @@ Project-specific, not synced from upstream. No character sheets have been author
 yet. Record each sheet's name, its approval state (provisional/rejected/final), and
 why, as sheets are produced and reviewed — Pip's walk cycle should be the first entry
 here, per the build order in `docs/CODEX_BUILD_PROMPT.md`.
+
+### Current sheet evidence
+
+| Sheet | Actor type | State | Evidence |
+|---|---|---|---|
+| `art/qa-placeholder` | walk-plane fixture | provisional/pass | `npm run qa:placeholder` passes and writes `art/qa-placeholder/onion.png`. |
+| `art/qa-broken` | walk-plane fixture | rejected/expected fail | Deliberately mismatched canvas and anchor drift; `npm run qa:broken` must fail and is not part of `npm test`. |
+| `art/pip-walk` | walk-plane | provisional/pass | 9-role walk-cycle contract sheet; `npm run qa:pip` passes and writes `art/pip-walk/onion.png`. |
+| `art/old-bottlecap-idle` | furniture-anchored | provisional/pass | Fixed-contact rig sheet; `npm run qa:bottlecap` passes and writes `art/old-bottlecap-idle/onion.png`. |
+| `art/bramble-idle` | furniture-anchored | provisional/pass | Desk-fixed idle sheet for Act 1; `npm run qa:bramble` passes and writes `art/bramble-idle/onion.png`. |
+| `art/scuttle-walk` | walk-plane | provisional/pass | Cameo-only scale/registration sheet; `npm run qa:scuttle` passes and writes `art/scuttle-walk/onion.png`. |
+| `art/grommet-idle` | furniture-anchored placeholder | provisional/pass | Cast-scale placeholder only; not playable until Acts 2-3 get a script/design pass. |
+
+`npm run qa:cast` passes against the full declared cast at 220 px/world unit. None of
+these sheets are final production animation approval; final status still requires the
+contact-sheet, normal/half-speed loop, mobile capture, dialogue-staging, and secondary
+motion review evidence listed above.
