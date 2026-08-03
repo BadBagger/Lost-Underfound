@@ -26,6 +26,12 @@ Required layer order:
 declared, referenced layer assets exist, and the runtime renders the expected layer
 slots. This supplements registration/cast-scale QA; it does not replace it.
 
+This Act 1 pass uses authored fixed slots because Pip does not yet need to walk
+behind multiple independent foreground masks. When a room adds true walk-behind
+movement, implement the shared baseline algorithm in
+`specs/DYNAMIC_BASELINE_DEPTH_SORTING.md`: each walk-behind mask gets a scene-space
+baseline and each actor's draw order follows its contact Y.
+
 Character model source for the current Act 1 production pass is:
 
 - `art/act01-production/source/character-reference-sheet.png`

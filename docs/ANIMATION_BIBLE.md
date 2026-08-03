@@ -1,11 +1,21 @@
-# Animation Bible — Lost & Underfound
+# Animation Bible - Lost & Underfound
 
 > **Source of truth: [`BadBagger/Animation-Bible`](https://github.com/BadBagger/Animation-Bible).**
 > This file is a synced local copy of that repo's `ANIMATION_BIBLE.md`, kept here so
 > Codex (and anyone else working in this repo) has the rules on hand without needing
-> cross-repo access. **Do not edit the rules below directly** — if a rule needs to
+> cross-repo access. **Do not edit the rules below directly** - if a rule needs to
 > change, change it upstream in `Animation-Bible`, then re-sync this file. The
 > "Current status" section at the bottom is this project's own and is not synced.
+
+A binding animation production rulebook for 2D character-animation game projects.
+Project-agnostic on purpose — port this file into a new project's `docs/` as-is, then
+adapt only the illustrative examples to that project's own cast if you want, never the
+rules themselves.
+
+Proven across two productions: originated on Department of Impossible Complaints
+(a noir bureaucracy adventure), carried forward unchanged in substance into Lost &
+Underfound (a Humongous Entertainment-style kids' adventure). The rules held for both
+tones — that's the point of keeping them here instead of re-deriving them per project.
 
 **This is a binding production rule.** A sequence is not animation because it has a
 high frame count. Every non-held frame must deliberately lead from the preceding
@@ -118,6 +128,44 @@ the background:
 - every frame in the rig shares one canvas, one origin, one contact guide — no
   per-frame crop or resize hacks, ever
 
+Every point-and-click room starts as a layered production asset, not a single poster.
+The minimum stack is: background plate, environment layers, midground interactable
+props, actor planes/slots, foreground occlusion, and hotspot masks. A desk character
+must be designed as `desk back/wall -> actor body/hands/tools -> desk front
+occluder`, not as a full-room animation patch. A gate character must be designed as
+`gate back/frame -> actor -> gate bars/front latch`. If the room has to be
+regenerated because one character moves, the scene source is wrong.
+
+Each room should declare its layer contract in code or an engine manifest before new
+character animation is bound. The contract names which actors live on contact-Y
+sorted walk planes, which actors are fixed slots, which foreground layers occlude
+them, and which object-shaped hotspot masks sit above broad surfaces. Broad
+rectangular hotspots are temporary scaffolding only; production hotspots are reviewed
+against the final scene plate.
+
+## Talk-loop contract
+
+Do not run one short six-frame talk gesture as an identical infinite treadmill for a
+whole voice line. That reads as a game loop, not performance.
+
+When only one short talk sheet exists, the engine must phase it:
+
+- play the full gesture once, preferably as a ping-pong arc rather than a hard
+  last-frame-to-first-frame snap;
+- drop into a lower-amplitude settle loop using a small neutral/mid-pose subset for
+  the middle of the line;
+- for longer lines, re-trigger the full gesture near a phrase change or ending beat;
+- vary frame holds slightly so every repeat does not land on the same metronomic
+  timing;
+- never use crossfade, blur, or repeated near-identical cels to disguise a missing
+  gesture.
+
+This is a code-side mitigation, not a replacement for art direction. The long-term
+fix for repeated performance content is a real gesture pool: multiple registered
+short talk/reaction clips per character, plus independent secondary layers such as
+blinks, small eye shifts, breathing, or idle sway that do not repeat in lockstep with
+the mouth/hand gesture.
+
 ### Smear-frame rule
 
 A smear is a single, intentionally distorted transition cel for an unusually fast
@@ -158,6 +206,10 @@ independently-generated images.
    <cast_scale.json>` verifies every character's measured source-art scale agrees with
    its director-declared proportion in the roster, catching accidental mis-scale
    without flagging intentional size differences.
+   Pair this with a staged visible-size review: a counter, window, vehicle, or
+   foreground-occluded actor can be mathematically correct as a full-body equivalent
+   and still read wrong in the actual composite. Important actor pairings need a
+   project-specific visible-ratio test or review note.
 5. **A visual QA page before anything is called playable.**
    `tools/check_registration.py frames <sheet>/registration.json --onion-skin out.png`
    overlays every frame of a sheet on top of each other, aligned by anchor. If feet,
@@ -168,12 +220,92 @@ independently-generated images.
    frames on top of ungoverned registration only produces more visible drift, not
    better animation.
 
+## Known failure definitions
+
+These are hard rejects, even if the loop looks busy at full speed:
+
+- **Scale drift:** an actor grows or shrinks from frame to frame while standing,
+  talking, idling, or walking on the same floor position. Perspective size may change
+  only when the actor's world position changes intentionally.
+- **Location drift:** the actor's feet, root, counter-contact point, or furniture
+  anchor slides around inside the sheet while the engine position stays fixed.
+- **Detached or duplicate parts:** a spare hand, arm, hat, head, or second partial
+  actor appears because a generated frame carried unwanted remnants. Quarantine the
+  cel; do not hide it with speed.
+- **Whole-room swap:** a resident character animation changes walls, desks, props,
+  lights, windows, or the camera plate. Scene characters animate as isolated actor
+  layers only.
+- **Fake in-between:** a frame has the same pose as the previous frame with only
+  redraw shimmer, texture noise, or tiny clothing flicker. More of these frames makes
+  the animation worse, not smoother.
+- **Baked contact shadow:** a frame contains its own shadow that fails to stay under
+  the actor's actual root/contact point. Shadows belong to the engine or to a
+  separately registered shadow layer.
+- **Canvas-bottom shadow error:** an actor sheet has transparent padding below the
+  feet, but the runtime treats the canvas bottom as the foot-contact point. The
+  shadow then sits under empty padding instead of under the boots. Register the
+  authored contact baseline and offset the sprite so the actor root is the real
+  contact point.
+- **Per-frame rescue crop:** a single broken cel is fixed by changing its crop,
+  origin, display size, or offset differently from the rest of the sheet. Re-pad or
+  redraw the art instead; every allowed cel shares the same registration contract.
+
+## Furniture and counter actor QA
+
+Counter, desk, booth, gate, and window actors require extra discipline because bad
+layering reads immediately as pasted-on.
+
+Before a furniture-anchored actor is admitted:
+
+- Confirm the background plate has the actor removed or neutralized; the room cannot
+  change between frames.
+- Define the furniture contact/occlusion line in writing before drawing frames.
+- Prove the actor's registered root/bounds physically cross the foreground
+  occlusion band in the final composed scene. A counter mask that exists but does
+  not overlap the actor is decorative, not functional.
+- Keep torso and lower body behind the furniture mask.
+- Put only the required active hands, tools, papers, or stamps above the writing or
+  work surface.
+- Confirm every action has named key poses: anticipation, contact/impact, follow
+  through, settle, return to idle.
+- Use smear frames only for fast tool movement, such as a stamp strike or pen flick;
+  never for a held writing pose or ordinary dialogue.
+- Review one frozen frame from every action with the UI visible. If the body covers
+  the counter wrong, clips off the edge, overhangs the window, or hides behind the
+  wrong layer, reject the sheet before motion review.
+
 ## Hard gate
 
 **A frame that does not pass both `check_registration.py frames` and
 `check_registration.py cast-scale` does not get merged into the game.** This is not
 advisory — wire both checks into CI or, at minimum, a documented pre-merge checklist,
-so every character sheet in this project goes through them before shipping.
+so every character sheet in every project that adopts this Bible goes through them
+before shipping.
+
+## Bug-to-Bible rule
+
+When a project hits an animation, registration, staging, UI-occlusion, or
+scene-compositing bug and the team finds a fix, the work is not considered fully
+closed until the reusable lesson is added back to this Bible.
+
+Do not copy project-specific drama into the shared rulebook. Generalize the learning
+so the next project can use it:
+
+- **Symptom:** what the viewer saw, such as scale drift, floating feet, a duplicate
+  limb, a full-room flicker, dialogue covering a speaker, or a counter actor clipping
+  through furniture.
+- **Root cause:** what actually caused it, such as independent frame generation,
+  wrong visible-body fraction, per-frame crop rescue, stale actor dimensions, missing
+  occlusion masks, or UI placement that ignored staging.
+- **Rule:** the production constraint that would have prevented it.
+- **QA check:** the test, overlay, contact sheet, mobile capture, or review artifact
+  that proves the bug cannot quietly return.
+- **Adoption note:** which active project docs, templates, scripts, or CI checks need
+  the new rule ported back into them.
+
+If the fix only lives in code, memory, chat, or a single project branch, the lesson is
+not captured. The Bible is the durable memory. Future projects should inherit the
+rule before they repeat the mistake.
 
 ## Required approval evidence
 
@@ -185,18 +317,38 @@ Before a new animation is called playable or published as final, provide:
   the actor.
 - A check that dialogue and UI do not cover the speaking character or the current
   interaction.
+- A scene-composite still for every resident/furniture-anchored actor, proving the
+  actor lives behind/in front of the correct furniture layers and does not overhang,
+  clip, or drift.
+- For generated art, a statement that the room/background was not regenerated as part
+  of the character animation pass.
 - Explicit review of the primary motion plus secondary motion; no crossfade, blur, or
   duplicated imagery may be used to conceal missing action. A deliberate one-cel smear
   is allowed only under the Smear-frame rule above.
 - Both `check_registration.py` checks passing — no sheet is "final" while either is
   red.
 
+## Adopting this in a new project
+
+1. Copy `ANIMATION_BIBLE.md` (this file) into the new project's `docs/` unchanged.
+2. Copy `tools/check_registration.py` into the new project.
+3. Author a `registration.json` per character sheet and a project-wide
+   `cast_scale.json` for the full roster — see `templates/` in this repo for annotated
+   examples and the schema documented in the script's own docstring.
+4. Add a "Current status" section to the project's own copy of this file (or a
+   sibling doc) tracking each sheet's name and approval state
+   (provisional/rejected/final) as it's produced — that history is project-specific
+   and does not belong in this shared repo.
+5. Wire the hard gate into CI or a pre-merge checklist before any character art is
+   treated as final.
+
 ## Current status
 
-Project-specific, not synced from upstream. No character sheets have been authored
-yet. Record each sheet's name, its approval state (provisional/rejected/final), and
-why, as sheets are produced and reviewed — Pip's walk cycle should be the first entry
-here, per the build order in `docs/CODEX_BUILD_PROMPT.md`.
+Project-specific, not synced from upstream. This section records each sheet's name,
+approval state (provisional/rejected/final), and why as sheets are produced and
+reviewed. Act 1 has provisional production sheets wired into the playable scene; they
+remain provisional until final human review accepts the required motion, mobile,
+composite, and dialogue-staging evidence.
 
 ### Current sheet evidence
 
@@ -240,3 +392,4 @@ provisional because final human approval requires reviewing the evidence listed 
 `npm run qa:cast` passes against the full declared cast at 220 px/world unit with Act
 1 production sheets for Pip, Bramble, Scuttle, and Old Bottlecap, and the existing
 Grommet placeholder.
+
