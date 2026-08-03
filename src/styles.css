@@ -149,8 +149,8 @@ h1 {
 
 .pip {
   left: 52%;
-  top: 82%;
-  width: 8.8%;
+  top: 84%;
+  width: 14.5%;
   transform: translate(-50%, -83.333%);
   z-index: 12;
   filter: drop-shadow(0 14px 8px rgba(0, 0, 0, 0.32));
@@ -166,7 +166,7 @@ h1 {
 .bramble-rig {
   left: 47%;
   top: 63%;
-  width: 8.8%;
+  width: 14.5%;
   aspect-ratio: 320 / 260;
   transform: translate(-50%, -78.846%);
 }
@@ -174,7 +174,7 @@ h1 {
 .bottlecap-rig {
   left: 79.5%;
   top: 86%;
-  width: 8.8%;
+  width: 14.5%;
   aspect-ratio: 320 / 260;
   transform: translate(-50%, -80.769%);
 }
@@ -367,21 +367,21 @@ h1 {
   }
 
   .pip {
-    width: 14%;
+    width: 23%;
     left: 52%;
-    top: 82%;
+    top: 77%;
   }
 
   .bramble-rig {
-    width: 14%;
+    width: 23%;
     left: 47%;
     top: 50%;
   }
 
   .bottlecap-rig {
-    width: 14%;
+    width: 23%;
     left: 79.5%;
-    top: 86%;
+    top: 79%;
   }
 
   .dialogue span {
