@@ -48,6 +48,26 @@ Act 1 uses no parallax. A single painted background is the deliberate choice; do
 split it per object. Future parallax, if introduced, may use only far/near full-width
 horizontal paintings.
 
+### Background acceptance gate
+
+Do not import a candidate painting into AGS until it passes every item below against
+`ags/room1/room1-greybox.png`. A visually attractive image that drifts from this
+contract is rejected and regenerated; geometry is never retrofitted to make it fit.
+
+| Check | Required result |
+|---|---|
+| Canvas and registration | One opaque `3840x720` PNG. The cubbies, dust, note, desk, bell, gate, and right-edge entry staging align to their room-space coordinates in `geometry.json`. |
+| Desk clearance | A finished wall and floor exist behind the desk footprint. The desk is painted at `1440,488,460x154`; its counter top is at `y=488` and its walk-behind baseline is `y=614`. No hole, cutout, or separate desk layer. |
+| Gate clearance | The gate is painted at `2760,302,300x300`, with the walk-behind baseline at `y=568`. Bottlecap's `y=576` staging must visibly place the guard in front of its bars. |
+| Scrolling continuity | Light remains a warm upper-left key across room X `0-3840`. Horizon/eye level, floor perspective, line weight, palette, and value range remain continuous when panning through X `1280` and `2560`. No seam, repeated bay, tonal jump, or reversed light source. |
+| Walk corridor | The floor clearly supports the uninterrupted walkable corridor from entry through gate, clerk, note, cubbies, and dust. Station dressing must not visually suggest an obstacle across that route. |
+| Composition | The three screens are distinct play beats, not three copied panels: discovery/cubbies at left, clerk/note/bell at center, and gate/entry/exit at right. The return route retains readable environmental detail rather than becoming an empty transit void. |
+| Cohesion | Warm painterly rendering, upper-left light, and the muted earth palette match across the full width. Furniture is part of the painting, not pasted on or isolated. |
+
+Review the candidate at full width and at three `1280x720` camera crops before
+acceptance. Record a failure as layout, scrolling continuity, occlusion readability,
+or scene cohesion; regenerate rather than loosening a locked coordinate.
+
 ## Step 4 - AGS integration
 
 Room occlusion uses AGS walk-behind areas and baselines, never transparent furniture
