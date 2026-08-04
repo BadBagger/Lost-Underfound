@@ -41,10 +41,14 @@
     "old-bottlecap-guard": { "x": 2900, "y": 576 }
   },
   "hotspots": [
+    { "id": "couch-ceiling", "rect": { "x": 1840, "y": 32, "width": 980, "height": 152 } },
     { "id": "dust-clump", "rect": { "x": 610, "y": 598, "width": 128, "height": 72 } },
     { "id": "cubby-wall", "rect": { "x": 146, "y": 270, "width": 330, "height": 278 } },
     { "id": "wall-note", "rect": { "x": 1160, "y": 202, "width": 142, "height": 74 } },
+    { "id": "sign-in-log", "rect": { "x": 1290, "y": 310, "width": 118, "height": 128 } },
+    { "id": "popcorn-boulder", "rect": { "x": 816, "y": 530, "width": 158, "height": 124 } },
     { "id": "service-bell", "rect": { "x": 1768, "y": 454, "width": 54, "height": 32 } },
-    { "id": "toll-gate", "rect": { "x": 2748, "y": 292, "width": 326, "height": 322 } }
+    { "id": "toll-gate", "rect": { "x": 2748, "y": 292, "width": 326, "height": 322 } },
+    { "id": "cobweb-curtain", "rect": { "x": 3150, "y": 246, "width": 242, "height": 320 } }
   ]
 }

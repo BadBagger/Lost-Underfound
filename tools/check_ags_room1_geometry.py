@@ -53,12 +53,28 @@ def main() -> None:
     if not all(walkable_min_x <= x <= walkable_max_x for x in required_route):
         fail("walkable corridor must connect entry, gate, clerk, cubbies, and dust")
 
+    hotspot_ids = {hotspot["id"] for hotspot in spec["hotspots"]}
+    required_hotspots = {
+        "couch-ceiling",
+        "dust-clump",
+        "cubby-wall",
+        "wall-note",
+        "sign-in-log",
+        "popcorn-boulder",
+        "cobweb-curtain",
+        "service-bell",
+        "toll-gate",
+    }
+    missing_hotspots = required_hotspots - hotspot_ids
+    if missing_hotspots:
+        fail("all scripted room hotspots must be blocked: " + ", ".join(sorted(missing_hotspots)))
+
     pip_height = spec["actorReference"]["pipHeight"]
     counter_delta = positions["pip-talk-clerk"]["y"] - desk["counterTopY"]
     if not (0.42 * pip_height <= counter_delta <= 0.58 * pip_height):
         fail("desk counter must meet Pip around mid-torso at clerk spot")
 
-    print("AGS Room 1 geometry QA passed: 3-screen room, connected walk corridor, locked baselines, and calibrated actor blocking.")
+    print("AGS Room 1 geometry QA passed: 3-screen room, connected walk corridor, all scripted hotspots, locked baselines, and calibrated actor blocking.")
 
 
 if __name__ == "__main__":

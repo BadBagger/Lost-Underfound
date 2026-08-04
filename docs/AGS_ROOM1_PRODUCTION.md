@@ -13,10 +13,11 @@ See `ags/room1/geometry.json` and `ags/room1/room1-greybox.png`.
 | Zone | Type | Coordinates / baseline | Purpose |
 |---|---|---:|---|
 | Under-couch floor | walkable area | room X `38-3802`; screens `0-2` | Pip movement plane. |
-| Discovery station | hotspot cluster | cubbies `146-476`, dust `610-738`; screen `0` | Early inspection/pickup beat. |
+| Discovery station | hotspot cluster | cubbies `146-476`, dust `610-738`, popcorn `816-974`, note `1160-1302`; screen `0` | Early inspection/pickup and flavor beats. |
 | Clerk station | walk-behind | desk `1440,488,460x154`; baseline `614`; screen `1` | Painted into background. Pip at clerk spot draws behind it; foreground Pip draws in front. |
 | Wall note / bell | hotspots | note `1160-1302`, bell `1768-1822`; screens `0-1` | Connects discovery to clerk station. |
 | Toll gate | walk-behind | `2760,302,300x300`; baseline `568`; screen `2` | Painted into background. Bottlecap baseline `576` keeps the guard in front of the bars. |
+| Cobweb tunnel | hotspot | `3150-3392`; screen `2` | Foreground corner curtain; Scuttle's one-shot dash-through. |
 | Pip entry | standing position | `3580,666`; screen `2` | Act opening position at right edge. |
 | Pip clerk talk | standing position | `1720,584`; screen `1` | Counter interaction position. |
 | Pip exit | standing position | `2690,592`; screen `2` | Grate exit position. |
@@ -37,12 +38,30 @@ sprite crop sizes.
 ## Step 3 - Background brief
 
 Paint one opaque, seamless `3840x720` room background around this geometry. The desk,
-cubbies, bookshelf, and gate are painted into that single background with a finished
-wall and floor behind all furniture. Keep the same warm upper-left key and one
-continuous eye level across all three screens: no repeated bays, seams, tonal jumps,
-or lighting reversal. Match the prior room's quality tier only: Deponia-style
-painterly rendering, rich cohesive dressing, and a muted earth palette. The old
-composition is not a layout source.
+cubbies, bookshelf, gate, chair, cobweb curtain, and every non-actor prop are painted
+into that single background with a finished wall and floor behind all furniture. This
+is Bramble's tidy little kingdom: dense, specific, and full of small visual jokes,
+not a generic empty basement. Keep the same warm upper-left key and one continuous
+eye level across all three screens: no repeated bays, seams, tonal jumps, or lighting
+reversal. Match the prior room's quality tier only: Deponia-style painterly rendering,
+rich cohesive dressing, and a muted earth palette. The old composition is not a
+layout source.
+
+Author the following room-space beats into the painting. They are required scene
+content, not optional decoration:
+
+- Left: cap-folder cubbies, dust clump, popcorn-kernel boulder, wall note, and a
+  believable accumulation of lost household junk around the floor edges.
+- Centre: Bramble's shoebox-lid desk on thread spools, the chair behind it, service
+  bell, sign-in log, filing clutter, and a narrow bookshelf of salvaged books,
+  spools, labels, and oddments. Keep the floor clear at the clerk talk position.
+- Right: the literal window-screen grate, its worn tollbooth hardware and exit
+  tunnel, Old Bottlecap's clear staging area in front of the bars, and a cobweb
+  curtain at the adjacent small tunnel where Scuttle can dash through.
+- Across the ceiling: couch springs, staples, a manufacturer's tag, and ancient
+  snack debris. Across walls and floor: small, readable Lost & Found history such as
+  labels, thread, bent paper clips, toy parts, lint, and deliberately placed scraps.
+  Dress the negative space without obscuring hotspots or the walk corridor.
 
 Act 1 uses no parallax. A single painted background is the deliberate choice; do not
 split it per object. Future parallax, if introduced, may use only far/near full-width
@@ -56,12 +75,13 @@ contract is rejected and regenerated; geometry is never retrofitted to make it f
 
 | Check | Required result |
 |---|---|
-| Canvas and registration | One opaque `3840x720` PNG. The cubbies, dust, note, desk, bell, gate, and right-edge entry staging align to their room-space coordinates in `geometry.json`. |
+| Canvas and registration | One opaque `3840x720` PNG. The couch ceiling, cubbies, dust, popcorn boulder, note, sign-in log, desk, bell, gate, cobweb curtain, and right-edge entry staging align to their room-space coordinates in `geometry.json`. |
 | Desk clearance | A finished wall and floor exist behind the desk footprint. The desk is painted at `1440,488,460x154`; its counter top is at `y=488` and its walk-behind baseline is `y=614`. No hole, cutout, or separate desk layer. |
 | Gate clearance | The gate is painted at `2760,302,300x300`, with the walk-behind baseline at `y=568`. Bottlecap's `y=576` staging must visibly place the guard in front of its bars. |
 | Scrolling continuity | Light remains a warm upper-left key across room X `0-3840`. Horizon/eye level, floor perspective, line weight, palette, and value range remain continuous when panning through X `1280` and `2560`. No seam, repeated bay, tonal jump, or reversed light source. |
 | Walk corridor | The floor clearly supports the uninterrupted walkable corridor from entry through gate, clerk, note, cubbies, and dust. Station dressing must not visually suggest an obstacle across that route. |
 | Composition | The three screens are distinct play beats, not three copied panels: discovery/cubbies at left, clerk/note/bell at center, and gate/entry/exit at right. The return route retains readable environmental detail rather than becoming an empty transit void. |
+| Environmental storytelling | Every scripted hotspot is visibly present and readable. The room has authored clutter, material history, small jokes, and useful-looking office detritus; empty wall or floor is used only to preserve silhouettes and movement readability. |
 | Cohesion | Warm painterly rendering, upper-left light, and the muted earth palette match across the full width. Furniture is part of the painting, not pasted on or isolated. |
 
 Review the candidate at full width and at three `1280x720` camera crops before
