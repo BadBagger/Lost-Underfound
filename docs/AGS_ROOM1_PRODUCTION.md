@@ -1,121 +1,85 @@
 # AGS Room 1 Production Contract
 
-Room 1 is a scrolling `3840x720` room viewed through a fixed `1280x720` AGS
-viewport. The greybox is the authoritative layout; the final background must fit it,
-never revise it implicitly. The room spans three viewport widths. Pip enters at the
-right edge, travels left through the discovery and clerk stations, then returns right
-to Bottlecap and the exit.
+Room 1 is three discrete native `1280x720` AGS screens, never a scrolling
+`3840x720` panorama. The screens are joined by player-driven edge transitions:
+Discovery <-> Clerk <-> Gate. `ags/room1/geometry.json` is authoritative for every
+screen-local placement, baseline, standing position, and link.
 
-## Step 1 - Geometry
+## Screen Route
 
-See `ags/room1/geometry.json` and `ags/room1/room1-greybox.png`.
-`ags/room1/room1-paint-guide.png` and its three crops in
-`ags/room1/paint-guides/` are the unlabeled art-placement references. They encode
-the locked landmark footprints but are never runtime assets.
+Pip begins the cold open in **Discovery**, moves right to **Clerk** for Bramble's
+greeting/tutorial, then right to **Gate**. Edge links are bidirectional so the
+optional post-gate Bramble exchange remains possible. The open toll gate is an Act 2
+transition, not a Room 1 edge link; it must play script line
+`act01-049-pip-transition-out`.
 
-| Zone | Type | Coordinates / baseline | Purpose |
-|---|---|---:|---|
-| Under-couch floor | walkable area | room X `38-3802`; screens `0-2` | Pip movement plane. |
-| Discovery station | hotspot cluster | cubbies `146-476`, dust `610-738`, popcorn `816-974`, note `1160-1302`; screen `0` | Early inspection/pickup and flavor beats. |
-| Clerk station | walk-behind | desk envelope `1440,488,460x154`; counter + side-support mask; baseline `614`; screen `1` | Painted into background. The desk has a visible open clerk recess (`1512,532,316x110`) and chair behind it. Pip at clerk spot draws behind the counter edge; foreground Pip draws in front. |
-| Wall note / bell | hotspots | note `1160-1302`, bell `1768-1822`; screens `0-1` | Connects discovery to clerk station. |
-| Toll gate | walk-behind | `2760,302,300x300`; baseline `568`; screen `2` | Painted into background. Bottlecap baseline `576` keeps the guard in front of the bars. |
-| Cobweb tunnel | hotspot | `3150-3392`; screen `2` | Foreground corner curtain; Scuttle's one-shot dash-through. |
-| Pip entry | standing position | `3580,666`; screen `2` | Act opening position at right edge. |
-| Pip clerk talk | standing position | `1720,584`; screen `1` | Counter interaction position. |
-| Pip exit | standing position | `2690,592`; screen `2` | Grate exit position. |
-| Bramble clerk | standing position | `1560,574`; screen `1` | Behind counter, low enough to read seated/short. |
-| Old Bottlecap guard | standing position | `2900,576`; screen `2` | In front of gate bars. |
+| Screen | Required scene content | Links |
+|---|---|---|
+| Discovery | Couch ceiling, cap-folder cubbies, dust nest, popcorn boulder | Right edge -> Clerk; Clerk return -> right-side entry. |
+| Clerk | Solid Bramble desk, bookshelf, sign-in log, wall note, bell | Left edge -> Discovery; right edge -> Gate. |
+| Gate | Toll grate/Old Bottlecap station and distinct cobweb tunnel | Left edge -> Clerk; opened grate -> Act 2. |
 
-## Step 2 - Scale calibration
+## Geometry And Scale
 
-Pip is the reference actor: `194 px` tall at the clerk talk position, with feet at
-`y=584`. The desk counter top at `y=488` crosses Pip `96 px` above his feet: just
-below his chest / at mid-torso. The painted desk envelope is `460x154 px`, but it is
-not a closed box: a `44 px` counter apron and two side supports leave a visible clerk
-recess. The chair is behind the recess at `1560,574`, never on Pip's side of the
-counter. Bramble is a seated, upper-body desk actor; her sprite has no visible legs
-that would need to be hidden by a fake solid desk.
+Pip is the reference actor at `194 px` tall. Each screen has a local walkable-floor
+polygon and uses AGS native character walking only. There is no scrolling and no
+custom depth sorting. Pip needs separate left/right walk sprites; standard edge exits
+walk offscreen and the destination plays the reciprocal walk-on animation. The toll
+gate instead uses the bespoke `duck-through-gate` exit animation after `gateOpen`.
 
-AGS walkable-area scaling is `85%` at `y=510` rising linearly to `100%` at `y=682`.
-The locked cast targets at their anchors are: Pip `194 px`, Bramble `160 px`, Old
-Bottlecap `116 px`, and Scuttle `68 px`. These are room-pixel heights, not source
-sprite crop sizes.
+The Clerk desk is a **solid painted background piece** at `160,488,460x154`, with
+baseline `614`. Bramble is a counter-height talking-head actor registered at
+`280,510`: only head and hands clear the counter. The chair is background dressing
+only and may be repainted or omitted; no player or clerk walk space exists behind the
+desk. Pip's clerk-talk spot is `440,584`, placing the counter at mid-torso.
 
-## Step 3 - Background brief
+The Gate is painted at `760,302,300x300`, baseline `568`. Old Bottlecap's `y=576`
+anchor deliberately renders in front of the bars. The cobweb tunnel is a distinct
+hotspot, not part of the grate.
 
-Paint one opaque, seamless `3840x720` room background around this geometry. The desk,
-cubbies, bookshelf, gate, chair, cobweb curtain, and every non-actor prop are painted
-into that single background with a finished wall and floor behind all furniture. This
-is Bramble's tidy little kingdom: dense, specific, and full of small visual jokes,
-not a generic empty basement. Keep the same warm upper-left key and one continuous
-eye level across all three screens: no repeated bays, seams, tonal jumps, or lighting
-reversal. Match the prior room's quality tier only: Deponia-style painterly rendering,
-rich cohesive dressing, and a muted earth palette. The old composition is not a
-layout source.
+## Background Production
 
-Author the following room-space beats into the painting. They are required scene
-content, not optional decoration:
+Produce one opaque painted background per screen:
 
-- Left: cap-folder cubbies, dust clump, popcorn-kernel boulder, wall note, and a
-  believable accumulation of lost household junk around the floor edges.
-- Centre: Bramble's shoebox-lid desk on thread spools, the chair behind it, service
-  bell, sign-in log, filing clutter, and a narrow bookshelf of salvaged books,
-  spools, labels, and oddments. Keep the floor clear at the clerk talk position.
-- Right: the literal window-screen grate, its worn tollbooth hardware and exit
-  tunnel, Old Bottlecap's clear staging area in front of the bars, and a cobweb
-  curtain at the adjacent small tunnel where Scuttle can dash through.
-- Across the ceiling: couch springs, staples, a manufacturer's tag, and ancient
-  snack debris. Across walls and floor: small, readable Lost & Found history such as
-  labels, thread, bent paper clips, toy parts, lint, and deliberately placed scraps.
-  Dress the negative space without obscuring hotspots or the walk corridor.
+- `ags/room1/background/discovery.png`
+- `ags/room1/background/clerk.png`
+- `ags/room1/background/gate.png`
 
-Act 1 uses no parallax. A single painted background is the deliberate choice; do not
-split it per object. Future parallax, if introduced, may use only far/near full-width
-horizontal paintings.
+Each is a cohesive, dense, warm painterly Lost & Found composition with consistent
+upper-left light **within that screen**. The approved studies are look references
+only. They do not override the local coordinates in `geometry.json`. Do not generate
+transparent furniture layers or recreate the old continuous-room seam workflow.
 
-### Background acceptance gate
+The Discovery screen needs lost household history around the cubbies and floor props.
+The Clerk screen needs a dense little bureaucracy made of salvaged objects, but the
+desk remains a legible solid counter for Bramble's talking head. The Gate screen needs
+the grumpy toll station, a clear Bottlecap staging spot in front of the bars, and a
+separate cobweb tunnel for Scuttle.
 
-Do not import a candidate painting into AGS until it passes every item below against
-`ags/room1/room1-greybox.png`. A visually attractive image that drifts from this
-contract is rejected and regenerated; geometry is never retrofitted to make it fit.
+## Background Acceptance Gate
 
-| Check | Required result |
-|---|---|
-| Canvas and registration | One opaque `3840x720` PNG. The couch ceiling, cubbies, dust, popcorn boulder, note, sign-in log, desk, bell, gate, cobweb curtain, and right-edge entry staging align to their room-space coordinates in `geometry.json`. |
-| Desk clearance | A finished wall and floor exist behind the desk envelope. The desk is painted at `1440,488,460x154`; its counter top is at `y=488` and its walk-behind baseline is `y=614`. It must read as a shallow counter with two side supports and an open clerk recess, not a sealed crate. The chair is clearly behind the counter, Bramble sits in front of the chair, and the chair is excluded from the walk-behind mask. No hole, cutout, or separate desk layer. |
-| Gate clearance | The gate is painted at `2760,302,300x300`, with the walk-behind baseline at `y=568`. Bottlecap's `y=576` staging must visibly place the guard in front of its bars. |
-| Scrolling continuity | Light remains a warm upper-left key across room X `0-3840`. Horizon/eye level, floor perspective, line weight, palette, and value range remain continuous when panning through X `1280` and `2560`. No seam, repeated bay, tonal jump, or reversed light source. |
-| Walk corridor | The floor clearly supports the uninterrupted walkable corridor from entry through gate, clerk, note, cubbies, and dust. Station dressing must not visually suggest an obstacle across that route. |
-| Composition | The three screens are distinct play beats, not three copied panels: discovery/cubbies at left, clerk/note/bell at center, and gate/entry/exit at right. The return route retains readable environmental detail rather than becoming an empty transit void. |
-| Environmental storytelling | Every scripted hotspot is visibly present and readable. The room has authored clutter, material history, small jokes, and useful-looking office detritus; empty wall or floor is used only to preserve silhouettes and movement readability. |
-| Cohesion | Warm painterly rendering, upper-left light, and the muted earth palette match across the full width. Furniture is part of the painting, not pasted on or isolated. |
+Do not import a screen into AGS until `npm run qa:ags:background` passes. For each
+screen that command requires:
 
-Review the candidate at full width and at three `1280x720` camera crops before
-acceptance. Record a failure as layout, scrolling continuity, occlusion readability,
-or scene cohesion; regenerate rather than loosening a locked coordinate.
+- opaque, exactly `1280x720` art;
+- a sibling review manifest, such as `background/discovery.review.json`, confirming
+  `geometryAuthority: true` and `studiesReferenceOnly: true`;
+- all of `objectPlacement`, `internalLighting`, `perspectiveEyeLevel`,
+  `finishedSurfaces`, and `dimensions` marked `pass`;
+- measured placement evidence for every local hotspot and walk-behind: `2 px`
+  tolerance for the desk and gate, `6 px` for the other props;
+- painted wall/floor behind every AGS walk-behind region, with no alpha holes or
+  placeholders.
 
-### Final-art proof package
+There are no seam crops and no full-room light-continuity gate because screens are
+discrete. A strong-looking background that misses local geometry still fails.
 
-The final candidate lives at `ags/room1/background/room1-background.png`. It cannot
-be imported into AGS until `npm run qa:ags:background` passes. That command requires:
+## AGS Integration
 
-- an opaque `3840x720` background;
-- `room1-background-review.json`, which records `geometryAuthority: true`,
-  `studiesReferenceOnly: true`, all six acceptance-gate results as `pass`, and the
-  measured `x`, `y`, `width`, and `height` for every locked object. It must also
-  record `deskClerkBay: "pass"` only after a reviewer confirms the desk is a
-  shallow counter with two supports, a visible open recess, and the chair behind
-  Bramble rather than on Pip's side of the counter;
-- `background/qa/seam-1280.png` and `seam-2560.png`, each a `200x720` crop centred
-  on the corresponding screen boundary.
+After all three background gates pass, import them as three AGS rooms. Define each
+local walkable area, the Clerk desk and Gate walk-behind masks/baselines, local
+hotspots, entry points, and edge-transition handlers from `geometry.json`. Do not
+begin character wiring before the matching screen background has passed QA.
 
-Placement tolerance is `2 px` for the desk and toll gate, and `6 px` for the other
-locked props. This is a final-art gate only; it is deliberately not part of the
-normal project test command until a candidate background exists.
-
-## Step 4 - AGS integration
-
-Room occlusion uses AGS walk-behind areas and baselines, never transparent furniture
-layers or custom depth sorting. Import only character cels that have passed the
-Animation Bible's registration, cast-scale, and full-construction gates.
+Import only character cels that have passed the Animation Bible's registration,
+cast-scale, and full-construction gates.

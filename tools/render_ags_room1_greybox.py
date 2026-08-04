@@ -1,4 +1,4 @@
-"""Render the authoritative AGS Room 1 geometry review plate."""
+"""Render the three authoritative discrete-screen Room 1 greyboxes."""
 
 from __future__ import annotations
 
@@ -10,8 +10,7 @@ from PIL import Image, ImageDraw, ImageFont
 
 ROOT = Path(__file__).resolve().parents[1]
 SPEC = ROOT / "ags" / "room1" / "geometry.json"
-OUT = ROOT / "ags" / "room1" / "room1-greybox.png"
-PAINT_GUIDE_OUT = ROOT / "ags" / "room1" / "room1-paint-guide.png"
+OUT_DIR = ROOT / "ags" / "room1" / "greybox"
 
 
 def font(size: int, bold: bool = False) -> ImageFont.FreeTypeFont:
@@ -20,111 +19,48 @@ def font(size: int, bold: bool = False) -> ImageFont.FreeTypeFont:
 
 
 def label(draw: ImageDraw.ImageDraw, xy: tuple[int, int], text: str, color: str = "#f5f7fa") -> None:
-    draw.text((xy[0] + 1, xy[1] + 1), text, font=font(15, True), fill="#151b22")
-    draw.text(xy, text, font=font(15, True), fill=color)
+    draw.text((xy[0] + 1, xy[1] + 1), text, font=font(14, True), fill="#151b22")
+    draw.text(xy, text, font=font(14, True), fill=color)
 
 
 def main() -> None:
     spec = json.loads(SPEC.read_text(encoding="utf-8"))
-    width = spec["resolution"]["width"]
-    height = spec["resolution"]["height"]
-    image = Image.new("RGB", (width, height), "#41474f")
-    draw = ImageDraw.Draw(image)
+    size = tuple(spec["nativeSize"].values())
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
+    for screen in spec["screens"]:
+        image = Image.new("RGB", size, "#41474f")
+        draw = ImageDraw.Draw(image)
+        draw.rectangle((0, 0, size[0], 505), fill="#60666c")
+        draw.rectangle((0, 505, size[0], size[1]), fill="#30363d")
+        draw.polygon([tuple(point) for point in screen["walkableArea"]], fill="#526b70", outline="#92d6d6", width=3)
+        label(draw, (52, 530), "WALKABLE FLOOR")
 
-    # Room shell and horizon. Greybox contains no final scene art.
-    draw.rectangle((0, 0, width, 505), fill="#60666c")
-    draw.rectangle((0, 505, width, height), fill="#30363d")
-    draw.line((0, 505, width, 505), fill="#9aa3ad", width=3)
-    for y in range(545, height, 45):
-        draw.line((0, y, width, y), fill="#434b54", width=1)
+        for item in screen.get("walkBehinds", []):
+            rect = item["rect"]
+            draw.rectangle((rect["x"], rect["y"], rect["x"] + rect["width"], rect["y"] + rect["height"]), fill="#7a6260", outline="#f0c674", width=3)
+            draw.line((rect["x"], item["baseline"], rect["x"] + rect["width"], item["baseline"]), fill="#ffcc66", width=4)
+            label(draw, (rect["x"] + 8, rect["y"] + 8), item["id"].upper())
 
-    walk = [tuple(point) for point in spec["walkableArea"]]
-    draw.polygon(walk, fill="#526b70", outline="#92d6d6", width=3)
-    label(draw, (80, 526), "WALKABLE FLOOR")
+        for key, point in screen.get("standingPositions", {}).items():
+            draw.ellipse((point["x"] - 7, point["y"] - 7, point["x"] + 7, point["y"] + 7), fill="#8ee4df", outline="#182028", width=2)
+            label(draw, (point["x"] + 10, point["y"] - 24), key, "#8ee4df")
 
-    # Furniture is deliberately geometric: these are the painted-background footprints.
-    desk = spec["walkBehinds"][0]
-    rect = desk["rect"]
-    for mask_rect in desk["foregroundMaskRects"]:
-        draw.rectangle(
-            (mask_rect["x"], mask_rect["y"], mask_rect["x"] + mask_rect["width"], mask_rect["y"] + mask_rect["height"]),
-            fill="#7a6260",
-            outline="#f0c674",
-            width=3,
-        )
-    recess = desk["clerkRecess"]
-    draw.rectangle(
-        (recess["x"], recess["y"], recess["x"] + recess["width"], recess["y"] + recess["height"]),
-        fill="#4b535a",
-        outline="#cdd8df",
-        width=2,
-    )
-    draw.line((rect["x"], desk["baseline"], rect["x"] + rect["width"], desk["baseline"]), fill="#ffcc66", width=4)
-    label(draw, (rect["x"] + 12, rect["y"] + 12), "DESK COUNTER + OPEN CLERK RECESS")
-    label(draw, (rect["x"] + 12, desk["baseline"] + 5), "walk-behind baseline 614", "#ffdc8b")
+        for hotspot in screen.get("hotspots", []):
+            rect = hotspot["rect"]
+            draw.rectangle((rect["x"], rect["y"], rect["x"] + rect["width"], rect["y"] + rect["height"]), outline="#f07f8f", width=3)
+            label(draw, (rect["x"] + 4, rect["y"] + 4), hotspot["id"], "#ff9ca8")
 
-    gate = spec["walkBehinds"][1]
-    rect = gate["rect"]
-    draw.rounded_rectangle((rect["x"], rect["y"], rect["x"] + rect["width"], rect["y"] + rect["height"]), radius=20, fill="#50606b", outline="#f0c674", width=3)
-    draw.line((rect["x"], gate["baseline"], rect["x"] + rect["width"], gate["baseline"]), fill="#ffcc66", width=4)
-    label(draw, (rect["x"] + 18, rect["y"] + 16), "TOLL GATE")
-    label(draw, (rect["x"] + 18, gate["baseline"] + 5), "walk-behind baseline 568", "#ffdc8b")
+        for exit_data in screen.get("exits", []):
+            rect = exit_data["exitHotspot"]
+            draw.rectangle((rect["x"], rect["y"], rect["x"] + rect["width"], rect["y"] + rect["height"]), outline="#b7e17e", width=3)
+            label(draw, (rect["x"] + 3, rect["y"] + 3), exit_data["id"], "#b7e17e")
 
-    colors = {"pip": "#8ee4df", "bramble": "#d0b0e8", "bottlecap": "#f2c879"}
-    poses = spec["standingPositions"]
-    for key, value in poses.items():
-        color = colors["pip"] if key.startswith("pip") else colors["bramble"] if key.startswith("bramble") else colors["bottlecap"]
-        x, y = value["x"], value["y"]
-        draw.ellipse((x - 8, y - 8, x + 8, y + 8), fill=color, outline="#182028", width=2)
-        draw.line((x, y, x, y - 45 if key.startswith("pip") else y - 32), fill=color, width=3)
-        label(draw, (x + 12, y - 26), key.replace("-", " "), color)
-
-    for hotspot in spec["hotspots"]:
-        rect = hotspot["rect"]
-        xy = (rect["x"], rect["y"], rect["x"] + rect["width"], rect["y"] + rect["height"])
-        draw.rectangle(xy, outline="#f07f8f", width=3)
-        label(draw, (rect["x"] + 4, rect["y"] + 4), hotspot["id"], "#ff9ca8")
-
-    draw.rectangle((16, 14, 580, 95), fill="#20262c", outline="#92d6d6", width=2)
-    draw.text((30, 26), "LOST & UNDERFOUND - ROOM 1 GEOMETRY", font=font(24, True), fill="#f5f7fa")
-    draw.text((30, 60), "AGS greybox: coordinates and baselines are authoritative; art follows.", font=font(15), fill="#cbd5df")
-    OUT.parent.mkdir(parents=True, exist_ok=True)
-    image.save(OUT)
-    print(OUT)
-
-    # A deliberately unlabeled placement guide for the final background paint-over.
-    # It captures only fixed geometry and must never ship as room art.
-    guide = Image.new("RGB", (width, height), "#34363a")
-    guide_draw = ImageDraw.Draw(guide)
-    guide_draw.rectangle((0, 0, width, 505), fill="#5f5b53")
-    guide_draw.rectangle((0, 505, width, height), fill="#6b5842")
-    guide_draw.rectangle((0, 0, width, 150), fill="#2d2928")
-    for hotspot in spec["hotspots"]:
-        rect = hotspot["rect"]
-        colors = {
-            "couch-ceiling": "#2d2928",
-            "cubby-wall": "#6e4933",
-            "dust-clump": "#71686a",
-            "popcorn-boulder": "#d7b361",
-            "wall-note": "#e7cf83",
-            "sign-in-log": "#caa66d",
-            "service-bell": "#d2a745",
-            "toll-gate": "#48616a",
-            "cobweb-curtain": "#aeb3ad",
-        }
-        guide_draw.rectangle(
-            (rect["x"], rect["y"], rect["x"] + rect["width"], rect["y"] + rect["height"]),
-            fill=colors[hotspot["id"]],
-        )
-    for mask_rect in desk["foregroundMaskRects"]:
-        guide_draw.rectangle(
-            (mask_rect["x"], mask_rect["y"], mask_rect["x"] + mask_rect["width"], mask_rect["y"] + mask_rect["height"]),
-            fill="#744a35",
-        )
-    chair = desk["chairAnchor"]
-    guide_draw.ellipse((chair["x"] - 54, chair["y"] - 150, chair["x"] + 54, chair["y"] + 6), fill="#8c755d")
-    guide.save(PAINT_GUIDE_OUT)
-    print(PAINT_GUIDE_OUT)
+        draw.rectangle((16, 14, 580, 76), fill="#20262c", outline="#92d6d6", width=2)
+        draw.text((30, 25), f"ROOM 1 - {screen['title'].upper()}", font=font(22, True), fill="#f5f7fa")
+        draw.text((30, 52), "AGS discrete-screen geometry: local coordinates are authoritative.", font=font(13), fill="#cbd5df")
+        target = OUT_DIR / f"{screen['id']}.png"
+        image.save(target)
+        print(target)
 
 
 if __name__ == "__main__":

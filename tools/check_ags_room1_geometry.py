@@ -1,4 +1,4 @@
-"""Fail the build when the AGS Room 1 geometry contract drifts."""
+"""Fail the build when the discrete AGS Room 1 geometry contract drifts."""
 
 from __future__ import annotations
 
@@ -16,73 +16,74 @@ def fail(message: str) -> None:
 
 def main() -> None:
     spec = json.loads(SPEC_PATH.read_text(encoding="utf-8"))
-    width = spec["resolution"]["width"]
-    height = spec["resolution"]["height"]
-    viewport = spec["viewport"]
-    if (width, height) != (3840, 720):
-        fail("Room 1 must remain a 3840x720 three-screen scrolling room")
-    if viewport["width"] * viewport["screensWide"] != width:
-        fail("room width must equal an integer number of viewport widths")
-    if spec["camera"]["xMax"] != width - viewport["width"]:
-        fail("camera xMax must match the rightmost legal viewport origin")
+    if spec.get("architecture") != "discrete-screens":
+        fail("Room 1 must use discrete screens, never a scrolling panorama")
+    if spec.get("nativeSize") != {"width": 1280, "height": 720}:
+        fail("every Room 1 screen must be native 1280x720")
 
-    desk, gate = spec["walkBehinds"]
-    if desk["id"] != "desk" or desk["baseline"] != 614:
-        fail("desk baseline must stay at 614")
-    if desk["rect"] != {"x": 1440, "y": 488, "width": 460, "height": 154}:
-        fail("desk footprint must stay at 1440,488,460x154")
-    if desk["clerkRecess"] != {"x": 1512, "y": 532, "width": 316, "height": 110}:
-        fail("desk must retain the open clerk recess")
-    if desk["chairAnchor"] != {"x": 1560, "y": 574}:
-        fail("chair must remain behind Bramble in the clerk recess")
-    if len(desk["foregroundMaskRects"]) != 3:
-        fail("desk foreground mask must be counter plus two side supports, never a solid crate")
-    if gate["id"] != "toll-gate" or gate["baseline"] != 568:
-        fail("gate baseline must stay at 568")
+    screens = {screen["id"]: screen for screen in spec.get("screens", [])}
+    if set(screens) != {"discovery", "clerk", "gate"}:
+        fail("Room 1 must contain discovery, clerk, and gate screens")
+    if spec.get("start") != {"screenId": "discovery", "entryPoint": "cold-open"}:
+        fail("Pip must begin the cold open in the discovery screen")
 
-    positions = spec["standingPositions"]
-    if not (positions["pip-talk-clerk"]["y"] < desk["baseline"]):
-        fail("Pip's clerk spot must render behind the desk")
-    if not (positions["old-bottlecap-guard"]["y"] > gate["baseline"]):
+    for screen_id, screen in screens.items():
+        if screen["background"] != f"background/{screen_id}.png":
+            fail(f"{screen_id} background path must be screen-local")
+        if len(screen["walkableArea"]) < 3:
+            fail(f"{screen_id} needs a walkable floor polygon")
+        if not screen.get("entryPoints"):
+            fail(f"{screen_id} needs at least one entry point")
+
+    discovery_ids = {hotspot["id"] for hotspot in screens["discovery"]["hotspots"]}
+    if not {"cubby-wall", "dust-clump", "popcorn-boulder", "couch-ceiling"} <= discovery_ids:
+        fail("discovery screen must contain the Act 1 discovery hotspots")
+
+    clerk = screens["clerk"]
+    desk = clerk["walkBehinds"][0]
+    if desk["id"] != "bramble-desk" or desk["baseline"] != 614:
+        fail("clerk screen desk baseline must remain 614")
+    if desk["rect"] != {"x": 160, "y": 488, "width": 460, "height": 154}:
+        fail("clerk desk footprint must remain 160,488,460x154")
+    if clerk["standingPositions"]["bramble-talking-head"] != {"x": 280, "y": 510}:
+        fail("Bramble must be registered as a counter-height talking head")
+    pip_talk = clerk["standingPositions"]["pip-talk-bramble"]
+    if not (0.42 * spec["actorReference"]["pipHeight"] <= pip_talk["y"] - desk["counterTopY"] <= 0.58 * spec["actorReference"]["pipHeight"]):
+        fail("desk counter must meet Pip around mid-torso")
+
+    gate = screens["gate"]
+    gate_object = gate["walkBehinds"][0]
+    if gate_object["id"] != "toll-gate" or gate_object["baseline"] != 568:
+        fail("gate screen baseline must remain 568")
+    if not (gate["standingPositions"]["old-bottlecap-guard"]["y"] > gate_object["baseline"]):
         fail("Bottlecap must render in front of gate bars")
-    if positions["pip-entry"]["x"] < width - viewport["width"]:
-        fail("Pip must begin in the rightmost camera beat")
+    gate_ids = {hotspot["id"] for hotspot in gate["hotspots"]}
+    if not {"toll-gate", "cobweb-curtain"} <= gate_ids:
+        fail("gate screen must contain both gate and cobweb-tunnel hotspots")
 
-    walkable = spec["walkableArea"]
-    walkable_min_x = min(point[0] for point in walkable)
-    walkable_max_x = max(point[0] for point in walkable)
-    required_route = (
-        positions["pip-entry"]["x"],
-        positions["pip-exit-grate"]["x"],
-        positions["pip-talk-clerk"]["x"],
-        spec["hotspots"][0]["rect"]["x"],
-        spec["hotspots"][1]["rect"]["x"],
-    )
-    if not all(walkable_min_x <= x <= walkable_max_x for x in required_route):
-        fail("walkable corridor must connect entry, gate, clerk, cubbies, and dust")
-
-    hotspot_ids = {hotspot["id"] for hotspot in spec["hotspots"]}
-    required_hotspots = {
-        "couch-ceiling",
-        "dust-clump",
-        "cubby-wall",
-        "wall-note",
-        "sign-in-log",
-        "popcorn-boulder",
-        "cobweb-curtain",
-        "service-bell",
-        "toll-gate",
+    link_map = {(link["from"], link["to"]) for link in spec.get("linkMap", [])}
+    required_links = {
+        ("discovery:to-clerk", "clerk:from-discovery"),
+        ("clerk:to-discovery", "discovery:from-clerk"),
+        ("clerk:to-gate", "gate:from-clerk"),
+        ("gate:to-clerk", "clerk:from-gate"),
     }
-    missing_hotspots = required_hotspots - hotspot_ids
-    if missing_hotspots:
-        fail("all scripted room hotspots must be blocked: " + ", ".join(sorted(missing_hotspots)))
+    if link_map != required_links:
+        fail("link map must define both directions for discovery-clerk and clerk-gate")
 
-    pip_height = spec["actorReference"]["pipHeight"]
-    counter_delta = positions["pip-talk-clerk"]["y"] - desk["counterTopY"]
-    if not (0.42 * pip_height <= counter_delta <= 0.58 * pip_height):
-        fail("desk counter must meet Pip around mid-torso at clerk spot")
+    for screen in screens.values():
+        for exit_data in screen.get("exits", []):
+            destination = exit_data["destinationScreenId"]
+            if destination == "act-02":
+                if exit_data.get("transitionLineId") != "act01-049-pip-transition-out":
+                    fail("gate transition must use exact script line act01-049-pip-transition-out")
+                continue
+            if destination not in screens:
+                fail(f"{screen['id']} exit {exit_data['id']} has no valid destination")
+            if exit_data["entryPoint"] not in screens[destination]["entryPoints"]:
+                fail(f"{screen['id']} exit {exit_data['id']} targets a missing entry point")
 
-    print("AGS Room 1 geometry QA passed: 3-screen room, connected walk corridor, all scripted hotspots, locked baselines, and calibrated actor blocking.")
+    print("AGS Room 1 geometry QA passed: three linked 1280x720 screens, locked actor staging, and valid exits.")
 
 
 if __name__ == "__main__":
