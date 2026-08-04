@@ -11,6 +11,7 @@ from PIL import Image, ImageDraw, ImageFont
 ROOT = Path(__file__).resolve().parents[1]
 SPEC = ROOT / "ags" / "room1" / "geometry.json"
 OUT = ROOT / "ags" / "room1" / "room1-greybox.png"
+PAINT_GUIDE_OUT = ROOT / "ags" / "room1" / "room1-paint-guide.png"
 
 
 def font(size: int, bold: bool = False) -> ImageFont.FreeTypeFont:
@@ -77,6 +78,37 @@ def main() -> None:
     OUT.parent.mkdir(parents=True, exist_ok=True)
     image.save(OUT)
     print(OUT)
+
+    # A deliberately unlabeled placement guide for the final background paint-over.
+    # It captures only fixed geometry and must never ship as room art.
+    guide = Image.new("RGB", (width, height), "#34363a")
+    guide_draw = ImageDraw.Draw(guide)
+    guide_draw.rectangle((0, 0, width, 505), fill="#5f5b53")
+    guide_draw.rectangle((0, 505, width, height), fill="#6b5842")
+    guide_draw.rectangle((0, 0, width, 150), fill="#2d2928")
+    for hotspot in spec["hotspots"]:
+        rect = hotspot["rect"]
+        colors = {
+            "couch-ceiling": "#2d2928",
+            "cubby-wall": "#6e4933",
+            "dust-clump": "#71686a",
+            "popcorn-boulder": "#d7b361",
+            "wall-note": "#e7cf83",
+            "sign-in-log": "#caa66d",
+            "service-bell": "#d2a745",
+            "toll-gate": "#48616a",
+            "cobweb-curtain": "#aeb3ad",
+        }
+        guide_draw.rectangle(
+            (rect["x"], rect["y"], rect["x"] + rect["width"], rect["y"] + rect["height"]),
+            fill=colors[hotspot["id"]],
+        )
+    guide_draw.rectangle(
+        (desk["rect"]["x"], desk["rect"]["y"], desk["rect"]["x"] + desk["rect"]["width"], desk["rect"]["y"] + desk["rect"]["height"]),
+        fill="#744a35",
+    )
+    guide.save(PAINT_GUIDE_OUT)
+    print(PAINT_GUIDE_OUT)
 
 
 if __name__ == "__main__":

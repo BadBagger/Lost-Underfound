@@ -9,6 +9,9 @@ to Bottlecap and the exit.
 ## Step 1 - Geometry
 
 See `ags/room1/geometry.json` and `ags/room1/room1-greybox.png`.
+`ags/room1/room1-paint-guide.png` and its three crops in
+`ags/room1/paint-guides/` are the unlabeled art-placement references. They encode
+the locked landmark footprints but are never runtime assets.
 
 | Zone | Type | Coordinates / baseline | Purpose |
 |---|---|---:|---|
