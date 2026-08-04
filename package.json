@@ -30,6 +30,7 @@
     "qa:cast": "python tools/check_registration.py cast-scale art/cast_scale.json",
     "qa:layers": "python tools/check_scene_layers.py",
     "qa:ags:room1": "python tools/check_ags_room1_geometry.py",
+    "qa:ags:background": "python tools/check_ags_room1_background.py",
     "qa": "npm run qa:placeholder && npm run qa:pip && npm run qa:bottlecap && npm run qa:bramble && npm run qa:scuttle && npm run qa:grommet-placeholder && npm run qa:production && npm run qa:cast && npm run qa:layers && npm run qa:ags:room1",
     "test": "npm run qa && tsc --noEmit",
     "dev": "vite --host 127.0.0.1",

@@ -91,6 +91,22 @@ Review the candidate at full width and at three `1280x720` camera crops before
 acceptance. Record a failure as layout, scrolling continuity, occlusion readability,
 or scene cohesion; regenerate rather than loosening a locked coordinate.
 
+### Final-art proof package
+
+The final candidate lives at `ags/room1/background/room1-background.png`. It cannot
+be imported into AGS until `npm run qa:ags:background` passes. That command requires:
+
+- an opaque `3840x720` background;
+- `room1-background-review.json`, which records `geometryAuthority: true`,
+  `studiesReferenceOnly: true`, all six acceptance-gate results as `pass`, and the
+  measured `x`, `y`, `width`, and `height` for every locked object;
+- `background/qa/seam-1280.png` and `seam-2560.png`, each a `200x720` crop centred
+  on the corresponding screen boundary.
+
+Placement tolerance is `2 px` for the desk and toll gate, and `6 px` for the other
+locked props. This is a final-art gate only; it is deliberately not part of the
+normal project test command until a candidate background exists.
+
 ## Step 4 - AGS integration
 
 Room occlusion uses AGS walk-behind areas and baselines, never transparent furniture
