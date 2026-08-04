@@ -1,0 +1,50 @@
+{
+  "room": "Room 1 - Lost & Found",
+  "resolution": { "width": 3840, "height": 720 },
+  "viewport": { "width": 1280, "height": 720, "screensWide": 3 },
+  "camera": {
+    "follow": "Pip",
+    "xMin": 0,
+    "xMax": 2560,
+    "initialViewX": 2560,
+    "note": "Pip enters from the right edge; camera pans left to the clerk and discovery stations, then returns right to the gate."
+  },
+  "actorReference": {
+    "pipHeight": 194,
+    "pipTalkBaseline": 584,
+    "pipEntryBaseline": 666,
+    "pipExitBaseline": 592
+  },
+  "walkableArea": [
+    [72, 510], [3768, 510], [3802, 682], [38, 682]
+  ],
+  "walkBehinds": [
+    {
+      "id": "desk",
+      "rect": { "x": 1440, "y": 488, "width": 460, "height": 154 },
+      "baseline": 614,
+      "counterTopY": 488,
+      "note": "Pip at clerk spot is behind the desk; Pip on the front walk plane is in front."
+    },
+    {
+      "id": "toll-gate",
+      "rect": { "x": 2760, "y": 302, "width": 300, "height": 300 },
+      "baseline": 568,
+      "note": "Bottlecap is staged at baseline 576, intentionally in front of gate bars."
+    }
+  ],
+  "standingPositions": {
+    "pip-entry": { "x": 3580, "y": 666 },
+    "pip-talk-clerk": { "x": 1720, "y": 584 },
+    "pip-exit-grate": { "x": 2690, "y": 592 },
+    "bramble-clerk": { "x": 1560, "y": 574 },
+    "old-bottlecap-guard": { "x": 2900, "y": 576 }
+  },
+  "hotspots": [
+    { "id": "dust-clump", "rect": { "x": 610, "y": 598, "width": 128, "height": 72 } },
+    { "id": "cubby-wall", "rect": { "x": 146, "y": 270, "width": 330, "height": 278 } },
+    { "id": "wall-note", "rect": { "x": 1160, "y": 202, "width": 142, "height": 74 } },
+    { "id": "service-bell", "rect": { "x": 1768, "y": 454, "width": 54, "height": 32 } },
+    { "id": "toll-gate", "rect": { "x": 2748, "y": 292, "width": 326, "height": 322 } }
+  ]
+}
