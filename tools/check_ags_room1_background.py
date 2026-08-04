@@ -67,6 +67,8 @@ def main() -> None:
     failed_gates = sorted(gate for gate in expected_gates if gates.get(gate) != "pass")
     if failed_gates:
         fail("unapproved acceptance gates: " + ", ".join(failed_gates))
+    if review.get("deskClerkBay") != "pass":
+        fail("review must confirm the desk is a counter with an open clerk recess, not a sealed crate")
 
     targets = target_rects(spec)
     placements = review.get("placements", {})

@@ -45,9 +45,22 @@ def main() -> None:
     # Furniture is deliberately geometric: these are the painted-background footprints.
     desk = spec["walkBehinds"][0]
     rect = desk["rect"]
-    draw.rectangle((rect["x"], rect["y"], rect["x"] + rect["width"], rect["y"] + rect["height"]), fill="#7a6260", outline="#f0c674", width=3)
+    for mask_rect in desk["foregroundMaskRects"]:
+        draw.rectangle(
+            (mask_rect["x"], mask_rect["y"], mask_rect["x"] + mask_rect["width"], mask_rect["y"] + mask_rect["height"]),
+            fill="#7a6260",
+            outline="#f0c674",
+            width=3,
+        )
+    recess = desk["clerkRecess"]
+    draw.rectangle(
+        (recess["x"], recess["y"], recess["x"] + recess["width"], recess["y"] + recess["height"]),
+        fill="#4b535a",
+        outline="#cdd8df",
+        width=2,
+    )
     draw.line((rect["x"], desk["baseline"], rect["x"] + rect["width"], desk["baseline"]), fill="#ffcc66", width=4)
-    label(draw, (rect["x"] + 12, rect["y"] + 12), "DESK (painted into background)")
+    label(draw, (rect["x"] + 12, rect["y"] + 12), "DESK COUNTER + OPEN CLERK RECESS")
     label(draw, (rect["x"] + 12, desk["baseline"] + 5), "walk-behind baseline 614", "#ffdc8b")
 
     gate = spec["walkBehinds"][1]
@@ -103,10 +116,13 @@ def main() -> None:
             (rect["x"], rect["y"], rect["x"] + rect["width"], rect["y"] + rect["height"]),
             fill=colors[hotspot["id"]],
         )
-    guide_draw.rectangle(
-        (desk["rect"]["x"], desk["rect"]["y"], desk["rect"]["x"] + desk["rect"]["width"], desk["rect"]["y"] + desk["rect"]["height"]),
-        fill="#744a35",
-    )
+    for mask_rect in desk["foregroundMaskRects"]:
+        guide_draw.rectangle(
+            (mask_rect["x"], mask_rect["y"], mask_rect["x"] + mask_rect["width"], mask_rect["y"] + mask_rect["height"]),
+            fill="#744a35",
+        )
+    chair = desk["chairAnchor"]
+    guide_draw.ellipse((chair["x"] - 54, chair["y"] - 150, chair["x"] + 54, chair["y"] + 6), fill="#8c755d")
     guide.save(PAINT_GUIDE_OUT)
     print(PAINT_GUIDE_OUT)
 

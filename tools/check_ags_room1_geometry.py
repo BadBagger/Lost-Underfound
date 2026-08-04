@@ -29,6 +29,14 @@ def main() -> None:
     desk, gate = spec["walkBehinds"]
     if desk["id"] != "desk" or desk["baseline"] != 614:
         fail("desk baseline must stay at 614")
+    if desk["rect"] != {"x": 1440, "y": 488, "width": 460, "height": 154}:
+        fail("desk footprint must stay at 1440,488,460x154")
+    if desk["clerkRecess"] != {"x": 1512, "y": 532, "width": 316, "height": 110}:
+        fail("desk must retain the open clerk recess")
+    if desk["chairAnchor"] != {"x": 1560, "y": 574}:
+        fail("chair must remain behind Bramble in the clerk recess")
+    if len(desk["foregroundMaskRects"]) != 3:
+        fail("desk foreground mask must be counter plus two side supports, never a solid crate")
     if gate["id"] != "toll-gate" or gate["baseline"] != 568:
         fail("gate baseline must stay at 568")
 

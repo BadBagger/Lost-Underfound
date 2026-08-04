@@ -24,7 +24,14 @@
       "rect": { "x": 1440, "y": 488, "width": 460, "height": 154 },
       "baseline": 614,
       "counterTopY": 488,
-      "note": "Pip at clerk spot is behind the desk; Pip on the front walk plane is in front."
+      "foregroundMaskRects": [
+        { "x": 1440, "y": 488, "width": 460, "height": 44 },
+        { "x": 1450, "y": 532, "width": 62, "height": 110 },
+        { "x": 1828, "y": 532, "width": 62, "height": 110 }
+      ],
+      "clerkRecess": { "x": 1512, "y": 532, "width": 316, "height": 110 },
+      "chairAnchor": { "x": 1560, "y": 574 },
+      "note": "A shallow counter and two side supports frame an open clerk recess. Pip at clerk spot draws behind the counter edge; Bramble is an upper-body desk actor in front of the chair but behind the counter mask."
     },
     {
       "id": "toll-gate",

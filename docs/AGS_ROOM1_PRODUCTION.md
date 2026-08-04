@@ -17,7 +17,7 @@ the locked landmark footprints but are never runtime assets.
 |---|---|---:|---|
 | Under-couch floor | walkable area | room X `38-3802`; screens `0-2` | Pip movement plane. |
 | Discovery station | hotspot cluster | cubbies `146-476`, dust `610-738`, popcorn `816-974`, note `1160-1302`; screen `0` | Early inspection/pickup and flavor beats. |
-| Clerk station | walk-behind | desk `1440,488,460x154`; baseline `614`; screen `1` | Painted into background. Pip at clerk spot draws behind it; foreground Pip draws in front. |
+| Clerk station | walk-behind | desk envelope `1440,488,460x154`; counter + side-support mask; baseline `614`; screen `1` | Painted into background. The desk has a visible open clerk recess (`1512,532,316x110`) and chair behind it. Pip at clerk spot draws behind the counter edge; foreground Pip draws in front. |
 | Wall note / bell | hotspots | note `1160-1302`, bell `1768-1822`; screens `0-1` | Connects discovery to clerk station. |
 | Toll gate | walk-behind | `2760,302,300x300`; baseline `568`; screen `2` | Painted into background. Bottlecap baseline `576` keeps the guard in front of the bars. |
 | Cobweb tunnel | hotspot | `3150-3392`; screen `2` | Foreground corner curtain; Scuttle's one-shot dash-through. |
@@ -31,7 +31,11 @@ the locked landmark footprints but are never runtime assets.
 
 Pip is the reference actor: `194 px` tall at the clerk talk position, with feet at
 `y=584`. The desk counter top at `y=488` crosses Pip `96 px` above his feet: just
-below his chest / at mid-torso. The painted desk footprint is `420x154 px`.
+below his chest / at mid-torso. The painted desk envelope is `460x154 px`, but it is
+not a closed box: a `44 px` counter apron and two side supports leave a visible clerk
+recess. The chair is behind the recess at `1560,574`, never on Pip's side of the
+counter. Bramble is a seated, upper-body desk actor; her sprite has no visible legs
+that would need to be hidden by a fake solid desk.
 
 AGS walkable-area scaling is `85%` at `y=510` rising linearly to `100%` at `y=682`.
 The locked cast targets at their anchors are: Pip `194 px`, Bramble `160 px`, Old
@@ -79,7 +83,7 @@ contract is rejected and regenerated; geometry is never retrofitted to make it f
 | Check | Required result |
 |---|---|
 | Canvas and registration | One opaque `3840x720` PNG. The couch ceiling, cubbies, dust, popcorn boulder, note, sign-in log, desk, bell, gate, cobweb curtain, and right-edge entry staging align to their room-space coordinates in `geometry.json`. |
-| Desk clearance | A finished wall and floor exist behind the desk footprint. The desk is painted at `1440,488,460x154`; its counter top is at `y=488` and its walk-behind baseline is `y=614`. No hole, cutout, or separate desk layer. |
+| Desk clearance | A finished wall and floor exist behind the desk envelope. The desk is painted at `1440,488,460x154`; its counter top is at `y=488` and its walk-behind baseline is `y=614`. It must read as a shallow counter with two side supports and an open clerk recess, not a sealed crate. The chair is clearly behind the counter, Bramble sits in front of the chair, and the chair is excluded from the walk-behind mask. No hole, cutout, or separate desk layer. |
 | Gate clearance | The gate is painted at `2760,302,300x300`, with the walk-behind baseline at `y=568`. Bottlecap's `y=576` staging must visibly place the guard in front of its bars. |
 | Scrolling continuity | Light remains a warm upper-left key across room X `0-3840`. Horizon/eye level, floor perspective, line weight, palette, and value range remain continuous when panning through X `1280` and `2560`. No seam, repeated bay, tonal jump, or reversed light source. |
 | Walk corridor | The floor clearly supports the uninterrupted walkable corridor from entry through gate, clerk, note, cubbies, and dust. Station dressing must not visually suggest an obstacle across that route. |
@@ -99,7 +103,10 @@ be imported into AGS until `npm run qa:ags:background` passes. That command requ
 - an opaque `3840x720` background;
 - `room1-background-review.json`, which records `geometryAuthority: true`,
   `studiesReferenceOnly: true`, all six acceptance-gate results as `pass`, and the
-  measured `x`, `y`, `width`, and `height` for every locked object;
+  measured `x`, `y`, `width`, and `height` for every locked object. It must also
+  record `deskClerkBay: "pass"` only after a reviewer confirms the desk is a
+  shallow counter with two supports, a visible open recess, and the chair behind
+  Bramble rather than on Pip's side of the counter;
 - `background/qa/seam-1280.png` and `seam-2560.png`, each a `200x720` crop centred
   on the corresponding screen boundary.
 
