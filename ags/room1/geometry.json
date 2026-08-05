@@ -1,0 +1,138 @@
+{
+  "act": 1,
+  "architecture": "discrete-screens",
+  "nativeSize": { "width": 1280, "height": 720 },
+  "start": { "screenId": "discovery", "entryPoint": "cold-open" },
+  "actorReference": {
+    "pipHeight": 194,
+    "brambleTalkingHeadHeight": 160,
+    "oldBottlecapHeight": 116,
+    "scuttleHeight": 68
+  },
+  "screens": [
+    {
+      "id": "discovery",
+      "title": "Lost & Found - Discovery",
+      "background": "background/discovery.png",
+      "walkableArea": [[38, 510], [1242, 510], [1270, 682], [20, 682]],
+      "entryPoints": {
+        "cold-open": { "x": 1080, "y": 666 },
+        "from-clerk": { "x": 1170, "y": 666, "facing": "left" }
+      },
+      "hotspots": [
+        { "id": "couch-ceiling", "rect": { "x": 110, "y": 30, "width": 850, "height": 150 } },
+        { "id": "cubby-wall", "rect": { "x": 146, "y": 270, "width": 330, "height": 278 } },
+        { "id": "dust-clump", "rect": { "x": 610, "y": 598, "width": 128, "height": 72 } },
+        { "id": "popcorn-boulder", "rect": { "x": 816, "y": 530, "width": 158, "height": 124 } }
+      ],
+      "exits": [
+        {
+          "id": "to-clerk",
+          "exitHotspot": { "x": 1238, "y": 500, "width": 42, "height": 182 },
+          "destinationScreenId": "clerk",
+          "entryPoint": "from-discovery",
+          "exitAnimation": "walk-right-offscreen",
+          "entryAnimation": "walk-right-onscreen"
+        }
+      ]
+    },
+    {
+      "id": "clerk",
+      "title": "Lost & Found - Clerk",
+      "background": "background/clerk.png",
+      "walkableArea": [[28, 510], [1252, 510], [1272, 682], [18, 682]],
+      "walkBehinds": [
+        {
+          "id": "bramble-desk",
+          "rect": { "x": 160, "y": 488, "width": 460, "height": 154 },
+          "baseline": 614,
+          "counterTopY": 488,
+          "note": "Solid painted desk. Bramble uses a talking-head sprite registered so only head and hands clear the counter."
+        }
+      ],
+      "entryPoints": {
+        "from-discovery": { "x": 82, "y": 666, "facing": "right" },
+        "from-gate": { "x": 1170, "y": 666, "facing": "left" }
+      },
+      "standingPositions": {
+        "pip-talk-bramble": { "x": 440, "y": 584 },
+        "bramble-talking-head": { "x": 280, "y": 510 }
+      },
+      "hotspots": [
+        { "id": "wall-note", "rect": { "x": 760, "y": 202, "width": 142, "height": 74 } },
+        { "id": "sign-in-log", "rect": { "x": 10, "y": 310, "width": 118, "height": 128 } },
+        { "id": "service-bell", "rect": { "x": 488, "y": 454, "width": 54, "height": 32 } },
+        { "id": "bramble-desk", "rect": { "x": 160, "y": 440, "width": 460, "height": 202 } }
+      ],
+      "exits": [
+        {
+          "id": "to-discovery",
+          "exitHotspot": { "x": 0, "y": 500, "width": 42, "height": 182 },
+          "destinationScreenId": "discovery",
+          "entryPoint": "from-clerk",
+          "exitAnimation": "walk-left-offscreen",
+          "entryAnimation": "walk-left-onscreen"
+        },
+        {
+          "id": "to-gate",
+          "exitHotspot": { "x": 1238, "y": 500, "width": 42, "height": 182 },
+          "destinationScreenId": "gate",
+          "entryPoint": "from-clerk",
+          "exitAnimation": "walk-right-offscreen",
+          "entryAnimation": "walk-right-onscreen"
+        }
+      ]
+    },
+    {
+      "id": "gate",
+      "title": "Lost & Found - Gate",
+      "background": "background/gate.png",
+      "walkableArea": [[20, 510], [1245, 510], [1270, 682], [18, 682]],
+      "walkBehinds": [
+        {
+          "id": "toll-gate",
+          "rect": { "x": 760, "y": 302, "width": 300, "height": 300 },
+          "baseline": 568,
+          "note": "Bottlecap is staged at y=576, intentionally in front of the gate bars."
+        }
+      ],
+      "entryPoints": {
+        "from-clerk": { "x": 82, "y": 666, "facing": "right" }
+      },
+      "standingPositions": {
+        "pip-gate": { "x": 690, "y": 592 },
+        "old-bottlecap-guard": { "x": 900, "y": 576 }
+      },
+      "hotspots": [
+        { "id": "cobweb-curtain", "rect": { "x": 180, "y": 246, "width": 242, "height": 320 } },
+        { "id": "toll-gate", "rect": { "x": 748, "y": 292, "width": 326, "height": 322 } }
+      ],
+      "exits": [
+        {
+          "id": "to-clerk",
+          "exitHotspot": { "x": 0, "y": 500, "width": 42, "height": 182 },
+          "destinationScreenId": "clerk",
+          "entryPoint": "from-gate",
+          "exitAnimation": "walk-left-offscreen",
+          "entryAnimation": "walk-left-onscreen"
+        },
+        {
+          "id": "through-grate",
+          "exitHotspot": { "x": 748, "y": 292, "width": 326, "height": 322 },
+          "destinationScreenId": "act-02",
+          "entryPoint": "act-02-entry",
+          "exitAnimation": "duck-through-gate",
+          "entryAnimation": "act-02-entry",
+          "requiresFlag": "gateOpen",
+          "transitionLineId": "act01-049-pip-transition-out"
+        }
+      ]
+    }
+  ],
+  "linkMap": [
+    { "from": "discovery:to-clerk", "to": "clerk:from-discovery" },
+    { "from": "clerk:to-discovery", "to": "discovery:from-clerk" },
+    { "from": "clerk:to-gate", "to": "gate:from-clerk" },
+    { "from": "gate:to-clerk", "to": "clerk:from-gate" }
+  ]
+}

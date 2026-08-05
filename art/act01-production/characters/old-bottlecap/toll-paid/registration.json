@@ -1,0 +1,73 @@
+{
+  "sheet": "old-bottlecap-toll-paid",
+  "actor_type": "furniture-anchored",
+  "canvas": {
+    "width": 320,
+    "height": 260
+  },
+  "anchor_tolerance_px": 1,
+  "frames": [
+    {
+      "file": "old_bottlecap_paid_01.png",
+      "anchor": [
+        160,
+        210
+      ],
+      "role": "button-noticed",
+      "canonical": true,
+      "scale_reference": [
+        160,
+        78
+      ]
+    },
+    {
+      "file": "old_bottlecap_paid_02.png",
+      "anchor": [
+        160,
+        210
+      ],
+      "role": "reach-anticipation"
+    },
+    {
+      "file": "old_bottlecap_paid_03.png",
+      "anchor": [
+        160,
+        210
+      ],
+      "role": "single-arm-smear"
+    },
+    {
+      "file": "old_bottlecap_paid_04.png",
+      "anchor": [
+        160,
+        210
+      ],
+      "role": "button-catch-contact"
+    },
+    {
+      "file": "old_bottlecap_paid_05.png",
+      "anchor": [
+        160,
+        210
+      ],
+      "role": "inspect-held-beat"
+    },
+    {
+      "file": "old_bottlecap_paid_06.png",
+      "anchor": [
+        160,
+        210
+      ],
+      "role": "grudging-approval"
+    },
+    {
+      "file": "old_bottlecap_paid_07.png",
+      "anchor": [
+        160,
+        210
+      ],
+      "role": "weighted-settle-open"
+    }
+  ],
+  "approval_state": "provisional-production-pass"
+}

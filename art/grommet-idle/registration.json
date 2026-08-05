@@ -1,0 +1,50 @@
+{
+  "sheet": "grommet-idle",
+  "actor_type": "furniture-anchored",
+  "canvas": {
+    "width": 460,
+    "height": 700
+  },
+  "anchor_tolerance_px": 1,
+  "frames": [
+    {
+      "file": "grommet-idle_01.png",
+      "anchor": [
+        230,
+        620
+      ],
+      "role": "provisional-scale-idle",
+      "canonical": true,
+      "scale_reference": [
+        230,
+        92
+      ]
+    },
+    {
+      "file": "grommet-idle_02.png",
+      "anchor": [
+        230,
+        620
+      ],
+      "role": "provisional-scale-idle"
+    },
+    {
+      "file": "grommet-idle_03.png",
+      "anchor": [
+        230,
+        620
+      ],
+      "role": "provisional-scale-idle"
+    },
+    {
+      "file": "grommet-idle_04.png",
+      "anchor": [
+        230,
+        620
+      ],
+      "role": "provisional-scale-idle"
+    }
+  ],
+  "provisional": true,
+  "world_height_units": 2.4
+}

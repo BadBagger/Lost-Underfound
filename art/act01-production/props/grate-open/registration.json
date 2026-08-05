@@ -1,0 +1,49 @@
+{
+  "sheet": "grate-open",
+  "actor_type": "furniture-anchored",
+  "canvas": {
+    "width": 220,
+    "height": 180
+  },
+  "anchor_tolerance_px": 1,
+  "frames": [
+    {
+      "file": "grate_open_01.png",
+      "anchor": [
+        110,
+        142
+      ],
+      "role": "closed",
+      "canonical": true,
+      "scale_reference": [
+        110,
+        32
+      ]
+    },
+    {
+      "file": "grate_open_02.png",
+      "anchor": [
+        110,
+        142
+      ],
+      "role": "mechanical-lift-start"
+    },
+    {
+      "file": "grate_open_03.png",
+      "anchor": [
+        110,
+        142
+      ],
+      "role": "stretch-lift"
+    },
+    {
+      "file": "grate_open_04.png",
+      "anchor": [
+        110,
+        142
+      ],
+      "role": "open-settle"
+    }
+  ],
+  "approval_state": "provisional-production-pass"
+}

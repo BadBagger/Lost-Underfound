@@ -1,0 +1,88 @@
+{
+  "sheet": "pip-walk",
+  "actor_type": "walk-plane",
+  "canvas": {
+    "width": 320,
+    "height": 360
+  },
+  "anchor_tolerance_px": 1,
+  "frames": [
+    {
+      "file": "pip_walk_01.png",
+      "anchor": [
+        160,
+        300
+      ],
+      "role": "left-contact",
+      "canonical": true,
+      "scale_reference": [
+        160,
+        80
+      ]
+    },
+    {
+      "file": "pip_walk_02.png",
+      "anchor": [
+        160,
+        300
+      ],
+      "role": "left-recoil-down"
+    },
+    {
+      "file": "pip_walk_03.png",
+      "anchor": [
+        160,
+        300
+      ],
+      "role": "left-passing"
+    },
+    {
+      "file": "pip_walk_04.png",
+      "anchor": [
+        160,
+        300
+      ],
+      "role": "left-high-point"
+    },
+    {
+      "file": "pip_walk_05.png",
+      "anchor": [
+        160,
+        300
+      ],
+      "role": "right-contact"
+    },
+    {
+      "file": "pip_walk_06.png",
+      "anchor": [
+        160,
+        300
+      ],
+      "role": "right-recoil-down"
+    },
+    {
+      "file": "pip_walk_07.png",
+      "anchor": [
+        160,
+        300
+      ],
+      "role": "right-passing"
+    },
+    {
+      "file": "pip_walk_08.png",
+      "anchor": [
+        160,
+        300
+      ],
+      "role": "right-high-point"
+    },
+    {
+      "file": "pip_walk_09.png",
+      "anchor": [
+        160,
+        300
+      ],
+      "role": "loop-safe-return"
+    }
+  ]
+}
