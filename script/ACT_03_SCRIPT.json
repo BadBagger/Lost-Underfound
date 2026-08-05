@@ -1,0 +1,63 @@
+{
+  "act": 3,
+  "title": "The Roar",
+  "location": "The Annex, then the escape route back through the Grate and the Concourse",
+  "notes": "Per-line script for Act 3, closing act. Same format as script/ACT_01_SCRIPT.json and script/ACT_02_SCRIPT.json: line_id, speaker, text, context. Not yet voiced or produced -- script/design pass only. See docs/ACT_03_DESIGN.md for hotspot/item/topic/event structure, docs/STORY_ARC.md for the full arc this act resolves, and docs/ANIMATION_BIBLE.md for the animation rules governing each beat.",
+  "lines": [
+    { "line_id": "act03-001-pip-ask-grommet-now", "speaker": "PIP", "context": "Sec 0, Cold open, Pip asks Grommet given the tremor", "text": "I know you wanted your minute. I don't think we get one. That tremor wasn't nothing." },
+    { "line_id": "act03-002-grommet-conflicted", "speaker": "GROMMET", "context": "Sec 0, Grommet conflicted", "text": "...yeah. Yeah, I felt it too. Okay. Okay, this is me deciding something for the first time in a long time." },
+    { "line_id": "act03-003-grommet-opens-annex", "speaker": "GROMMET", "context": "Sec 0, Grommet opens the Annex, event: annex-opened", "text": "It's open. Go. I'll be right here — still standing here, just, differently now." },
+    { "line_id": "act03-004-pip-enters-annex", "speaker": "PIP", "context": "Sec 0, Pip reacts entering", "text": "Oh. Oh, that's a lot of shiny. That's a genuinely upsetting amount of shiny." },
+
+    { "line_id": "act03-005-pip-annex-examine-general", "speaker": "PIP", "context": "Sec 1, Annex interior / examine general", "text": "Piles and piles of it. Marbles, mostly. Some buttons that clearly wandered in and regretted it." },
+    { "line_id": "act03-006-pip-annex-rotate-1", "speaker": "PIP", "context": "Sec 1, Annex interior / flavor rotate 1", "text": "This one's got a little paper tag: 'Property of the Big One Under the Radiator.' I hope the Big One's okay." },
+    { "line_id": "act03-007-pip-annex-rotate-2", "speaker": "PIP", "context": "Sec 1, Annex interior / flavor rotate 2", "text": "Somebody labeled this pile 'MISC. VERY POPULAR.' That phrase again. It was never a compliment." },
+
+    { "line_id": "act03-008-pip-describe-own-marble", "speaker": "PIP", "context": "Sec 1, Marble Pile hotspot / examine 1st, sets search criteria", "text": "Mine's got a little nick on one side, shaped like a lopsided star. Dad called it a flaw. I called it how you tell it's really mine." },
+    { "line_id": "act03-009-pip-search-decoy-1", "speaker": "PIP", "context": "Sec 1, Marble Pile / search attempt 1, wrong marble", "text": "Nope. No nick. Somebody's, just not mine. Sorry, somebody." },
+    { "line_id": "act03-010-pip-search-decoy-2", "speaker": "PIP", "context": "Sec 1, Marble Pile / search attempt 2, wrong marble", "text": "Also not it. This one's got a whole tiny galaxy painted inside it. Beautiful. Not mine." },
+    { "line_id": "act03-011-pip-search-success", "speaker": "PIP", "context": "Sec 1, Marble Pile / search attempt 3, success, addItem: pips-marble, event: marble-found", "text": "There. Lopsided star. Hi. I missed you. This is a weird thing to say to a marble." },
+
+    { "line_id": "act03-012-toggle-catches-them", "speaker": "CHAIRMAN_TOGGLE", "context": "Sec 2, Chairman Toggle enters the Annex, auto-fire after marble-found", "text": "I KNEW it. I knew that overgrown doorway would fold the second someone was nice to him. This is exactly the chaos I warned you about!" },
+    { "line_id": "act03-013-pip-toggle-defends", "speaker": "PIP", "context": "Sec 2, Pip stands ground", "text": "It's my marble. I can prove it. You're the one who filed it." },
+    { "line_id": "act03-014-pip-use-parcel-finds-fine-print", "speaker": "PIP", "context": "Sec 2, Use intake-parcel / re-examine, discovers fine print", "text": "Hang on — there's small print on the back of this. Very small. Very official-looking." },
+    { "line_id": "act03-015-pip-reads-fine-print", "speaker": "PIP", "context": "Sec 2, Pip reads it aloud", "text": "'All intake assets must be re-verified with the original claimant, if present.' I'm present. Extremely present." },
+    { "line_id": "act03-016-bramble-reinforces", "speaker": "BRAMBLE", "context": "Sec 2, Bramble backs the play, callback to act02-056", "text": "You said it yourself, back at your desk — unclaimed property is unclaimed property. He's claiming it. Your rule, Chairman. Not mine." },
+    { "line_id": "act03-017-toggle-stalls", "speaker": "CHAIRMAN_TOGGLE", "context": "Sec 2, Toggle stalls", "text": "That clause is — that's boilerplate, nobody actually — that's not meant to be USED—" },
+    { "line_id": "act03-018-pip-show-ledger", "speaker": "PIP", "context": "Sec 2, Show founders-ledger to Toggle", "text": "One more thing. Recognize this handwriting? 'One button to one button, fair and plain.' Your whole standard. Your whole Court. Signed by someone you put on gate duty." },
+    { "line_id": "act03-019-toggle-deflating", "speaker": "CHAIRMAN_TOGGLE", "context": "Sec 2, Toggle deflates", "text": "...I didn't PUT him anywhere. He— he stepped back. That's what I was told. That's what everyone was told." },
+    { "line_id": "act03-020-toggle-concedes", "speaker": "CHAIRMAN_TOGGLE", "context": "Sec 2, Toggle concedes, event: toggle-defeated, close, comedic not violent", "text": "Fine. FINE. Take your— your galaxy marble too, I don't even know whose that is anymore, take the whole shelf, I need to sit down and reconsider several things." },
+
+    { "line_id": "act03-021-pip-roar-hits", "speaker": "PIP", "context": "Sec 3, The Roar arrives, environmental cue + reaction", "text": "...that's not a tremor. That's the actual — that's the Roar, that's really it, that's really happening right now—" },
+    { "line_id": "act03-022-bramble-panic-urgency", "speaker": "BRAMBLE", "context": "Sec 3, Bramble urgency", "text": "Dawn sweep's early, or we lost track of time, or both, it doesn't matter WHY, we need to be anywhere but here—" },
+    { "line_id": "act03-023-toggle-panics-about-hoard", "speaker": "CHAIRMAN_TOGGLE", "context": "Sec 3, Toggle, even now, panics about the hoard first, comedic beat", "text": "The ASSETS, someone has to think about the— no. No, you're right, forget the assets, THAT'S NEW FOR ME, let's just also please go—" },
+    { "line_id": "act03-024-grommet-offers-to-block", "speaker": "GROMMET", "context": "Sec 3, Grommet steps up, event: grommet-guardian-payoff", "text": "I've got the doorway. That's — that's actually the one thing I'm built for. Go, I mean it, go!" },
+    { "line_id": "act03-025-pip-worried-for-grommet", "speaker": "PIP", "context": "Sec 3, Pip worried", "text": "Are you going to be okay?!" },
+    { "line_id": "act03-026-grommet-reassurance", "speaker": "GROMMET", "context": "Sec 3, Grommet reassures, close", "text": "I'm a sock! Air mostly goes around me! GO!" },
+
+    { "line_id": "act03-027-scuttle-reappears", "speaker": "SCUTTLE", "context": "Sec 4, Scuttle reappears at the escape route", "text": "There you are! Fastest way out is through the filing booth, trust me, I've timed it, GO GO GO—" },
+    { "line_id": "act03-028-pip-scuttle-banter", "speaker": "PIP", "context": "Sec 4, Pip banter mid-run", "text": "You circled back!" },
+    { "line_id": "act03-029-scuttle-always-circle-back", "speaker": "SCUTTLE", "context": "Sec 4, Scuttle, close", "text": "Told you! I always circle back! Just usually for parcels, not — whatever this is!" },
+
+    { "line_id": "act03-030-oldbottlecap-at-grate", "speaker": "OLD_BOTTLECAP", "context": "Sec 4, Old Bottlecap reopens the Grate, waiting at the exit", "text": "Figured you'd be back through here in a hurry. Gate's open. My call this time. Nobody asked me to." },
+    { "line_id": "act03-031-pip-thanks-oldbottlecap", "speaker": "PIP", "context": "Sec 4, Pip responds warmly", "text": "We found your ledger. The real one. You built this whole place." },
+    { "line_id": "act03-032-oldbottlecap-admission", "speaker": "OLD_BOTTLECAP", "context": "Sec 4, Old Bottlecap, brief vulnerable admission, deadpan not soft", "text": "Built it fair. Watched it get run different. Didn't have the stomach to fight about it, so I sat down at a gate instead. That's not a proud story. It's just mine." },
+    { "line_id": "act03-033-bramble-thanks-oldbottlecap", "speaker": "BRAMBLE", "context": "Sec 4, Bramble, close", "text": "It's not over, for the record. Somebody's going to run this place honestly. I've got some ideas. We'll talk. After the— the enormous roaring emergency." },
+
+    { "line_id": "act03-034-pip-final-dash", "speaker": "PIP", "context": "Sec 5, Final dash through the Grate, tension peak", "text": "Go go go go—" },
+    { "line_id": "act03-035-grommet-holding-strained", "speaker": "GROMMET", "context": "Sec 5, Grommet mid-block, strained but steady, distant/muffled", "text": "STILL HOLDING! MOSTLY! MOSTLY HOLDING!" },
+    { "line_id": "act03-036-pip-checks-on-grommet", "speaker": "PIP", "context": "Sec 5, Pip checks back once clear, event: roar-passed", "text": "Grommet! You still— are you—" },
+    { "line_id": "act03-037-grommet-fine-understatement", "speaker": "GROMMET", "context": "Sec 5, Grommet, comedic understatement, close", "text": "A little windswept. Structurally, emotionally, several other ways. Fine, though! I held it!" },
+    { "line_id": "act03-038-pip-relief", "speaker": "PIP", "context": "Sec 5, Pip relief beat", "text": "You held it. Big guy, you actually held it." },
+
+    { "line_id": "act03-039-bramble-new-role", "speaker": "BRAMBLE", "context": "Sec 6, Goodbye beat, Bramble reflects", "text": "I think the Lost and Underfound just got bigger. Properly bigger. The Annex answers to the cubby wall now, not the other way around. I'm going to need a much bigger ledger." },
+    { "line_id": "act03-040-pip-acknowledges-bramble", "speaker": "PIP", "context": "Sec 6, Pip acknowledges her growth", "text": "You were the one who actually looked. That's the whole job, right? Looking closely." },
+    { "line_id": "act03-041-grommet-lighter", "speaker": "GROMMET", "context": "Sec 6, Grommet, no longer guarding a secret", "text": "I don't have to stand there not-knowing anymore. That's a strange kind of light feeling. I think I like it." },
+    { "line_id": "act03-042-pip-friendship-promise", "speaker": "PIP", "context": "Sec 6, Pip promises to visit", "text": "I'll come back down. Not on purpose, probably — I'm not great at staying big — but I'll come back." },
+    { "line_id": "act03-043-bramble-farewell", "speaker": "BRAMBLE", "context": "Sec 6, Bramble farewell", "text": "You'd better. You're the strangest, fastest-processed claim I've ever handled, and I mean that as a genuine compliment." },
+    { "line_id": "act03-044-grommet-farewell", "speaker": "GROMMET", "context": "Sec 6, Grommet farewell, close of NPC beats", "text": "Bye, Pip. Thanks for fixing my seam. Thanks for the rest of it too, but mostly the seam." },
+
+    { "line_id": "act03-045-pip-shrinking-back-up", "speaker": "PIP", "context": "Sec 7, Transition, Pip shrinks back up, marble in hand", "text": "Okay. Marble's real, my knees are enormous again, and I have the strangest story I'm never telling a single living soul." },
+    { "line_id": "act03-046-pip-epilogue-closing-line", "speaker": "PIP", "context": "Sec 7, Epilogue, closing line, callback to act01-002 and the talent-show stakes", "text": "Talent show's in the morning. Lucky charm's back where it belongs. ...Okay. Maybe I tell the talent show judges. A LITTLE of it." }
+  ]
+}

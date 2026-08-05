@@ -114,9 +114,16 @@ them before shipping.
    conversation, the toll-gate puzzle) → ambiance (dust, light, the first hints of
    The Roar) → next area. Do not invent placeholder dialogue where the script already
    has the real line — use it verbatim.
-5. Acts 2 ("The Button Sovereignty") and 3 ("The Roar") don't have this level of
-   script/design detail yet — only the loose outline in `docs/GAME_CONCEPT.md`. Once
-   Act 1 is built and played, that same script-writing pass needs to happen for Acts
-   2 and 3 before building them — don't build ahead of the script. Act 2 introduces
-   Grommet (the real test of the layered rig at extreme scale); Act 3 introduces The
-   Roar as an environmental threat, no character rig needed, ambiance/tension-only.
+5. Acts 2 ("The Button Sovereignty") and 3 ("The Roar") now have the same level of
+   script/design detail Act 1 has: `script/ACT_02_SCRIPT.json` + `docs/ACT_02_DESIGN.md`,
+   and `script/ACT_03_SCRIPT.json` + `docs/ACT_03_DESIGN.md`. Read `docs/STORY_ARC.md`
+   first — it's the connective plot both design docs assume (Chairman Toggle, the
+   Button Court, the Annex, Old Bottlecap's founder reveal) and explains exactly which
+   Act 1 lines are being paid off. Build them the same way Act 1 was built (script and
+   design doc first, verbatim dialogue, no invented placeholder lines) once Act 1 is
+   playable — still don't build ahead of a script, there just isn't a script gap here
+   anymore. Act 2 introduces Grommet (the real test of the layered rig at extreme
+   scale) and a new walk-plane rig for Bramble (she's furniture-anchored in Act 1
+   only). Act 3 introduces no new character rig but needs Grommet's one-time walk
+   cycle (see `docs/ACT_03_DESIGN.md`) and a sustained strain-hold performance for his
+   guardian payoff — the closest thing this game has to a climax beat.

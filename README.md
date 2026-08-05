@@ -12,6 +12,12 @@ scaffold.
 
 - **`docs/GAME_CONCEPT.md`** — the pitch: premise, tone, full cast with personalities,
   and the target ~1 hour, 3-act structure.
+- **`docs/STORY_ARC.md`** — the finalized overarching story: the central mystery
+  behind Pip's missing marble, the Act 2/3 antagonist (Chairman Toggle and the
+  Button Court), every character's arc across all three acts, and exactly how each
+  of Act 1's planted hooks (the Sign-In Log, Bramble's deflection, Old Bottlecap's
+  age) pays off later — written to require zero changes to Act 1's already-recorded
+  script and audio.
 - **`docs/ANIMATION_BIBLE.md`** — binding animation production rules synced from
   [`BadBagger/Animation-Bible`](https://github.com/BadBagger/Animation-Bible), the
   shared source of truth across projects — edit rules upstream there, not here.
@@ -26,6 +32,13 @@ scaffold.
   puzzle exchange, idle/fallback lines, and the transition out.
 - **`docs/ACT_01_DESIGN.md`** — Act 1 hotspot, item, topic, event, puzzle, and
   animation-cue structure the script plugs into.
+- **`script/ACT_02_SCRIPT.json`** + **`docs/ACT_02_DESIGN.md`** — Act 2 ("The
+  Button Sovereignty"), same format as Act 1: 62-line script and matching
+  hotspot/item/topic/event/animation-cue design doc. Script/design pass only — not
+  yet voiced, scored, or built.
+- **`script/ACT_03_SCRIPT.json`** + **`docs/ACT_03_DESIGN.md`** — Act 3 ("The
+  Roar"), 46-line script and design doc, closes out the story. Same not-yet-produced
+  status as Act 2.
 - **`script/ACT_01_DIALOGUE.json`** + **`public/audio/voice/act-01/*.ogg`** — real
   recorded voice for all 49 of Act 1's lines (ElevenLabs, `eleven_multilingual_v2`,
   paid Creator tier — commercial use permitted). See "Voice Audio" below for the
@@ -122,6 +135,9 @@ review of the required Animation Bible evidence, but it is registered from the s
 - `art/cast_scale.json` now resolves Act 1 production registration paths and passes
   cast-scale. Grommet remains placeholder scale art only; Acts 2 and 3 are not built.
 
-Acts 2 ("The Button Sovereignty") and 3 ("The Roar") still only exist as the loose
-outline in `docs/GAME_CONCEPT.md`. They need the same script/design pass Act 1 has
-before implementation continues.
+Acts 2 ("The Button Sovereignty") and 3 ("The Roar") now have the same script/design
+pass Act 1 has — `script/ACT_02_SCRIPT.json` + `docs/ACT_02_DESIGN.md` and
+`script/ACT_03_SCRIPT.json` + `docs/ACT_03_DESIGN.md` — plus `docs/STORY_ARC.md`
+tying all three acts into one finalized story. Neither act is voiced, scored, or
+built yet; that's the next production pass, same order Act 1 went through
+(script/design → voice → music/SFX → production art → engine).
