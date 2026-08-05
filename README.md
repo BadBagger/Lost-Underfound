@@ -54,8 +54,8 @@ caveat. All 49 lines are voiced.
 |---|---|---|---|
 | Pip | Harry — Fierce Warrior | `SOYHLrjzK2X1ezoPC6cr` | **Pitch-shifted +3 semitones** (`sox in.wav out.wav pitch 300`) — required every time, not a saved custom voice |
 | Bramble | Grimblewood Thornwhisker — Snarky Gnome & Magical Maintainer | `ouL9IsyrSnUkCmfnD02u` | **3x credit rate** (`rate: 3.0` on this shared-library voice, vs. 1x for everything else in this project) — factor that in if regenerating a lot of Bramble dialogue |
-| Old Bottlecap | Bill — Wise, Mature, Balanced | `pqHfZKP75CvOlQylNhV4` | none |
-| Scuttle | Liam — Energetic, Social Media Creator | `TX3LPaxmHKxFdv7VOQHJ` | none |
+| Old Bottlecap | Marshal — Dry, Hoarse and Grumpy | `LysucvtFmzi1NVAE0rKp` | none |
+| Scuttle | Ziggy — Cute little Aussie character | `J1lfByWs8gvoooryDWEi` | **Pitch-shifted +2 semitones AND tempo +12%** (`sox in.wav out.wav pitch 200 tempo 1.12`) — pitch alone tested as reading "higher," not "faster"; tempo was the piece that actually sold Scuttle's speed |
 
 **Pip's voice needed real A/B testing to land** — worth knowing before touching it:
 ElevenLabs Voice Design refuses prompts describing a child voice outright (a
@@ -80,6 +80,20 @@ Bramble's script nor design docs use gendered pronouns for the character (always
 just "Bramble"), so this was a clean swap, not a rewrite — but it is a real
 character-voice decision, and it's the one voice in this project billed at a
 premium rate.
+
+**Old Bottlecap changed from Bill (a neutral "wise elder" premade) to Marshal**
+after A/B testing against Bill plus two other grumpy-old-man options (Mister Gruff,
+Antonio). Bill read as calm and narratorial rather than actually grumpy; Marshal's
+"dry, hoarse and grumpy... dreary demeanor" matched the character brief — "ancient,
+grumpy, deadpan" — specifically the *deadpan* part, which is a stiller, less
+actively-complaining kind of grumpy than the other candidates offered.
+
+**Scuttle changed from Liam (generic energetic premade) to Ziggy** ("cute little
+Aussie character... slightly quirky"), the strongest small-creature-coded option
+tested against Moxy ("Hyped Mouse") and Jet ("short, modern, carries speed"). Pitch
+and tempo are two different levers — pitching Ziggy up alone read as "higher," not
+"faster" — so both were applied together to actually land Scuttle's "fastest thing
+in Underneath" trait, not just make him sound smaller.
 
 ## Music & SFX Audio
 

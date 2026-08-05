@@ -49,8 +49,8 @@ permitted):
 |---|---|---|---|
 | Pip | Harry — Fierce Warrior | `SOYHLrjzK2X1ezoPC6cr` | Pitch-shifted +3 semitones (`sox pitch 300`) — always required, not baked into a saved voice |
 | Bramble | Grimblewood Thornwhisker — Snarky Gnome & Magical Maintainer | `ouL9IsyrSnUkCmfnD02u` | None, but bills at a **3x credit rate** (shared-library premium voice) — every other voice in this project is 1x |
-| Old Bottlecap | Bill — Wise, Mature, Balanced | `pqHfZKP75CvOlQylNhV4` | none |
-| Scuttle | Liam — Energetic, Social Media Creator | `TX3LPaxmHKxFdv7VOQHJ` | none |
+| Old Bottlecap | Marshal — Dry, Hoarse and Grumpy | `LysucvtFmzi1NVAE0rKp` | none |
+| Scuttle | Ziggy — Cute little Aussie character | `J1lfByWs8gvoooryDWEi` | Pitch-shifted +2 semitones and tempo +12% (`sox pitch 200 tempo 1.12`) — always required, not baked into a saved voice |
 
 **⚠️ ElevenLabs requires crediting ElevenLabs on any public use of generated audio,
 regardless of tier.** This is a permanent ToS requirement, not something that goes
