@@ -18,6 +18,8 @@
     { "line_id": "act01-009-pip-cubbywall-rotate-2", "speaker": "PIP", "context": "Sec 1, Cubby Wall / flavor rotate 2", "text": "Cubby seven: a dead watch battery, labeled 'MIGHT STILL WORK.' It's been three years." },
     { "line_id": "act01-010-pip-cubbywall-rotate-3", "speaker": "PIP", "context": "Sec 1, Cubby Wall / flavor rotate 3", "text": "Cubby twelve: a single Lego. The most dangerous object in this entire building, respected accordingly." },
 
+    { "line_id": "act01-050-pip-cubby-battery-take", "speaker": "PIP", "context": "Sec 1, Cubby Wall / take dead battery from cubby 7 (available after rotate 2, act01-009, has been seen), addItem: dead-battery -- NEW line, added in the difficulty pass, not part of the original 49-line recorded set", "text": "Pocketed the dead battery. Cubby seven's going to notice. Cubby seven notices everything." },
+
     { "line_id": "act01-011-pip-signinlog-examine", "speaker": "PIP", "context": "Sec 1, Sign-In Log / examine (foreshadowing, no mechanic yet)", "text": "A sign-in log. Everyone who's come through today... huh. Somebody signed in carrying something 'round and shiny.' That's not nothing." },
 
     { "line_id": "act01-012-pip-popcorn-examine", "speaker": "PIP", "context": "Sec 1, Popcorn Kernel Boulder / examine", "text": "A popcorn kernel. The size of my head. This explains so much about Tuesdays in this house." },
@@ -55,6 +57,10 @@
 
     { "line_id": "act01-037-pip-gate-examine", "speaker": "PIP", "context": "Sec 3, Grate / examine", "text": "The Grate. And someone very old, very round, and very unimpressed, sitting right in front of it." },
     { "line_id": "act01-038-bottlecap-no-toll", "speaker": "OLD_BOTTLECAP", "context": "Sec 3, Use wrong item / nothing on gate, fail", "text": "No toll, no through. Come back when you've got something worth my time." },
+
+    { "line_id": "act01-051-bottlecap-battery-refused", "speaker": "OLD_BOTTLECAP", "context": "Sec 3, Use dead-battery on toll-gate, wrong-item rejection, event: toll-refused-claimed -- NEW line, added in the difficulty pass, not part of the original 49-line recorded set", "text": "That's cubby seven's. Filed, logged, somebody's coming back for it eventually. I don't take other people's claimed. Try again." },
+    { "line_id": "act01-052-pip-battery-realization", "speaker": "PIP", "context": "Sec 3, Pip reaction after battery refusal, teaches the claimed-vs-unclaimed rule the endgame reuses -- NEW line, added in the difficulty pass, not part of the original 49-line recorded set", "text": "Right. Filed doesn't count. Whatever I hand him has to actually be unclaimed." },
+
     { "line_id": "act01-039-bottlecap-toll-accepted", "speaker": "OLD_BOTTLECAP", "context": "Sec 3, Use Button on gate, success part 1", "text": "...a button. Acceptable. Barely." },
     { "line_id": "act01-040-bottlecap-toll-close", "speaker": "OLD_BOTTLECAP", "context": "Sec 3, Use Button on gate, success part 2", "text": "Fine. Go on. Try not to get lost. It'd be embarrassing for both of us." },
     { "line_id": "act01-041-pip-lost-and-underfound-joke", "speaker": "PIP", "context": "Sec 3, Success close, part 1", "text": "It's the Lost and Underfound, isn't it, that's kind of the whole—" },

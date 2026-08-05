@@ -33,12 +33,14 @@ scaffold.
 - **`docs/ACT_01_DESIGN.md`** — Act 1 hotspot, item, topic, event, puzzle, and
   animation-cue structure the script plugs into.
 - **`script/ACT_02_SCRIPT.json`** + **`docs/ACT_02_DESIGN.md`** — Act 2 ("The
-  Button Sovereignty"), same format as Act 1: 62-line script and matching
+  Button Sovereignty"), same format as Act 1: 72-line script and matching
   hotspot/item/topic/event/animation-cue design doc. Script/design pass only — not
-  yet voiced, scored, or built.
+  yet voiced, scored, or built. Puzzle difficulty targets Monkey Island/King's
+  Quest-style lateral thinking, not the easier Act 1 benchmark — see
+  `docs/STORY_ARC.md`'s difficulty-target note.
 - **`script/ACT_03_SCRIPT.json`** + **`docs/ACT_03_DESIGN.md`** — Act 3 ("The
-  Roar"), 46-line script and design doc, closes out the story. Same not-yet-produced
-  status as Act 2.
+  Roar"), 58-line script and design doc, closes out the story. Same not-yet-produced
+  status and difficulty target as Act 2.
 - **`script/ACT_01_DIALOGUE.json`** + **`public/audio/voice/act-01/*.ogg`** — real
   recorded voice for all 49 of Act 1's lines (ElevenLabs, `eleven_multilingual_v2`,
   paid Creator tier — commercial use permitted). See "Voice Audio" below for the

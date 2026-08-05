@@ -6,6 +6,13 @@ Codex builds the actual engine, this doc is the spec for `HotspotId`/`ItemId`/
 `TopicId`/`EventId` and the scene/hotspot data table, the same relationship
 `department-impossible-complaints`' `scene-data.ts` has to its own script.
 
+**Difficulty pass note:** the dead-battery decoy below (`act01-050` through
+`act01-052`) was added after the original 49 lines were already recorded and
+produced, to raise Act 1's puzzle past a single obvious hand-off. Those three lines
+are the *only* new/unvoiced content in this act — everything else in this document
+describes the original recorded script unchanged. See `docs/STORY_ARC.md`'s
+difficulty-target note for why.
+
 ## Location description
 
 The entry chamber of Underneath, directly beneath the living-room couch. Low
@@ -33,18 +40,19 @@ not a threat.
 |---|---|---|
 | `couch-ceiling` | Couch-Bottom Ceiling | inspect → `003` (flavor only, no state) |
 | `dust-clump` | Dust Clump | inspect (before searched) → `004`; use/search (before searched) → `005`, `addItem: button`, `setFlag: dustSearched`, `event: found-button`; inspect or use (after searched) → `006` |
-| `cubby-wall` | Lost & Found Cubby Wall | inspect, rotating pool `007` (1st) then `008`/`009`/`010` (loop) |
+| `cubby-wall` | Lost & Found Cubby Wall | inspect, rotating pool `007` (1st) then `008`/`009`/`010` (loop). **NEW:** once `009` (cubby seven, the dead watch battery) has been seen, a `take` action unlocks on that one cubby only — `050`, `addItem: dead-battery`, `setFlag: batteryTaken`. The other cubbies stay flavor-only; this is a single deliberate decoy, not a general "take anything" rule. |
 | `sign-in-log` | Sign-In Log | inspect → `011` (flavor/foreshadowing only — no clue flag yet; Act 2/3 pays this off) |
 | `popcorn-boulder` | Popcorn Kernel Boulder | inspect → `012`; use → `013` (permanent flavor fail, not a real gate) |
 | `cobweb-curtain` | Cobweb Curtain | inspect → `014`, then once only: `015` (Scuttle bark) + `016` (Pip reaction) |
 | `bramble-desk` | Bramble's Desk | `conversation: bramble` (see Topics below) |
-| `toll-gate` | The Grate / Old Bottlecap | inspect → `037`; use (no/wrong item) → `038`, `event: toll-refused`; use `item: button` → `039`+`040` (2-beat), `setFlag: gateOpen`, `removeItem: button`, `event: toll-paid`, `sceneChanged: true` (transition to Act 2 space); inspect (after `gateOpen`) → `043` |
+| `toll-gate` | The Grate / Old Bottlecap | inspect → `037`; use (no item, or any item other than `button`/`dead-battery`) → `038`, `event: toll-refused`; **NEW:** use `item: dead-battery` → `051`+`052` (2-beat), `event: toll-refused-claimed`, item is NOT consumed and NOT removed from inventory — this is the decoy path, it must be retryable; use `item: button` → `039`+`040` (2-beat), `setFlag: gateOpen`, `removeItem: button`, `event: toll-paid`, `sceneChanged: true` (transition to Act 2 space); inspect (after `gateOpen`) → `043` |
 
 ## Items
 
 | `ItemId` | Source | Used on |
 |---|---|---|
 | `button` | `dust-clump` search | `toll-gate` (consumed on success) |
+| `dead-battery` | `cubby-wall`, cubby seven, take (after `009` seen) | `toll-gate` (rejected, not consumed — the decoy) |
 
 ## Topics (Bramble conversation)
 
@@ -64,6 +72,7 @@ once, then falls back to normal topic list.
 |---|---|---|
 | `found-button` | `dust-clump` search success | SFX: a soft rustle/reveal chime; Pip reacts with a small "found it" beat, per Animation Bible principle 2 (anticipation) — a brief crouch/reach before the item appears, not an instant pop |
 | `toll-refused` | `toll-gate` use, no/wrong item | Old Bottlecap's idle loop interrupts for a single dismissive head-shake beat, then resumes |
+| `toll-refused-claimed` | `toll-gate` use, `dead-battery` | **NEW.** Distinct from generic `toll-refused` — this is the decoy's teaching beat, not a fail state. Same head-shake reaction beat as `toll-refused` is fine to reuse, no new animation needed, only the line differs |
 | `toll-paid` | `toll-gate` use, `button` | The act's one real "performance" beat — see animation table below |
 
 ## Generic fallbacks
@@ -104,3 +113,12 @@ puzzle (this act's only puzzle is find-item → use-on-gate), and the Sign-In Lo
 clue is flavor-only for now — it's a planted hook, not a mechanical gate, until
 Act 2's design pass decides what it pays off into. Don't over-build mechanics this
 act doesn't need yet.
+
+**On the dead-battery decoy being fair, not a trap:** it's never consumed, never
+sets a fail flag, and Old Bottlecap's rejection (`051`) states the actual rule
+outright ("filed... I don't take other people's claimed") rather than being a pure
+gotcha — the player learns the rule *by trying the wrong thing once*, not by being
+punished for it. This is also the exact rule the endgame turns back on Chairman
+Toggle in `docs/ACT_03_DESIGN.md` ("unclaimed property is unclaimed property"), so
+Act 1 is now quietly teaching the mechanic the whole story's climax depends on, not
+just planting narrative color.

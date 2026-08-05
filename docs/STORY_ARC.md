@@ -130,6 +130,32 @@ Closes on the small goodbye beat with Bramble and Grommet (per `docs/GAME_CONCEP
 — Bramble now running a Lost & Underfound the Annex answers to, Grommet no longer
 guarding a secret, Pip shrinking back up with the marble, gone before dawn.
 
+## Difficulty target
+
+Puzzles are deliberately harder than the Pajama Sam/Putt-Putt-era Humongous
+benchmark the rest of the design leans on — closer to early Monkey
+Island/King's Quest: real lateral thinking, clues that have to be connected across
+scenes rather than handed over in one line, and fair decoys instead of a single
+obvious hand-off. Three rules hold across all three acts regardless of how hard a
+given puzzle gets:
+
+1. **No dead ends, no fail states, no lost progress.** Wrong attempts cost time and
+   maybe a laugh line, never a flag, a resource, or a game over. A player can always
+   eventually win by trying things.
+2. **Every real clue is available before the puzzle that needs it**, even when it's
+   planted in an earlier act (Act 2 plants the marble's identifying mark, Act 3's
+   search depends on it) or split across two sources that have to be cross-referenced
+   (Act 2's notice board + Grommet's own dialogue). Nothing requires outside
+   knowledge or a wiki.
+3. **Guessing the "obvious" action still works, it's just less satisfying.** Using
+   the threaded needle straight on Grommet succeeds without having read either
+   clue first. The puzzles reward attention, they don't gate progress behind it.
+
+Act 1's puzzle was raised from a straight find-item-use-it hand-off by *adding* a
+decoy (the dead battery) without touching any of its 49 already-recorded lines —
+see `docs/ACT_01_DESIGN.md`'s difficulty-pass note for the exact scope. Acts 2 and
+3, not yet voiced, were reworked more freely; see their own difficulty-pass notes.
+
 ## What this doesn't lock in yet
 
 Exact hotspot/topic/puzzle data for Act 2 and Act 3 live in their own design docs
