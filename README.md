@@ -50,10 +50,10 @@ ElevenLabs still requires attribution on any public use per their Terms of Servi
 that's a permanent requirement of using their TTS at all, not a free-tier-only
 caveat. All 49 lines are voiced.
 
-| Character | ElevenLabs voice | Voice ID | Post-processing |
+| Character | ElevenLabs voice | Voice ID | Post-processing / notes |
 |---|---|---|---|
 | Pip | Harry — Fierce Warrior | `SOYHLrjzK2X1ezoPC6cr` | **Pitch-shifted +3 semitones** (`sox in.wav out.wav pitch 300`) — required every time, not a saved custom voice |
-| Bramble | Alice — Clear, Engaging Educator | `Xb7hH8MSUJpSbSDYk0k2` | none |
+| Bramble | Grimblewood Thornwhisker — Snarky Gnome & Magical Maintainer | `ouL9IsyrSnUkCmfnD02u` | **3x credit rate** (`rate: 3.0` on this shared-library voice, vs. 1x for everything else in this project) — factor that in if regenerating a lot of Bramble dialogue |
 | Old Bottlecap | Bill — Wise, Mature, Balanced | `pqHfZKP75CvOlQylNhV4` | none |
 | Scuttle | Liam — Energetic, Social Media Creator | `TX3LPaxmHKxFdv7VOQHJ` | none |
 
@@ -70,6 +70,16 @@ from just raising pitch) was also tried via `rubberband` and made the voice soun
 on three separate rounds of testing against real alternatives. If Pip's voice is
 ever regenerated, redo this exact pitch-shift step — it is not baked into a saved
 ElevenLabs voice, just a processing step on top of the stock Harry voice.
+
+**Bramble's voice changed from the original pick (Alice, a standard-rate female
+educator-toned voice) to Grimblewood Thornwhisker** after a direct A/B test on the
+same line — the "snarky gnome, magical maintainer, grumpy-but-warm" character voice
+matched Bramble's "fussy, procedure-proud, means well, understands nothing" brief
+better than Alice did. Worth being deliberate about if touching this again: neither
+Bramble's script nor design docs use gendered pronouns for the character (always
+just "Bramble"), so this was a clean swap, not a rewrite — but it is a real
+character-voice decision, and it's the one voice in this project billed at a
+premium rate.
 
 ## Music & SFX Audio
 

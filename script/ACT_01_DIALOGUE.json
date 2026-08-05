@@ -3,11 +3,11 @@
   "title": "The Crack Under the Couch",
   "voice_map": {
     "PIP": "Harry - Fierce Warrior (SOYHLrjzK2X1ezoPC6cr), pitch-shifted +3 semitones",
-    "BRAMBLE": "Alice - Clear, Engaging Educator (Xb7hH8MSUJpSbSDYk0k2)",
+    "BRAMBLE": "Grimblewood Thornwhisker - Snarky Gnome & Magical Maintainer (ouL9IsyrSnUkCmfnD02u), 3x credit rate",
     "OLD_BOTTLECAP": "Bill - Wise, Mature, Balanced (pqHfZKP75CvOlQylNhV4)",
     "SCUTTLE": "Liam - Energetic, Social Media Creator (TX3LPaxmHKxFdv7VOQHJ)"
   },
-  "notes": "Per-line dialogue/timing manifest for Act 1. Voice is ElevenLabs TTS (eleven_multilingual_v2), generated on a paid Creator-tier account -- commercial use permitted, still requires ElevenLabs attribution per their ToS (see AUDIO_CREDITS.md/README.md). All 49 lines are voiced. Pip's voice is Harry (a standard premade ElevenLabs voice) pitch-shifted +3 semitones via sox (`sox in.wav out.wav pitch 300`) -- picked after A/B testing plain pitch-shift against ElevenLabs Voice Design (blocked for explicit child-voice prompts, a deliberate ElevenLabs safety policy) and several shared-Voice-Library actors who specifically clone themselves performing kid/boy characters (Vardan, Valf, Tuna, Teddy Twinkle -- all real options, just didn't win this A/B round), and against rubberband-based formant-exaggeration (read as *older*, not younger, to the ear -- abandoned). Regenerating Pip requires the same pitch-shift step every time; it is not baked into a saved custom voice.",
+  "notes": "Per-line dialogue/timing manifest for Act 1. Voice is ElevenLabs TTS (eleven_multilingual_v2), generated on a paid Creator-tier account -- commercial use permitted, still requires ElevenLabs attribution per their ToS (see AUDIO_CREDITS.md/README.md). All 49 lines are voiced. Pip's voice is Harry (a standard premade voice) pitch-shifted +3 semitones via sox -- see README.md for the A/B-testing history. Bramble's voice is Grimblewood Thornwhisker, a shared-Voice-Library character voice (\"Snarky Gnome & Magical Maintainer\") picked after a direct A/B test against the original pick (Alice) -- note this voice bills at a 3x credit rate (rate: 3.0 per the ElevenLabs shared-voices API), unlike every other voice used in this project so far.",
   "lines": [
     {
       "line_id": "act01-001-pip-cold-open-landing",
@@ -159,7 +159,7 @@
       "context": "Sec 2, Greeting (auto, first contact)",
       "text": "Oh! A visitor. A big one. Well, big for here. Do you have an appointment, a claim ticket, or a very good reason?",
       "audio_filename": "public/audio/voice/act-01/act01-017-bramble-greeting.ogg",
-      "duration_s": 7.508,
+      "duration_s": 8.627,
       "voice_engine": "elevenlabs"
     },
     {
@@ -177,7 +177,7 @@
       "context": "Sec 2, Greeting, part 1",
       "text": "A marble! Round, shiny, catastrophically easy to lose. Very common. Very popular around here, actually.",
       "audio_filename": "public/audio/voice/act-01/act01-019-bramble-marble-common.ogg",
-      "duration_s": 7.986,
+      "duration_s": 8.411,
       "voice_engine": "elevenlabs"
     },
     {
@@ -195,7 +195,7 @@
       "context": "Sec 2, Greeting close",
       "text": "Nothing! Nothing to worry about! Let's get you processed.",
       "audio_filename": "public/audio/voice/act-01/act01-021-bramble-deflect.ogg",
-      "duration_s": 2.869,
+      "duration_s": 3.698,
       "voice_engine": "elevenlabs"
     },
     {
@@ -204,7 +204,7 @@
       "context": "Sec 2, Verb tutorial",
       "text": "Now, you'll want to look at things. Closely. And touch things, when appropriate. And occasionally put two things together, when the universe allows it.",
       "audio_filename": "public/audio/voice/act-01/act01-022-bramble-teach-verbs.ogg",
-      "duration_s": 8.96,
+      "duration_s": 11.549,
       "voice_engine": "elevenlabs"
     },
     {
@@ -222,7 +222,7 @@
       "context": "Sec 2, Verb tutorial close",
       "text": "Wonderful! You're a natural claimant.",
       "audio_filename": "public/audio/voice/act-01/act01-024-bramble-natural-claimant.ogg",
-      "duration_s": 2.148,
+      "duration_s": 1.509,
       "voice_engine": "elevenlabs"
     },
     {
@@ -231,7 +231,7 @@
       "context": "Sec 2, Quest lead, part 1",
       "text": "Your marble likely rolled through the Grate. Everything shiny does, eventually.",
       "audio_filename": "public/audio/voice/act-01/act01-025-bramble-quest-lead.ogg",
-      "duration_s": 4.603,
+      "duration_s": 4.09,
       "voice_engine": "elevenlabs"
     },
     {
@@ -249,7 +249,7 @@
       "context": "Sec 2, Quest lead, part 3",
       "text": "The Grate is guarded. By Old Bottlecap. Who does not open for just anyone.",
       "audio_filename": "public/audio/voice/act-01/act01-027-bramble-quest-lead-gate.ogg",
-      "duration_s": 4.778,
+      "duration_s": 5.058,
       "voice_engine": "elevenlabs"
     },
     {
@@ -267,7 +267,7 @@
       "context": "Sec 2, Quest lead, part 5",
       "text": "A toll. He's very serious about the toll. It's the only thing he's serious about, other than being disappointed in everyone.",
       "audio_filename": "public/audio/voice/act-01/act01-029-bramble-toll.ogg",
-      "duration_s": 7.311,
+      "duration_s": 8.706,
       "voice_engine": "elevenlabs"
     },
     {
@@ -285,7 +285,7 @@
       "context": "Sec 2, Quest lead close (puzzle hint)",
       "text": "Something small. Something round. Something you'll probably find lying around, if you look in the sort of place nobody looks.",
       "audio_filename": "public/audio/voice/act-01/act01-031-bramble-toll-hint.ogg",
-      "duration_s": 7.066,
+      "duration_s": 7.994,
       "voice_engine": "elevenlabs"
     },
     {
@@ -294,7 +294,7 @@
       "context": "Sec 2, Topic: about herself",
       "text": "Me? Self-appointed Lost and Underfound Clerk, three years running. Someone has to file things. I have chosen to be that someone.",
       "audio_filename": "public/audio/voice/act-01/act01-032-bramble-about-herself.ogg",
-      "duration_s": 7.666,
+      "duration_s": 9.407,
       "voice_engine": "elevenlabs"
     },
     {
@@ -312,7 +312,7 @@
       "context": "Sec 2, Topic: about herself, close",
       "text": "Nobody had to. That's the tragedy.",
       "audio_filename": "public/audio/voice/act-01/act01-034-bramble-the-tragedy.ogg",
-      "duration_s": 1.922,
+      "duration_s": 2.182,
       "voice_engine": "elevenlabs"
     },
     {
@@ -321,7 +321,7 @@
       "context": "Sec 2, Topic: about Old Bottlecap",
       "text": "Old Bottlecap predates the filing system. Predates me, probably. Predates the couch, if you ask him, though I wouldn't recommend asking him things.",
       "audio_filename": "public/audio/voice/act-01/act01-035-bramble-about-bottlecap.ogg",
-      "duration_s": 8.999,
+      "duration_s": 8.768,
       "voice_engine": "elevenlabs"
     },
     {
@@ -330,7 +330,7 @@
       "context": "Sec 2, Wrong-action fallback",
       "text": "That's not really a form, is it. That's just, a thing you're holding at me.",
       "audio_filename": "public/audio/voice/act-01/act01-036-bramble-wrong-action.ogg",
-      "duration_s": 3.783,
+      "duration_s": 4.635,
       "voice_engine": "elevenlabs"
     },
     {
@@ -411,7 +411,7 @@
       "context": "Sec 4, Idle / Bramble reply post-gate",
       "text": "Already? I'm almost disappointed. I had a whole speech prepared.",
       "audio_filename": "public/audio/voice/act-01/act01-045-bramble-almost-disappointed.ogg",
-      "duration_s": 4.364,
+      "duration_s": 3.636,
       "voice_engine": "elevenlabs"
     },
     {

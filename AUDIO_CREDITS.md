@@ -48,7 +48,7 @@ permitted):
 | Character | ElevenLabs voice | Voice ID | Post-processing |
 |---|---|---|---|
 | Pip | Harry — Fierce Warrior | `SOYHLrjzK2X1ezoPC6cr` | Pitch-shifted +3 semitones (`sox pitch 300`) — always required, not baked into a saved voice |
-| Bramble | Alice — Clear, Engaging Educator | `Xb7hH8MSUJpSbSDYk0k2` | none |
+| Bramble | Grimblewood Thornwhisker — Snarky Gnome & Magical Maintainer | `ouL9IsyrSnUkCmfnD02u` | None, but bills at a **3x credit rate** (shared-library premium voice) — every other voice in this project is 1x |
 | Old Bottlecap | Bill — Wise, Mature, Balanced | `pqHfZKP75CvOlQylNhV4` | none |
 | Scuttle | Liam — Energetic, Social Media Creator | `TX3LPaxmHKxFdv7VOQHJ` | none |
 
