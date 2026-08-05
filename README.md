@@ -44,11 +44,11 @@ from day one.
   an animation-cue table mapping every beat to which `ANIMATION_BIBLE.md` rule governs
   it. Acts 2 and 3 don't have this treatment yet.
 - **`script/ACT_01_DIALOGUE.json`** + **`public/audio/voice/act-01/*.ogg`** — real
-  recorded voice for 45 of Act 1's 49 lines (ElevenLabs, `eleven_multilingual_v2`).
-  ⚠️ **Free-tier, non-commercial, not cleared to ship** — see "Voice audio" below
-  before wiring this up anywhere public. The 4 unvoiced lines are the least-critical
-  generic fallbacks (`act01-046` through `act01-049`); the entire core playable path
-  — location, every hotspot, Bramble's full tree, the toll-gate puzzle — is voiced.
+  recorded voice for all 49 of Act 1's lines (ElevenLabs, `eleven_multilingual_v2`,
+  paid Creator tier — commercial use permitted). See "Voice audio" below for the
+  attribution requirement that still applies, and for Pip's voice specifically —
+  it's a pitch-shifted premade voice, not a stock pick, worth reading before
+  regenerating any of Pip's lines.
 - **`public/audio/AUDIO_MANIFEST.json`** + **`public/audio/music/`** / **`sfx/`** —
   real music and SFX for Act 1: one ambience bed, one success stinger, and 15 SFX
   covering every hotspot interaction, UI feedback, and footsteps. Built from curated
@@ -59,23 +59,31 @@ from day one.
 ## Voice audio
 
 Act 1's voice (`public/audio/voice/act-01/`, manifest in `script/ACT_01_DIALOGUE.json`)
-is ElevenLabs TTS on the **free tier** — non-commercial per ElevenLabs' Terms of
-Service, requires attributing ElevenLabs on any public use, **not cleared to ship in
-a commercial release as-is**. Treat it as a real audition/pacing pass, not final audio.
-Voice-to-character mapping (same premade ElevenLabs voices, reuse if regenerating):
+is ElevenLabs TTS on a **paid Creator-tier account** — commercial use permitted, but
+ElevenLabs still requires attribution on any public use per their Terms of Service;
+that's a permanent requirement of using their TTS at all, not a free-tier-only
+caveat. All 49 lines are voiced.
 
-| Character | ElevenLabs voice | Voice ID |
-|---|---|---|
-| Pip | Jessica — Playful, Bright, Warm | `cgSgspJ2msm6clMCkdW9` |
-| Bramble | Alice — Clear, Engaging Educator | `Xb7hH8MSUJpSbSDYk0k2` |
-| Old Bottlecap | Bill — Wise, Mature, Balanced | `pqHfZKP75CvOlQylNhV4` |
-| Scuttle | Liam — Energetic, Social Media Creator | `TX3LPaxmHKxFdv7VOQHJ` |
+| Character | ElevenLabs voice | Voice ID | Post-processing |
+|---|---|---|---|
+| Pip | Harry — Fierce Warrior | `SOYHLrjzK2X1ezoPC6cr` | **Pitch-shifted +3 semitones** (`sox in.wav out.wav pitch 300`) — required every time, not a saved custom voice |
+| Bramble | Alice — Clear, Engaging Educator | `Xb7hH8MSUJpSbSDYk0k2` | none |
+| Old Bottlecap | Bill — Wise, Mature, Balanced | `pqHfZKP75CvOlQylNhV4` | none |
+| Scuttle | Liam — Energetic, Social Media Creator | `TX3LPaxmHKxFdv7VOQHJ` | none |
 
-Generation stopped mid-Act-1 because the account's free-tier monthly quota (10,000
-characters) ran out — Act 1 needs 3,471 characters total, only ~3,218 remained when
-this pass started. Regenerating the last 4 lines, or upgrading to a paid tier and
-redoing the whole batch for commercial clearance, both work as drop-in replacements
-by `line_id`/filename, no code changes needed.
+**Pip's voice needed real A/B testing to land** — worth knowing before touching it:
+ElevenLabs Voice Design refuses prompts describing a child voice outright (a
+deliberate safety policy, confirmed directly against the API, not a bug to route
+around). The shared Voice Library does have real voice actors who cloned themselves
+performing kid/boy characters (searchable — "kid", "boy" turn up options like Vardan,
+Valf, Tuna, Teddy Twinkle) and those are legitimate, usable options, but none beat a
+plain premade adult voice (Harry) pitch-shifted up in this project's A/B testing.
+Formant-shifting beyond the pitch shift (simulating a smaller vocal tract, distinct
+from just raising pitch) was also tried via `rubberband` and made the voice sound
+*older*, not younger, to the ear — abandoned. Plain pitch-shift, +3 semitones, won
+on three separate rounds of testing against real alternatives. If Pip's voice is
+ever regenerated, redo this exact pitch-shift step — it is not baked into a saved
+ElevenLabs voice, just a processing step on top of the stock Harry voice.
 
 ## Music & SFX audio
 
@@ -92,7 +100,7 @@ list with triggers, volumes, and durations.
 
 ## Status
 
-Pre-production, with Act 1 fully scripted, mostly voiced (45/49 lines), and fully
+Pre-production, with Act 1 fully scripted, fully voiced (49/49 lines), and fully
 scored (all music/SFX for Act 1's hotspots and UI). No engine code, no character art
 yet. Acts 2 ("The Button Sovereignty") and 3 ("The Roar") still only exist as the
 loose outline in `docs/GAME_CONCEPT.md` — do those as a follow-up pass once Act 1

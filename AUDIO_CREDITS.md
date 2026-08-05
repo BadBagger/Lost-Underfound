@@ -38,22 +38,23 @@ ship it (or an equivalent in-game credits screen) alongside any public release.
 | `sfx/toll-gate-open.ogg` | "open screen door step in close" (trimmed to the opening slide only) | PostProdDog | [freesound.org/s/537830](https://freesound.org/s/537830/) |
 | `sfx/bramble-paper-shuffle.ogg` | "Paper shuffling.mp3" | meeser9 | [freesound.org/s/642770](https://freesound.org/s/642770/) |
 
-## Voice: ElevenLabs (⚠️ non-commercial free tier, read before shipping)
+## Voice: ElevenLabs (⚠️ attribution required, read before shipping)
 
-Act 1's 45 recorded voice lines (`public/audio/voice/act-01/*.ogg`) are generated via
-the [ElevenLabs](https://elevenlabs.io) text-to-speech API, model
-`eleven_multilingual_v2`:
+All 49 of Act 1's recorded voice lines (`public/audio/voice/act-01/*.ogg`) are
+generated via the [ElevenLabs](https://elevenlabs.io) text-to-speech API, model
+`eleven_multilingual_v2`, on a paid **Creator** tier account (commercial use
+permitted):
 
-| Character | ElevenLabs voice | Voice ID |
-|---|---|---|
-| Pip | Jessica — Playful, Bright, Warm | `cgSgspJ2msm6clMCkdW9` |
-| Bramble | Alice — Clear, Engaging Educator | `Xb7hH8MSUJpSbSDYk0k2` |
-| Old Bottlecap | Bill — Wise, Mature, Balanced | `pqHfZKP75CvOlQylNhV4` |
-| Scuttle | Liam — Energetic, Social Media Creator | `TX3LPaxmHKxFdv7VOQHJ` |
+| Character | ElevenLabs voice | Voice ID | Post-processing |
+|---|---|---|---|
+| Pip | Harry — Fierce Warrior | `SOYHLrjzK2X1ezoPC6cr` | Pitch-shifted +3 semitones (`sox pitch 300`) — always required, not baked into a saved voice |
+| Bramble | Alice — Clear, Engaging Educator | `Xb7hH8MSUJpSbSDYk0k2` | none |
+| Old Bottlecap | Bill — Wise, Mature, Balanced | `pqHfZKP75CvOlQylNhV4` | none |
+| Scuttle | Liam — Energetic, Social Media Creator | `TX3LPaxmHKxFdv7VOQHJ` | none |
 
-**⚠️ Generated on ElevenLabs' free tier, which is explicitly non-commercial per their
-Terms of Service and requires crediting ElevenLabs on any public use.** Not cleared
-to ship in a commercial release as-is. Regenerate on a paid tier (same voice IDs) or
-replace with real voice-actor performance before release — both are drop-in
-replacements by `line_id`/filename, no code changes needed. See README.md's "Voice
-audio" section for what's voiced vs. still missing (4 of 49 lines).
+**⚠️ ElevenLabs requires crediting ElevenLabs on any public use of generated audio,
+regardless of tier.** This is a permanent ToS requirement, not something that goes
+away on a paid plan — include attribution wherever this audio ships. See README.md's
+"Voice audio" section for how Pip's voice was chosen (real A/B testing against
+ElevenLabs Voice Design, several shared-Voice-Library child-voice actors, and a
+formant-shifting approach, all outperformed by a plain pitch-shifted premade voice).
