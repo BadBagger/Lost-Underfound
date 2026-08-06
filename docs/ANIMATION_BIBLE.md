@@ -172,6 +172,41 @@ them, and which object-shaped hotspot masks sit above broad surfaces. Broad
 rectangular hotspots are temporary scaffolding only; production hotspots are reviewed
 against the final scene plate.
 
+## Scene-prop state contract
+
+A baked background plate is a single fused image — nothing inside it can change on
+its own. If a scenery element needs more than one state (a gate open vs. closed, a
+door, a drawer, a lit vs. unlit lamp, a dust clump before vs. after being searched),
+regenerating or swapping the *entire* background plate to show that one element
+changing is the same whole-room-swap failure the Scene-character contract already
+forbids for actors — this contract extends that same discipline to scenery.
+
+The fix is a small state-patch overlay, not a new background:
+
+1. **Define the element's bounding box or polygon before any state art is
+   produced** — the same discipline the furniture-contact line already requires for
+   characters. Every state's patch shares this exact box, fixed relative to the
+   camera.
+2. **The first/default state costs nothing.** It is a crop of the existing baked
+   plate at that box — not new art, not a regeneration.
+3. **Each additional state is authored as an edit of the source plate at that same
+   box**, not a fresh, independently-generated image. Lighting direction, grain,
+   color grade, and perspective must match the surrounding plate exactly, so the
+   patch seams in invisibly rather than reading as a sticker pasted over the scene.
+4. **At runtime, the matching state's patch composites on top of the unchanged base
+   plate at its fixed screen rectangle.** The base plate itself is never swapped,
+   resized, or regenerated — only the small patch changes.
+5. **If the transition itself must be seen** (a gate sliding open, a door swinging),
+   author it as a short sequence of in-between patches in the same box, spaced with
+   the same anticipation/main-motion/settle logic as the walk-cycle contract — not an
+   instant two-state snap, unless the design explicitly calls for an instant change.
+
+This is the same technique already required for any furniture-anchored character's
+occlusion mask (a fixed-box overlay clipped from the scene), just aimed at an element
+that changes what it shows instead of what it hides. One box, authored once,
+reused by every state and every project that needs a background element to do
+something.
+
 ## Talk-loop contract
 
 Do not run one short six-frame talk gesture as an identical infinite treadmill for a
@@ -283,6 +318,11 @@ These are hard rejects, even if the loop looks busy at full speed:
 - **Whole-room swap:** a resident character animation changes walls, desks, props,
   lights, windows, or the camera plate. Scene characters animate as isolated actor
   layers only.
+- **Patch seam:** a scene-prop state-change overlay (see the Scene-prop state
+  contract) whose lighting, grain, color grade, or perspective doesn't match the base
+  background plate at its boundary. Reads as a visible sticker rather than the scene
+  actually changing. The patch was generated independently instead of as an edit of
+  the source plate.
 - **Fake in-between:** a frame has the same pose as the previous frame with only
   redraw shimmer, texture noise, or tiny clothing flicker. More of these frames makes
   the animation worse, not smoother.
