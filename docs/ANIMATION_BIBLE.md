@@ -196,16 +196,33 @@ The fix is a small state-patch overlay, not a new background:
 4. **At runtime, the matching state's patch composites on top of the unchanged base
    plate at its fixed screen rectangle.** The base plate itself is never swapped,
    resized, or regenerated — only the small patch changes.
-5. **If the transition itself must be seen** (a gate sliding open, a door swinging),
-   author it as a short sequence of in-between patches in the same box, spaced with
-   the same anticipation/main-motion/settle logic as the walk-cycle contract — not an
-   instant two-state snap, unless the design explicitly calls for an instant change.
+5. **If the design calls for the transition to be seen, a two-state snap does not
+   satisfy this contract.** "Closed" and "open" are the two ends of a motion, not the
+   whole animation. Author a real in-between sequence in the same fixed box — a gate
+   rising needs frames for the lift starting, the gate mid-travel, and it settling
+   into the open position at minimum, not just a start frame and an end frame. Space
+   those frames with the same anticipation/main-motion/settle logic and slow-in/slow-
+   out timing as the walk-cycle contract, and hold the same standard the golden
+   review test already applies to character animation: every frame must produce a
+   nameable visible change (the gate has traveled further, not "the same pose
+   redrawn"). A prop transition sequence with fake in-betweens is rejected under the
+   same Known-failure-definitions entry that rejects one on a character sheet — this
+   contract does not get a lower bar just because the actor is a gate instead of a
+   person.
+6. **Register the sequence the same way a character sheet is registered.** Every
+   frame in a multi-frame state transition shares the same canvas and the same fixed
+   box/anchor — run the equivalent of `check_registration.py frames` against the
+   sequence before it's treated as playable, not just an eyeballed composite. A frame
+   that doesn't share the sequence's box is wrong, the same way a character frame that
+   doesn't share its sheet's anchor is wrong.
 
 This is the same technique already required for any furniture-anchored character's
 occlusion mask (a fixed-box overlay clipped from the scene), just aimed at an element
 that changes what it shows instead of what it hides. One box, authored once,
 reused by every state and every project that needs a background element to do
-something.
+something. An instant, un-animated state swap is only acceptable when the design
+never intended the change to be seen happening — a light that's simply on or off, not
+a mechanism whose motion is the point.
 
 ## Talk-loop contract
 
