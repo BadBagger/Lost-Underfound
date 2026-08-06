@@ -22,6 +22,8 @@ ship it (or an equivalent in-game credits screen) alongside any public release.
 | `sfx/button-pickup.ogg` | "Single Coin Drop" | mokasza | [freesound.org/s/810185](https://freesound.org/s/810185/) | CC BY 4.0 |
 | `sfx/signinlog-open.ogg` | "Page_Turn_26.wav" | Koops | [freesound.org/s/20260](https://freesound.org/s/20260/) | CC BY 4.0 |
 | `sfx/scuttle-dash.ogg` | "Rat Scurry" | alexyquest42 | [freesound.org/s/630473](https://freesound.org/s/630473/) | CC BY 4.0 |
+| `music/roar-escape-tension-loop.ogg` | "Music for an action movie scene 120BPM loop" | BrainClaim | [freesound.org/s/848003](https://freesound.org/s/848003/) | CC BY 4.0 |
+| `sfx/parcel-drop-thud.ogg` | "cardboard box on street 003 241126_0952" | klankbeeld | [freesound.org/s/772166](https://freesound.org/s/772166/) | CC BY 4.0 |
 
 ### CC0 (public domain, no attribution required)
 
@@ -37,6 +39,17 @@ ship it (or an equivalent in-game credits screen) alongside any public release.
 | `sfx/toll-refused.ogg` | "Wood Knock" | Mrguff | [freesound.org/s/369710](https://freesound.org/s/369710/) |
 | `sfx/toll-gate-open.ogg` | "open screen door step in close" (trimmed to the opening slide only) | PostProdDog | [freesound.org/s/537830](https://freesound.org/s/537830/) |
 | `sfx/bramble-paper-shuffle.ogg` | "Paper shuffling.mp3" | meeser9 | [freesound.org/s/642770](https://freesound.org/s/642770/) |
+| `music/concourse-ambience-loop.ogg` | "Office ambience - call center 3" | leonelmail | [freesound.org/s/579568](https://freesound.org/s/579568/) |
+| `music/annex-ambience-loop.ogg` | "Ambience: Basement 1" | Sheyvan | [freesound.org/s/540749](https://freesound.org/s/540749/) |
+| `music/epilogue-resolution-stinger.ogg` | "Victory (short sting)" | xkeril | [freesound.org/s/706753](https://freesound.org/s/706753/) |
+| `sfx/needle-thread-combine.ogg` | "pull the thread.wav" | alisss77 | [freesound.org/s/409164](https://freesound.org/s/409164/) |
+| `sfx/toggle-stamp-thud.ogg` | "traditional stamp.wav" | I.fekry | [freesound.org/s/470710](https://freesound.org/s/470710/) |
+| `sfx/first-tremor-rumble.ogg` | "cinematic_deep_tremor.wav" | swiftoid | [freesound.org/s/119782](https://freesound.org/s/119782/) |
+| `sfx/annex-door-open.ogg` | "Door Open Close Heavy Wooden Medium Creak Seal Theatre" | LampEight | [freesound.org/s/402464](https://freesound.org/s/402464/) |
+| `sfx/marble-clink.ogg` | "marbles - 15cm ceramic bowl - shaking bowl half full - ~13mm marbles 03.wav" | Anthousai | [freesound.org/s/448344](https://freesound.org/s/448344/) |
+| `sfx/toggle-deflate.ogg` | "Balloon-Deflate-03.wav" | Gniffelbaf | [freesound.org/s/82124](https://freesound.org/s/82124/) |
+| `sfx/roar-rumble.ogg` | "Vacuum Cleaner switch on, run, switch off 2.aif" | DJ Burnham | [freesound.org/s/141682](https://freesound.org/s/141682/) |
+| `sfx/wind-rush-strain.ogg` | "Fabric Flapping" | IENBA | [freesound.org/s/701647](https://freesound.org/s/701647/) |
 
 ## Voice: ElevenLabs (⚠️ attribution required, read before shipping)
 

@@ -136,6 +136,27 @@ from Old Bottlecap's stillness).
 or CC-BY only, no NC/ND/SA/Sampling+. Unlike the voice audio above, this material is
 commercially usable now, but the CC-BY sources require attribution if the game ships
 publicly. The full credit list is in `AUDIO_CREDITS.md` and must ship with the game.
+All three acts now share one 30-cue manifest (`public/audio/AUDIO_MANIFEST.json`),
+gain-matched by the same functional categories throughout — Act 2/3's additions
+didn't get their own looser pass.
+
+Act 2 and 3 add: `music/concourse-ambience-loop.ogg` (the Exchange Concourse's
+institutional room tone, replacing Act 1's cozier ambience for that scene),
+`music/annex-ambience-loop.ogg` (the Annex's darker, hollow tone),
+`music/roar-escape-tension-loop.ogg` (cuts in on `roar-arrives`, carries the whole
+Act 3 escape sequence), and `music/epilogue-resolution-stinger.ogg` (the game's
+actual ending, deliberately bigger than Act 1's toll-paid-stinger). SFX-wise:
+`sfx/needle-thread-combine.ogg` is a **shared combine sound** — one asset reused by
+trigger (`item_combine`) for both Act 2's threaded-needle and Act 3's
+annotated-evidence, rather than two near-identical one-offs. `sfx/roar-rumble.ogg`
+is a real vacuum-cleaner recording (the Roar is a vacuum cleaner, so it's not a
+generic rumble bed) — the low-intensity version of that same visual/audio language
+is `sfx/first-tremor-rumble.ogg`, planted a full act earlier in Act 2's
+`first-tremor` event so Act 3 escalates something already established rather than
+introducing a new sound cold. `sfx/toggle-deflate.ogg` is a small balloon-deflate
+pun on Chairman Toggle's own name for his Act 3 concession — deliberately comedic,
+not a victory fanfare, per `docs/STORY_ARC.md`'s note that his defeat should read
+embarrassed, not crushed.
 
 Act 1 is now a playable local web slice built from `script/ACT_01_SCRIPT.json` and
 `docs/ACT_01_DESIGN.md`, fully voiced (49/49 lines) and fully scored (all music/SFX
@@ -160,9 +181,11 @@ review of the required Animation Bible evidence, but it is registered from the s
 Acts 2 ("The Button Sovereignty") and 3 ("The Roar") now have the same script/design
 pass Act 1 has — `script/ACT_02_SCRIPT.json` + `docs/ACT_02_DESIGN.md` and
 `script/ACT_03_SCRIPT.json` + `docs/ACT_03_DESIGN.md` — plus `docs/STORY_ARC.md`
-tying all three acts into one finalized story. Both acts are now fully voiced too
+tying all three acts into one finalized story. Both acts are now fully voiced
 (72/72 and 58/58 lines, `public/audio/voice/act-02/` and `act-03/`, manifests in
-`script/ACT_02_DIALOGUE.json` / `ACT_03_DIALOGUE.json`) — see "Voice Audio" above.
-Neither act has a music/SFX pass or production art yet; that's the next step, same
-order Act 1 went through (script/design → voice → music/SFX → production art →
-engine).
+`script/ACT_02_DIALOGUE.json` / `ACT_03_DIALOGUE.json`) and fully scored (13 new
+music/SFX cues covering both acts' scenes, events, and puzzle beats — see "Music &
+SFX Audio" above). Neither act has production art yet (Grommet and Chairman Toggle
+still have no finished character art beyond early concept passes); that's the next
+step, same order Act 1 went through (script/design → voice → music/SFX →
+production art → engine).

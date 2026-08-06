@@ -189,8 +189,151 @@
       "purpose": "Ambient paper-shuffle one-shot during Bramble's passive furniture-anchored idle loop, played periodically, not player-triggered.",
       "sourced": "freesound",
       "duration_s": 0.296
+    },
+    {
+      "filename": "music/concourse-ambience-loop.ogg",
+      "type": "music",
+      "scene": "The Button Sovereignty",
+      "trigger": "scene_concourse_ambience",
+      "volume": 0.5,
+      "loop": true,
+      "purpose": "Institutional bureaucratic room tone (murmur, distant office activity) for the Exchange Concourse -- loops under all Act 2 gameplay, replacing Act 1's cozier underneath-ambience-loop for this scene.",
+      "sourced": "freesound",
+      "duration_s": 40.0
+    },
+    {
+      "filename": "music/annex-ambience-loop.ogg",
+      "type": "music",
+      "scene": "The Roar",
+      "trigger": "scene_annex_ambience",
+      "volume": 0.5,
+      "loop": true,
+      "purpose": "Dark, hollow storage-room tone for the Annex -- loops from the cold open through the Toggle confrontation, until roar-arrives cuts over to roar-escape-tension-loop.",
+      "sourced": "freesound",
+      "duration_s": 36.0
+    },
+    {
+      "filename": "music/roar-escape-tension-loop.ogg",
+      "type": "music",
+      "scene": "The Roar",
+      "trigger": "roar-arrives",
+      "volume": 0.55,
+      "loop": true,
+      "purpose": "Fast, percussion-driven tension loop replacing the Annex ambience once the Roar hits -- carries the whole Sec 3-5 escape sequence (Grommet's block, the dash to the Grate, the final push through), stops on roar-passed.",
+      "sourced": "freesound",
+      "duration_s": 32.0
+    },
+    {
+      "filename": "music/epilogue-resolution-stinger.ogg",
+      "type": "music",
+      "scene": "Global / Sting",
+      "trigger": "game-ending",
+      "volume": 0.6,
+      "loop": false,
+      "purpose": "Warm resolution sting under the closing goodbye beat and Pip's epilogue line (act03-057/058) -- the game's single biggest emotional beat, deliberately bigger than Act 1's toll-paid-stinger.",
+      "sourced": "freesound",
+      "duration_s": 6.0
+    },
+    {
+      "filename": "sfx/needle-thread-combine.ogg",
+      "type": "sfx",
+      "scene": "The Button Sovereignty",
+      "trigger": "item_combine",
+      "volume": 0.5,
+      "loop": false,
+      "purpose": "Shared 'combine' sound language for the whole game -- plays whenever two inventory items combine into one: Act 2's needle+thread->threaded-needle (act02-023) and Act 3's founders-ledger+intake-parcel->annotated-evidence (act03-028). One sound, reused by trigger, not two near-identical assets.",
+      "sourced": "freesound",
+      "duration_s": 0.55
+    },
+    {
+      "filename": "sfx/parcel-drop-thud.ogg",
+      "type": "sfx",
+      "scene": "The Button Sovereignty",
+      "trigger": "parcel-dropped",
+      "volume": 0.45,
+      "loop": false,
+      "purpose": "Soft parcel-hits-floor thud when Scuttle fumbles the intake parcel (act02-036).",
+      "sourced": "freesound",
+      "duration_s": 0.534
+    },
+    {
+      "filename": "sfx/toggle-stamp-thud.ogg",
+      "type": "sfx",
+      "scene": "The Button Sovereignty",
+      "trigger": "petition-denied",
+      "volume": 0.5,
+      "loop": false,
+      "purpose": "Chairman Toggle's decisive stamp-thud on petition denial (act02-067). Reused wherever else he stamps something dismissively in Act 3's deflect beats (act03-022, act03-026) -- one prop sound for the character, not a unique stamp per line.",
+      "sourced": "freesound",
+      "duration_s": 0.45
+    },
+    {
+      "filename": "sfx/first-tremor-rumble.ogg",
+      "type": "sfx",
+      "scene": "The Button Sovereignty",
+      "trigger": "first-tremor",
+      "volume": 0.45,
+      "loop": false,
+      "purpose": "Low, distant rumble under the light-flicker foreshadowing beat (act02-070/071) -- low-intensity version of sfx/roar-rumble.ogg, establishes the visual/audio language Act 3's roar-arrives escalates.",
+      "sourced": "freesound",
+      "duration_s": 3.5
+    },
+    {
+      "filename": "sfx/annex-door-open.ogg",
+      "type": "sfx",
+      "scene": "The Roar",
+      "trigger": "annex-opened",
+      "volume": 0.55,
+      "loop": false,
+      "purpose": "Heavy wooden door creak-open when Grommet lets Pip into the Annex (act03-003) -- distinct material (wood, not metal) from Act 1's toll-gate-open.",
+      "sourced": "freesound",
+      "duration_s": 2.6
+    },
+    {
+      "filename": "sfx/marble-clink.ogg",
+      "type": "sfx",
+      "scene": "The Roar",
+      "trigger": "marble_pile_take",
+      "volume": 0.4,
+      "loop": false,
+      "purpose": "Small glass-marble handling/clink sound, shared across all 5 marble-pile candidates' take attempts (act03-010/012/014/016/018) -- both fails and the success reuse the same physical sound, only the dialogue differs.",
+      "sourced": "freesound",
+      "duration_s": 1.112
+    },
+    {
+      "filename": "sfx/toggle-deflate.ogg",
+      "type": "sfx",
+      "scene": "The Roar",
+      "trigger": "toggle-defeated",
+      "volume": 0.5,
+      "loop": false,
+      "purpose": "Small comedic balloon-deflate whoosh on Chairman Toggle's concession (act03-032) -- a pun on his own name, and per docs/STORY_ARC.md's note that his defeat should read embarrassed, not crushed, this is deliberately funny, not a victory fanfare.",
+      "sourced": "freesound",
+      "duration_s": 1.8
+    },
+    {
+      "filename": "sfx/roar-rumble.ogg",
+      "type": "sfx",
+      "scene": "The Roar",
+      "trigger": "roar-arrives",
+      "volume": 0.6,
+      "loop": true,
+      "purpose": "The Roar itself -- a real vacuum-cleaner run sound, layered under music/roar-escape-tension-loop.ogg for the full escape sequence. Faded down (not re-sourced) for the inverse roar-passed cue once Pip checks on Grommet (act03-048).",
+      "sourced": "freesound",
+      "duration_s": 10.0
+    },
+    {
+      "filename": "sfx/wind-rush-strain.ogg",
+      "type": "sfx",
+      "scene": "The Roar",
+      "trigger": "grommet-guardian-payoff",
+      "volume": 0.5,
+      "loop": true,
+      "purpose": "Fabric-flapping wind-rush loop under Grommet holding the chokepoint against the draft (act03-036 onward) -- the game's climax beat, sustains for however long the escape sequence's timing needs.",
+      "sourced": "freesound",
+      "duration_s": 5.0
     }
   ],
-  "voiceDialogueNote": "Voice lines are ElevenLabs TTS, free tier -- non-commercial, requires ElevenLabs attribution, not cleared to ship as-is. See script/ACT_01_DIALOGUE.json and README.md's Voice audio section. 45 of 49 Act 1 lines are voiced; the free-tier monthly quota ran out on the last 4 generic fallback lines.",
+  "voiceDialogueNote": "Voice lines are ElevenLabs TTS on a paid Creator-tier account -- commercial use permitted, still requires ElevenLabs attribution per their ToS. All three acts are fully voiced: 49/49 (Act 1), 72/72 (Act 2), 58/58 (Act 3). See script/ACT_0{1,2,3}_DIALOGUE.json and README.md's Voice Audio section.",
   "sourcingNote": "All music and SFX are Freesound.org recordings (CC0 or CC-BY only), trimmed/normalized/gain-matched by functional category (footstep/ui/interaction/reward/ambient_character/music_loop/music_stinger targets) rather than used verbatim or left at inconsistent source loudness. See AUDIO_CREDITS.md for full attribution."
 }
