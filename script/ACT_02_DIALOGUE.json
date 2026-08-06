@@ -1,0 +1,663 @@
+{
+  "act": 2,
+  "title": "The Button Sovereignty",
+  "voice_map": {
+    "PIP": "Harry - Fierce Warrior (SOYHLrjzK2X1ezoPC6cr), pitch-shifted +3 semitones",
+    "BRAMBLE": "Grimblewood Thornwhisker - Snarky Gnome & Magical Maintainer (ouL9IsyrSnUkCmfnD02u), 3x credit rate",
+    "OLD_BOTTLECAP": "Marshal - Dry, Hoarse and Grumpy (LysucvtFmzi1NVAE0rKp)",
+    "SCUTTLE": "Ziggy - Cute little Aussie character (J1lfByWs8gvoooryDWEi), pitch-shifted +2 semitones + 12% faster tempo",
+    "GROMMET": "Jasper - Gentle and Cautious (8RjxcQ6tY1F2YZiIvWqY)",
+    "CHAIRMAN_TOGGLE": "Posh Josh (NXaTw4ifg0LAguvKuIwZ)"
+  },
+  "notes": "Per-line dialogue/timing manifest for Act 2. Voice is ElevenLabs TTS (eleven_multilingual_v2), generated on a paid Creator-tier account -- commercial use permitted, still requires ElevenLabs attribution per their ToS (see AUDIO_CREDITS.md/README.md). Pip, Bramble, Old Bottlecap, and Scuttle reuse the exact voice IDs and post-processing established in Act 1 (see Act 1's own ACT_01_DIALOGUE.json / README.md for that A/B-testing history) -- no re-casting, just the same voices reading new lines. Grommet (Jasper) and Chairman Toggle (Posh Josh) are new voice casts, picked via a 3-candidate A/B test each, first voiced in this act.",
+  "lines": [
+    {
+      "line_id": "act02-001-pip-cold-open",
+      "speaker": "PIP",
+      "context": "Sec 0, Cold open, transition in from Act 1",
+      "text": "Okay. Bigger room. Much bigger room. Somebody in here really likes stamps.",
+      "audio_filename": "public/audio/voice/act-02/act02-001-pip-cold-open.ogg",
+      "duration_s": 6.113,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act02-002-pip-cold-open-goal",
+      "speaker": "PIP",
+      "context": "Sec 0, Cold open, restated goal",
+      "text": "Sign-in log said something round and shiny came through here. That's my marble talking. Or about my marble. You know what I mean.",
+      "audio_filename": "public/audio/voice/act-02/act02-002-pip-cold-open-goal.ogg",
+      "duration_s": 7.837,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act02-003-pip-exchange-window-examine",
+      "speaker": "PIP",
+      "context": "Sec 1, Currency Exchange Window / examine",
+      "text": "A little window, a little sign: 'ALL BUTTONS WEIGHED AND VERIFIED. NO EXCEPTIONS. NO, NOT EVEN THAT ONE.'",
+      "audio_filename": "public/audio/voice/act-02/act02-003-pip-exchange-window-examine.ogg",
+      "duration_s": 7.419,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act02-004-pip-exchange-window-use-fail",
+      "speaker": "PIP",
+      "context": "Sec 1, Currency Exchange Window / use, permanent flavor fail",
+      "text": "I don't have anything to exchange. Also I don't think I want whatever the exchange rate on a shoelace tip is.",
+      "audio_filename": "public/audio/voice/act-02/act02-004-pip-exchange-window-use-fail.ogg",
+      "duration_s": 6.113,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act02-005-pip-noticeboard-examine-1st",
+      "speaker": "PIP",
+      "context": "Sec 1, Public Notice Board / examine 1st",
+      "text": "A notice board. Mostly button-related bulletins. One is just the word 'AUDIT' underlined four times.",
+      "audio_filename": "public/audio/voice/act-02/act02-005-pip-noticeboard-examine-1st.ogg",
+      "duration_s": 6.949,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act02-006-pip-noticeboard-rotate-1",
+      "speaker": "PIP",
+      "context": "Sec 1, Public Notice Board / flavor rotate 1",
+      "text": "'Lost: one (1) sense of proportion. Reward: modest.'",
+      "audio_filename": "public/audio/voice/act-02/act02-006-pip-noticeboard-rotate-1.ogg",
+      "duration_s": 6.217,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act02-007-pip-noticeboard-rotate-2",
+      "speaker": "PIP",
+      "context": "Sec 1, Public Notice Board / flavor rotate 2 (red herring seed)",
+      "text": "This one's just gossip, really: 'Old Bottlecap knows more than he's letting on.' No signature. Bold accusation from an unsigned note.",
+      "audio_filename": "public/audio/voice/act-02/act02-007-pip-noticeboard-rotate-2.ogg",
+      "duration_s": 9.796,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act02-008-pip-noticeboard-rotate-3",
+      "speaker": "PIP",
+      "context": "Sec 1, Public Notice Board / flavor rotate 3",
+      "text": "'Reminder: the Sovereignty does not confirm or deny the existence of an Annex.' ...that phrasing is doing a lot of work.",
+      "audio_filename": "public/audio/voice/act-02/act02-008-pip-noticeboard-rotate-3.ogg",
+      "duration_s": 8.255,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act02-009-pip-noticeboard-rotate-4",
+      "speaker": "PIP",
+      "context": "Sec 1, Public Notice Board / flavor rotate 4 -- puzzle clue, oblique, does not name Grommet",
+      "text": "'MAINTENANCE ADVISORY: loose threads reported along the Annex access corridor. General Services regrets the delay.' Riveting stuff, this board.",
+      "audio_filename": "public/audio/voice/act-02/act02-009-pip-noticeboard-rotate-4.ogg",
+      "duration_s": 9.874,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act02-010-pip-filing-booth-examine",
+      "speaker": "PIP",
+      "context": "Sec 1, Citizen Filing Booth / examine",
+      "text": "A citizen, filing a formal dispute about a button that is, and I quote, 'definitely two shades lighter than the button it was sold to me as.'",
+      "audio_filename": "public/audio/voice/act-02/act02-010-pip-filing-booth-examine.ogg",
+      "duration_s": 7.758,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act02-011-pip-filing-booth-rotate-1",
+      "speaker": "PIP",
+      "context": "Sec 1, Citizen Filing Booth / flavor rotate 1",
+      "text": "The clerk has stamped the complaint 'VALID, BUT WHY.' Fair, honestly.",
+      "audio_filename": "public/audio/voice/act-02/act02-011-pip-filing-booth-rotate-1.ogg",
+      "duration_s": 5.512,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act02-012-pip-filing-booth-rotate-2",
+      "speaker": "PIP",
+      "context": "Sec 1, Citizen Filing Booth / flavor rotate 2 -- decoy target seed for the threaded-needle puzzle",
+      "text": "Different citizen, further back in line, muttering to no one: 'This coat's been drafty for a week, ever since the seam by the collar popped. Nobody's fixed it. Typical.'",
+      "audio_filename": "public/audio/voice/act-02/act02-012-pip-filing-booth-rotate-2.ogg",
+      "duration_s": 9.796,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act02-013-pip-needle-examine",
+      "speaker": "PIP",
+      "context": "Sec 1, Dropped Needle / examine",
+      "text": "A needle, stuck point-first in a floorboard crack like a tiny sword in a tiny stone.",
+      "audio_filename": "public/audio/voice/act-02/act02-013-pip-needle-examine.ogg",
+      "duration_s": 5.329,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act02-014-pip-needle-take",
+      "speaker": "PIP",
+      "context": "Sec 1, Dropped Needle / take",
+      "text": "Pulled it free. No prophecy triggered. Slightly disappointed.",
+      "audio_filename": "public/audio/voice/act-02/act02-014-pip-needle-take.ogg",
+      "duration_s": 4.598,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act02-015-bramble-reunion-greeting",
+      "speaker": "BRAMBLE",
+      "context": "Sec 1b, Bramble reunion, auto-fires first approach this act",
+      "text": "You made it past the Grate! I really did have a whole speech about proper channels prepared, and now I'll never get to give it.",
+      "audio_filename": "public/audio/voice/act-02/act02-015-bramble-reunion-greeting.ogg",
+      "duration_s": 7.758,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act02-016-pip-reunion-response",
+      "speaker": "PIP",
+      "context": "Sec 1b, Pip response",
+      "text": "You can still give it to me. I'm a very good audience.",
+      "audio_filename": "public/audio/voice/act-02/act02-016-pip-reunion-response.ogg",
+      "duration_s": 3.788,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act02-017-pip-asks-mending-supplies",
+      "speaker": "PIP",
+      "context": "Sec 1b, Pip asks for mending help, motivated by the torn sleeve from Act 1's cobweb curtain",
+      "text": "Actually, first — do you have anything for mending? Caught my sleeve on a cobweb back there and it's still bugging me.",
+      "audio_filename": "public/audio/voice/act-02/act02-017-pip-asks-mending-supplies.ogg",
+      "duration_s": 7.288,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act02-018-bramble-whats-it-for",
+      "speaker": "BRAMBLE",
+      "context": "Sec 1b, Bramble, bureaucratic reflex",
+      "text": "For the file: what's the actual errand here? I like to know what I'm supplying thread for.",
+      "audio_filename": "public/audio/voice/act-02/act02-018-bramble-whats-it-for.ogg",
+      "duration_s": 6.531,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act02-019-pip-explains-marble-hunt",
+      "speaker": "PIP",
+      "context": "Sec 1b, Pip restates the goal",
+      "text": "Still looking for my marble. Sign-in log said something round and shiny came through, and I'm fairly sure that was mine.",
+      "audio_filename": "public/audio/voice/act-02/act02-019-pip-explains-marble-hunt.ogg",
+      "duration_s": 7.758,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act02-020-bramble-describe-it",
+      "speaker": "BRAMBLE",
+      "context": "Sec 1b, Bramble asks for a description, in-fiction reason to plant the identifying detail",
+      "text": "Describe it for me, properly. If it ever does turn up on a desk somewhere, I'd like to actually recognize it.",
+      "audio_filename": "public/audio/voice/act-02/act02-020-bramble-describe-it.ogg",
+      "duration_s": 7.758,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act02-021-pip-describes-marble",
+      "speaker": "PIP",
+      "context": "Sec 1b, Pip describes the identifying mark -- THIS is the clue Act 3's marble search pays off, planted here rather than restated fresh in Act 3",
+      "text": "It's got a little nick on one side. Shaped like a lopsided star, if you squint. My dad called it a flaw. I call it how you tell it's really mine.",
+      "audio_filename": "public/audio/voice/act-02/act02-021-pip-describes-marble.ogg",
+      "duration_s": 9.979,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act02-022-bramble-hands-over-thread",
+      "speaker": "BRAMBLE",
+      "context": "Sec 1b, Bramble gives thread, addItem: thread, close of this beat",
+      "text": "Noted. Here — thread, from the desk drawer. Filed mentally under 'public infrastructure maintenance.' Don't ask me to justify that filing category.",
+      "audio_filename": "public/audio/voice/act-02/act02-022-bramble-hands-over-thread.ogg",
+      "duration_s": 11.938,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act02-023-pip-combine-needle-thread",
+      "speaker": "PIP",
+      "context": "Sec 1, Combine needle + thread -> item: threaded-needle",
+      "text": "Threaded needle. Not glamorous, but somewhere out there something is about to stop falling apart.",
+      "audio_filename": "public/audio/voice/act-02/act02-023-pip-combine-needle-thread.ogg",
+      "duration_s": 5.93,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act02-024-scuttle-bump-in",
+      "speaker": "SCUTTLE",
+      "context": "Sec 2, Scuttle reconnect, auto-fire on approach",
+      "text": "'Scuse, delivery, no time— oh. Oh, it's you. From the cobweb. You're slower than you looked.",
+      "audio_filename": "public/audio/voice/act-02/act02-024-scuttle-bump-in.ogg",
+      "duration_s": 9.703,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act02-025-pip-scuttle-greeting",
+      "speaker": "PIP",
+      "context": "Sec 2, Scuttle reconnect response",
+      "text": "You're the one who almost ran me over. I have questions.",
+      "audio_filename": "public/audio/voice/act-02/act02-025-pip-scuttle-greeting.ogg",
+      "duration_s": 3.892,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act02-026-scuttle-no-time-bit",
+      "speaker": "SCUTTLE",
+      "context": "Sec 2, Scuttle deflect",
+      "text": "No time for questions! Got a route! Got a schedule! Got a very specific number of stops between now and lunch!",
+      "audio_filename": "public/audio/voice/act-02/act02-026-scuttle-no-time-bit.ogg",
+      "duration_s": 7.254,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act02-027-pip-just-one-question",
+      "speaker": "PIP",
+      "context": "Sec 2, Pip presses",
+      "text": "One question. Sixty seconds. I'll even walk with you.",
+      "audio_filename": "public/audio/voice/act-02/act02-027-pip-just-one-question.ogg",
+      "duration_s": 3.474,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act02-028-scuttle-fine-walking",
+      "speaker": "SCUTTLE",
+      "context": "Sec 2, Scuttle relents",
+      "text": "Fine! Walking counts as working. Go.",
+      "audio_filename": "public/audio/voice/act-02/act02-028-scuttle-fine-walking.ogg",
+      "duration_s": 3.569,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act02-029-scuttle-about-himself",
+      "speaker": "SCUTTLE",
+      "context": "Sec 2, Topic: about himself",
+      "text": "Courier, three routes a day, never missed a delivery, never read one either. Not my job to read them. My job is fast.",
+      "audio_filename": "public/audio/voice/act-02/act02-029-scuttle-about-himself.ogg",
+      "duration_s": 9.283,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act02-030-pip-never-read-them",
+      "speaker": "PIP",
+      "context": "Sec 2, Topic: about himself, response",
+      "text": "You've never once looked at what you're carrying?",
+      "audio_filename": "public/audio/voice/act-02/act02-030-pip-never-read-them.ogg",
+      "duration_s": 2.456,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act02-031-scuttle-thats-the-job",
+      "speaker": "SCUTTLE",
+      "context": "Sec 2, Topic: about himself, close",
+      "text": "Looking's slow. I don't do slow. Ask literally anyone.",
+      "audio_filename": "public/audio/voice/act-02/act02-031-scuttle-thats-the-job.ogg",
+      "duration_s": 5.668,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act02-032-scuttle-about-deliveries",
+      "speaker": "SCUTTLE",
+      "context": "Sec 2, Topic: about deliveries",
+      "text": "Mostly I run Court intake to the Annex. 'Round Asset,' 'Unclaimed Property,' whatever the label says, I don't argue with labels.",
+      "audio_filename": "public/audio/voice/act-02/act02-032-scuttle-about-deliveries.ogg",
+      "duration_s": 9.819,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act02-033-pip-round-asset-what",
+      "speaker": "PIP",
+      "context": "Sec 2, Topic: about deliveries, response",
+      "text": "What's a 'round asset,' exactly?",
+      "audio_filename": "public/audio/voice/act-02/act02-033-pip-round-asset-what.ogg",
+      "duration_s": 1.985,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act02-034-scuttle-honestly-no-idea",
+      "speaker": "SCUTTLE",
+      "context": "Sec 2, Topic: about deliveries, close",
+      "text": "Honestly? No idea. Round, I guess. I deliver the box, not the box's feelings.",
+      "audio_filename": "public/audio/voice/act-02/act02-034-scuttle-honestly-no-idea.ogg",
+      "duration_s": 6.577,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act02-035-pip-ambient-warning",
+      "speaker": "PIP",
+      "context": "Sec 2, Ambient beat before parcel drop",
+      "text": "Careful, you're about to—",
+      "audio_filename": "public/audio/voice/act-02/act02-035-pip-ambient-warning.ogg",
+      "duration_s": 1.855,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act02-036-scuttle-drops-parcel",
+      "speaker": "SCUTTLE",
+      "context": "Sec 2, Scuttle fumbles a parcel, event: parcel-dropped, addItem: intake-parcel",
+      "text": "—dropped a parcel! No, don't tell dispatch, I'll circle back, I always circle back—",
+      "audio_filename": "public/audio/voice/act-02/act02-036-scuttle-drops-parcel.ogg",
+      "duration_s": 7.86,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act02-037-pip-parcel-examine",
+      "speaker": "PIP",
+      "context": "Sec 2, Intake Parcel / examine (in inventory)",
+      "text": "Little parcel, little label: 'ROUND ASSET INTAKE — c/o Chairman Toggle, The Annex.' Huh. Huh huh huh.",
+      "audio_filename": "public/audio/voice/act-02/act02-037-pip-parcel-examine.ogg",
+      "duration_s": 8.62,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act02-038-scuttle-exit-line",
+      "speaker": "SCUTTLE",
+      "context": "Sec 2, Scuttle exits scene after parcel beat, non-interactive from here",
+      "text": "Route's already blown, might as well finish it fast. Catch you around, slow one!",
+      "audio_filename": "public/audio/voice/act-02/act02-038-scuttle-exit-line.ogg",
+      "duration_s": 5.598,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act02-039-bramble-midact-checkin-greeting",
+      "speaker": "BRAMBLE",
+      "context": "Sec 3, Bramble check-in, auto-fire once parcel obtained",
+      "text": "You found a — is that a Court intake parcel? Where did you even— you know what, I don't want to know.",
+      "audio_filename": "public/audio/voice/act-02/act02-039-bramble-midact-checkin-greeting.ogg",
+      "duration_s": 7.549,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act02-040-pip-show-parcel",
+      "speaker": "PIP",
+      "context": "Sec 3, Pip shows parcel to Bramble",
+      "text": "It says 'round asset.' Round. Shiny. Sound familiar?",
+      "audio_filename": "public/audio/voice/act-02/act02-040-pip-show-parcel.ogg",
+      "duration_s": 6.087,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act02-041-bramble-defensive",
+      "speaker": "BRAMBLE",
+      "context": "Sec 3, Bramble defensive beat",
+      "text": "I— there's a process for everything, that doesn't mean I— look, the cubby wall is real! Everything on the cubby wall is real and properly filed!",
+      "audio_filename": "public/audio/voice/act-02/act02-041-bramble-defensive.ogg",
+      "duration_s": 10.867,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act02-042-pip-not-asking-that",
+      "speaker": "PIP",
+      "context": "Sec 3, Pip gentle pushback",
+      "text": "I'm not saying it isn't. I'm asking about the stuff that's NOT on the cubby wall.",
+      "audio_filename": "public/audio/voice/act-02/act02-042-pip-not-asking-that.ogg",
+      "duration_s": 4.963,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act02-043-bramble-quiet-admission",
+      "speaker": "BRAMBLE",
+      "context": "Sec 3, Bramble quiet admission, close",
+      "text": "...There's an Annex. I've never been inside it. I tell myself that's not the same as knowing what's inside it. I'm starting to think it is the same.",
+      "audio_filename": "public/audio/voice/act-02/act02-043-bramble-quiet-admission.ogg",
+      "duration_s": 13.14,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act02-044-grommet-first-appearance",
+      "speaker": "GROMMET",
+      "context": "Sec 4, Grommet threshold, first encounter, auto-fire on approach",
+      "text": "...oh. Hi. You're new. New ones usually go the other way.",
+      "audio_filename": "public/audio/voice/act-02/act02-044-grommet-first-appearance.ogg",
+      "duration_s": 5.982,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act02-045-pip-grommet-greeting",
+      "speaker": "PIP",
+      "context": "Sec 4, Pip greeting response",
+      "text": "I'm looking for something that might be past you. No offense, but you're kind of enormous.",
+      "audio_filename": "public/audio/voice/act-02/act02-045-pip-grommet-greeting.ogg",
+      "duration_s": 5.277,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act02-046-grommet-im-just-the-door",
+      "speaker": "GROMMET",
+      "context": "Sec 4, Grommet self-deprecating",
+      "text": "I get that a lot. I'm not trying to be enormous. I'm just standing where I was told to stand.",
+      "audio_filename": "public/audio/voice/act-02/act02-046-grommet-im-just-the-door.ogg",
+      "duration_s": 8.673,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act02-047-pip-who-told-you",
+      "speaker": "PIP",
+      "context": "Sec 4, Pip probes",
+      "text": "Who told you to?",
+      "audio_filename": "public/audio/voice/act-02/act02-047-pip-who-told-you.ogg",
+      "duration_s": 1.149,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act02-048-grommet-dont-remember",
+      "speaker": "GROMMET",
+      "context": "Sec 4, Grommet doesn't fully know, close of first exchange",
+      "text": "...huh. That's a good question. I don't actually remember. I've just always stood here.",
+      "audio_filename": "public/audio/voice/act-02/act02-048-grommet-dont-remember.ogg",
+      "duration_s": 8.673,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act02-049-grommet-vague-unease",
+      "speaker": "GROMMET",
+      "context": "Sec 4, Grommet's puzzle clue -- deliberately oblique, does not name a seam or diagnose the problem, meant to be cross-referenced against the notice-board's maintenance advisory (act02-009)",
+      "text": "...sorry, I keep shifting. There's a draft today, right along my shoulder. Probably nothing.",
+      "audio_filename": "public/audio/voice/act-02/act02-049-grommet-vague-unease.ogg",
+      "duration_s": 11.416,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act02-050-pip-examine-grommet-response",
+      "speaker": "PIP",
+      "context": "Sec 4, Examine Grommet after the vague-unease line -- Pip notices something's off but does not diagnose it for the player, this is the deduction step",
+      "text": "A draft. On a sock. That's... actually a pretty specific kind of wrong.",
+      "audio_filename": "public/audio/voice/act-02/act02-050-pip-examine-grommet-response.ogg",
+      "duration_s": 6.296,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act02-051-pip-decoy-needle-on-citizen",
+      "speaker": "PIP",
+      "context": "Sec 1/4, Use threaded-needle on the filing-booth citizen (the drafty-coat one from act02-012) -- decoy, rejected, no consequence, retryable",
+      "text": "This isn't your coat. Also you're a citizen, not a hem. This is weird for both of us.",
+      "audio_filename": "public/audio/voice/act-02/act02-051-pip-decoy-needle-on-citizen.ogg",
+      "duration_s": 6.348,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act02-052-pip-use-threaded-needle-on-grommet",
+      "speaker": "PIP",
+      "context": "Sec 4, Use threaded-needle on Grommet, puzzle success",
+      "text": "Hold still a second — just this one bit, right here—",
+      "audio_filename": "public/audio/voice/act-02/act02-052-pip-use-threaded-needle-on-grommet.ogg",
+      "duration_s": 3.605,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act02-053-grommet-mended-reaction",
+      "speaker": "GROMMET",
+      "context": "Sec 4, Grommet reaction to mending, event: grommet-trust-earned",
+      "text": "...oh. Oh, that's — nobody's ever just fixed a part of me before. They usually just point at the door part.",
+      "audio_filename": "public/audio/voice/act-02/act02-053-grommet-mended-reaction.ogg",
+      "duration_s": 10.475,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act02-054-pip-its-nothing",
+      "speaker": "PIP",
+      "context": "Sec 4, Pip response",
+      "text": "It's a loose thread, not a big deal. You looked uncomfortable.",
+      "audio_filename": "public/audio/voice/act-02/act02-054-pip-its-nothing.ogg",
+      "duration_s": 4.18,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act02-055-grommet-nobody-noticed",
+      "speaker": "GROMMET",
+      "context": "Sec 4, Grommet, close",
+      "text": "Nobody noticed before. You noticed. I think I'd like to help you, actually, if that's allowed.",
+      "audio_filename": "public/audio/voice/act-02/act02-055-grommet-nobody-noticed.ogg",
+      "duration_s": 9.326,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act02-056-grommet-about-annex",
+      "speaker": "GROMMET",
+      "context": "Sec 4, Topic: about the Annex (unlocked post-trust)",
+      "text": "It's dark in there. Full of shiny stacked-up things, floor to who-knows. I water it sometimes. I don't know why I water it. I don't think that helps.",
+      "audio_filename": "public/audio/voice/act-02/act02-056-grommet-about-annex.ogg",
+      "duration_s": 16.144,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act02-057-pip-let-me-in",
+      "speaker": "PIP",
+      "context": "Sec 4, Pip asks directly",
+      "text": "Could you just... let me in?",
+      "audio_filename": "public/audio/voice/act-02/act02-057-pip-let-me-in.ogg",
+      "duration_s": 1.802,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act02-058-grommet-not-yet",
+      "speaker": "GROMMET",
+      "context": "Sec 4, Grommet holds, sets up Act 3",
+      "text": "I want to. I do. But it's the one thing I've always done, and I need a minute before I stop doing it forever. Ask the Chairman first. Do it the — the polite way. I'll be right here.",
+      "audio_filename": "public/audio/voice/act-02/act02-058-grommet-not-yet.ogg",
+      "duration_s": 21.629,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act02-059-pip-ledger-examine",
+      "speaker": "PIP",
+      "context": "Sec 1 (late), Founder's Ledger prop / examine, tucked near the Notice Board",
+      "text": "An old, old ledger. Water-stained. First entry, in handwriting nothing else here matches: 'Standard set this day, one button to one button, fair and plain. — O.B.'",
+      "audio_filename": "public/audio/voice/act-02/act02-059-pip-ledger-examine.ogg",
+      "duration_s": 14.158,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act02-060-pip-ledger-realization",
+      "speaker": "PIP",
+      "context": "Sec 1 (late), Ledger realization beat",
+      "text": "O.B. ...Old Bottlecap. He didn't just guard a gate. He started all of this.",
+      "audio_filename": "public/audio/voice/act-02/act02-060-pip-ledger-realization.ogg",
+      "duration_s": 4.859,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act02-061-bramble-ledger-reveal-reaction",
+      "speaker": "BRAMBLE",
+      "context": "Sec 3 (late), show ledger to Bramble",
+      "text": "He set the button standard? Himself? Why would he just — sit at a gate for years and never say —",
+      "audio_filename": "public/audio/voice/act-02/act02-061-bramble-ledger-reveal-reaction.ogg",
+      "duration_s": 7.889,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act02-062-bramble-ledger-reveal-close",
+      "speaker": "BRAMBLE",
+      "context": "Sec 3 (late), Bramble, close",
+      "text": "I don't think he sat down. I think somebody sat him down. There's a difference, and I don't love what it implies about who's running things now.",
+      "audio_filename": "public/audio/voice/act-02/act02-062-bramble-ledger-reveal-close.ogg",
+      "duration_s": 8.438,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act02-063-toggle-first-appearance",
+      "speaker": "CHAIRMAN_TOGGLE",
+      "context": "Sec 6, Chairman Toggle audience chamber, auto-fire on approach",
+      "text": "A petitioner! Wonderful, wonderful, I do so love a petitioner. State your grievance, in triplicate if possible.",
+      "audio_filename": "public/audio/voice/act-02/act02-063-toggle-first-appearance.ogg",
+      "duration_s": 7.523,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act02-064-pip-petition",
+      "speaker": "PIP",
+      "context": "Sec 6, Pip states the case",
+      "text": "You've got my marble. In the Annex. I have a delivery label that says so.",
+      "audio_filename": "public/audio/voice/act-02/act02-064-pip-petition.ogg",
+      "duration_s": 5.93,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act02-065-toggle-deflect-procedure",
+      "speaker": "CHAIRMAN_TOGGLE",
+      "context": "Sec 6, Toggle deflects with procedure",
+      "text": "'Unclaimed round asset,' the label says, and unclaimed property is unclaimed property — that is the ENTIRE point of having a filing system, you understand. Chaos otherwise. Total chaos.",
+      "audio_filename": "public/audio/voice/act-02/act02-065-toggle-deflect-procedure.ogg",
+      "duration_s": 14.211,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act02-066-bramble-pushback",
+      "speaker": "BRAMBLE",
+      "context": "Sec 6, Bramble pushes back",
+      "text": "It's not unclaimed if he's standing right here claiming it. That's — that's the literal definition of claimed.",
+      "audio_filename": "public/audio/voice/act-02/act02-066-bramble-pushback.ogg",
+      "duration_s": 7.053,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act02-067-toggle-not-todays-matter",
+      "speaker": "CHAIRMAN_TOGGLE",
+      "context": "Sec 6, Toggle stonewalls, close",
+      "text": "Fascinating jurisprudence, Ms. Bramble, truly, but the Annex is not open to the public, was never open to the public, and will not be open to the public today. Good AFTERNOON.",
+      "audio_filename": "public/audio/voice/act-02/act02-067-toggle-not-todays-matter.ogg",
+      "duration_s": 12.774,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act02-068-pip-fallback-use-scenery",
+      "speaker": "PIP",
+      "context": "Sec 7, Fallback / use item on scenery",
+      "text": "Doesn't seem like it's supposed to go there. I'll hang onto it.",
+      "audio_filename": "public/audio/voice/act-02/act02-068-pip-fallback-use-scenery.ogg",
+      "duration_s": 3.84,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act02-069-pip-fallback-examine-self",
+      "speaker": "PIP",
+      "context": "Sec 7, Fallback / examine self",
+      "text": "Still small. Still determined. Getting a little better at both.",
+      "audio_filename": "public/audio/voice/act-02/act02-069-pip-fallback-examine-self.ogg",
+      "duration_s": 4.31,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act02-070-pip-first-tremor-reaction",
+      "speaker": "PIP",
+      "context": "Sec 7, First distant tremor, foreshadowing Act 3",
+      "text": "...did the floor just do that? That was not a floor thing that floors normally do.",
+      "audio_filename": "public/audio/voice/act-02/act02-070-pip-first-tremor-reaction.ogg",
+      "duration_s": 5.016,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act02-071-bramble-tremor-reaction",
+      "speaker": "BRAMBLE",
+      "context": "Sec 7, Bramble reacts to tremor",
+      "text": "That's early. That's — that's much earlier than the Roar usually— we don't have as much time as I thought we had.",
+      "audio_filename": "public/audio/voice/act-02/act02-071-bramble-tremor-reaction.ogg",
+      "duration_s": 7.654,
+      "voice_engine": "elevenlabs"
+    },
+    {
+      "line_id": "act02-072-pip-transition-out",
+      "speaker": "PIP",
+      "context": "Sec 7, Transition to Act 3",
+      "text": "Then Grommet doesn't get his minute. Sorry, big guy. Time to find out what's actually in that room.",
+      "audio_filename": "public/audio/voice/act-02/act02-072-pip-transition-out.ogg",
+      "duration_s": 5.982,
+      "voice_engine": "elevenlabs"
+    }
+  ]
+}

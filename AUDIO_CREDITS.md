@@ -40,7 +40,8 @@ ship it (or an equivalent in-game credits screen) alongside any public release.
 
 ## Voice: ElevenLabs (⚠️ attribution required, read before shipping)
 
-All 49 of Act 1's recorded voice lines (`public/audio/voice/act-01/*.ogg`) are
+All 49 of Act 1's recorded voice lines (`public/audio/voice/act-01/*.ogg`), plus
+Act 2 and Act 3's full voice passes (`public/audio/voice/act-02/`, `act-03/`), are
 generated via the [ElevenLabs](https://elevenlabs.io) text-to-speech API, model
 `eleven_multilingual_v2`, on a paid **Creator** tier account (commercial use
 permitted):
@@ -51,6 +52,14 @@ permitted):
 | Bramble | Grimblewood Thornwhisker — Snarky Gnome & Magical Maintainer | `ouL9IsyrSnUkCmfnD02u` | None, but bills at a **3x credit rate** (shared-library premium voice) — every other voice in this project is 1x |
 | Old Bottlecap | Marshal — Dry, Hoarse and Grumpy | `LysucvtFmzi1NVAE0rKp` | none |
 | Scuttle | Ziggy — Cute little Aussie character | `J1lfByWs8gvoooryDWEi` | Pitch-shifted +2 semitones and tempo +12% (`sox pitch 200 tempo 1.12`) — always required, not baked into a saved voice |
+| Grommet | Jasper — Gentle and Cautious | `8RjxcQ6tY1F2YZiIvWqY` | none — new cast, first voiced in Act 2 |
+| Chairman Toggle | Posh Josh | `NXaTw4ifg0LAguvKuIwZ` | none — new cast, first voiced in Act 2 |
+
+Pip, Bramble, Old Bottlecap, and Scuttle are the exact same voice IDs and
+post-processing established for Act 1 — reused verbatim across all three acts, no
+re-casting. Grommet and Chairman Toggle are new voices, each picked via a
+3-candidate A/B test (see README.md's "Voice Audio" section for the shortlist and
+reasoning).
 
 **⚠️ ElevenLabs requires crediting ElevenLabs on any public use of generated audio,
 regardless of tier.** This is a permanent ToS requirement, not something that goes

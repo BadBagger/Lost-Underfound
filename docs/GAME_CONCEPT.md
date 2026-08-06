@@ -65,8 +65,9 @@ with Scuttle mid-delivery, follow the sign-in log's clue trail, chase a red herr
 that falsely points at Old Bottlecap and uncovers his real founder history instead,
 and the biggest puzzle chain of the game (a needle+thread combine puzzle that earns
 Grommet's trust). Ends turned away from the Annex by Chairman Toggle, on procedure.
-Fully scripted and designed, not yet voiced or produced — see
-`script/ACT_02_SCRIPT.json` and `docs/ACT_02_DESIGN.md`.
+Fully scripted, designed, and voiced (72/72 lines) — see `script/ACT_02_SCRIPT.json`,
+`docs/ACT_02_DESIGN.md`, and `script/ACT_02_DIALOGUE.json`. Not yet scored or
+produced.
 
 ### Act 3 — "The Roar" (~15–20 min)
 The vacuum cleaner is coming early — dust starts shaking, ambient tension ramps
@@ -75,8 +76,9 @@ among years of the Court's other confiscated finds, and Toggle is beaten with hi
 own paperwork, not force. The vacuum hits mid-escape: Grommet holds the chokepoint
 (the payoff for his `world_height_units: 2.4` scale), Old Bottlecap reopens the
 Grate on his own initiative, Scuttle guides the fastest way out. Closes on a small
-goodbye beat with Bramble and Grommet. Fully scripted and designed, not yet voiced
-or produced — see `script/ACT_03_SCRIPT.json` and `docs/ACT_03_DESIGN.md`.
+goodbye beat with Bramble and Grommet. Fully scripted, designed, and voiced (58/58
+lines) — see `script/ACT_03_SCRIPT.json`, `docs/ACT_03_DESIGN.md`, and
+`script/ACT_03_DIALOGUE.json`. Not yet scored or produced.
 
 ## What doesn't exist yet
 
