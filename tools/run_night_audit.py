@@ -14,7 +14,9 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT_DIR = ROOT / "art" / "act01-production" / "qa" / "night-audit"
+CANONICAL_OUT_DIR = ROOT / "art" / "act01-production" / "qa" / "night-audit"
+TRANSIENT_OUT_DIR = ROOT / "out" / "night-audit"
+OUT_DIR = CANONICAL_OUT_DIR
 LOG_DIR = OUT_DIR / "logs"
 REPORT_JSON = OUT_DIR / "qa-report.json"
 REPORT_MD = OUT_DIR / "qa-report.md"
@@ -95,6 +97,15 @@ PROOF_PATHS = [
 ]
 
 
+def configure_output_dir(update_proofs: bool) -> None:
+    global OUT_DIR, LOG_DIR, REPORT_JSON, REPORT_MD
+
+    OUT_DIR = CANONICAL_OUT_DIR if update_proofs else TRANSIENT_OUT_DIR
+    LOG_DIR = OUT_DIR / "logs"
+    REPORT_JSON = OUT_DIR / "qa-report.json"
+    REPORT_MD = OUT_DIR / "qa-report.md"
+
+
 def relative(path: Path) -> str:
     return path.relative_to(ROOT).as_posix()
 
@@ -102,6 +113,23 @@ def relative(path: Path) -> str:
 def write_text(path: Path, content: str) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(content, encoding="utf-8")
+
+
+def snapshot_files(paths: list[Path]) -> dict[Path, bytes | None]:
+    snapshot: dict[Path, bytes | None] = {}
+    for path in paths:
+        snapshot[path] = path.read_bytes() if path.exists() else None
+    return snapshot
+
+
+def restore_files(snapshot: dict[Path, bytes | None]) -> None:
+    for path, content in snapshot.items():
+        if content is None:
+            if path.exists():
+                path.unlink()
+            continue
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_bytes(content)
 
 
 def run_step(step: AuditStep) -> dict:
@@ -191,32 +219,43 @@ def write_reports(results: list[dict], proofs: list[dict], started_at: str) -> d
 
 
 def main() -> int:
+    update_proofs = "--update-proofs" in sys.argv[1:]
+    configure_output_dir(update_proofs)
     started_at = time.strftime("%Y-%m-%dT%H:%M:%S%z")
     if OUT_DIR.exists():
         shutil.rmtree(OUT_DIR)
     LOG_DIR.mkdir(parents=True, exist_ok=True)
+    mutable_proof_paths = [ROOT / proof for proof in PROOF_PATHS]
+    mutable_snapshot = snapshot_files(mutable_proof_paths) if not update_proofs else {}
 
-    print("Lost & Underfound night audit started.")
-    results: list[dict] = []
-    for index, step in enumerate(STEPS, start=1):
-        print(f"[{index}/{len(STEPS)}] {step.name}")
-        result = run_step(step)
-        results.append(result)
-        if not result["ok"]:
-            proofs = collect_proofs()
-            write_reports(results, proofs, started_at)
-            print(f"Night audit failed at {step.name}.")
-            print(f"Report: {relative(REPORT_MD)}")
+    try:
+        mode = "proof update" if update_proofs else "clean verify"
+        print(f"Lost & Underfound night audit started ({mode}).")
+        results: list[dict] = []
+        for index, step in enumerate(STEPS, start=1):
+            print(f"[{index}/{len(STEPS)}] {step.name}")
+            result = run_step(step)
+            results.append(result)
+            if not result["ok"]:
+                proofs = collect_proofs()
+                write_reports(results, proofs, started_at)
+                print(f"Night audit failed at {step.name}.")
+                print(f"Report: {relative(REPORT_MD)}")
+                return 1
+
+        proofs = collect_proofs()
+        report = write_reports(results, proofs, started_at)
+        print(f"Night audit {report['status'].upper()}.")
+        print(f"Report: {relative(REPORT_MD)}")
+        print(f"Machine report: {relative(REPORT_JSON)}")
+        if not update_proofs:
+            print("Committed proof artifacts were restored after verification.")
+        if report["status"] != "pass":
             return 1
-
-    proofs = collect_proofs()
-    report = write_reports(results, proofs, started_at)
-    print(f"Night audit {report['status'].upper()}.")
-    print(f"Report: {relative(REPORT_MD)}")
-    print(f"Machine report: {relative(REPORT_JSON)}")
-    if report["status"] != "pass":
-        return 1
-    return 0
+        return 0
+    finally:
+        if not update_proofs:
+            restore_files(mutable_snapshot)
 
 
 if __name__ == "__main__":

@@ -632,8 +632,13 @@ runs production animation admission, engine export parity, cast-scale, AGS
 geometry/background/layer checks, runtime sprite-flow, runtime visual
 playthrough, and TypeScript validation.
 
-The night audit writes machine and human reports to
-`art/act01-production/qa/night-audit/`:
+The normal night audit is clean by default: it writes machine and human reports to
+`out/night-audit/`, then restores committed proof screenshots that runtime visual
+checks may have regenerated while sampling live animation. The committed proof
+folder is updated only by `npm run qa:night-audit:update-proofs`, which writes to
+`art/act01-production/qa/night-audit/`.
+
+Audit reports include:
 
 - `qa-report.json` is the authoritative machine-readable pass/fail record;
 - `qa-report.md` is the human review checklist;
