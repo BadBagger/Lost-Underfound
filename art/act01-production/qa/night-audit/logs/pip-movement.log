@@ -1,0 +1,5 @@
+
+> lost-underfound@0.1.0 qa:pip-movement
+> python tools/check_pip_movement_qa.py
+
+Pip movement QA passed: click-to-walk speed is distance-based, uncapped, and tuned to 85px/s with a 950ms minimum beat.

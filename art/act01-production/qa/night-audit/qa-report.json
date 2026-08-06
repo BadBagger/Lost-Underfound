@@ -1,0 +1,367 @@
+{
+  "status": "pass",
+  "started_at": "2026-08-06T15:57:42-0400",
+  "completed_at": "2026-08-06T15:59:40-0400",
+  "steps": [
+    {
+      "name": "negative-control-broken-sheet",
+      "command": "npm.cmd run qa:broken",
+      "expected": "fail",
+      "exit_code": 1,
+      "ok": true,
+      "duration_seconds": 0.365,
+      "log": "art/act01-production/qa/night-audit/logs/negative-control-broken-sheet.log"
+    },
+    {
+      "name": "registration-placeholders",
+      "command": "npm.cmd run qa:placeholder",
+      "expected": "pass",
+      "exit_code": 0,
+      "ok": true,
+      "duration_seconds": 0.374,
+      "log": "art/act01-production/qa/night-audit/logs/registration-placeholders.log"
+    },
+    {
+      "name": "registration-pip",
+      "command": "npm.cmd run qa:pip",
+      "expected": "pass",
+      "exit_code": 0,
+      "ok": true,
+      "duration_seconds": 0.389,
+      "log": "art/act01-production/qa/night-audit/logs/registration-pip.log"
+    },
+    {
+      "name": "registration-bottlecap",
+      "command": "npm.cmd run qa:bottlecap",
+      "expected": "pass",
+      "exit_code": 0,
+      "ok": true,
+      "duration_seconds": 0.397,
+      "log": "art/act01-production/qa/night-audit/logs/registration-bottlecap.log"
+    },
+    {
+      "name": "registration-bramble",
+      "command": "npm.cmd run qa:bramble",
+      "expected": "pass",
+      "exit_code": 0,
+      "ok": true,
+      "duration_seconds": 0.395,
+      "log": "art/act01-production/qa/night-audit/logs/registration-bramble.log"
+    },
+    {
+      "name": "registration-bramble-talking-head",
+      "command": "npm.cmd run qa:bramble-talking-head",
+      "expected": "pass",
+      "exit_code": 0,
+      "ok": true,
+      "duration_seconds": 0.923,
+      "log": "art/act01-production/qa/night-audit/logs/registration-bramble-talking-head.log"
+    },
+    {
+      "name": "registration-scuttle",
+      "command": "npm.cmd run qa:scuttle",
+      "expected": "pass",
+      "exit_code": 0,
+      "ok": true,
+      "duration_seconds": 0.375,
+      "log": "art/act01-production/qa/night-audit/logs/registration-scuttle.log"
+    },
+    {
+      "name": "registration-grommet-placeholder",
+      "command": "npm.cmd run qa:grommet-placeholder",
+      "expected": "pass",
+      "exit_code": 0,
+      "ok": true,
+      "duration_seconds": 0.398,
+      "log": "art/act01-production/qa/night-audit/logs/registration-grommet-placeholder.log"
+    },
+    {
+      "name": "production-animation",
+      "command": "npm.cmd run qa:production",
+      "expected": "pass",
+      "exit_code": 0,
+      "ok": true,
+      "duration_seconds": 5.815,
+      "log": "art/act01-production/qa/night-audit/logs/production-animation.log"
+    },
+    {
+      "name": "cast-scale",
+      "command": "npm.cmd run qa:cast",
+      "expected": "pass",
+      "exit_code": 0,
+      "ok": true,
+      "duration_seconds": 0.354,
+      "log": "art/act01-production/qa/night-audit/logs/cast-scale.log"
+    },
+    {
+      "name": "lora-manifest",
+      "command": "npm.cmd run qa:lora",
+      "expected": "pass",
+      "exit_code": 0,
+      "ok": true,
+      "duration_seconds": 0.61,
+      "log": "art/act01-production/qa/night-audit/logs/lora-manifest.log"
+    },
+    {
+      "name": "bramble-rig",
+      "command": "npm.cmd run qa:rig:bramble",
+      "expected": "pass",
+      "exit_code": 0,
+      "ok": true,
+      "duration_seconds": 0.649,
+      "log": "art/act01-production/qa/night-audit/logs/bramble-rig.log"
+    },
+    {
+      "name": "engine-character-exports",
+      "command": "npm.cmd run qa:engine:characters",
+      "expected": "pass",
+      "exit_code": 0,
+      "ok": true,
+      "duration_seconds": 0.771,
+      "log": "art/act01-production/qa/night-audit/logs/engine-character-exports.log"
+    },
+    {
+      "name": "animation-admission",
+      "command": "npm.cmd run qa:animation-admission",
+      "expected": "pass",
+      "exit_code": 0,
+      "ok": true,
+      "duration_seconds": 1.583,
+      "log": "art/act01-production/qa/night-audit/logs/animation-admission.log"
+    },
+    {
+      "name": "runtime-scene-contract",
+      "command": "npm.cmd run qa:runtime-scene",
+      "expected": "pass",
+      "exit_code": 0,
+      "ok": true,
+      "duration_seconds": 0.342,
+      "log": "art/act01-production/qa/night-audit/logs/runtime-scene-contract.log"
+    },
+    {
+      "name": "pip-movement",
+      "command": "npm.cmd run qa:pip-movement",
+      "expected": "pass",
+      "exit_code": 0,
+      "ok": true,
+      "duration_seconds": 0.303,
+      "log": "art/act01-production/qa/night-audit/logs/pip-movement.log"
+    },
+    {
+      "name": "runtime-sprite-flow",
+      "command": "npm.cmd run qa:sprite-flow",
+      "expected": "pass",
+      "exit_code": 0,
+      "ok": true,
+      "duration_seconds": 32.748,
+      "log": "art/act01-production/qa/night-audit/logs/runtime-sprite-flow.log"
+    },
+    {
+      "name": "act1-playthrough-contract",
+      "command": "npm.cmd run qa:act1-playthrough",
+      "expected": "pass",
+      "exit_code": 0,
+      "ok": true,
+      "duration_seconds": 0.33,
+      "log": "art/act01-production/qa/night-audit/logs/act1-playthrough-contract.log"
+    },
+    {
+      "name": "scene-layers",
+      "command": "npm.cmd run qa:layers",
+      "expected": "pass",
+      "exit_code": 0,
+      "ok": true,
+      "duration_seconds": 0.317,
+      "log": "art/act01-production/qa/night-audit/logs/scene-layers.log"
+    },
+    {
+      "name": "ambient-motion-layers",
+      "command": "npm.cmd run qa:ambient-layers",
+      "expected": "pass",
+      "exit_code": 0,
+      "ok": true,
+      "duration_seconds": 0.307,
+      "log": "art/act01-production/qa/night-audit/logs/ambient-motion-layers.log"
+    },
+    {
+      "name": "interactable-change-layers",
+      "command": "npm.cmd run qa:change-layers",
+      "expected": "pass",
+      "exit_code": 0,
+      "ok": true,
+      "duration_seconds": 0.356,
+      "log": "art/act01-production/qa/night-audit/logs/interactable-change-layers.log"
+    },
+    {
+      "name": "ags-room1-geometry",
+      "command": "npm.cmd run qa:ags:room1",
+      "expected": "pass",
+      "exit_code": 0,
+      "ok": true,
+      "duration_seconds": 0.341,
+      "log": "art/act01-production/qa/night-audit/logs/ags-room1-geometry.log"
+    },
+    {
+      "name": "ags-multiroom-geometry",
+      "command": "npm.cmd run qa:ags:geometry",
+      "expected": "pass",
+      "exit_code": 0,
+      "ok": true,
+      "duration_seconds": 0.312,
+      "log": "art/act01-production/qa/night-audit/logs/ags-multiroom-geometry.log"
+    },
+    {
+      "name": "ags-backgrounds",
+      "command": "npm.cmd run qa:ags:background",
+      "expected": "pass",
+      "exit_code": 0,
+      "ok": true,
+      "duration_seconds": 0.365,
+      "log": "art/act01-production/qa/night-audit/logs/ags-backgrounds.log"
+    },
+    {
+      "name": "ags-actor-scale-proofs",
+      "command": "npm.cmd run qa:ags:actor-scale-proofs",
+      "expected": "pass",
+      "exit_code": 0,
+      "ok": true,
+      "duration_seconds": 0.387,
+      "log": "art/act01-production/qa/night-audit/logs/ags-actor-scale-proofs.log"
+    },
+    {
+      "name": "godot-content-manifest",
+      "command": "npm.cmd run qa:godot-content",
+      "expected": "pass",
+      "exit_code": 0,
+      "ok": true,
+      "duration_seconds": 0.315,
+      "log": "art/act01-production/qa/night-audit/logs/godot-content-manifest.log"
+    },
+    {
+      "name": "runtime-visual-playthrough",
+      "command": "npm.cmd run qa:runtime-visual",
+      "expected": "pass",
+      "exit_code": 0,
+      "ok": true,
+      "duration_seconds": 66.68,
+      "log": "art/act01-production/qa/night-audit/logs/runtime-visual-playthrough.log"
+    },
+    {
+      "name": "typescript",
+      "command": "npx.cmd tsc --noEmit",
+      "expected": "pass",
+      "exit_code": 0,
+      "ok": true,
+      "duration_seconds": 1.231,
+      "log": "art/act01-production/qa/night-audit/logs/typescript.log"
+    }
+  ],
+  "proofs": [
+    {
+      "path": "art/qa-placeholder/onion.png",
+      "exists": true,
+      "size_bytes": 342
+    },
+    {
+      "path": "art/pip-walk/onion.png",
+      "exists": true,
+      "size_bytes": 10044
+    },
+    {
+      "path": "art/old-bottlecap-idle/onion.png",
+      "exists": true,
+      "size_bytes": 2593
+    },
+    {
+      "path": "art/bramble-idle/onion.png",
+      "exists": true,
+      "size_bytes": 2884
+    },
+    {
+      "path": "art/scuttle-walk/onion.png",
+      "exists": true,
+      "size_bytes": 1211
+    },
+    {
+      "path": "art/grommet-idle/onion.png",
+      "exists": true,
+      "size_bytes": 4996
+    },
+    {
+      "path": "art/act01-production/qa/runtime-sprite-flow/sprite-flow-report.json",
+      "exists": true,
+      "size_bytes": 5599
+    },
+    {
+      "path": "art/act01-production/qa/runtime-sprite-flow/sprite-flow-final.png",
+      "exists": true,
+      "size_bytes": 1221978
+    },
+    {
+      "path": "art/act01-production/qa/runtime-sprite-flow/sprite-flow-mobile.png",
+      "exists": true,
+      "size_bytes": 181924
+    },
+    {
+      "path": "art/act01-production/qa/runtime-playthrough/desktop-01-discovery-cold-open.png",
+      "exists": true,
+      "size_bytes": 1394526
+    },
+    {
+      "path": "art/act01-production/qa/runtime-playthrough/desktop-02-discovery-dust-reveal.png",
+      "exists": true,
+      "size_bytes": 1387614
+    },
+    {
+      "path": "art/act01-production/qa/runtime-playthrough/desktop-03-clerk-bramble-greeting.png",
+      "exists": true,
+      "size_bytes": 1265550
+    },
+    {
+      "path": "art/act01-production/qa/runtime-playthrough/desktop-04-gate-before-toll.png",
+      "exists": true,
+      "size_bytes": 1222003
+    },
+    {
+      "path": "art/act01-production/qa/runtime-playthrough/desktop-05-gate-toll-paid.png",
+      "exists": true,
+      "size_bytes": 1239101
+    },
+    {
+      "path": "art/act01-production/qa/runtime-playthrough/desktop-06-act1-complete.png",
+      "exists": true,
+      "size_bytes": 1236320
+    },
+    {
+      "path": "art/act01-production/qa/runtime-playthrough/mobile-portrait-01-discovery-cold-open.png",
+      "exists": true,
+      "size_bytes": 1414943
+    },
+    {
+      "path": "art/act01-production/qa/runtime-playthrough/mobile-portrait-02-discovery-dust-reveal.png",
+      "exists": true,
+      "size_bytes": 1396136
+    },
+    {
+      "path": "art/act01-production/qa/runtime-playthrough/mobile-portrait-03-clerk-bramble-greeting.png",
+      "exists": true,
+      "size_bytes": 1295443
+    },
+    {
+      "path": "art/act01-production/qa/runtime-playthrough/mobile-portrait-04-gate-before-toll.png",
+      "exists": true,
+      "size_bytes": 1223150
+    },
+    {
+      "path": "art/act01-production/qa/runtime-playthrough/mobile-portrait-05-gate-toll-paid.png",
+      "exists": true,
+      "size_bytes": 1248535
+    },
+    {
+      "path": "art/act01-production/qa/runtime-playthrough/mobile-portrait-06-act1-complete.png",
+      "exists": true,
+      "size_bytes": 1247089
+    }
+  ],
+  "missing_proofs": []
+}

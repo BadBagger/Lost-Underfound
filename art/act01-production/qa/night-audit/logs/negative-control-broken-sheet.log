@@ -1,0 +1,9 @@
+
+> lost-underfound@0.1.0 qa:broken
+> python tools/check_registration.py frames art/qa-broken/registration.json
+
+Sheet: qa-broken (walk-plane), 2 frames, tolerance 1px
+
+FAIL — 2 registration issue(s):
+  - fixture_02.png: canvas 130x120 != sheet canvas 120x120
+  - fixture_02.png: anchor [75, 96] drifts 15px from sheet reference anchor [60, 96] (fixture_01.png), tolerance is 1px

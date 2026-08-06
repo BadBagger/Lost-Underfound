@@ -1,0 +1,5 @@
+
+> lost-underfound@0.1.0 qa:ags:actor-scale-proofs
+> python tools/check_ags_actor_scale_proofs.py
+
+AGS actor-scale proof QA passed: 9 screen proof(s) and contact sheet are present.

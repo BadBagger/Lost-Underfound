@@ -1,0 +1,10 @@
+
+> lost-underfound@0.1.0 qa:grommet-placeholder
+> python tools/check_registration.py frames art/grommet-idle/registration.json --onion-skin art/grommet-idle/onion.png
+
+Sheet: grommet-idle (furniture-anchored), 4 frames, tolerance 1px
+PASS — every frame matches the sheet's canvas size and anchor point.
+onion-skin composite written to art\grommet-idle\onion.png
+Review the composite by eye even on a PASS — this checks the declared anchor
+data is internally consistent, not that the anchor was placed correctly in the
+first place. Confirm the crosshair sits on the real contact point.

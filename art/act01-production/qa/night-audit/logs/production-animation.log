@@ -1,0 +1,134 @@
+
+> lost-underfound@0.1.0 qa:production
+> npm run qa:prod:pip-walk && npm run qa:prod:pip-idle && npm run qa:prod:pip-talk && npm run qa:prod:pip-dust && npm run qa:prod:pip-toll && npm run qa:prod:bramble-idle && npm run qa:prod:bramble-talk && npm run qa:prod:bottlecap-idle && npm run qa:prod:bottlecap-refused && npm run qa:prod:bottlecap-paid && npm run qa:prod:scuttle-dash && npm run qa:prod:dust && npm run qa:prod:grate
+
+
+> lost-underfound@0.1.0 qa:prod:pip-walk
+> python tools/check_registration.py frames art/act01-production/characters/pip/meshy-current/walk/registration.json --onion-skin art/act01-production/characters/pip/meshy-current/walk/onion.png
+
+Sheet: pip-walk-meshy-current (walk-plane), 12 frames, tolerance 2px
+PASS — every frame matches the sheet's canvas size and anchor point.
+onion-skin composite written to art\act01-production\characters\pip\meshy-current\walk\onion.png
+Review the composite by eye even on a PASS — this checks the declared anchor
+data is internally consistent, not that the anchor was placed correctly in the
+first place. Confirm the crosshair sits on the real contact point.
+
+> lost-underfound@0.1.0 qa:prod:pip-idle
+> python tools/check_registration.py frames art/act01-production/characters/pip/meshy-current/idle/registration.json --onion-skin art/act01-production/characters/pip/meshy-current/idle/onion.png
+
+Sheet: pip-idle-meshy-current (walk-plane), 12 frames, tolerance 2px
+PASS — every frame matches the sheet's canvas size and anchor point.
+onion-skin composite written to art\act01-production\characters\pip\meshy-current\idle\onion.png
+Review the composite by eye even on a PASS — this checks the declared anchor
+data is internally consistent, not that the anchor was placed correctly in the
+first place. Confirm the crosshair sits on the real contact point.
+
+> lost-underfound@0.1.0 qa:prod:pip-talk
+> python tools/check_registration.py frames art/act01-production/characters/pip/meshy-current/talk/registration.json --onion-skin art/act01-production/characters/pip/meshy-current/talk/onion.png
+
+Sheet: pip-talk-meshy-current (walk-plane), 12 frames, tolerance 2px
+PASS — every frame matches the sheet's canvas size and anchor point.
+onion-skin composite written to art\act01-production\characters\pip\meshy-current\talk\onion.png
+Review the composite by eye even on a PASS — this checks the declared anchor
+data is internally consistent, not that the anchor was placed correctly in the
+first place. Confirm the crosshair sits on the real contact point.
+
+> lost-underfound@0.1.0 qa:prod:pip-dust
+> python tools/check_registration.py frames art/act01-production/characters/pip/meshy-current/dust-reach/registration.json --onion-skin art/act01-production/characters/pip/meshy-current/dust-reach/onion.png
+
+Sheet: pip-dust-reach-meshy-current (walk-plane), 14 frames, tolerance 2px
+PASS — every frame matches the sheet's canvas size and anchor point.
+onion-skin composite written to art\act01-production\characters\pip\meshy-current\dust-reach\onion.png
+Review the composite by eye even on a PASS — this checks the declared anchor
+data is internally consistent, not that the anchor was placed correctly in the
+first place. Confirm the crosshair sits on the real contact point.
+
+> lost-underfound@0.1.0 qa:prod:pip-toll
+> python tools/check_registration.py frames art/act01-production/characters/pip/meshy-current/toll-paid/registration.json --onion-skin art/act01-production/characters/pip/meshy-current/toll-paid/onion.png
+
+Sheet: pip-toll-paid-meshy-current (walk-plane), 10 frames, tolerance 2px
+PASS — every frame matches the sheet's canvas size and anchor point.
+onion-skin composite written to art\act01-production\characters\pip\meshy-current\toll-paid\onion.png
+Review the composite by eye even on a PASS — this checks the declared anchor
+data is internally consistent, not that the anchor was placed correctly in the
+first place. Confirm the crosshair sits on the real contact point.
+
+> lost-underfound@0.1.0 qa:prod:bramble-idle
+> python tools/check_registration.py frames art/act01-production/characters/bramble/idle/registration.json --onion-skin art/act01-production/characters/bramble/idle/onion.png
+
+Sheet: bramble-idle (furniture-anchored), 24 frames, tolerance 1px
+PASS — every frame matches the sheet's canvas size and anchor point.
+onion-skin composite written to art\act01-production\characters\bramble\idle\onion.png
+Review the composite by eye even on a PASS — this checks the declared anchor
+data is internally consistent, not that the anchor was placed correctly in the
+first place. Confirm the crosshair sits on the real contact point.
+
+> lost-underfound@0.1.0 qa:prod:bramble-talk
+> python tools/check_registration.py frames art/act01-production/characters/bramble/talk/registration.json --onion-skin art/act01-production/characters/bramble/talk/onion.png
+
+Sheet: bramble-talk (furniture-anchored), 48 frames, tolerance 1px
+PASS — every frame matches the sheet's canvas size and anchor point.
+onion-skin composite written to art\act01-production\characters\bramble\talk\onion.png
+Review the composite by eye even on a PASS — this checks the declared anchor
+data is internally consistent, not that the anchor was placed correctly in the
+first place. Confirm the crosshair sits on the real contact point.
+
+> lost-underfound@0.1.0 qa:prod:bottlecap-idle
+> python tools/check_registration.py frames art/act01-production/characters/old-bottlecap/meshy-current/idle/registration.json --onion-skin art/act01-production/characters/old-bottlecap/meshy-current/idle/onion.png
+
+Sheet: old-bottlecap-idle-meshy-current (furniture-anchored), 24 frames, tolerance 2px
+PASS — every frame matches the sheet's canvas size and anchor point.
+onion-skin composite written to art\act01-production\characters\old-bottlecap\meshy-current\idle\onion.png
+Review the composite by eye even on a PASS — this checks the declared anchor
+data is internally consistent, not that the anchor was placed correctly in the
+first place. Confirm the crosshair sits on the real contact point.
+
+> lost-underfound@0.1.0 qa:prod:bottlecap-refused
+> python tools/check_registration.py frames art/act01-production/characters/old-bottlecap/meshy-current/toll-refused/registration.json --onion-skin art/act01-production/characters/old-bottlecap/meshy-current/toll-refused/onion.png
+
+Sheet: old-bottlecap-toll-refused-meshy-current (furniture-anchored), 5 frames, tolerance 2px
+PASS — every frame matches the sheet's canvas size and anchor point.
+onion-skin composite written to art\act01-production\characters\old-bottlecap\meshy-current\toll-refused\onion.png
+Review the composite by eye even on a PASS — this checks the declared anchor
+data is internally consistent, not that the anchor was placed correctly in the
+first place. Confirm the crosshair sits on the real contact point.
+
+> lost-underfound@0.1.0 qa:prod:bottlecap-paid
+> python tools/check_registration.py frames art/act01-production/characters/old-bottlecap/meshy-current/toll-paid/registration.json --onion-skin art/act01-production/characters/old-bottlecap/meshy-current/toll-paid/onion.png
+
+Sheet: old-bottlecap-toll-paid-meshy-current (furniture-anchored), 7 frames, tolerance 2px
+PASS — every frame matches the sheet's canvas size and anchor point.
+onion-skin composite written to art\act01-production\characters\old-bottlecap\meshy-current\toll-paid\onion.png
+Review the composite by eye even on a PASS — this checks the declared anchor
+data is internally consistent, not that the anchor was placed correctly in the
+first place. Confirm the crosshair sits on the real contact point.
+
+> lost-underfound@0.1.0 qa:prod:scuttle-dash
+> python tools/check_registration.py frames art/act01-production/characters/scuttle/meshy-current/dash/registration.json --onion-skin art/act01-production/characters/scuttle/meshy-current/dash/onion.png
+
+Sheet: scuttle-dash-meshy-current (walk-plane), 6 frames, tolerance 2px
+PASS — every frame matches the sheet's canvas size and anchor point.
+onion-skin composite written to art\act01-production\characters\scuttle\meshy-current\dash\onion.png
+Review the composite by eye even on a PASS — this checks the declared anchor
+data is internally consistent, not that the anchor was placed correctly in the
+first place. Confirm the crosshair sits on the real contact point.
+
+> lost-underfound@0.1.0 qa:prod:dust
+> python tools/check_registration.py frames art/act01-production/props/dust-clump-reveal/registration.json --onion-skin art/act01-production/props/dust-clump-reveal/onion.png
+
+Sheet: dust-clump-reveal (furniture-anchored), 4 frames, tolerance 1px
+PASS — every frame matches the sheet's canvas size and anchor point.
+onion-skin composite written to art\act01-production\props\dust-clump-reveal\onion.png
+Review the composite by eye even on a PASS — this checks the declared anchor
+data is internally consistent, not that the anchor was placed correctly in the
+first place. Confirm the crosshair sits on the real contact point.
+
+> lost-underfound@0.1.0 qa:prod:grate
+> python tools/check_registration.py frames art/act01-production/props/grate-open/registration.json --onion-skin art/act01-production/props/grate-open/onion.png
+
+Sheet: grate-open (furniture-anchored), 4 frames, tolerance 1px
+PASS — every frame matches the sheet's canvas size and anchor point.
+onion-skin composite written to art\act01-production\props\grate-open\onion.png
+Review the composite by eye even on a PASS — this checks the declared anchor
+data is internally consistent, not that the anchor was placed correctly in the
+first place. Confirm the crosshair sits on the real contact point.

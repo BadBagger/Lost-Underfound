@@ -1,0 +1,10 @@
+
+> lost-underfound@0.1.0 qa:pip
+> python tools/check_registration.py frames art/pip-walk/registration.json --onion-skin art/pip-walk/onion.png
+
+Sheet: pip-walk (walk-plane), 9 frames, tolerance 1px
+PASS — every frame matches the sheet's canvas size and anchor point.
+onion-skin composite written to art\pip-walk\onion.png
+Review the composite by eye even on a PASS — this checks the declared anchor
+data is internally consistent, not that the anchor was placed correctly in the
+first place. Confirm the crosshair sits on the real contact point.

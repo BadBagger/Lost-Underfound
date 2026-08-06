@@ -1,0 +1,5 @@
+
+> lost-underfound@0.1.0 qa:ags:geometry
+> python tools/check_ags_geometry.py
+
+AGS geometry QA passed: 3 room geometry file(s) are discrete, linked, bounded, and screen-local.

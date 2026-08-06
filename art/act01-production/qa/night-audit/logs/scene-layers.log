@@ -1,0 +1,5 @@
+
+> lost-underfound@0.1.0 qa:layers
+> python tools/check_scene_layers.py
+
+PASS - 14 scene layer(s) declared and runtime layer slots match manifest z-order.

@@ -182,6 +182,11 @@ required Animation Bible evidence, but it is registered from the start:
   screen, gate screen, button item, fixed Act 1 randomization state, and a smoke
   walkthrough ending at the Act 2 blocker.
 
+Use `npm.cmd run qa:night-audit` before calling a checkpoint production-ready.
+It runs the full quality firewall, confirms the deliberately broken sheet still
+fails, and writes `art/act01-production/qa/night-audit/qa-report.md` plus
+`qa-report.json` with links to the logs and proof images.
+
 Acts 2 ("The Button Sovereignty") and 3 ("The Roar") now have the same script/design
 pass Act 1 has — `script/ACT_02_SCRIPT.json` + `docs/ACT_02_DESIGN.md` and
 `script/ACT_03_SCRIPT.json` + `docs/ACT_03_DESIGN.md` — plus `docs/STORY_ARC.md`

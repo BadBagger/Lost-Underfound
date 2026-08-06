@@ -1,0 +1,13 @@
+
+> lost-underfound@0.1.0 qa:cast
+> python tools/check_registration.py cast-scale art/cast_scale.json
+
+Cast scale check, 5 actor(s), tolerance 8%
+
+  pip              standing height 220px on effective_source_height_px (1.0 world units -> 220.0 px/unit)
+  bramble          standing height 187px on bramble_idle_01.png (0.85 world units -> 220.0 px/unit)
+  grommet          standing height 528px on grommet-idle_01.png (2.4 world units -> 220.0 px/unit)
+  scuttle          standing height 77px on effective_source_height_px (0.35 world units -> 220.0 px/unit)
+  old-bottlecap    standing height 132px on effective_source_height_px (0.6 world units -> 220.0 px/unit)
+
+PASS — every actor's source-art scale agrees with the cast's declared proportions.

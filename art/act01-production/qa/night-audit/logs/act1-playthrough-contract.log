@@ -1,0 +1,5 @@
+
+> lost-underfound@0.1.0 qa:act1-playthrough
+> python tools/check_act1_playthrough_contract.py
+
+Act 1 playthrough contract QA passed: dust->button, Bramble intro, Bottlecap toll, gate exit, screen links, dialogue lockout, and hidden release hitboxes are enforced.

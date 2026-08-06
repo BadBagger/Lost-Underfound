@@ -169,7 +169,7 @@ const pipRegisteredBodyHeight = pipCanonicalFrame.anchor[1] - pipCanonicalFrame.
 const pipCanvasHeight = (geometry.actorReference.pipHeight / pipRegisteredBodyHeight) * pipRegistration.canvas.height;
 const pipAnchorYPercent = (pipCanonicalFrame.anchor[1] / pipRegistration.canvas.height) * 100;
 const layoutMode = new URLSearchParams(window.location.search).get("layout") === "1";
-const PIP_WALK_PX_PER_SECOND = 90;
+const PIP_WALK_PX_PER_SECOND = 85;
 const PIP_MIN_WALK_DURATION_MS = 950;
 const PIP_IDLE_FRAME_MS = 340;
 const PIP_WALK_FRAME_MS = 96;

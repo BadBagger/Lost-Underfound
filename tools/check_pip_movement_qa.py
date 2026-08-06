@@ -11,7 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 MAIN = ROOT / "src" / "main.ts"
 
 MIN_WALK_PX_PER_SECOND = 70
-MAX_WALK_PX_PER_SECOND = 125
+MAX_WALK_PX_PER_SECOND = 120
 MIN_DURATION_MS = 900
 
 

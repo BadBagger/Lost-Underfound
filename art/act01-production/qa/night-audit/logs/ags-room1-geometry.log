@@ -1,0 +1,5 @@
+
+> lost-underfound@0.1.0 qa:ags:room1
+> python tools/check_ags_room1_geometry.py
+
+AGS Room 1 geometry QA passed: three linked 1280x720 screens, locked actor staging, and valid exits.

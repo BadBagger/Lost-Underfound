@@ -1,0 +1,6 @@
+
+> lost-underfound@0.1.0 qa:rig:bramble
+> python tools/check_rig_manifest.py art/rigs/bramble/manifest.json
+
+Rig manifest: bramble status=animation-ready
+PASS - rig parts are present, padded, and pivot-declared.

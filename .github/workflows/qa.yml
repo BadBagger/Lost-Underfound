@@ -20,4 +20,5 @@ jobs:
       - run: npm ci
       - run: npm run assets
       - run: npm run qa:change-layers
-      - run: npm test
+      - run: npm run qa:night-audit
+      - run: npx tsc --noEmit

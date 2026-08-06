@@ -1,0 +1,18 @@
+
+> lost-underfound@0.1.0 qa:bramble-talking-head
+> python tools/check_registration.py frames art/act01-production/characters/bramble/talking-head/idle/registration.json --onion-skin art/act01-production/characters/bramble/talking-head/idle/onion.png && python tools/check_registration.py frames art/act01-production/characters/bramble/talking-head/talk/registration.json --onion-skin art/act01-production/characters/bramble/talking-head/talk/onion.png && python tools/check_talking_head_calibration.py art/act01-production/characters/bramble/talking-head/idle/registration.json && python tools/check_talking_head_calibration.py art/act01-production/characters/bramble/talking-head/talk/registration.json
+
+Sheet: bramble-talking-head-idle (furniture-anchored), 6 frames, tolerance 1px
+PASS — every frame matches the sheet's canvas size and anchor point.
+onion-skin composite written to art\act01-production\characters\bramble\talking-head\idle\onion.png
+Review the composite by eye even on a PASS — this checks the declared anchor
+data is internally consistent, not that the anchor was placed correctly in the
+first place. Confirm the crosshair sits on the real contact point.
+Sheet: bramble-talking-head-talk (furniture-anchored), 6 frames, tolerance 1px
+PASS — every frame matches the sheet's canvas size and anchor point.
+onion-skin composite written to art\act01-production\characters\bramble\talking-head\talk\onion.png
+Review the composite by eye even on a PASS — this checks the declared anchor
+data is internally consistent, not that the anchor was placed correctly in the
+first place. Confirm the crosshair sits on the real contact point.
+Talking-head calibration QA passed: 6 frames, shared lower anchor 360px, visible-height range 320-320px.
+Talking-head calibration QA passed: 6 frames, shared lower anchor 360px, visible-height range 320-320px.

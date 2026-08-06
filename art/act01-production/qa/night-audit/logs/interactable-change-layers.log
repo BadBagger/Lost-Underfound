@@ -1,0 +1,5 @@
+
+> lost-underfound@0.1.0 qa:change-layers
+> python tools/check_interactable_change_layers.py
+
+PASS - 13 interactable/change layer(s) declared; 6 production-ready layer(s) bound to geometry and runtime slots.

@@ -1,0 +1,8 @@
+
+> lost-underfound@0.1.0 qa:engine:characters
+> python tools/check_character_engine_export.py all
+
+PASS - pip engine export has complete strips, metadata, alpha-safe canvases, and matching hashes.
+PASS - old-bottlecap engine export has complete strips, metadata, alpha-safe canvases, and matching hashes.
+PASS - scuttle engine export has complete strips, metadata, alpha-safe canvases, and matching hashes.
+PASS - bramble engine export has complete strips, metadata, alpha-safe canvases, and matching hashes.

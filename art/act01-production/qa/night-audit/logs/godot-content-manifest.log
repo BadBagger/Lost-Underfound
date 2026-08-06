@@ -1,0 +1,5 @@
+
+> lost-underfound@0.1.0 qa:godot-content
+> python tools/check_godot_content_manifest.py
+
+Godot content manifest QA passed: 3 room(s), 1 item(s), 1 cutscene smoke path(s), all room links and script line references valid.

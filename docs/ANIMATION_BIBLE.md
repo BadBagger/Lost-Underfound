@@ -623,6 +623,32 @@ For Lost & Underfound, `npm run qa:sprite-flow` writes its proof to
 `art/act01-production/qa/runtime-sprite-flow/` and is wired into `npm test`. If this
 gate is red, the animation is not admitted even when the static sheet QA passes.
 
+### Night audit quality firewall
+
+Every production-ready game checkpoint must pass `npm run qa:night-audit`.
+This command is the highest-level quality gate: it runs the positive registration
+checks, verifies that the deliberately broken registration fixture still fails,
+runs production animation admission, engine export parity, cast-scale, AGS
+geometry/background/layer checks, runtime sprite-flow, runtime visual
+playthrough, and TypeScript validation.
+
+The night audit writes machine and human reports to
+`art/act01-production/qa/night-audit/`:
+
+- `qa-report.json` is the authoritative machine-readable pass/fail record;
+- `qa-report.md` is the human review checklist;
+- `logs/` contains one log per gate;
+- proof screenshots and contact sheets are listed explicitly so mobile,
+  desktop, registration, occlusion, frame-cadence, and walk-speed evidence can be
+  reviewed together.
+
+A checkpoint is not production-approved if `qa:night-audit` is red, if its
+expected proof artifacts are missing, or if the negative-control broken sheet
+unexpectedly passes. Do not waive this by saying an individual image "looks
+fine"; the point of the audit is to catch the exact drift, cropping, wrong-scale,
+wrong-color, fast-cycle, missing-layer, and stale-runtime failures that static
+inspection misses.
+
 ### ComfyUI/LoRA identity lane
 
 LoRA production is scaffolded in `docs/COMFYUI_LORA_PIPELINE.md` and

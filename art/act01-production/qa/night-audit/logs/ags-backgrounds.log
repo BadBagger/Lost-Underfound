@@ -1,0 +1,5 @@
+
+> lost-underfound@0.1.0 qa:ags:background
+> python tools/check_ags_backgrounds.py
+
+AGS background QA passed: 9 opaque screen background(s) are sized, manifested, and geometry-locked.

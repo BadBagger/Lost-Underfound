@@ -1,0 +1,5 @@
+
+> lost-underfound@0.1.0 qa:ambient-layers
+> python tools/check_ambient_motion_layers.py
+
+PASS - 5 ambient motion clip(s) are slow, non-interactive, and frame-complete.

@@ -1,0 +1,5 @@
+
+> lost-underfound@0.1.0 qa:runtime-scene
+> python tools/check_runtime_scene_contract.py
+
+Runtime scene QA passed: geometry-driven screens, bottom dialogue UI, actor scale anchors, Bottlecap gate staging, cobweb hotspot, character export parity, finalized/provisional cast status, state playback, and loop-frame floors are enforced.

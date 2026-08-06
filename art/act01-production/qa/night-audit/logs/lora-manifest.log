@@ -1,0 +1,8 @@
+
+> lost-underfound@0.1.0 qa:lora
+> python tools/check_lora_manifest.py
+
+LoRA manifest: 5 character(s), minimum trainable images 16
+PASS - LoRA manifest is structurally valid and no quarantined source is eligible for training.
+Characters marked needs-curated-dataset or needs-clean-source are intentionally blocked from training.
+Characters marked dataset-ready have captioned source images but still require a trained LoRA.

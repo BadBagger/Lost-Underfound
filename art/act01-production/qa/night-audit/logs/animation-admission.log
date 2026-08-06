@@ -1,0 +1,6 @@
+
+> lost-underfound@0.1.0 qa:animation-admission
+> python tools/check_animation_admission.py art/animation_admission.json
+
+Animation admission: 15 sheet(s)
+PASS - production animation sheets have review artifacts, padding, frame counts, and stable construction.
