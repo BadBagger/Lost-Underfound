@@ -1,0 +1,17 @@
+{
+  "sheet": "bramble-talking-head-talk",
+  "actor_type": "furniture-anchored",
+  "canvas": { "width": 360, "height": 400 },
+  "anchor_tolerance_px": 1,
+  "frames": [
+    { "file": "bramble_talk_01.png", "anchor": [180, 320], "role": "listen-closed", "canonical": true, "scale_reference": [180, 160] },
+    { "file": "bramble_talk_02.png", "anchor": [180, 320], "role": "small-open-lean" },
+    { "file": "bramble_talk_03.png", "anchor": [180, 320], "role": "wide-open-gesture" },
+    { "file": "bramble_talk_04.png", "anchor": [180, 320], "role": "rounded-emphasis" },
+    { "file": "bramble_talk_05.png", "anchor": [180, 320], "role": "close-and-settle" },
+    { "file": "bramble_talk_06.png", "anchor": [180, 320], "role": "listen-return" }
+  ],
+  "screen_height_px": 160,
+  "anchor_context": "Clerk screen solid desk; anchor is aligned to the painted counter contact line, while only Bramble head and hands render above it.",
+  "approval_state": "pending-visual-on-unchanged-clerk-plate"
+}

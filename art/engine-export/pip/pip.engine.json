@@ -1,0 +1,242 @@
+{
+  "schema_version": 1,
+  "character": "pip",
+  "status": "engine-export-ready",
+  "character_role": "walk-plane player character",
+  "actor_type": "walk-plane",
+  "runtime_canvas": [
+    512,
+    512
+  ],
+  "runtime_anchor": [
+    256,
+    486
+  ],
+  "ags": {
+    "import_note": "Import each strip as evenly divided RGBA frames. Use the walk strip as Pip's right-facing walk; mirror in-engine for left-facing movement."
+  },
+  "states": {
+    "idle": {
+      "file": "art/engine-export/pip/pip_idle.png",
+      "cell": [
+        512,
+        512
+      ],
+      "frames": 12,
+      "sha256": "4a5f5991cb45f0ddd2b524336f7c2dcc0145b59df0f2f98fb18620b6f7c9c47b",
+      "source_hashes": {
+        "art/act01-production/characters/pip/meshy-current/idle/pip_meshy_idle_01.png": "bb2d726eb4a80f3ebb302ad0627dfc38d2bf05b7e147c0f38578c84a6a23f063",
+        "art/act01-production/characters/pip/meshy-current/idle/pip_meshy_idle_02.png": "5094e7fb57c18c654c876b6c7c5f8af942e28400da9bae8af1bce2a997b4cf8b",
+        "art/act01-production/characters/pip/meshy-current/idle/pip_meshy_idle_03.png": "e2bcad3ab14067329fc398eed87b0883b470fda7686d5f3141bce499db4688fc",
+        "art/act01-production/characters/pip/meshy-current/idle/pip_meshy_idle_04.png": "efc32c85730c014d75b72447f01fafb3012138a0f6627099a798639976d901d5",
+        "art/act01-production/characters/pip/meshy-current/idle/pip_meshy_idle_05.png": "75ec822e043fe3552fad7905c3afbeeb05a8802347a6c94c834d1a0c1ab227a9",
+        "art/act01-production/characters/pip/meshy-current/idle/pip_meshy_idle_06.png": "aeecfc87ff3ceab49ff3379caa9217465726bf5546d5d166b0062c896187cde2",
+        "art/act01-production/characters/pip/meshy-current/idle/pip_meshy_idle_07.png": "f1b740b43abe79818c27cd4a7e613ccec2bcf50c670f34d81cdc4785630eb245",
+        "art/act01-production/characters/pip/meshy-current/idle/pip_meshy_idle_08.png": "90747e6e1b3b74f6d94436ec1bbc32f84536e118d2f9d8b1042c90c78b27fe03",
+        "art/act01-production/characters/pip/meshy-current/idle/pip_meshy_idle_09.png": "eea65334091f028236b813f351ce56986c0fa2130fa15ae9a303059d163cd083",
+        "art/act01-production/characters/pip/meshy-current/idle/pip_meshy_idle_10.png": "489200d7aaac6aa63806c2528111bd24a3939d9d44cf37fcb780338c11250c64",
+        "art/act01-production/characters/pip/meshy-current/idle/pip_meshy_idle_11.png": "50101b938658b2443c932e9469d5fa8ac16a37ed24c4f790b2c8617c23bd7f9b",
+        "art/act01-production/characters/pip/meshy-current/idle/pip_meshy_idle_12.png": "4a136c3b9e778bc050451c131fbd3ead4d4be0d2516a1ebfa6c3d5a0008be862"
+      },
+      "state": "idle",
+      "fps": 5,
+      "loop": true,
+      "ags_view": "PIP_IDLE",
+      "registration": "art/act01-production/characters/pip/meshy-current/idle/registration.json",
+      "runtime_canvas": [
+        512,
+        512
+      ],
+      "runtime_anchor": [
+        256,
+        486
+      ]
+    },
+    "walk": {
+      "file": "art/engine-export/pip/pip_walk.png",
+      "cell": [
+        512,
+        512
+      ],
+      "frames": 12,
+      "sha256": "fbe97161de518f5c9658670581c02417a83d076d86937565e02ef804cdf24de9",
+      "source_hashes": {
+        "art/act01-production/characters/pip/meshy-current/walk/pip_meshy_walk_01.png": "db5a1b07aac3b20a1213b8878d75ea12a21df8dce9d7a65f4e3a4d150e3a1ca2",
+        "art/act01-production/characters/pip/meshy-current/walk/pip_meshy_walk_02.png": "6feacf24951cfb967c3fccc4531c8dddef9e6a250ed09232fcc4d4ba729e851a",
+        "art/act01-production/characters/pip/meshy-current/walk/pip_meshy_walk_03.png": "e54373b17945f1d4580c7478559cf58c197b769f05aa3a0ead460a46cf37bcd6",
+        "art/act01-production/characters/pip/meshy-current/walk/pip_meshy_walk_04.png": "7b6bd52d9c2e14c00c66435fe800f487fc390e351b3d450c897a3d075759c333",
+        "art/act01-production/characters/pip/meshy-current/walk/pip_meshy_walk_05.png": "09fecceec7e784785ea400155f53a7b7c065933b6e5bf12dcad3c0888e3fe7c7",
+        "art/act01-production/characters/pip/meshy-current/walk/pip_meshy_walk_06.png": "e37c1c425c700b46b87c78a8160512e321288fe3f4254ab9da9118ddf1d7e64b",
+        "art/act01-production/characters/pip/meshy-current/walk/pip_meshy_walk_07.png": "a49e95edd186861cbbaa82576464d5400d1755373b24668154d7f672528f147a",
+        "art/act01-production/characters/pip/meshy-current/walk/pip_meshy_walk_08.png": "1ac27092631d8dc1bbfcf88b226f6a20e9e8f2230c05737c33335d5a2d3e201c",
+        "art/act01-production/characters/pip/meshy-current/walk/pip_meshy_walk_09.png": "417abdb357d6c702ef12bf279fbab74ad1862d567c08fa5186d2dfd3e5520dbd",
+        "art/act01-production/characters/pip/meshy-current/walk/pip_meshy_walk_10.png": "a18edc25b32ca1a88674aa3f1838a9dfc579d2a4c624d7cc9450304b6ea6a101",
+        "art/act01-production/characters/pip/meshy-current/walk/pip_meshy_walk_11.png": "78eccc2848b815007810af6bda777cb9c6e538963ed1198734332680564abcc2",
+        "art/act01-production/characters/pip/meshy-current/walk/pip_meshy_walk_12.png": "2d49818dc617922a8fd30f7ed90c8bc161a3c37bb0ea7b83e4cd59302883279d"
+      },
+      "state": "walk",
+      "fps": 12,
+      "loop": true,
+      "ags_view": "PIP_WALK_RIGHT",
+      "registration": "art/act01-production/characters/pip/meshy-current/walk/registration.json",
+      "runtime_canvas": [
+        512,
+        512
+      ],
+      "runtime_anchor": [
+        256,
+        486
+      ]
+    },
+    "talk": {
+      "file": "art/engine-export/pip/pip_talk.png",
+      "cell": [
+        512,
+        512
+      ],
+      "frames": 12,
+      "sha256": "7a482c58190303ad2f392934eb9722da43c980e29e70bf4fe0a09b6b3b31a27a",
+      "source_hashes": {
+        "art/act01-production/characters/pip/meshy-current/talk/pip_meshy_talk_01.png": "f8abdd37f8cc3712dfcd3ad1d7ef3717cf3d074745e003139e541b728e0f541b",
+        "art/act01-production/characters/pip/meshy-current/talk/pip_meshy_talk_02.png": "eaf6d33cd22ba63048d8ed62dd2ce55d39b8f1fbf779e344d844f574b832a04b",
+        "art/act01-production/characters/pip/meshy-current/talk/pip_meshy_talk_03.png": "011666cd0e8be635bbf9a50706a00683793f4e6bf7027bb34b2bb85f68de9d58",
+        "art/act01-production/characters/pip/meshy-current/talk/pip_meshy_talk_04.png": "e850ef9774323450c43e68482020b7c6129fe5760f9765dd13da7700fb7c076c",
+        "art/act01-production/characters/pip/meshy-current/talk/pip_meshy_talk_05.png": "824510bbfbf6d835eb950f6a920900d4c6481296a3a5ad76d75cc358b9f5a77b",
+        "art/act01-production/characters/pip/meshy-current/talk/pip_meshy_talk_06.png": "62ec69cf42e83defc40151b842175acfc6c348dae9736a60bbfcdcfd821df002",
+        "art/act01-production/characters/pip/meshy-current/talk/pip_meshy_talk_07.png": "64475d08c6441f3c95249464f36f3f5a35fc32d778ebceccd1079bf9d04fd89f",
+        "art/act01-production/characters/pip/meshy-current/talk/pip_meshy_talk_08.png": "4ae16b0a9cebf90d9c0f683801459a1b78aa94171168f2aef617053ada280e9c",
+        "art/act01-production/characters/pip/meshy-current/talk/pip_meshy_talk_09.png": "f035b54eccb293e2a0b7ec45685711c902147fcd8ae1d7dc05d9f10f6e691298",
+        "art/act01-production/characters/pip/meshy-current/talk/pip_meshy_talk_10.png": "619ba1f7332868220c9b8c890bac040e48d6f8eb3011b5a08d0846292bfb98e3",
+        "art/act01-production/characters/pip/meshy-current/talk/pip_meshy_talk_11.png": "17aee8bdad4ba4a6e360dfccd71f33ddbb137fbd7654a3daf8ee0f5a26398266",
+        "art/act01-production/characters/pip/meshy-current/talk/pip_meshy_talk_12.png": "43985bab9c7684513755349e862718426bf6e52ec5c66eb0c8bec4aacd83a2b3"
+      },
+      "state": "talk",
+      "fps": 12,
+      "loop": true,
+      "ags_view": "PIP_TALK",
+      "registration": "art/act01-production/characters/pip/meshy-current/talk/registration.json",
+      "runtime_canvas": [
+        512,
+        512
+      ],
+      "runtime_anchor": [
+        256,
+        486
+      ]
+    },
+    "inspect": {
+      "file": "art/engine-export/pip/pip_inspect.png",
+      "cell": [
+        512,
+        512
+      ],
+      "frames": 14,
+      "sha256": "f4507b5f9c892407c5bb1f2d7f23c67105cbc747412d1c15d4f660dea6faf547",
+      "source_hashes": {
+        "art/act01-production/characters/pip/meshy-current/inspect/pip_meshy_inspect_01.png": "d966bbea62032392e8666a05ee648cfdd626e34d25547f0a286c493f22eddd45",
+        "art/act01-production/characters/pip/meshy-current/inspect/pip_meshy_inspect_02.png": "ed2e678e68630a4275b43ccded9fd9097b943a1aa8224021e0210bec4f862d41",
+        "art/act01-production/characters/pip/meshy-current/inspect/pip_meshy_inspect_03.png": "5581047ad1050279edc97f254dfd5fce42794f11df52c284767e907097bf8f80",
+        "art/act01-production/characters/pip/meshy-current/inspect/pip_meshy_inspect_04.png": "49283bc4c59c0b7d0a2ebc11da999f177c7aeb8f78e63e7452a7ce2012146f64",
+        "art/act01-production/characters/pip/meshy-current/inspect/pip_meshy_inspect_05.png": "9ffebfd5f167728c37ad223d663ec168f9cbd7a2a5af268f702d1150ecfc4c43",
+        "art/act01-production/characters/pip/meshy-current/inspect/pip_meshy_inspect_06.png": "248e5e975b3ef49625fcca9c633b0af254e6e7f9bc19b1879752e7b5d7bd21e2",
+        "art/act01-production/characters/pip/meshy-current/inspect/pip_meshy_inspect_07.png": "b8e048de4333dae0d11590e9aa084a85fd39daec4809056a41286ed156967979",
+        "art/act01-production/characters/pip/meshy-current/inspect/pip_meshy_inspect_08.png": "d706fe48987e3de5141a67263b87b4a7feee23ddb19905ac695090dc9af4caf6",
+        "art/act01-production/characters/pip/meshy-current/inspect/pip_meshy_inspect_09.png": "f5385779197b0689e46de06d4a5929e058d1ab2ac6b64f8ee87944ab65b0c473",
+        "art/act01-production/characters/pip/meshy-current/inspect/pip_meshy_inspect_10.png": "0632eda8c8b968d201e4fd31bcd54e944c74e28f252ff9d1ffbb91493dffb987",
+        "art/act01-production/characters/pip/meshy-current/inspect/pip_meshy_inspect_11.png": "69647fbd5fb7b90b77c8fec494fa780c1e044e7799fac0d1f1aa2ff67f22dc4e",
+        "art/act01-production/characters/pip/meshy-current/inspect/pip_meshy_inspect_12.png": "5edfe9268366017a2afe60938d3e48e7a6c0ad4437d9265bbe325b93b654e471",
+        "art/act01-production/characters/pip/meshy-current/inspect/pip_meshy_inspect_13.png": "d25f869622580d113b2a9d149919b5da89caf64ca998e3df2b310fa76d78d019",
+        "art/act01-production/characters/pip/meshy-current/inspect/pip_meshy_inspect_14.png": "e65de71898d3698316a5d061f4a1578ae4a289d7c9a1bc8f64c0ac5d5b50a856"
+      },
+      "state": "inspect",
+      "fps": 12,
+      "loop": false,
+      "ags_view": "PIP_INSPECT",
+      "registration": "art/act01-production/characters/pip/meshy-current/inspect/registration.json",
+      "runtime_canvas": [
+        512,
+        512
+      ],
+      "runtime_anchor": [
+        256,
+        486
+      ]
+    },
+    "dustReach": {
+      "file": "art/engine-export/pip/pip_dustReach.png",
+      "cell": [
+        512,
+        512
+      ],
+      "frames": 14,
+      "sha256": "1ae2a6f547a9e05c7a34c8ede28b1169d8e3382b445b4350463e4d5c7789f0ec",
+      "source_hashes": {
+        "art/act01-production/characters/pip/meshy-current/dust-reach/pip_meshy_dust_01.png": "b1c32421e6caec3c6cb850c36295913c622676d480421712c6575b9bc44e91b5",
+        "art/act01-production/characters/pip/meshy-current/dust-reach/pip_meshy_dust_02.png": "a98b59d3fee704d0864141775fef8027e51fc5c40c1cb29ddb05d923203443bc",
+        "art/act01-production/characters/pip/meshy-current/dust-reach/pip_meshy_dust_03.png": "1daf312d5ff545f790d7a07de7b1ae40de52a9513b95e7067f71e49b61c070b3",
+        "art/act01-production/characters/pip/meshy-current/dust-reach/pip_meshy_dust_04.png": "1072515bdc12056f846b97368ba9f70cb23965bd329c623eb64cc2b16f0446bf",
+        "art/act01-production/characters/pip/meshy-current/dust-reach/pip_meshy_dust_05.png": "6c73dd78cda40f7c835cd200d7b34176bd03062ee26eff01ffdf69058385caef",
+        "art/act01-production/characters/pip/meshy-current/dust-reach/pip_meshy_dust_06.png": "f8f53248751d4706d135dd6d432c0549ff65d2110eeabb23fb979d5010285901",
+        "art/act01-production/characters/pip/meshy-current/dust-reach/pip_meshy_dust_07.png": "c5538db64255d574787d34db0817d8e7a945e04f80b1409cbeb7733287c5676e",
+        "art/act01-production/characters/pip/meshy-current/dust-reach/pip_meshy_dust_08.png": "0bb30dcb7a8f4560b55732ba2a38646ef229a92923dd74226a8ab7f7510104a4",
+        "art/act01-production/characters/pip/meshy-current/dust-reach/pip_meshy_dust_09.png": "4d604ad5fa873bef3b93c69bfbf23f23bf1b56f18317ee3c7bbf0bb40e1743eb",
+        "art/act01-production/characters/pip/meshy-current/dust-reach/pip_meshy_dust_10.png": "b7eb43088fe62a9b74f4da5d01a314cb43ce11a8320f9b99bf0d039223875bf0",
+        "art/act01-production/characters/pip/meshy-current/dust-reach/pip_meshy_dust_11.png": "ea3114d33fea3d00e7bee40ec15b1b0e6014ef9b084aea0833af977dcddbc19b",
+        "art/act01-production/characters/pip/meshy-current/dust-reach/pip_meshy_dust_12.png": "163d2045926dc7ebd53fdfb863d1c2a58dc2bf5da9d420caba85602220cc7d66",
+        "art/act01-production/characters/pip/meshy-current/dust-reach/pip_meshy_dust_13.png": "36c29c27944c3e4975a1f0912518c85b4f0ce4f7ccb082e4e0b060c342021fde",
+        "art/act01-production/characters/pip/meshy-current/dust-reach/pip_meshy_dust_14.png": "86991a2517ae618887fcbde4973edcaf46f8177f4e675f115530c00430c87a6c"
+      },
+      "state": "dustReach",
+      "fps": 12,
+      "loop": false,
+      "ags_view": "PIP_PICKUP_DUST",
+      "registration": "art/act01-production/characters/pip/meshy-current/dust-reach/registration.json",
+      "runtime_canvas": [
+        512,
+        512
+      ],
+      "runtime_anchor": [
+        256,
+        486
+      ]
+    },
+    "tollPaid": {
+      "file": "art/engine-export/pip/pip_tollPaid.png",
+      "cell": [
+        512,
+        512
+      ],
+      "frames": 10,
+      "sha256": "b7432bdc5041bb5678cd188926f0644ebd2767dd19ae8009aef941e135c32628",
+      "source_hashes": {
+        "art/act01-production/characters/pip/meshy-current/toll-paid/pip_meshy_toll_01.png": "b1c32421e6caec3c6cb850c36295913c622676d480421712c6575b9bc44e91b5",
+        "art/act01-production/characters/pip/meshy-current/toll-paid/pip_meshy_toll_02.png": "15f3cb8d1c49a18e8031511922096f5d783f3f28059cc71785451c4590e8ad18",
+        "art/act01-production/characters/pip/meshy-current/toll-paid/pip_meshy_toll_03.png": "9386f3650db1c8527417456fcd2c62fdf951657a348b0a80d4acd4f7271f6342",
+        "art/act01-production/characters/pip/meshy-current/toll-paid/pip_meshy_toll_04.png": "1ebbc99a6a119ce9385752713e2bf5f7c8227321b0e38dd5267732e10e4d016b",
+        "art/act01-production/characters/pip/meshy-current/toll-paid/pip_meshy_toll_05.png": "aab7eb652dba162b3817a6ff8d586e61f632306523482d2c61add7b80a499c8d",
+        "art/act01-production/characters/pip/meshy-current/toll-paid/pip_meshy_toll_06.png": "33e718d82a5af9bceb7ca57951d7f06725d1f33e9faa501bb9c5367dc6505cc4",
+        "art/act01-production/characters/pip/meshy-current/toll-paid/pip_meshy_toll_07.png": "704b9bc2eac6913a309a002d5d16aeea813363bc0c0057be848c0248621b6bd6",
+        "art/act01-production/characters/pip/meshy-current/toll-paid/pip_meshy_toll_08.png": "2af8fc53d909fdd20f81a6ffbf85586b662e2270e1258ac60a55cc371186f81f",
+        "art/act01-production/characters/pip/meshy-current/toll-paid/pip_meshy_toll_09.png": "85b6959daff79a0f42c1da63dd39c2d7b11a6b335d4c51b88180620239e9bfd5",
+        "art/act01-production/characters/pip/meshy-current/toll-paid/pip_meshy_toll_10.png": "8bf308cd9669639b91c28b01515bb5b86fc86e0e720375dbd1f81f61c510f65a"
+      },
+      "state": "tollPaid",
+      "fps": 12,
+      "loop": false,
+      "ags_view": "PIP_HANDOFF_TOLL",
+      "registration": "art/act01-production/characters/pip/meshy-current/toll-paid/registration.json",
+      "runtime_canvas": [
+        512,
+        512
+      ],
+      "runtime_anchor": [
+        256,
+        486
+      ]
+    }
+  },
+  "qa": {
+    "review_sheet": "art/act01-production/qa/pip-engine-export-review.png",
+    "export_gate": "npm.cmd run qa:engine:pip"
+  }
+}

@@ -1,0 +1,234 @@
+{
+  "role": "automatic object-crop candidates from user-provided prop sheets",
+  "policy": "review and rename clean crops; do not final-admit without alpha cleanup and registration",
+  "items": [
+    {
+      "id": "marbles_00",
+      "source": "marbles",
+      "box": [
+        6,
+        237,
+        1536,
+        838
+      ],
+      "area": 468072,
+      "size": [
+        1530,
+        601
+      ],
+      "path": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\user_prop_art_intake_auto\\candidates\\marbles_00.png"
+    },
+    {
+      "id": "room_props_00",
+      "source": "room_props",
+      "box": [
+        8,
+        16,
+        765,
+        518
+      ],
+      "area": 216245,
+      "size": [
+        757,
+        502
+      ],
+      "path": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\user_prop_art_intake_auto\\candidates\\room_props_00.png"
+    },
+    {
+      "id": "room_props_01",
+      "source": "room_props",
+      "box": [
+        767,
+        62,
+        1530,
+        500
+      ],
+      "area": 249096,
+      "size": [
+        763,
+        438
+      ],
+      "path": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\user_prop_art_intake_auto\\candidates\\room_props_01.png"
+    },
+    {
+      "id": "room_props_02",
+      "source": "room_props",
+      "box": [
+        11,
+        491,
+        1536,
+        1008
+      ],
+      "area": 567656,
+      "size": [
+        1525,
+        517
+      ],
+      "path": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\user_prop_art_intake_auto\\candidates\\room_props_02.png"
+    },
+    {
+      "id": "inventory_props_00",
+      "source": "inventory_props",
+      "box": [
+        807,
+        45,
+        1194,
+        448
+      ],
+      "area": 73462,
+      "size": [
+        387,
+        403
+      ],
+      "path": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\user_prop_art_intake_auto\\candidates\\inventory_props_00.png"
+    },
+    {
+      "id": "inventory_props_01",
+      "source": "inventory_props",
+      "box": [
+        80,
+        106,
+        396,
+        396
+      ],
+      "area": 51837,
+      "size": [
+        316,
+        290
+      ],
+      "path": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\user_prop_art_intake_auto\\candidates\\inventory_props_01.png"
+    },
+    {
+      "id": "inventory_props_02",
+      "source": "inventory_props",
+      "box": [
+        470,
+        116,
+        763,
+        392
+      ],
+      "area": 46041,
+      "size": [
+        293,
+        276
+      ],
+      "path": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\user_prop_art_intake_auto\\candidates\\inventory_props_02.png"
+    },
+    {
+      "id": "inventory_props_03",
+      "source": "inventory_props",
+      "box": [
+        91,
+        449,
+        374,
+        796
+      ],
+      "area": 13223,
+      "size": [
+        283,
+        347
+      ],
+      "path": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\user_prop_art_intake_auto\\candidates\\inventory_props_03.png"
+    },
+    {
+      "id": "inventory_props_04",
+      "source": "inventory_props",
+      "box": [
+        440,
+        456,
+        755,
+        803
+      ],
+      "area": 24772,
+      "size": [
+        315,
+        347
+      ],
+      "path": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\user_prop_art_intake_auto\\candidates\\inventory_props_04.png"
+    },
+    {
+      "id": "inventory_props_05",
+      "source": "inventory_props",
+      "box": [
+        770,
+        469,
+        1221,
+        827
+      ],
+      "area": 90642,
+      "size": [
+        451,
+        358
+      ],
+      "path": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\user_prop_art_intake_auto\\candidates\\inventory_props_05.png"
+    },
+    {
+      "id": "inventory_props_06",
+      "source": "inventory_props",
+      "box": [
+        31,
+        813,
+        457,
+        1221
+      ],
+      "area": 98417,
+      "size": [
+        426,
+        408
+      ],
+      "path": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\user_prop_art_intake_auto\\candidates\\inventory_props_06.png"
+    },
+    {
+      "id": "inventory_props_07",
+      "source": "inventory_props",
+      "box": [
+        759,
+        824,
+        1213,
+        1233
+      ],
+      "area": 101261,
+      "size": [
+        454,
+        409
+      ],
+      "path": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\user_prop_art_intake_auto\\candidates\\inventory_props_07.png"
+    },
+    {
+      "id": "inventory_props_08",
+      "source": "inventory_props",
+      "box": [
+        470,
+        862,
+        757,
+        1174
+      ],
+      "area": 51169,
+      "size": [
+        287,
+        312
+      ],
+      "path": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\user_prop_art_intake_auto\\candidates\\inventory_props_08.png"
+    },
+    {
+      "id": "scene_objects_00",
+      "source": "scene_objects",
+      "box": [
+        22,
+        21,
+        1531,
+        1021
+      ],
+      "area": 997442,
+      "size": [
+        1509,
+        1000
+      ],
+      "path": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\user_prop_art_intake_auto\\candidates\\scene_objects_00.png"
+    }
+  ],
+  "warnings": [
+    "Transparent/glass/cobweb assets cannot be recovered perfectly from RGB gray-background sheets.",
+    "Some large multi-object source components may intentionally remain grouped for manual recrop."
+  ]
+}

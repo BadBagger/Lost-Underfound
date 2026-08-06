@@ -1,0 +1,21 @@
+{
+  "source": "spikes\\sprite_render\\textured_proof\\frames_raw\\walk_raw_000.png",
+  "outputs": [
+    "spikes/sprite_render/textured_proof/texture_source_crop.png",
+    "spikes/sprite_render/textured_proof/texture_R2_palette.png",
+    "spikes/sprite_render/textured_proof/texture_R3_outline.png"
+  ],
+  "palette": "spikes\\sprite_render\\palette.json",
+  "frame_size": [
+    512,
+    512
+  ],
+  "cropped_size": [
+    158,
+    249
+  ],
+  "notes": [
+    "GLB source texture drives color zones; no coordinate-inferred materials used.",
+    "R3 is palette quantized plus warm outline."
+  ]
+}

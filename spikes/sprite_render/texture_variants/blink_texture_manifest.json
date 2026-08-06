@@ -1,0 +1,6 @@
+{
+  "base": "spikes\\sprite_render\\texture_variants\\otto_base_texture.png",
+  "out": "spikes\\sprite_render\\texture_variants\\otto_blink_texture_proof.png",
+  "type": "proof_blink_texture",
+  "warning": "UV coordinates are proof-only. Prefer Meshy retexture or a real texture-paint pass for production."
+}

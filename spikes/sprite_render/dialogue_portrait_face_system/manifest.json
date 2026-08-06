@@ -1,0 +1,33 @@
+{
+  "status": "portrait_face_system_proof",
+  "base_still": "spikes\\sprite_render\\dialogue_portrait_gate\\otto_portrait_gate_still.png",
+  "face_geometry": {
+    "face_center_x": 1317.9,
+    "face_center_y": 436.52,
+    "face_width": 140.71,
+    "face_height": 185.74,
+    "eye_y": 442.1,
+    "nose_y": 469.96,
+    "mouth_y": 494.1,
+    "eye_gap": 61.91,
+    "eye_width": 23.92,
+    "pupil_width": 3.24
+  },
+  "assets_dir": "spikes\\sprite_render\\dialogue_portrait_face_system\\assets",
+  "asset_count": 11,
+  "brow_composites": [
+    "otto_portrait_brow_neutral.png",
+    "otto_portrait_brow_raised.png",
+    "otto_portrait_brow_furrowed.png",
+    "otto_portrait_brow_skeptical.png"
+  ],
+  "talk_preview": "otto_portrait_talk_preview.gif",
+  "frame_count": 36,
+  "fps": 12,
+  "constraints": [
+    "No costume repainting.",
+    "No belly or horn overlays.",
+    "Face acting layer only.",
+    "Text-driven mouth flap; no phoneme sync."
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "status": "scaffolded-not-trained",
+  "backend": {
+    "preferred": "ComfyUI",
+    "trainer": "kohya-compatible LoRA trainer",
+    "local_comfyui_path": "C:/Users/KyleB/AppData/Local/Comfy-Desktop/ComfyUI-Installs/ComfyUI/ComfyUI",
+    "running_comfyui_path": "D:/CodexDeps/ComfyUI",
+    "local_python": "C:/Users/KyleB/AppData/Local/Comfy-Desktop/ComfyUI-Installs/ComfyUI/ComfyUI/.venv/Scripts/python.exe",
+    "shared_models_path": "C:/Users/KyleB/AppData/Local/Comfy-Desktop/ComfyUI-Shared/models",
+    "detected_gpu": "NVIDIA GeForce RTX 5080",
+    "notes": "Comfy Desktop install detected, but the active local server at 127.0.0.1:8188 is running from D:/CodexDeps/ComfyUI. Shared SDXL checkpoint, OpenPoseXL2, ControlNet depth/canny, IPAdapter, and several LoRAs are present."
+  },
+  "rules": {
+    "identity_only": true,
+    "runtime_registration_required": true,
+    "cast_scale_required": true,
+    "full_construction_review_required": true,
+    "reject_quarantined_sources": true,
+    "minimum_trainable_images": 16
+  },
+  "characters": [
+    {
+      "id": "pip",
+      "trigger": "lu_pip_shrunk_kid",
+      "scale": 1.0,
+      "status": "needs-curated-dataset",
+      "dataset_dir": "art/lora/datasets/pip",
+      "identity_prompt": "art/lora/prompts/pip-identity.txt",
+      "candidate_sources": [
+        "art/act01-production/source/character-reference-sheet.png",
+        "art/act01-production/source/concept-sprite-grids/pip-idle-72-grid.png",
+        "art/act01-production/source/concept-sprite-grids/pip-pickup-item-36-grid.png",
+        "art/act01-production/source/concept-sprite-grids/pip-handoff-old-bottlecap-36-grid.png"
+      ],
+      "model_path": null,
+      "blocked_until": [
+        "approved actor-only identity sheet",
+        "captioned training crops",
+        "full-construction review"
+      ]
+    },
+    {
+      "id": "bramble",
+      "trigger": "lu_bramble_clerk",
+      "scale": 0.85,
+      "status": "dataset-ready",
+      "dataset_dir": "art/lora/datasets/bramble",
+      "identity_prompt": "art/lora/prompts/bramble-identity.txt",
+      "candidate_sources": [
+        "art/act01-production/source/bramble-talking-head/bramble-idle-pink.png",
+        "art/act01-production/source/bramble-talking-head/bramble-talk-pink.png",
+        "art/act01-production/source/concept-sprite-grids/bramble-clean-actor-strip.png"
+      ],
+      "training_sources": [
+        {
+          "registration": "art/act01-production/characters/bramble/idle/registration.json",
+          "clip": "idle",
+          "allowed_approval_states": [
+            "provisional-production-pass"
+          ]
+        },
+        {
+          "registration": "art/act01-production/characters/bramble/talk/registration.json",
+          "clip": "talk",
+          "allowed_approval_states": [
+            "provisional-production-pass"
+          ]
+        }
+      ],
+      "model_path": "art/lora/models/lu_bramble_clerk_proof.safetensors",
+      "training_run": {
+        "trainer": "sd-scripts",
+        "source_dataset": "art/lora/datasets/bramble",
+        "staged_dataset": "D:/CodexDeps/lora_training/dataset_bramble/2_lu_bramble_clerk",
+        "output_source": "D:/CodexDeps/lora_training/output_lu_bramble_clerk/lu_bramble_clerk_proof.safetensors",
+        "steps": 24,
+        "network_dim": 32,
+        "network_alpha": 16,
+        "learning_rate": "1e-4",
+        "status": "proof-only-needs-identity-test-generations"
+      },
+      "rejected_datasets": [
+        {
+          "path": "art/lora/quarantine/bramble-mixed-identity-dataset",
+          "reason": "visual QA rejected mixed identity: older flat/vector idle frames combined with painterly dust-bunny talk frames"
+        }
+      ],
+      "blocked_until": [
+        "LoRA training run",
+        "post-training identity review",
+        "state-strip registration QA"
+      ],
+      "dataset_contact_sheet": "art/lora/datasets/bramble/contact-sheet.png",
+      "dataset_manifest": "art/lora/datasets/bramble/dataset.json"
+    },
+    {
+      "id": "old-bottlecap",
+      "trigger": "lu_old_bottlecap_guard",
+      "scale": 0.6,
+      "status": "needs-clean-source",
+      "dataset_dir": "art/lora/datasets/old-bottlecap",
+      "identity_prompt": "art/lora/prompts/old-bottlecap-identity.txt",
+      "candidate_sources": [
+        "art/act01-production/source/concept-sprite-grids/old-bottlecap-idle-72-grid.png"
+      ],
+      "rejected_sources": [
+        "art/act01-production/quarantine/old-bottlecap-talk-truncated"
+      ],
+      "model_path": null,
+      "blocked_until": [
+        "complete full-stack actor-only source with generous margins",
+        "no truncated lower cap stack",
+        "captioned training crops",
+        "full-construction contact-sheet approval"
+      ]
+    },
+    {
+      "id": "scuttle",
+      "trigger": "lu_scuttle_courier",
+      "scale": 0.35,
+      "status": "needs-curated-dataset",
+      "dataset_dir": "art/lora/datasets/scuttle",
+      "identity_prompt": "art/lora/prompts/scuttle-identity.txt",
+      "candidate_sources": [
+        "art/act01-production/source/concept-sprite-grids/scuttle-idle-72-grid.png"
+      ],
+      "model_path": null,
+      "blocked_until": [
+        "approved actor-only source",
+        "captioned training crops",
+        "dash smear poses bracketed by solid poses"
+      ]
+    },
+    {
+      "id": "grommet",
+      "trigger": "lu_grommet_guardian",
+      "scale": 2.4,
+      "status": "deferred",
+      "dataset_dir": "art/lora/datasets/grommet",
+      "identity_prompt": "art/lora/prompts/grommet-identity-DEFERRED.txt",
+      "candidate_sources": [],
+      "model_path": null,
+      "blocked_until": [
+        "Acts 2-3 script pass",
+        "approved Grommet design sheet"
+      ]
+    }
+  ]
+}

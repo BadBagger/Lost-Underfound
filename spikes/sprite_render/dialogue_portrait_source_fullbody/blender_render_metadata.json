@@ -1,0 +1,91 @@
+{
+  "asset": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\input\\meshy_textured_animated\\walking_textured.glb",
+  "format": "glb",
+  "has_animation": false,
+  "source_frame_range": [
+    1.0,
+    1.0
+  ],
+  "source_fps": 24.0,
+  "target_fps": 12.0,
+  "duration_seconds": 0.08333333333333333,
+  "frame_count": 1,
+  "camera": {
+    "type": "orthographic",
+    "view": "side-left",
+    "angle_deg_above_horizontal": 4.0,
+    "ortho_scale": 3.6999998092651367,
+    "target_z_frac": 0.5,
+    "shift": [
+      0.18,
+      0.58
+    ]
+  },
+  "material_mode": "source",
+  "source_material_data_present": true,
+  "material_report": [
+    "char1: imported material slots"
+  ],
+  "face_decals": {
+    "enabled": false,
+    "report": []
+  },
+  "blink_texture": {
+    "enabled": false,
+    "path": null,
+    "blink_frames": [],
+    "texture_node_found": true
+  },
+  "base_texture": {
+    "enabled": true,
+    "path": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\texture_variants\\otto_face_open_texture.png",
+    "texture_node_found": true
+  },
+  "lighting": {
+    "key": "warm upper-left sun",
+    "fill": "dim cool fill",
+    "cast_shadows": false
+  },
+  "root_motion_samples": [
+    {
+      "index": 0,
+      "source_frame": 1.0,
+      "armature_location": [
+        0.0,
+        0.0,
+        0.6621568202972412
+      ],
+      "root_bone_location": [
+        8.387166599277407e-05,
+        -0.09275880455970764,
+        1.3506064414978027
+      ]
+    }
+  ],
+  "face_anchor_samples": [
+    {
+      "index": 0,
+      "source_frame": 1.0,
+      "bone": "headfront",
+      "center": [
+        554.63,
+        764.62
+      ],
+      "scale": 4.305,
+      "head_pixel_height": 275.52,
+      "head_pixel_width": 98.81,
+      "rotation_degrees": 0.0,
+      "source": "blender_projected_bone",
+      "model_space_adjustment": {
+        "neck_to_head_up_units": 0.23
+      }
+    }
+  ],
+  "render_frame_states": [
+    {
+      "index": 0,
+      "source_frame": 1.0,
+      "texture_state": "normal"
+    }
+  ]
+}

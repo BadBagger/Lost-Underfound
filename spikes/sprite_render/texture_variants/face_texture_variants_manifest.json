@@ -1,0 +1,339 @@
+{
+  "base": "spikes\\sprite_render\\texture_variants\\otto_base_texture.png",
+  "open_out": "spikes\\sprite_render\\texture_variants\\otto_face_open_texture.png",
+  "blink_out": "spikes\\sprite_render\\texture_variants\\otto_face_blink_texture.png",
+  "type": "eye-island-derived texture variants",
+  "eye_blob_count": 8,
+  "eye_blobs": [
+    {
+      "bbox": [
+        1857,
+        1587,
+        1913,
+        1656
+      ],
+      "pixels": 2791,
+      "center": [
+        1885,
+        1621
+      ]
+    },
+    {
+      "bbox": [
+        357,
+        228,
+        427,
+        283
+      ],
+      "pixels": 2759,
+      "center": [
+        391,
+        254
+      ]
+    },
+    {
+      "bbox": [
+        818,
+        37,
+        856,
+        80
+      ],
+      "pixels": 884,
+      "center": [
+        835,
+        61
+      ]
+    },
+    {
+      "bbox": [
+        1445,
+        861,
+        1492,
+        900
+      ],
+      "pixels": 821,
+      "center": [
+        1460,
+        884
+      ]
+    },
+    {
+      "bbox": [
+        822,
+        99,
+        854,
+        142
+      ],
+      "pixels": 608,
+      "center": [
+        838,
+        122
+      ]
+    },
+    {
+      "bbox": [
+        1688,
+        1782,
+        1750,
+        1803
+      ],
+      "pixels": 556,
+      "center": [
+        1721,
+        1792
+      ]
+    },
+    {
+      "bbox": [
+        829,
+        0,
+        862,
+        31
+      ],
+      "pixels": 516,
+      "center": [
+        846,
+        15
+      ]
+    },
+    {
+      "bbox": [
+        229,
+        2007,
+        276,
+        2048
+      ],
+      "pixels": 496,
+      "center": [
+        251,
+        2035
+      ]
+    }
+  ],
+  "open_eye_paint": [
+    {
+      "center": [
+        1885,
+        1621
+      ],
+      "radius": [
+        38,
+        46
+      ]
+    },
+    {
+      "center": [
+        391,
+        254
+      ],
+      "radius": [
+        48,
+        36
+      ]
+    },
+    {
+      "center": [
+        835,
+        61
+      ],
+      "radius": [
+        26,
+        28
+      ]
+    },
+    {
+      "center": [
+        1460,
+        884
+      ],
+      "radius": [
+        32,
+        26
+      ]
+    },
+    {
+      "center": [
+        838,
+        122
+      ],
+      "radius": [
+        22,
+        28
+      ]
+    },
+    {
+      "center": [
+        1721,
+        1792
+      ],
+      "radius": [
+        42,
+        14
+      ]
+    },
+    {
+      "center": [
+        846,
+        15
+      ],
+      "radius": [
+        22,
+        20
+      ]
+    },
+    {
+      "center": [
+        251,
+        2035
+      ],
+      "radius": [
+        32,
+        27
+      ]
+    }
+  ],
+  "blink_eye_paint": [
+    {
+      "center": [
+        1885,
+        1621
+      ],
+      "radius": [
+        60,
+        66
+      ],
+      "cover": [
+        1795,
+        1522,
+        1975,
+        1720
+      ],
+      "line_width": 17
+    },
+    {
+      "center": [
+        391,
+        254
+      ],
+      "radius": [
+        76,
+        53
+      ],
+      "cover": [
+        277,
+        175,
+        505,
+        333
+      ],
+      "line_width": 15
+    },
+    {
+      "center": [
+        835,
+        61
+      ],
+      "radius": [
+        41,
+        41
+      ],
+      "cover": [
+        774,
+        0,
+        896,
+        122
+      ],
+      "line_width": 11
+    },
+    {
+      "center": [
+        1460,
+        884
+      ],
+      "radius": [
+        51,
+        37
+      ],
+      "cover": [
+        1384,
+        829,
+        1536,
+        939
+      ],
+      "line_width": 10
+    },
+    {
+      "center": [
+        838,
+        122
+      ],
+      "radius": [
+        35,
+        41
+      ],
+      "cover": [
+        786,
+        61,
+        890,
+        183
+      ],
+      "line_width": 10
+    },
+    {
+      "center": [
+        1721,
+        1792
+      ],
+      "radius": [
+        67,
+        20
+      ],
+      "cover": [
+        1621,
+        1762,
+        1821,
+        1822
+      ],
+      "line_width": 6
+    },
+    {
+      "center": [
+        846,
+        15
+      ],
+      "radius": [
+        36,
+        30
+      ],
+      "cover": [
+        792,
+        0,
+        900,
+        60
+      ],
+      "line_width": 8
+    },
+    {
+      "center": [
+        251,
+        2035
+      ],
+      "radius": [
+        51,
+        39
+      ],
+      "cover": [
+        175,
+        1977,
+        327,
+        2048
+      ],
+      "line_width": 11
+    }
+  ],
+  "mouth_paint": [],
+  "notes": [
+    "Uses existing eye-white UV islands from the Meshy texture; no single atlas coordinate is guessed.",
+    "Mouth UV painting is disabled by default because generated atlases can rotate and fragment face islands.",
+    "This is still a repo-side texture paint pass. Meshy retexture or manual UV paint remains preferred for final art quality."
+  ]
+}

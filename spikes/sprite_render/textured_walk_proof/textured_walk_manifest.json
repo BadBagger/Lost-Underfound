@@ -1,0 +1,15 @@
+{
+  "frames": 12,
+  "frame_size": [
+    132,
+    206
+  ],
+  "outputs": [
+    "textured_walk_R3_sheet.png",
+    "textured_walk_R3_contact.png",
+    "textured_walk_R3_preview.gif"
+  ],
+  "notes": [
+    "Generated from Meshy textured animated GLB with source material render, palette quantization, warm outline."
+  ]
+}

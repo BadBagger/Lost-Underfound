@@ -11,55 +11,392 @@
       "file": "bramble_talk_01.png",
       "anchor": [
         160,
-        205
+        252
       ],
-      "role": "talk-closed-mouth",
+      "role": "desk-talk-01",
       "canonical": true,
       "scale_reference": [
         160,
-        18
+        8
       ]
     },
     {
       "file": "bramble_talk_02.png",
       "anchor": [
         160,
-        205
+        252
       ],
-      "role": "talk-open-mouth"
+      "role": "desk-talk-02"
     },
     {
       "file": "bramble_talk_03.png",
       "anchor": [
         160,
-        205
+        252
       ],
-      "role": "talk-wide-emphasis"
+      "role": "desk-talk-03"
     },
     {
       "file": "bramble_talk_04.png",
       "anchor": [
         160,
-        205
+        252
       ],
-      "role": "talk-return-passing"
+      "role": "desk-talk-04"
     },
     {
       "file": "bramble_talk_05.png",
       "anchor": [
         160,
-        205
+        252
       ],
-      "role": "talk-settle-paper"
+      "role": "desk-talk-05"
     },
     {
       "file": "bramble_talk_06.png",
       "anchor": [
         160,
-        205
+        252
       ],
-      "role": "talk-neutral-hold"
+      "role": "desk-talk-06"
+    },
+    {
+      "file": "bramble_talk_07.png",
+      "anchor": [
+        160,
+        252
+      ],
+      "role": "desk-talk-07"
+    },
+    {
+      "file": "bramble_talk_08.png",
+      "anchor": [
+        160,
+        252
+      ],
+      "role": "desk-talk-08"
+    },
+    {
+      "file": "bramble_talk_09.png",
+      "anchor": [
+        160,
+        252
+      ],
+      "role": "desk-talk-09"
+    },
+    {
+      "file": "bramble_talk_10.png",
+      "anchor": [
+        160,
+        252
+      ],
+      "role": "desk-talk-10"
+    },
+    {
+      "file": "bramble_talk_11.png",
+      "anchor": [
+        160,
+        252
+      ],
+      "role": "desk-talk-11"
+    },
+    {
+      "file": "bramble_talk_12.png",
+      "anchor": [
+        160,
+        252
+      ],
+      "role": "desk-talk-12"
+    },
+    {
+      "file": "bramble_talk_13.png",
+      "anchor": [
+        160,
+        252
+      ],
+      "role": "desk-talk-13"
+    },
+    {
+      "file": "bramble_talk_14.png",
+      "anchor": [
+        160,
+        252
+      ],
+      "role": "desk-talk-14"
+    },
+    {
+      "file": "bramble_talk_15.png",
+      "anchor": [
+        160,
+        252
+      ],
+      "role": "desk-talk-15"
+    },
+    {
+      "file": "bramble_talk_16.png",
+      "anchor": [
+        160,
+        252
+      ],
+      "role": "desk-talk-16"
+    },
+    {
+      "file": "bramble_talk_17.png",
+      "anchor": [
+        160,
+        252
+      ],
+      "role": "desk-talk-17"
+    },
+    {
+      "file": "bramble_talk_18.png",
+      "anchor": [
+        160,
+        252
+      ],
+      "role": "desk-talk-18"
+    },
+    {
+      "file": "bramble_talk_19.png",
+      "anchor": [
+        160,
+        252
+      ],
+      "role": "desk-talk-19"
+    },
+    {
+      "file": "bramble_talk_20.png",
+      "anchor": [
+        160,
+        252
+      ],
+      "role": "desk-talk-20"
+    },
+    {
+      "file": "bramble_talk_21.png",
+      "anchor": [
+        160,
+        252
+      ],
+      "role": "desk-talk-21"
+    },
+    {
+      "file": "bramble_talk_22.png",
+      "anchor": [
+        160,
+        252
+      ],
+      "role": "desk-talk-22"
+    },
+    {
+      "file": "bramble_talk_23.png",
+      "anchor": [
+        160,
+        252
+      ],
+      "role": "desk-talk-23"
+    },
+    {
+      "file": "bramble_talk_24.png",
+      "anchor": [
+        160,
+        252
+      ],
+      "role": "desk-talk-24"
+    },
+    {
+      "file": "bramble_talk_25.png",
+      "anchor": [
+        160,
+        252
+      ],
+      "role": "desk-talk-25"
+    },
+    {
+      "file": "bramble_talk_26.png",
+      "anchor": [
+        160,
+        252
+      ],
+      "role": "desk-talk-26"
+    },
+    {
+      "file": "bramble_talk_27.png",
+      "anchor": [
+        160,
+        252
+      ],
+      "role": "desk-talk-27"
+    },
+    {
+      "file": "bramble_talk_28.png",
+      "anchor": [
+        160,
+        252
+      ],
+      "role": "desk-talk-28"
+    },
+    {
+      "file": "bramble_talk_29.png",
+      "anchor": [
+        160,
+        252
+      ],
+      "role": "desk-talk-29"
+    },
+    {
+      "file": "bramble_talk_30.png",
+      "anchor": [
+        160,
+        252
+      ],
+      "role": "desk-talk-30"
+    },
+    {
+      "file": "bramble_talk_31.png",
+      "anchor": [
+        160,
+        252
+      ],
+      "role": "desk-talk-31"
+    },
+    {
+      "file": "bramble_talk_32.png",
+      "anchor": [
+        160,
+        252
+      ],
+      "role": "desk-talk-32"
+    },
+    {
+      "file": "bramble_talk_33.png",
+      "anchor": [
+        160,
+        252
+      ],
+      "role": "desk-talk-33"
+    },
+    {
+      "file": "bramble_talk_34.png",
+      "anchor": [
+        160,
+        252
+      ],
+      "role": "desk-talk-34"
+    },
+    {
+      "file": "bramble_talk_35.png",
+      "anchor": [
+        160,
+        252
+      ],
+      "role": "desk-talk-35"
+    },
+    {
+      "file": "bramble_talk_36.png",
+      "anchor": [
+        160,
+        252
+      ],
+      "role": "desk-talk-36"
+    },
+    {
+      "file": "bramble_talk_37.png",
+      "anchor": [
+        160,
+        252
+      ],
+      "role": "desk-talk-37"
+    },
+    {
+      "file": "bramble_talk_38.png",
+      "anchor": [
+        160,
+        252
+      ],
+      "role": "desk-talk-38"
+    },
+    {
+      "file": "bramble_talk_39.png",
+      "anchor": [
+        160,
+        252
+      ],
+      "role": "desk-talk-39"
+    },
+    {
+      "file": "bramble_talk_40.png",
+      "anchor": [
+        160,
+        252
+      ],
+      "role": "desk-talk-40"
+    },
+    {
+      "file": "bramble_talk_41.png",
+      "anchor": [
+        160,
+        252
+      ],
+      "role": "desk-talk-41"
+    },
+    {
+      "file": "bramble_talk_42.png",
+      "anchor": [
+        160,
+        252
+      ],
+      "role": "desk-talk-42"
+    },
+    {
+      "file": "bramble_talk_43.png",
+      "anchor": [
+        160,
+        252
+      ],
+      "role": "desk-talk-43"
+    },
+    {
+      "file": "bramble_talk_44.png",
+      "anchor": [
+        160,
+        252
+      ],
+      "role": "desk-talk-44"
+    },
+    {
+      "file": "bramble_talk_45.png",
+      "anchor": [
+        160,
+        252
+      ],
+      "role": "desk-talk-45"
+    },
+    {
+      "file": "bramble_talk_46.png",
+      "anchor": [
+        160,
+        252
+      ],
+      "role": "desk-talk-46"
+    },
+    {
+      "file": "bramble_talk_47.png",
+      "anchor": [
+        160,
+        252
+      ],
+      "role": "desk-talk-47"
+    },
+    {
+      "file": "bramble_talk_48.png",
+      "anchor": [
+        160,
+        252
+      ],
+      "role": "desk-talk-48"
     }
   ],
-  "approval_state": "provisional-production-pass"
+  "approval_state": "manual-plate-desk-clerk-built",
+  "source": "tools/build_bramble_desk_clerk_frames.py + C:/Users/KyleB/OneDrive/Pictures/Lost Animation PNGS/Bramble1-6.png"
 }

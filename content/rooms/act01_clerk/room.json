@@ -1,0 +1,74 @@
+{
+  "id": "act01_clerk",
+  "display_name": "Lost & Found Desk",
+  "native_size": [1280, 720],
+  "background": "ags/room1/background/clerk.png",
+  "walkable_polygon": [[40, 540], [1218, 540], [1230, 690], [40, 690]],
+  "entry_points": {
+    "from_discovery": [120, 620],
+    "from_gate": [1120, 620]
+  },
+  "exits": [
+    {
+      "id": "to_discovery",
+      "to": "act01_discovery",
+      "edge": "left",
+      "region": [[0, 500], [120, 500], [120, 720], [0, 720]],
+      "walk_to": [140, 620],
+      "destination_entry": "from_clerk",
+      "exit_animation": "walk_off_left",
+      "entry_animation": "walk_in_right"
+    },
+    {
+      "id": "to_gate",
+      "to": "act01_gate",
+      "edge": "right",
+      "region": [[1160, 500], [1280, 500], [1280, 720], [1160, 720]],
+      "walk_to": [1120, 620],
+      "destination_entry": "from_clerk",
+      "exit_animation": "walk_off_right",
+      "entry_animation": "walk_in_left"
+    }
+  ],
+  "walk_behinds": [
+    {
+      "id": "desk",
+      "baseline_y": 488,
+      "notes": "Bramble registers low behind the painted desk; only head and hands clear the counter."
+    }
+  ],
+  "actors": [
+    {
+      "id": "bramble",
+      "anchor": [610, 487],
+      "scale": 0.85,
+      "default_state": "idle"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "bramble",
+      "name": "Bramble",
+      "shape": [[450, 230], [760, 230], [760, 505], [450, 505]],
+      "walk_to": [610, 620],
+      "essential": true,
+      "talk_lines": ["act01-017-bramble-greeting", "act01-022-bramble-teach-verbs", "act01-025-bramble-quest-lead", "act01-031-bramble-toll-hint"]
+    },
+    {
+      "id": "wall_note",
+      "name": "Do Not Remove Note",
+      "shape": [[120, 120], [290, 120], [290, 210], [120, 210]],
+      "walk_to": [230, 620],
+      "essential": false,
+      "look_lines": ["act01-011-pip-signinlog-examine"]
+    },
+    {
+      "id": "sign_in_log",
+      "name": "Sign-in Log",
+      "shape": [[520, 350], [705, 350], [705, 430], [520, 430]],
+      "walk_to": [600, 620],
+      "essential": false,
+      "look_lines": ["act01-011-pip-signinlog-examine"]
+    }
+  ]
+}

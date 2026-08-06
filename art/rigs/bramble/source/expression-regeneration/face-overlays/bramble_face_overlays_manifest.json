@@ -1,0 +1,1005 @@
+{
+  "source_dir": "art/rigs/bramble/source/expression-regeneration/locked-sliced",
+  "output_dir": "art/rigs/bramble/source/expression-regeneration/face-overlays",
+  "face_box": [
+    82,
+    204,
+    284,
+    382
+  ],
+  "search_box": [
+    70,
+    190,
+    292,
+    390
+  ],
+  "rigid_box": [
+    55,
+    150,
+    315,
+    385
+  ],
+  "target_anchor": [
+    181,
+    287
+  ],
+  "frame_count": 6,
+  "frames": [
+    {
+      "name": "neutral",
+      "source_anchor": [
+        222.391,
+        290.91
+      ],
+      "neutral_anchor": [
+        222.391,
+        290.91
+      ],
+      "transform": {
+        "dx": 0,
+        "dy": 0,
+        "rotate": 0,
+        "scale": 1,
+        "silhouette_score": 0.0,
+        "measured_dx_not_applied": 0,
+        "measured_dy_not_applied": 0
+      },
+      "face_plate": "art/rigs/bramble/source/expression-regeneration/face-overlays/bramble_face_neutral.png",
+      "full_plate": "art/rigs/bramble/source/expression-regeneration/face-overlays/bramble_face_neutral_full.png",
+      "delta_mask": "art/rigs/bramble/source/expression-regeneration/face-overlays/bramble_face_neutral_mask.png"
+    },
+    {
+      "name": "blink",
+      "source_anchor": [
+        222.248,
+        289.761
+      ],
+      "neutral_anchor": [
+        222.391,
+        290.91
+      ],
+      "transform": {
+        "dx": 0,
+        "dy": 0,
+        "rotate": 0,
+        "scale": 1,
+        "silhouette_score": 0.0145,
+        "measured_dx_not_applied": -3,
+        "measured_dy_not_applied": 0
+      },
+      "face_plate": "art/rigs/bramble/source/expression-regeneration/face-overlays/bramble_face_blink.png",
+      "full_plate": "art/rigs/bramble/source/expression-regeneration/face-overlays/bramble_face_blink_full.png",
+      "delta_mask": "art/rigs/bramble/source/expression-regeneration/face-overlays/bramble_face_blink_mask.png"
+    },
+    {
+      "name": "small_open",
+      "source_anchor": [
+        218.459,
+        289.291
+      ],
+      "neutral_anchor": [
+        222.391,
+        290.91
+      ],
+      "transform": {
+        "dx": 0,
+        "dy": 0,
+        "rotate": 0,
+        "scale": 1,
+        "silhouette_score": 0.0149,
+        "measured_dx_not_applied": 3,
+        "measured_dy_not_applied": 1
+      },
+      "face_plate": "art/rigs/bramble/source/expression-regeneration/face-overlays/bramble_face_small_open.png",
+      "full_plate": "art/rigs/bramble/source/expression-regeneration/face-overlays/bramble_face_small_open_full.png",
+      "delta_mask": "art/rigs/bramble/source/expression-regeneration/face-overlays/bramble_face_small_open_mask.png"
+    },
+    {
+      "name": "wide_open",
+      "source_anchor": [
+        214.859,
+        289.533
+      ],
+      "neutral_anchor": [
+        222.391,
+        290.91
+      ],
+      "transform": {
+        "dx": 0,
+        "dy": 0,
+        "rotate": 0,
+        "scale": 1,
+        "silhouette_score": 0.015,
+        "measured_dx_not_applied": 8,
+        "measured_dy_not_applied": 1
+      },
+      "face_plate": "art/rigs/bramble/source/expression-regeneration/face-overlays/bramble_face_wide_open.png",
+      "full_plate": "art/rigs/bramble/source/expression-regeneration/face-overlays/bramble_face_wide_open_full.png",
+      "delta_mask": "art/rigs/bramble/source/expression-regeneration/face-overlays/bramble_face_wide_open_mask.png"
+    },
+    {
+      "name": "skeptical",
+      "source_anchor": [
+        210.8,
+        290.431
+      ],
+      "neutral_anchor": [
+        222.391,
+        290.91
+      ],
+      "transform": {
+        "dx": 0,
+        "dy": 0,
+        "rotate": 0,
+        "scale": 1,
+        "silhouette_score": 0.0158,
+        "measured_dx_not_applied": 14,
+        "measured_dy_not_applied": 0
+      },
+      "face_plate": "art/rigs/bramble/source/expression-regeneration/face-overlays/bramble_face_skeptical.png",
+      "full_plate": "art/rigs/bramble/source/expression-regeneration/face-overlays/bramble_face_skeptical_full.png",
+      "delta_mask": "art/rigs/bramble/source/expression-regeneration/face-overlays/bramble_face_skeptical_mask.png"
+    },
+    {
+      "name": "pleased",
+      "source_anchor": [
+        215.043,
+        290.647
+      ],
+      "neutral_anchor": [
+        222.391,
+        290.91
+      ],
+      "transform": {
+        "dx": 0,
+        "dy": 0,
+        "rotate": 0,
+        "scale": 1,
+        "silhouette_score": 0.0044,
+        "measured_dx_not_applied": 12,
+        "measured_dy_not_applied": 1
+      },
+      "face_plate": "art/rigs/bramble/source/expression-regeneration/face-overlays/bramble_face_pleased.png",
+      "full_plate": "art/rigs/bramble/source/expression-regeneration/face-overlays/bramble_face_pleased_full.png",
+      "delta_mask": "art/rigs/bramble/source/expression-regeneration/face-overlays/bramble_face_pleased_mask.png"
+    }
+  ],
+  "proof": {
+    "locked_body_contact": "art/rigs/bramble/source/expression-regeneration/face-overlays/proof/bramble_face_overlay_locked_body_contact.png",
+    "locked_body_preview": "art/rigs/bramble/source/expression-regeneration/face-overlays/proof/bramble_face_overlay_locked_body_preview.gif"
+  },
+  "acting_sequence": [
+    {
+      "index": 0,
+      "from": "neutral",
+      "to": "neutral",
+      "t": 0.0,
+      "note": "settled watch"
+    },
+    {
+      "index": 1,
+      "from": "neutral",
+      "to": "neutral",
+      "t": 0.023,
+      "note": "settled watch"
+    },
+    {
+      "index": 2,
+      "from": "neutral",
+      "to": "neutral",
+      "t": 0.087,
+      "note": "settled watch"
+    },
+    {
+      "index": 3,
+      "from": "neutral",
+      "to": "neutral",
+      "t": 0.183,
+      "note": "settled watch"
+    },
+    {
+      "index": 4,
+      "from": "neutral",
+      "to": "neutral",
+      "t": 0.301,
+      "note": "settled watch"
+    },
+    {
+      "index": 5,
+      "from": "neutral",
+      "to": "neutral",
+      "t": 0.432,
+      "note": "settled watch"
+    },
+    {
+      "index": 6,
+      "from": "neutral",
+      "to": "neutral",
+      "t": 0.568,
+      "note": "settled watch"
+    },
+    {
+      "index": 7,
+      "from": "neutral",
+      "to": "neutral",
+      "t": 0.699,
+      "note": "settled watch"
+    },
+    {
+      "index": 8,
+      "from": "neutral",
+      "to": "neutral",
+      "t": 0.817,
+      "note": "settled watch"
+    },
+    {
+      "index": 9,
+      "from": "neutral",
+      "to": "neutral",
+      "t": 0.913,
+      "note": "settled watch"
+    },
+    {
+      "index": 10,
+      "from": "neutral",
+      "to": "neutral",
+      "t": 0.977,
+      "note": "settled watch"
+    },
+    {
+      "index": 11,
+      "from": "neutral",
+      "to": "neutral",
+      "t": 1.0,
+      "note": "settled watch"
+    },
+    {
+      "index": 12,
+      "from": "neutral",
+      "to": "blink",
+      "t": 0.0,
+      "note": "blink close"
+    },
+    {
+      "index": 13,
+      "from": "neutral",
+      "to": "blink",
+      "t": 1.0,
+      "note": "blink close"
+    },
+    {
+      "index": 14,
+      "from": "blink",
+      "to": "neutral",
+      "t": 0.0,
+      "note": "blink reopen"
+    },
+    {
+      "index": 15,
+      "from": "blink",
+      "to": "neutral",
+      "t": 0.5,
+      "note": "blink reopen"
+    },
+    {
+      "index": 16,
+      "from": "blink",
+      "to": "neutral",
+      "t": 1.0,
+      "note": "blink reopen"
+    },
+    {
+      "index": 17,
+      "from": "neutral",
+      "to": "neutral",
+      "t": 0.0,
+      "note": "post-blink rest"
+    },
+    {
+      "index": 18,
+      "from": "neutral",
+      "to": "neutral",
+      "t": 0.104,
+      "note": "post-blink rest"
+    },
+    {
+      "index": 19,
+      "from": "neutral",
+      "to": "neutral",
+      "t": 0.352,
+      "note": "post-blink rest"
+    },
+    {
+      "index": 20,
+      "from": "neutral",
+      "to": "neutral",
+      "t": 0.648,
+      "note": "post-blink rest"
+    },
+    {
+      "index": 21,
+      "from": "neutral",
+      "to": "neutral",
+      "t": 0.896,
+      "note": "post-blink rest"
+    },
+    {
+      "index": 22,
+      "from": "neutral",
+      "to": "neutral",
+      "t": 1.0,
+      "note": "post-blink rest"
+    },
+    {
+      "index": 23,
+      "from": "neutral",
+      "to": "skeptical",
+      "t": 0.0,
+      "note": "brow decision"
+    },
+    {
+      "index": 24,
+      "from": "neutral",
+      "to": "skeptical",
+      "t": 0.074,
+      "note": "brow decision"
+    },
+    {
+      "index": 25,
+      "from": "neutral",
+      "to": "skeptical",
+      "t": 0.259,
+      "note": "brow decision"
+    },
+    {
+      "index": 26,
+      "from": "neutral",
+      "to": "skeptical",
+      "t": 0.5,
+      "note": "brow decision"
+    },
+    {
+      "index": 27,
+      "from": "neutral",
+      "to": "skeptical",
+      "t": 0.741,
+      "note": "brow decision"
+    },
+    {
+      "index": 28,
+      "from": "neutral",
+      "to": "skeptical",
+      "t": 0.926,
+      "note": "brow decision"
+    },
+    {
+      "index": 29,
+      "from": "neutral",
+      "to": "skeptical",
+      "t": 1.0,
+      "note": "brow decision"
+    },
+    {
+      "index": 30,
+      "from": "skeptical",
+      "to": "skeptical",
+      "t": 0.0,
+      "note": "skeptical hold"
+    },
+    {
+      "index": 31,
+      "from": "skeptical",
+      "to": "skeptical",
+      "t": 0.017,
+      "note": "skeptical hold"
+    },
+    {
+      "index": 32,
+      "from": "skeptical",
+      "to": "skeptical",
+      "t": 0.064,
+      "note": "skeptical hold"
+    },
+    {
+      "index": 33,
+      "from": "skeptical",
+      "to": "skeptical",
+      "t": 0.135,
+      "note": "skeptical hold"
+    },
+    {
+      "index": 34,
+      "from": "skeptical",
+      "to": "skeptical",
+      "t": 0.226,
+      "note": "skeptical hold"
+    },
+    {
+      "index": 35,
+      "from": "skeptical",
+      "to": "skeptical",
+      "t": 0.33,
+      "note": "skeptical hold"
+    },
+    {
+      "index": 36,
+      "from": "skeptical",
+      "to": "skeptical",
+      "t": 0.442,
+      "note": "skeptical hold"
+    },
+    {
+      "index": 37,
+      "from": "skeptical",
+      "to": "skeptical",
+      "t": 0.558,
+      "note": "skeptical hold"
+    },
+    {
+      "index": 38,
+      "from": "skeptical",
+      "to": "skeptical",
+      "t": 0.67,
+      "note": "skeptical hold"
+    },
+    {
+      "index": 39,
+      "from": "skeptical",
+      "to": "skeptical",
+      "t": 0.774,
+      "note": "skeptical hold"
+    },
+    {
+      "index": 40,
+      "from": "skeptical",
+      "to": "skeptical",
+      "t": 0.865,
+      "note": "skeptical hold"
+    },
+    {
+      "index": 41,
+      "from": "skeptical",
+      "to": "skeptical",
+      "t": 0.936,
+      "note": "skeptical hold"
+    },
+    {
+      "index": 42,
+      "from": "skeptical",
+      "to": "skeptical",
+      "t": 0.983,
+      "note": "skeptical hold"
+    },
+    {
+      "index": 43,
+      "from": "skeptical",
+      "to": "skeptical",
+      "t": 1.0,
+      "note": "skeptical hold"
+    },
+    {
+      "index": 44,
+      "from": "skeptical",
+      "to": "small_open",
+      "t": 0.0,
+      "note": "small breath before speech"
+    },
+    {
+      "index": 45,
+      "from": "skeptical",
+      "to": "small_open",
+      "t": 0.104,
+      "note": "small breath before speech"
+    },
+    {
+      "index": 46,
+      "from": "skeptical",
+      "to": "small_open",
+      "t": 0.352,
+      "note": "small breath before speech"
+    },
+    {
+      "index": 47,
+      "from": "skeptical",
+      "to": "small_open",
+      "t": 0.648,
+      "note": "small breath before speech"
+    },
+    {
+      "index": 48,
+      "from": "skeptical",
+      "to": "small_open",
+      "t": 0.896,
+      "note": "small breath before speech"
+    },
+    {
+      "index": 49,
+      "from": "skeptical",
+      "to": "small_open",
+      "t": 1.0,
+      "note": "small breath before speech"
+    },
+    {
+      "index": 50,
+      "from": "small_open",
+      "to": "small_open",
+      "t": 0.0,
+      "note": "small-open hold"
+    },
+    {
+      "index": 51,
+      "from": "small_open",
+      "to": "small_open",
+      "t": 0.055,
+      "note": "small-open hold"
+    },
+    {
+      "index": 52,
+      "from": "small_open",
+      "to": "small_open",
+      "t": 0.198,
+      "note": "small-open hold"
+    },
+    {
+      "index": 53,
+      "from": "small_open",
+      "to": "small_open",
+      "t": 0.394,
+      "note": "small-open hold"
+    },
+    {
+      "index": 54,
+      "from": "small_open",
+      "to": "small_open",
+      "t": 0.606,
+      "note": "small-open hold"
+    },
+    {
+      "index": 55,
+      "from": "small_open",
+      "to": "small_open",
+      "t": 0.802,
+      "note": "small-open hold"
+    },
+    {
+      "index": 56,
+      "from": "small_open",
+      "to": "small_open",
+      "t": 0.945,
+      "note": "small-open hold"
+    },
+    {
+      "index": 57,
+      "from": "small_open",
+      "to": "small_open",
+      "t": 1.0,
+      "note": "small-open hold"
+    },
+    {
+      "index": 58,
+      "from": "small_open",
+      "to": "neutral",
+      "t": 0.0,
+      "note": "mouth close"
+    },
+    {
+      "index": 59,
+      "from": "small_open",
+      "to": "neutral",
+      "t": 0.156,
+      "note": "mouth close"
+    },
+    {
+      "index": 60,
+      "from": "small_open",
+      "to": "neutral",
+      "t": 0.5,
+      "note": "mouth close"
+    },
+    {
+      "index": 61,
+      "from": "small_open",
+      "to": "neutral",
+      "t": 0.844,
+      "note": "mouth close"
+    },
+    {
+      "index": 62,
+      "from": "small_open",
+      "to": "neutral",
+      "t": 1.0,
+      "note": "mouth close"
+    },
+    {
+      "index": 63,
+      "from": "neutral",
+      "to": "neutral",
+      "t": 0.0,
+      "note": "listen rest"
+    },
+    {
+      "index": 64,
+      "from": "neutral",
+      "to": "neutral",
+      "t": 0.156,
+      "note": "listen rest"
+    },
+    {
+      "index": 65,
+      "from": "neutral",
+      "to": "neutral",
+      "t": 0.5,
+      "note": "listen rest"
+    },
+    {
+      "index": 66,
+      "from": "neutral",
+      "to": "neutral",
+      "t": 0.844,
+      "note": "listen rest"
+    },
+    {
+      "index": 67,
+      "from": "neutral",
+      "to": "neutral",
+      "t": 1.0,
+      "note": "listen rest"
+    },
+    {
+      "index": 68,
+      "from": "neutral",
+      "to": "pleased",
+      "t": 0.0,
+      "note": "pleased realization"
+    },
+    {
+      "index": 69,
+      "from": "neutral",
+      "to": "pleased",
+      "t": 0.055,
+      "note": "pleased realization"
+    },
+    {
+      "index": 70,
+      "from": "neutral",
+      "to": "pleased",
+      "t": 0.198,
+      "note": "pleased realization"
+    },
+    {
+      "index": 71,
+      "from": "neutral",
+      "to": "pleased",
+      "t": 0.394,
+      "note": "pleased realization"
+    },
+    {
+      "index": 72,
+      "from": "neutral",
+      "to": "pleased",
+      "t": 0.606,
+      "note": "pleased realization"
+    },
+    {
+      "index": 73,
+      "from": "neutral",
+      "to": "pleased",
+      "t": 0.802,
+      "note": "pleased realization"
+    },
+    {
+      "index": 74,
+      "from": "neutral",
+      "to": "pleased",
+      "t": 0.945,
+      "note": "pleased realization"
+    },
+    {
+      "index": 75,
+      "from": "neutral",
+      "to": "pleased",
+      "t": 1.0,
+      "note": "pleased realization"
+    },
+    {
+      "index": 76,
+      "from": "pleased",
+      "to": "pleased",
+      "t": 0.0,
+      "note": "pleased hold"
+    },
+    {
+      "index": 77,
+      "from": "pleased",
+      "to": "pleased",
+      "t": 0.017,
+      "note": "pleased hold"
+    },
+    {
+      "index": 78,
+      "from": "pleased",
+      "to": "pleased",
+      "t": 0.064,
+      "note": "pleased hold"
+    },
+    {
+      "index": 79,
+      "from": "pleased",
+      "to": "pleased",
+      "t": 0.135,
+      "note": "pleased hold"
+    },
+    {
+      "index": 80,
+      "from": "pleased",
+      "to": "pleased",
+      "t": 0.226,
+      "note": "pleased hold"
+    },
+    {
+      "index": 81,
+      "from": "pleased",
+      "to": "pleased",
+      "t": 0.33,
+      "note": "pleased hold"
+    },
+    {
+      "index": 82,
+      "from": "pleased",
+      "to": "pleased",
+      "t": 0.442,
+      "note": "pleased hold"
+    },
+    {
+      "index": 83,
+      "from": "pleased",
+      "to": "pleased",
+      "t": 0.558,
+      "note": "pleased hold"
+    },
+    {
+      "index": 84,
+      "from": "pleased",
+      "to": "pleased",
+      "t": 0.67,
+      "note": "pleased hold"
+    },
+    {
+      "index": 85,
+      "from": "pleased",
+      "to": "pleased",
+      "t": 0.774,
+      "note": "pleased hold"
+    },
+    {
+      "index": 86,
+      "from": "pleased",
+      "to": "pleased",
+      "t": 0.865,
+      "note": "pleased hold"
+    },
+    {
+      "index": 87,
+      "from": "pleased",
+      "to": "pleased",
+      "t": 0.936,
+      "note": "pleased hold"
+    },
+    {
+      "index": 88,
+      "from": "pleased",
+      "to": "pleased",
+      "t": 0.983,
+      "note": "pleased hold"
+    },
+    {
+      "index": 89,
+      "from": "pleased",
+      "to": "pleased",
+      "t": 1.0,
+      "note": "pleased hold"
+    },
+    {
+      "index": 90,
+      "from": "pleased",
+      "to": "wide_open",
+      "t": 0.0,
+      "note": "little surprised aside"
+    },
+    {
+      "index": 91,
+      "from": "pleased",
+      "to": "wide_open",
+      "t": 0.259,
+      "note": "little surprised aside"
+    },
+    {
+      "index": 92,
+      "from": "pleased",
+      "to": "wide_open",
+      "t": 0.741,
+      "note": "little surprised aside"
+    },
+    {
+      "index": 93,
+      "from": "pleased",
+      "to": "wide_open",
+      "t": 1.0,
+      "note": "little surprised aside"
+    },
+    {
+      "index": 94,
+      "from": "wide_open",
+      "to": "wide_open",
+      "t": 0.0,
+      "note": "surprised hold"
+    },
+    {
+      "index": 95,
+      "from": "wide_open",
+      "to": "wide_open",
+      "t": 0.104,
+      "note": "surprised hold"
+    },
+    {
+      "index": 96,
+      "from": "wide_open",
+      "to": "wide_open",
+      "t": 0.352,
+      "note": "surprised hold"
+    },
+    {
+      "index": 97,
+      "from": "wide_open",
+      "to": "wide_open",
+      "t": 0.648,
+      "note": "surprised hold"
+    },
+    {
+      "index": 98,
+      "from": "wide_open",
+      "to": "wide_open",
+      "t": 0.896,
+      "note": "surprised hold"
+    },
+    {
+      "index": 99,
+      "from": "wide_open",
+      "to": "wide_open",
+      "t": 1.0,
+      "note": "surprised hold"
+    },
+    {
+      "index": 100,
+      "from": "wide_open",
+      "to": "neutral",
+      "t": 0.0,
+      "note": "settle back"
+    },
+    {
+      "index": 101,
+      "from": "wide_open",
+      "to": "neutral",
+      "t": 0.104,
+      "note": "settle back"
+    },
+    {
+      "index": 102,
+      "from": "wide_open",
+      "to": "neutral",
+      "t": 0.352,
+      "note": "settle back"
+    },
+    {
+      "index": 103,
+      "from": "wide_open",
+      "to": "neutral",
+      "t": 0.648,
+      "note": "settle back"
+    },
+    {
+      "index": 104,
+      "from": "wide_open",
+      "to": "neutral",
+      "t": 0.896,
+      "note": "settle back"
+    },
+    {
+      "index": 105,
+      "from": "wide_open",
+      "to": "neutral",
+      "t": 1.0,
+      "note": "settle back"
+    },
+    {
+      "index": 106,
+      "from": "neutral",
+      "to": "neutral",
+      "t": 0.0,
+      "note": "final neutral hold"
+    },
+    {
+      "index": 107,
+      "from": "neutral",
+      "to": "neutral",
+      "t": 0.023,
+      "note": "final neutral hold"
+    },
+    {
+      "index": 108,
+      "from": "neutral",
+      "to": "neutral",
+      "t": 0.087,
+      "note": "final neutral hold"
+    },
+    {
+      "index": 109,
+      "from": "neutral",
+      "to": "neutral",
+      "t": 0.183,
+      "note": "final neutral hold"
+    },
+    {
+      "index": 110,
+      "from": "neutral",
+      "to": "neutral",
+      "t": 0.301,
+      "note": "final neutral hold"
+    },
+    {
+      "index": 111,
+      "from": "neutral",
+      "to": "neutral",
+      "t": 0.432,
+      "note": "final neutral hold"
+    },
+    {
+      "index": 112,
+      "from": "neutral",
+      "to": "neutral",
+      "t": 0.568,
+      "note": "final neutral hold"
+    },
+    {
+      "index": 113,
+      "from": "neutral",
+      "to": "neutral",
+      "t": 0.699,
+      "note": "final neutral hold"
+    },
+    {
+      "index": 114,
+      "from": "neutral",
+      "to": "neutral",
+      "t": 0.817,
+      "note": "final neutral hold"
+    },
+    {
+      "index": 115,
+      "from": "neutral",
+      "to": "neutral",
+      "t": 0.913,
+      "note": "final neutral hold"
+    },
+    {
+      "index": 116,
+      "from": "neutral",
+      "to": "neutral",
+      "t": 0.977,
+      "note": "final neutral hold"
+    },
+    {
+      "index": 117,
+      "from": "neutral",
+      "to": "neutral",
+      "t": 1.0,
+      "note": "final neutral hold"
+    }
+  ],
+  "rules": [
+    "Only the fixed face aperture is retained from each regenerated expression.",
+    "Only pixels that differ from the neutral master are carried forward, like a soft lasso selection.",
+    "The rest of the body and unchanged facial structure is discarded, so source body drift does not affect runtime overlay.",
+    "No procedural eyes, mouth, hands, body motion, or generated replacement features are drawn by this tool."
+  ]
+}

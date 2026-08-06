@@ -1,0 +1,11 @@
+Trigger token: lu_bramble_clerk
+
+BRAMBLE - a dust-bunny Lost & Found clerk. Rounded grey-brown dust and lint body,
+expressive eyes, small clerk spectacles, tiny active hands, fussy and
+procedure-proud. Warm painterly storybook rendering, soft warm key light from
+upper-left. Same body mass, spectacles, hand design, proportions, and camera
+distance in every generation.
+
+Actor-only. Never draw the desk, chair, service bell, ledger, papers, cubbies,
+room background, UI, speech text, labels, cast shadows, or other characters in
+Bramble source strips.

@@ -1,0 +1,83 @@
+{
+  "source": "ags\\room3\\background\\annex-interior.source.png",
+  "output": "ags\\room3\\background\\annex-interior.png",
+  "source_size": [
+    1672,
+    941
+  ],
+  "target_size": [
+    1280,
+    720
+  ],
+  "crop_box": [
+    0,
+    0,
+    1672,
+    941
+  ],
+  "geometryAuthority": true,
+  "studiesReferenceOnly": true,
+  "gates": {
+    "objectPlacement": "pass",
+    "internalLighting": "pass",
+    "perspectiveEyeLevel": "pass",
+    "finishedSurfaces": "pass",
+    "dimensions": "pass"
+  },
+  "placements": {
+    "annex-interior": {
+      "x": 80,
+      "y": 90,
+      "width": 1060,
+      "height": 330
+    },
+    "marble-pile": {
+      "x": 315,
+      "y": 515,
+      "width": 485,
+      "height": 120
+    },
+    "marble-candidate-galaxy": {
+      "x": 330,
+      "y": 548,
+      "width": 80,
+      "height": 70
+    },
+    "marble-candidate-radiator": {
+      "x": 430,
+      "y": 548,
+      "width": 86,
+      "height": 70
+    },
+    "marble-candidate-scratch": {
+      "x": 536,
+      "y": 548,
+      "width": 80,
+      "height": 70
+    },
+    "marble-candidate-flawless": {
+      "x": 640,
+      "y": 548,
+      "width": 80,
+      "height": 70
+    },
+    "marble-candidate-correct": {
+      "x": 740,
+      "y": 548,
+      "width": 80,
+      "height": 70
+    },
+    "chairman-toggle": {
+      "x": 850,
+      "y": 420,
+      "width": 210,
+      "height": 220
+    }
+  },
+  "visualReview": {
+    "status": "intake",
+    "actorProofRequired": true,
+    "blockingNotes": "Treasure-hoard room works; split marble candidate hotspots after final prop choices.",
+    "finalApproval": "pending actor-scale composite proof"
+  }
+}

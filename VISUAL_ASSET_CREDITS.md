@@ -22,3 +22,8 @@ the registration and cast-scale gates documented in `docs/ANIMATION_BIBLE.md`.
 
 No third-party copyrighted characters, trademarks, or licensed source images were used
 as prompts or references in this pass.
+
+ComfyUI/LoRA production is scaffolded under `art/lora/` for future controlled
+character-identity training. No LoRA model has been trained or used in committed
+runtime art yet; generated outputs from that lane must be credited here when they
+enter production.

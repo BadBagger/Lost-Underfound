@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "act_scope": "act-01",
+  "rule": "none",
+  "note": "Act 1 has one fixed progression item. The Pajama Sam-style randomized item-hunt spine starts after a dedicated script/design pass.",
+  "quest_items": []
+}

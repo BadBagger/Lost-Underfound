@@ -1,0 +1,164 @@
+{
+  "act": 2,
+  "architecture": "discrete-screens",
+  "nativeSize": { "width": 1280, "height": 720 },
+  "start": { "screenId": "concourse", "entryPoint": "from-act1-gate" },
+  "actorReference": {
+    "pipHeight": 230,
+    "brambleMobileHeight": 195,
+    "scuttleHeight": 78,
+    "grommetHeight": 420,
+    "chairmanToggleHeight": 190
+  },
+  "screens": [
+    {
+      "id": "concourse",
+      "title": "Button Court - Exchange Concourse",
+      "background": "background/concourse.png",
+      "walkableArea": [[20, 512], [1260, 512], [1274, 682], [12, 682]],
+      "entryPoints": {
+        "from-act1-gate": { "x": 70, "y": 666, "facing": "right" },
+        "from-annex-threshold": { "x": 1160, "y": 666, "facing": "left" },
+        "from-audience-chamber": { "x": 1020, "y": 666, "facing": "left" }
+      },
+      "standingPositions": {
+        "pip-exchange-window": { "x": 230, "y": 656, "facing": "left" },
+        "pip-notice-board": { "x": 628, "y": 656, "facing": "up" },
+        "pip-filing-booth": { "x": 925, "y": 656, "facing": "right" },
+        "bramble-reunion": { "x": 405, "y": 650, "facing": "right" },
+        "scuttle-caught": { "x": 760, "y": 640, "facing": "left" }
+      },
+      "hotspots": [
+        { "id": "exchange-window", "rect": { "x": 78, "y": 235, "width": 270, "height": 230 } },
+        { "id": "notice-board", "rect": { "x": 500, "y": 112, "width": 310, "height": 252 } },
+        { "id": "filing-booth", "rect": { "x": 880, "y": 258, "width": 285, "height": 230 } },
+        { "id": "needle", "rect": { "x": 690, "y": 610, "width": 72, "height": 44 } },
+        { "id": "bramble", "rect": { "x": 330, "y": 420, "width": 155, "height": 225 } },
+        { "id": "scuttle", "rect": { "x": 720, "y": 576, "width": 95, "height": 78 } },
+        { "id": "founders-ledger", "rect": { "x": 455, "y": 405, "width": 145, "height": 82 } }
+      ],
+      "separateProps": [
+        { "id": "needle", "asset": "user_prop_art_curated/accepted_review_crops/needle.png", "x": 700, "y": 626 },
+        { "id": "founders-ledger", "asset": "user_prop_art_curated/accepted_review_crops/founders_ledger_closed.png", "x": 515, "y": 446 }
+      ],
+      "exits": [
+        {
+          "id": "to-annex-threshold",
+          "exitHotspot": { "x": 1238, "y": 500, "width": 42, "height": 182 },
+          "destinationScreenId": "annex-threshold",
+          "entryPoint": "from-concourse",
+          "exitAnimation": "walk-right-offscreen",
+          "entryAnimation": "walk-right-onscreen"
+        },
+        {
+          "id": "to-audience-chamber",
+          "exitHotspot": { "x": 1050, "y": 500, "width": 120, "height": 182 },
+          "destinationScreenId": "audience-chamber",
+          "entryPoint": "from-concourse",
+          "exitAnimation": "walk-right-into-alcove",
+          "entryAnimation": "walk-from-left"
+        }
+      ]
+    },
+    {
+      "id": "annex-threshold",
+      "title": "Button Court - Annex Threshold",
+      "background": "background/annex-threshold.png",
+      "walkableArea": [[16, 516], [1260, 516], [1274, 684], [12, 684]],
+      "walkBehinds": [
+        {
+          "id": "annex-door",
+          "rect": { "x": 720, "y": 145, "width": 360, "height": 430 },
+          "baseline": 612,
+          "note": "Grommet anchors in front of this threshold until trust is earned."
+        }
+      ],
+      "entryPoints": {
+        "from-concourse": { "x": 72, "y": 666, "facing": "right" },
+        "from-audience-chamber": { "x": 1020, "y": 666, "facing": "left" }
+      },
+      "standingPositions": {
+        "pip-grommet-talk": { "x": 605, "y": 652, "facing": "right" },
+        "grommet-guard": { "x": 865, "y": 618, "facing": "left" },
+        "bramble-witness": { "x": 455, "y": 650, "facing": "right" }
+      },
+      "hotspots": [
+        { "id": "grommet", "rect": { "x": 700, "y": 190, "width": 340, "height": 430 } },
+        { "id": "annex-threshold", "rect": { "x": 700, "y": 130, "width": 420, "height": 490 } },
+        { "id": "maintenance-advisory", "rect": { "x": 175, "y": 135, "width": 330, "height": 205 } },
+        { "id": "drafty-citizen-coat", "rect": { "x": 220, "y": 405, "width": 210, "height": 112 } }
+      ],
+      "separateProps": [
+        { "id": "threaded-needle", "asset": "user_prop_art_curated/accepted_review_crops/threaded_needle.png", "x": 622, "y": 604 }
+      ],
+      "exits": [
+        {
+          "id": "to-concourse",
+          "exitHotspot": { "x": 0, "y": 500, "width": 42, "height": 182 },
+          "destinationScreenId": "concourse",
+          "entryPoint": "from-annex-threshold",
+          "exitAnimation": "walk-left-offscreen",
+          "entryAnimation": "walk-left-onscreen"
+        },
+        {
+          "id": "to-audience-chamber",
+          "exitHotspot": { "x": 1148, "y": 500, "width": 122, "height": 182 },
+          "destinationScreenId": "audience-chamber",
+          "entryPoint": "from-annex-threshold",
+          "exitAnimation": "walk-right-offscreen",
+          "entryAnimation": "walk-from-left"
+        }
+      ]
+    },
+    {
+      "id": "audience-chamber",
+      "title": "Button Court - Audience Chamber",
+      "background": "background/audience-chamber.png",
+      "walkableArea": [[20, 515], [1264, 515], [1276, 684], [12, 684]],
+      "walkBehinds": [
+        {
+          "id": "toggle-desk",
+          "rect": { "x": 455, "y": 415, "width": 395, "height": 180 },
+          "baseline": 615,
+          "counterTopY": 415,
+          "note": "Solid desk/counter painted into background; Toggle appears above/behind it."
+        }
+      ],
+      "entryPoints": {
+        "from-concourse": { "x": 88, "y": 666, "facing": "right" },
+        "from-annex-threshold": { "x": 112, "y": 666, "facing": "right" }
+      },
+      "standingPositions": {
+        "pip-petition": { "x": 360, "y": 656, "facing": "right" },
+        "chairman-toggle": { "x": 652, "y": 438 },
+        "bramble-pushback": { "x": 246, "y": 650, "facing": "right" }
+      },
+      "hotspots": [
+        { "id": "chairman-toggle", "rect": { "x": 515, "y": 290, "width": 300, "height": 230 } },
+        { "id": "petition-counter", "rect": { "x": 430, "y": 390, "width": 460, "height": 230 } },
+        { "id": "stamp", "rect": { "x": 750, "y": 375, "width": 72, "height": 76 } },
+        { "id": "button-court-seal", "rect": { "x": 110, "y": 120, "width": 230, "height": 230 } }
+      ],
+      "separateProps": [
+        { "id": "intake-parcel", "asset": "user_prop_art_curated/accepted_review_crops/intake_parcel.png", "x": 438, "y": 474 }
+      ],
+      "exits": [
+        {
+          "id": "to-concourse",
+          "exitHotspot": { "x": 0, "y": 500, "width": 42, "height": 182 },
+          "destinationScreenId": "concourse",
+          "entryPoint": "from-audience-chamber",
+          "exitAnimation": "walk-left-offscreen",
+          "entryAnimation": "walk-left-onscreen"
+        }
+      ]
+    }
+  ],
+  "linkMap": [
+    { "from": "concourse:to-annex-threshold", "to": "annex-threshold:from-concourse" },
+    { "from": "annex-threshold:to-concourse", "to": "concourse:from-annex-threshold" },
+    { "from": "concourse:to-audience-chamber", "to": "audience-chamber:from-concourse" },
+    { "from": "audience-chamber:to-concourse", "to": "concourse:from-audience-chamber" },
+    { "from": "annex-threshold:to-audience-chamber", "to": "audience-chamber:from-annex-threshold" }
+  ]
+}

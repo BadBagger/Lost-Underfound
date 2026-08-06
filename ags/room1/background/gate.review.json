@@ -1,0 +1,47 @@
+{
+  "source": "ags\\room1\\background\\gate.source.png",
+  "output": "ags\\room1\\background\\gate.png",
+  "source_size": [
+    1672,
+    941
+  ],
+  "target_size": [
+    1280,
+    720
+  ],
+  "crop_box": [
+    0,
+    0,
+    1672,
+    941
+  ],
+  "geometryAuthority": true,
+  "studiesReferenceOnly": true,
+  "gates": {
+    "objectPlacement": "pass",
+    "internalLighting": "pass",
+    "perspectiveEyeLevel": "pass",
+    "finishedSurfaces": "pass",
+    "dimensions": "pass"
+  },
+  "placements": {
+    "cobweb-curtain": {
+      "x": 180,
+      "y": 246,
+      "width": 242,
+      "height": 320
+    },
+    "toll-gate": {
+      "x": 760,
+      "y": 302,
+      "width": 300,
+      "height": 300
+    }
+  },
+  "visualReview": {
+    "status": "intake",
+    "actorProofRequired": true,
+    "blockingNotes": "Gate and cobweb are clear; Bottlecap visibility behind bars and gate click path still require actor-scale proof.",
+    "finalApproval": "pending actor-scale composite proof"
+  }
+}

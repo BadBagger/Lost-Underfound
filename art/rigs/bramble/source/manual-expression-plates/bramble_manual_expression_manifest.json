@@ -1,0 +1,29 @@
+{
+  "source": "C:/Users/KyleB/OneDrive/Pictures/Lost Animation PNGS",
+  "frames": [
+    {
+      "name": "neutral",
+      "file": "art/rigs/bramble/source/manual-expression-plates/bramble_manual_neutral_alpha.png"
+    },
+    {
+      "name": "blink",
+      "file": "art/rigs/bramble/source/manual-expression-plates/bramble_manual_blink_alpha.png"
+    }
+  ],
+  "proof": {
+    "contact": "art/rigs/bramble/source/manual-expression-plates/proof/bramble_manual_blink_contact.png",
+    "preview": "art/rigs/bramble/source/manual-expression-plates/proof/bramble_manual_blink_preview.gif"
+  },
+  "note": "Manual full-body plates have stable registration and are preferable source for Bramble blink/idle.",
+  "blink_timing": {
+    "fps": 10,
+    "sequence_counts": {
+      "neutral_rest": 18,
+      "closing_inbetween": 1,
+      "closed": 2,
+      "opening_inbetween": 1,
+      "neutral_recover": 24
+    },
+    "note": "Fast blink with longer neutral rest; transition is intentionally snappy."
+  }
+}

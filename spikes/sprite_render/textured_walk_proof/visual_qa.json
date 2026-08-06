@@ -1,0 +1,434 @@
+{
+  "frames_dir": "spikes\\sprite_render\\textured_walk_proof",
+  "palette": "spikes\\sprite_render\\palette.json",
+  "frame_count": 12,
+  "ignored_palette_names": [
+    "hair",
+    "outline",
+    "room_dark"
+  ],
+  "visible_pixels": 70610,
+  "analyzed_pixels": 50120,
+  "ignored_pixels": {
+    "outline": 18296,
+    "room_dark": 2194
+  },
+  "mean_palette_coverage": 0.91365,
+  "dominant_color_excluding_ignored": "teal_belly",
+  "shares_excluding_ignored": {
+    "blue_costume": 0.16866,
+    "blue_costume_shadow": 0.04699,
+    "room_brown": 0.02067,
+    "teal_belly": 0.43689,
+    "teal_shadow": 0.1826,
+    "warm_highlight": 0.12608,
+    "warm_skin": 0.0104,
+    "warm_skin_shadow": 0.00772
+  },
+  "face_mode": "texture_only",
+  "warnings": [
+    {
+      "type": "target_color_low",
+      "color": "blue_costume",
+      "share": 0.16866,
+      "minimum": 0.25
+    },
+    {
+      "type": "forbidden_color_high",
+      "color": "warm_highlight",
+      "share": 0.12608,
+      "maximum": 0.01
+    },
+    {
+      "type": "missing_face_overlay",
+      "message": "production clips need a deterministic face overlay for eyes, blink, nose, and mouth visemes"
+    }
+  ],
+  "frames": [
+    {
+      "file": "textured_walk_R3_000.png",
+      "visible_pixels": 6134,
+      "analyzed_pixels": 4456,
+      "ignored_pixels": {
+        "outline": 1491,
+        "room_dark": 187
+      },
+      "palette_coverage": 0.9140484739676841,
+      "max_distance": 68.367,
+      "counts": {
+        "blue_costume": 707,
+        "blue_costume_shadow": 190,
+        "room_brown": 84,
+        "teal_belly": 2046,
+        "teal_shadow": 812,
+        "warm_highlight": 518,
+        "warm_skin": 57,
+        "warm_skin_shadow": 42
+      },
+      "shares": {
+        "blue_costume": 0.15866,
+        "blue_costume_shadow": 0.04264,
+        "room_brown": 0.01885,
+        "teal_belly": 0.45916,
+        "teal_shadow": 0.18223,
+        "warm_highlight": 0.11625,
+        "warm_skin": 0.01279,
+        "warm_skin_shadow": 0.00943
+      },
+      "dominant_color": "teal_belly"
+    },
+    {
+      "file": "textured_walk_R3_001.png",
+      "visible_pixels": 6009,
+      "analyzed_pixels": 4317,
+      "ignored_pixels": {
+        "outline": 1505,
+        "room_dark": 187
+      },
+      "palette_coverage": 0.9149872596710679,
+      "max_distance": 68.367,
+      "counts": {
+        "blue_costume": 653,
+        "blue_costume_shadow": 171,
+        "room_brown": 94,
+        "teal_belly": 1988,
+        "teal_shadow": 802,
+        "warm_highlight": 509,
+        "warm_skin": 62,
+        "warm_skin_shadow": 38
+      },
+      "shares": {
+        "blue_costume": 0.15126,
+        "blue_costume_shadow": 0.03961,
+        "room_brown": 0.02177,
+        "teal_belly": 0.4605,
+        "teal_shadow": 0.18578,
+        "warm_highlight": 0.11791,
+        "warm_skin": 0.01436,
+        "warm_skin_shadow": 0.0088
+      },
+      "dominant_color": "teal_belly"
+    },
+    {
+      "file": "textured_walk_R3_002.png",
+      "visible_pixels": 5875,
+      "analyzed_pixels": 4154,
+      "ignored_pixels": {
+        "outline": 1531,
+        "room_dark": 190
+      },
+      "palette_coverage": 0.9063553201733269,
+      "max_distance": 68.367,
+      "counts": {
+        "blue_costume": 734,
+        "blue_costume_shadow": 182,
+        "room_brown": 91,
+        "teal_belly": 1756,
+        "teal_shadow": 778,
+        "warm_highlight": 523,
+        "warm_skin": 50,
+        "warm_skin_shadow": 40
+      },
+      "shares": {
+        "blue_costume": 0.1767,
+        "blue_costume_shadow": 0.04381,
+        "room_brown": 0.02191,
+        "teal_belly": 0.42273,
+        "teal_shadow": 0.18729,
+        "warm_highlight": 0.1259,
+        "warm_skin": 0.01204,
+        "warm_skin_shadow": 0.00963
+      },
+      "dominant_color": "teal_belly"
+    },
+    {
+      "file": "textured_walk_R3_003.png",
+      "visible_pixels": 5881,
+      "analyzed_pixels": 4136,
+      "ignored_pixels": {
+        "outline": 1556,
+        "room_dark": 189
+      },
+      "palette_coverage": 0.906431334622824,
+      "max_distance": 67.417,
+      "counts": {
+        "blue_costume": 696,
+        "blue_costume_shadow": 175,
+        "room_brown": 98,
+        "teal_belly": 1760,
+        "teal_shadow": 771,
+        "warm_highlight": 539,
+        "warm_skin": 56,
+        "warm_skin_shadow": 41
+      },
+      "shares": {
+        "blue_costume": 0.16828,
+        "blue_costume_shadow": 0.04231,
+        "room_brown": 0.02369,
+        "teal_belly": 0.42553,
+        "teal_shadow": 0.18641,
+        "warm_highlight": 0.13032,
+        "warm_skin": 0.01354,
+        "warm_skin_shadow": 0.00991
+      },
+      "dominant_color": "teal_belly"
+    },
+    {
+      "file": "textured_walk_R3_004.png",
+      "visible_pixels": 5912,
+      "analyzed_pixels": 4177,
+      "ignored_pixels": {
+        "outline": 1541,
+        "room_dark": 194
+      },
+      "palette_coverage": 0.9126167105578166,
+      "max_distance": 67.015,
+      "counts": {
+        "blue_costume": 669,
+        "blue_costume_shadow": 172,
+        "room_brown": 94,
+        "teal_belly": 1842,
+        "teal_shadow": 759,
+        "warm_highlight": 560,
+        "warm_skin": 40,
+        "warm_skin_shadow": 41
+      },
+      "shares": {
+        "blue_costume": 0.16016,
+        "blue_costume_shadow": 0.04118,
+        "room_brown": 0.0225,
+        "teal_belly": 0.44099,
+        "teal_shadow": 0.18171,
+        "warm_highlight": 0.13407,
+        "warm_skin": 0.00958,
+        "warm_skin_shadow": 0.00982
+      },
+      "dominant_color": "teal_belly"
+    },
+    {
+      "file": "textured_walk_R3_005.png",
+      "visible_pixels": 5836,
+      "analyzed_pixels": 4261,
+      "ignored_pixels": {
+        "outline": 1413,
+        "room_dark": 162
+      },
+      "palette_coverage": 0.913165923492138,
+      "max_distance": 67.446,
+      "counts": {
+        "blue_costume": 606,
+        "blue_costume_shadow": 175,
+        "room_brown": 109,
+        "teal_belly": 1953,
+        "teal_shadow": 777,
+        "warm_highlight": 549,
+        "warm_skin": 46,
+        "warm_skin_shadow": 46
+      },
+      "shares": {
+        "blue_costume": 0.14222,
+        "blue_costume_shadow": 0.04107,
+        "room_brown": 0.02558,
+        "teal_belly": 0.45834,
+        "teal_shadow": 0.18235,
+        "warm_highlight": 0.12884,
+        "warm_skin": 0.0108,
+        "warm_skin_shadow": 0.0108
+      },
+      "dominant_color": "teal_belly"
+    },
+    {
+      "file": "textured_walk_R3_006.png",
+      "visible_pixels": 5793,
+      "analyzed_pixels": 4268,
+      "ignored_pixels": {
+        "outline": 1368,
+        "room_dark": 157
+      },
+      "palette_coverage": 0.9205716963448922,
+      "max_distance": 68.272,
+      "counts": {
+        "blue_costume": 664,
+        "blue_costume_shadow": 187,
+        "room_brown": 79,
+        "teal_belly": 2034,
+        "teal_shadow": 713,
+        "warm_highlight": 522,
+        "warm_skin": 38,
+        "warm_skin_shadow": 31
+      },
+      "shares": {
+        "blue_costume": 0.15558,
+        "blue_costume_shadow": 0.04381,
+        "room_brown": 0.01851,
+        "teal_belly": 0.47657,
+        "teal_shadow": 0.16706,
+        "warm_highlight": 0.12231,
+        "warm_skin": 0.0089,
+        "warm_skin_shadow": 0.00726
+      },
+      "dominant_color": "teal_belly"
+    },
+    {
+      "file": "textured_walk_R3_007.png",
+      "visible_pixels": 5811,
+      "analyzed_pixels": 4061,
+      "ignored_pixels": {
+        "outline": 1566,
+        "room_dark": 184
+      },
+      "palette_coverage": 0.9199704506279242,
+      "max_distance": 68.367,
+      "counts": {
+        "blue_costume": 744,
+        "blue_costume_shadow": 220,
+        "room_brown": 72,
+        "teal_belly": 1815,
+        "teal_shadow": 638,
+        "warm_highlight": 521,
+        "warm_skin": 35,
+        "warm_skin_shadow": 16
+      },
+      "shares": {
+        "blue_costume": 0.18321,
+        "blue_costume_shadow": 0.05417,
+        "room_brown": 0.01773,
+        "teal_belly": 0.44693,
+        "teal_shadow": 0.1571,
+        "warm_highlight": 0.12829,
+        "warm_skin": 0.00862,
+        "warm_skin_shadow": 0.00394
+      },
+      "dominant_color": "teal_belly"
+    },
+    {
+      "file": "textured_walk_R3_008.png",
+      "visible_pixels": 5824,
+      "analyzed_pixels": 4021,
+      "ignored_pixels": {
+        "outline": 1623,
+        "room_dark": 180
+      },
+      "palette_coverage": 0.9134543645859239,
+      "max_distance": 67.446,
+      "counts": {
+        "blue_costume": 797,
+        "blue_costume_shadow": 230,
+        "room_brown": 76,
+        "teal_belly": 1600,
+        "teal_shadow": 744,
+        "warm_highlight": 521,
+        "warm_skin": 36,
+        "warm_skin_shadow": 17
+      },
+      "shares": {
+        "blue_costume": 0.19821,
+        "blue_costume_shadow": 0.0572,
+        "room_brown": 0.0189,
+        "teal_belly": 0.39791,
+        "teal_shadow": 0.18503,
+        "warm_highlight": 0.12957,
+        "warm_skin": 0.00895,
+        "warm_skin_shadow": 0.00423
+      },
+      "dominant_color": "teal_belly"
+    },
+    {
+      "file": "textured_walk_R3_009.png",
+      "visible_pixels": 5761,
+      "analyzed_pixels": 3989,
+      "ignored_pixels": {
+        "outline": 1597,
+        "room_dark": 175
+      },
+      "palette_coverage": 0.9140135372273753,
+      "max_distance": 68.367,
+      "counts": {
+        "blue_costume": 769,
+        "blue_costume_shadow": 231,
+        "room_brown": 77,
+        "teal_belly": 1493,
+        "teal_shadow": 848,
+        "warm_highlight": 523,
+        "warm_skin": 27,
+        "warm_skin_shadow": 21
+      },
+      "shares": {
+        "blue_costume": 0.19278,
+        "blue_costume_shadow": 0.05791,
+        "room_brown": 0.0193,
+        "teal_belly": 0.37428,
+        "teal_shadow": 0.21258,
+        "warm_highlight": 0.13111,
+        "warm_skin": 0.00677,
+        "warm_skin_shadow": 0.00526
+      },
+      "dominant_color": "teal_belly"
+    },
+    {
+      "file": "textured_walk_R3_010.png",
+      "visible_pixels": 5788,
+      "analyzed_pixels": 4016,
+      "ignored_pixels": {
+        "outline": 1580,
+        "room_dark": 192
+      },
+      "palette_coverage": 0.9133466135458167,
+      "max_distance": 68.367,
+      "counts": {
+        "blue_costume": 726,
+        "blue_costume_shadow": 229,
+        "room_brown": 76,
+        "teal_belly": 1626,
+        "teal_shadow": 779,
+        "warm_highlight": 526,
+        "warm_skin": 32,
+        "warm_skin_shadow": 22
+      },
+      "shares": {
+        "blue_costume": 0.18078,
+        "blue_costume_shadow": 0.05702,
+        "room_brown": 0.01892,
+        "teal_belly": 0.40488,
+        "teal_shadow": 0.19397,
+        "warm_highlight": 0.13098,
+        "warm_skin": 0.00797,
+        "warm_skin_shadow": 0.00548
+      },
+      "dominant_color": "teal_belly"
+    },
+    {
+      "file": "textured_walk_R3_011.png",
+      "visible_pixels": 5986,
+      "analyzed_pixels": 4264,
+      "ignored_pixels": {
+        "outline": 1525,
+        "room_dark": 197
+      },
+      "palette_coverage": 0.9148686679174484,
+      "max_distance": 68.367,
+      "counts": {
+        "blue_costume": 688,
+        "blue_costume_shadow": 193,
+        "room_brown": 86,
+        "teal_belly": 1984,
+        "teal_shadow": 731,
+        "warm_highlight": 508,
+        "warm_skin": 42,
+        "warm_skin_shadow": 32
+      },
+      "shares": {
+        "blue_costume": 0.16135,
+        "blue_costume_shadow": 0.04526,
+        "room_brown": 0.02017,
+        "teal_belly": 0.46529,
+        "teal_shadow": 0.17144,
+        "warm_highlight": 0.11914,
+        "warm_skin": 0.00985,
+        "warm_skin_shadow": 0.0075
+      },
+      "dominant_color": "teal_belly"
+    }
+  ],
+  "passes": false
+}

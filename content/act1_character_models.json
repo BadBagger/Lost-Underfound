@@ -1,0 +1,171 @@
+{
+  "schema_version": 1,
+  "scope": "act1-runtime-character-models",
+  "source_of_truth": "art/engine-export",
+  "characters": {
+    "pip": {
+      "admission": "provisional-runtime",
+      "note": "Current Meshy-derived runtime package promoted from proof frames. Still provisional until visual approval, but no longer uses the old cutout model.",
+      "engine_manifest": "art/engine-export/pip/pip.engine.json",
+      "runtime_scale_ref": "ags/room1/geometry.json#/actorReference/pipHeight",
+      "states": {
+        "idle": {
+          "frames": 12,
+          "folder": "art/act01-production/characters/pip/meshy-current/idle",
+          "prefix": "pip_meshy_idle",
+          "pad": 2,
+          "fps": 5,
+          "loop": true
+        },
+        "walk": {
+          "frames": 12,
+          "folder": "art/act01-production/characters/pip/meshy-current/walk",
+          "prefix": "pip_meshy_walk",
+          "pad": 2,
+          "fps": 12,
+          "loop": true
+        },
+        "talk": {
+          "frames": 12,
+          "folder": "art/act01-production/characters/pip/meshy-current/talk",
+          "prefix": "pip_meshy_talk",
+          "pad": 2,
+          "fps": 12,
+          "loop": true
+        },
+        "inspect": {
+          "frames": 14,
+          "folder": "art/act01-production/characters/pip/meshy-current/inspect",
+          "prefix": "pip_meshy_inspect",
+          "pad": 2,
+          "fps": 12,
+          "loop": false
+        },
+        "dustReach": {
+          "frames": 14,
+          "folder": "art/act01-production/characters/pip/meshy-current/dust-reach",
+          "prefix": "pip_meshy_dust",
+          "pad": 2,
+          "fps": 12,
+          "loop": false
+        },
+        "tollPaid": {
+          "frames": 10,
+          "folder": "art/act01-production/characters/pip/meshy-current/toll-paid",
+          "prefix": "pip_meshy_toll",
+          "pad": 2,
+          "fps": 12,
+          "loop": false
+        }
+      }
+    },
+    "bramble": {
+      "admission": "finalized",
+      "note": "Only currently confirmed accurate finalized character model.",
+      "engine_manifest": "art/engine-export/bramble/bramble.engine.json",
+      "runtime_scale_ref": "ags/room1/geometry.json#/actorReference/brambleTalkingHeadHeight",
+      "states": {
+        "idle": {
+          "frames": 24,
+          "folder": "art/act01-production/characters/bramble/idle",
+          "prefix": "bramble_idle",
+          "pad": 2,
+          "fps": 12,
+          "loop": true
+        },
+        "talk": {
+          "frames": 48,
+          "folder": "art/act01-production/characters/bramble/talk",
+          "prefix": "bramble_talk",
+          "pad": 2,
+          "fps": 12,
+          "loop": true
+        },
+        "greeting": {
+          "frames": 36,
+          "folder": "art/act01-production/characters/bramble/greeting",
+          "prefix": "bramble_greeting",
+          "pad": 2,
+          "fps": 12,
+          "loop": false
+        },
+        "handoff": {
+          "frames": 36,
+          "folder": "art/act01-production/characters/bramble/handoff",
+          "prefix": "bramble_handoff",
+          "pad": 2,
+          "fps": 12,
+          "loop": false
+        },
+        "wrongAction": {
+          "frames": 30,
+          "folder": "art/act01-production/characters/bramble/wrong-action",
+          "prefix": "bramble_wrong",
+          "pad": 2,
+          "fps": 12,
+          "loop": false
+        }
+      },
+      "mouths": {
+        "folder": "art/act01-production/characters/bramble/mouths",
+        "prefix": "bramble_mouth",
+        "cues": ["X", "A", "B", "C", "D", "E", "F"]
+      }
+    },
+    "old-bottlecap": {
+      "admission": "provisional-runtime",
+      "note": "Current Meshy-derived model is wired for idle/refused/paid runtime states. Toll actions reuse the current-model stillness proof provisionally until bespoke toll animation is rendered.",
+      "engine_manifest": "art/engine-export/old-bottlecap/old-bottlecap.engine.json",
+      "runtime_scale_ref": "ags/room1/geometry.json#/actorReference/oldBottlecapHeight",
+      "states": {
+        "idle": {
+          "frames": 24,
+          "folder": "art/act01-production/characters/old-bottlecap/meshy-current/idle",
+          "prefix": "old_bottlecap_meshy_idle",
+          "pad": 2,
+          "fps": 12,
+          "loop": true
+        },
+        "tollRefused": {
+          "frames": 5,
+          "folder": "art/act01-production/characters/old-bottlecap/meshy-current/toll-refused",
+          "prefix": "old_bottlecap_meshy_refuse",
+          "pad": 2,
+          "fps": 8,
+          "loop": false
+        },
+        "tollPaid": {
+          "frames": 7,
+          "folder": "art/act01-production/characters/old-bottlecap/meshy-current/toll-paid",
+          "prefix": "old_bottlecap_meshy_paid",
+          "pad": 2,
+          "fps": 8,
+          "loop": false
+        }
+      }
+    },
+    "scuttle": {
+      "admission": "provisional-runtime",
+      "note": "Current Meshy-derived rig dash is wired for runtime. Still provisional until final visual approval.",
+      "engine_manifest": "art/engine-export/scuttle/scuttle.engine.json",
+      "runtime_scale_ref": "ags/room1/geometry.json#/actorReference/scuttleHeight",
+      "states": {
+        "dash": {
+          "frames": 6,
+          "folder": "art/act01-production/characters/scuttle/meshy-current/dash",
+          "prefix": "scuttle_meshy_dash",
+          "pad": 2,
+          "fps": 16,
+          "loop": false
+        }
+      }
+    }
+  },
+  "not_finalized": {
+    "pip": "Current Meshy runtime package is promoted from proof frames and must still receive visual approval before final admission.",
+    "old-bottlecap": "Current Meshy runtime package is promoted from proof frames; toll-specific acting is still provisional.",
+    "scuttle": "Current Meshy runtime package is promoted from proof frames and must still receive visual approval before final admission.",
+    "grommet": "Meshy/proof work exists, but no admitted art/engine-export package is present yet.",
+    "chairman-toggle": "Meshy/proof work exists, but no admitted art/engine-export package is present yet."
+  }
+}

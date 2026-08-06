@@ -1,0 +1,125 @@
+{
+    "sheet":  "pip-walk-meshy-current",
+    "actor_type":  "walk-plane",
+    "approval_state":  "provisional-meshy-runtime-proof",
+    "source":  "spikes/sprite_render/input/meshy_cast/pip/blue_monster_onesie_0806/walk_proof/out/pip_blue_onesie_walk_manifest.json",
+    "canvas":  {
+                   "width":  512,
+                   "height":  512
+               },
+    "anchor_contract":  "All promoted Meshy runtime frames share the fixed 512 canvas and bottom-center anchor from the sprite alignment pass.",
+    "frames":  [
+                   {
+                       "file":  "pip_meshy_walk_01.png",
+                       "anchor":  [
+                                      256,
+                                      486
+                                  ],
+                       "role":  "walk",
+                       "canonical":  false
+                   },
+                   {
+                       "file":  "pip_meshy_walk_02.png",
+                       "anchor":  [
+                                      256,
+                                      486
+                                  ],
+                       "role":  "walk",
+                       "canonical":  true,
+                       "scale_reference":  [
+                                               256,
+                                               486
+                                           ]
+                   },
+                   {
+                       "file":  "pip_meshy_walk_03.png",
+                       "anchor":  [
+                                      256,
+                                      486
+                                  ],
+                       "role":  "walk",
+                       "canonical":  false
+                   },
+                   {
+                       "file":  "pip_meshy_walk_04.png",
+                       "anchor":  [
+                                      256,
+                                      486
+                                  ],
+                       "role":  "walk",
+                       "canonical":  false
+                   },
+                   {
+                       "file":  "pip_meshy_walk_05.png",
+                       "anchor":  [
+                                      256,
+                                      486
+                                  ],
+                       "role":  "walk",
+                       "canonical":  false
+                   },
+                   {
+                       "file":  "pip_meshy_walk_06.png",
+                       "anchor":  [
+                                      256,
+                                      486
+                                  ],
+                       "role":  "walk",
+                       "canonical":  false
+                   },
+                   {
+                       "file":  "pip_meshy_walk_07.png",
+                       "anchor":  [
+                                      256,
+                                      486
+                                  ],
+                       "role":  "walk",
+                       "canonical":  false
+                   },
+                   {
+                       "file":  "pip_meshy_walk_08.png",
+                       "anchor":  [
+                                      256,
+                                      486
+                                  ],
+                       "role":  "walk",
+                       "canonical":  false
+                   },
+                   {
+                       "file":  "pip_meshy_walk_09.png",
+                       "anchor":  [
+                                      256,
+                                      486
+                                  ],
+                       "role":  "walk",
+                       "canonical":  false
+                   },
+                   {
+                       "file":  "pip_meshy_walk_10.png",
+                       "anchor":  [
+                                      256,
+                                      486
+                                  ],
+                       "role":  "walk",
+                       "canonical":  false
+                   },
+                   {
+                       "file":  "pip_meshy_walk_11.png",
+                       "anchor":  [
+                                      256,
+                                      486
+                                  ],
+                       "role":  "walk",
+                       "canonical":  false
+                   },
+                   {
+                       "file":  "pip_meshy_walk_12.png",
+                       "anchor":  [
+                                      256,
+                                      486
+                                  ],
+                       "role":  "walk",
+                       "canonical":  false
+                   }
+               ]
+}

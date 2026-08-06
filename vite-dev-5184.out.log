@@ -1,0 +1,66 @@
+
+> lost-underfound@0.1.0 dev
+> vite --host 127.0.0.1 --host 0.0.0.0 --port 5184
+
+
+  [32m[1mVITE[22m v7.3.6[39m  [2mready in [0m[1m152[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5184[22m/[39m
+  [32m➜[39m  [1mNetwork[22m: [36mhttp://10.45.0.24:[1m5184[22m/[39m
+  [32m➜[39m  [1mNetwork[22m: [36mhttp://100.119.186.57:[1m5184[22m/[39m
+  [32m➜[39m  [1mNetwork[22m: [36mhttp://192.168.1.236:[1m5184[22m/[39m
+[2m12:28:41 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mags/room1/geometry.json[22m
+[2m12:28:41 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/main.ts[22m
+[2m12:28:41 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mcontent/act1_character_models.json[22m
+[2m12:28:58 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mart/act01-production/characters/pip/meshy-current/talk/pip_meshy_talk_01.png[22m
+[2m12:28:58 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mart/act01-production/characters/pip/meshy-current/talk/pip_meshy_talk_02.png[22m
+[2m12:28:58 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mart/act01-production/characters/pip/meshy-current/talk/pip_meshy_talk_03.png[22m
+[2m12:28:58 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mart/act01-production/characters/pip/meshy-current/talk/pip_meshy_talk_04.png[22m
+[2m12:28:58 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mart/act01-production/characters/pip/meshy-current/talk/pip_meshy_talk_05.png[22m
+[2m12:28:58 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mart/act01-production/characters/pip/meshy-current/talk/pip_meshy_talk_06.png[22m
+[2m12:28:58 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mart/act01-production/characters/pip/meshy-current/talk/pip_meshy_talk_07.png[22m
+[2m12:28:58 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mart/act01-production/characters/pip/meshy-current/talk/pip_meshy_talk_08.png[22m
+[2m12:28:58 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mart/act01-production/characters/pip/meshy-current/talk/pip_meshy_talk_09.png[22m
+[2m12:28:58 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mart/act01-production/characters/pip/meshy-current/talk/pip_meshy_talk_10.png[22m
+[2m12:28:58 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mart/act01-production/characters/pip/meshy-current/talk/pip_meshy_talk_11.png[22m
+[2m12:28:58 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mart/act01-production/characters/pip/meshy-current/talk/pip_meshy_talk_12.png[22m
+[2m12:30:14 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mart/act01-production/characters/pip/meshy-current/talk/pip_meshy_talk_01.despill.png[22m
+[2m12:30:14 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mart/act01-production/characters/pip/meshy-current/talk/pip_meshy_talk_01.png[22m
+[2m12:30:14 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mart/act01-production/characters/pip/meshy-current/talk/pip_meshy_talk_01.despill.png[22m
+[2m12:30:14 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mart/act01-production/characters/pip/meshy-current/talk/pip_meshy_talk_02.despill.png[22m
+[2m12:30:14 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mart/act01-production/characters/pip/meshy-current/talk/pip_meshy_talk_02.png[22m
+[2m12:30:14 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mart/act01-production/characters/pip/meshy-current/talk/pip_meshy_talk_02.despill.png[22m
+[2m12:30:14 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mart/act01-production/characters/pip/meshy-current/talk/pip_meshy_talk_03.despill.png[22m
+[2m12:30:14 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mart/act01-production/characters/pip/meshy-current/talk/pip_meshy_talk_03.png[22m
+[2m12:30:15 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mart/act01-production/characters/pip/meshy-current/talk/pip_meshy_talk_03.despill.png[22m
+[2m12:30:15 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mart/act01-production/characters/pip/meshy-current/talk/pip_meshy_talk_04.despill.png[22m
+[2m12:30:15 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mart/act01-production/characters/pip/meshy-current/talk/pip_meshy_talk_04.png[22m
+[2m12:30:15 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mart/act01-production/characters/pip/meshy-current/talk/pip_meshy_talk_04.despill.png[22m
+[2m12:30:15 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mart/act01-production/characters/pip/meshy-current/talk/pip_meshy_talk_05.despill.png[22m
+[2m12:30:15 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mart/act01-production/characters/pip/meshy-current/talk/pip_meshy_talk_05.png[22m
+[2m12:30:15 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mart/act01-production/characters/pip/meshy-current/talk/pip_meshy_talk_05.despill.png[22m
+[2m12:30:15 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mart/act01-production/characters/pip/meshy-current/talk/pip_meshy_talk_06.despill.png[22m
+[2m12:30:15 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mart/act01-production/characters/pip/meshy-current/talk/pip_meshy_talk_06.png[22m
+[2m12:30:15 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mart/act01-production/characters/pip/meshy-current/talk/pip_meshy_talk_06.despill.png[22m
+[2m12:30:15 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mart/act01-production/characters/pip/meshy-current/talk/pip_meshy_talk_07.despill.png[22m
+[2m12:30:15 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mart/act01-production/characters/pip/meshy-current/talk/pip_meshy_talk_07.png[22m
+[2m12:30:15 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mart/act01-production/characters/pip/meshy-current/talk/pip_meshy_talk_07.despill.png[22m
+[2m12:30:15 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mart/act01-production/characters/pip/meshy-current/talk/pip_meshy_talk_08.despill.png[22m
+[2m12:30:15 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mart/act01-production/characters/pip/meshy-current/talk/pip_meshy_talk_08.png[22m
+[2m12:30:15 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mart/act01-production/characters/pip/meshy-current/talk/pip_meshy_talk_08.despill.png[22m
+[2m12:30:15 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mart/act01-production/characters/pip/meshy-current/talk/pip_meshy_talk_09.despill.png[22m
+[2m12:30:15 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mart/act01-production/characters/pip/meshy-current/talk/pip_meshy_talk_09.png[22m
+[2m12:30:16 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mart/act01-production/characters/pip/meshy-current/talk/pip_meshy_talk_09.despill.png[22m
+[2m12:30:16 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mart/act01-production/characters/pip/meshy-current/talk/pip_meshy_talk_10.despill.png[22m
+[2m12:30:16 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mart/act01-production/characters/pip/meshy-current/talk/pip_meshy_talk_10.png[22m
+[2m12:30:16 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mart/act01-production/characters/pip/meshy-current/talk/pip_meshy_talk_10.despill.png[22m
+[2m12:30:16 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mart/act01-production/characters/pip/meshy-current/talk/pip_meshy_talk_11.despill.png[22m
+[2m12:30:16 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mart/act01-production/characters/pip/meshy-current/talk/pip_meshy_talk_11.png[22m
+[2m12:30:16 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mart/act01-production/characters/pip/meshy-current/talk/pip_meshy_talk_11.despill.png[22m
+[2m12:30:16 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mart/act01-production/characters/pip/meshy-current/talk/pip_meshy_talk_12.despill.png[22m
+[2m12:30:16 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mart/act01-production/characters/pip/meshy-current/talk/pip_meshy_talk_12.png[22m
+[2m12:30:16 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mart/act01-production/characters/pip/meshy-current/talk/pip_meshy_talk_12.despill.png[22m
+[2m12:37:50 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/main.ts[22m
+[2m1:41:28 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/main.ts[22m
+[2m1:44:43 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/main.ts[22m
+[2m1:46:01 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/main.ts[22m

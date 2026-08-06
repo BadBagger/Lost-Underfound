@@ -1,0 +1,59 @@
+{
+  "source": "ags\\room1\\background\\discovery.source.png",
+  "output": "ags\\room1\\background\\discovery.png",
+  "source_size": [
+    1672,
+    941
+  ],
+  "target_size": [
+    1280,
+    720
+  ],
+  "crop_box": [
+    0,
+    0,
+    1672,
+    941
+  ],
+  "geometryAuthority": true,
+  "studiesReferenceOnly": true,
+  "gates": {
+    "objectPlacement": "pass",
+    "internalLighting": "pass",
+    "perspectiveEyeLevel": "pass",
+    "finishedSurfaces": "pass",
+    "dimensions": "pass"
+  },
+  "placements": {
+    "couch-ceiling": {
+      "x": 110,
+      "y": 30,
+      "width": 850,
+      "height": 150
+    },
+    "cubby-wall": {
+      "x": 146,
+      "y": 270,
+      "width": 330,
+      "height": 278
+    },
+    "dust-clump": {
+      "x": 610,
+      "y": 598,
+      "width": 128,
+      "height": 72
+    },
+    "popcorn-boulder": {
+      "x": 816,
+      "y": 530,
+      "width": 158,
+      "height": 124
+    }
+  },
+  "visualReview": {
+    "status": "intake",
+    "actorProofRequired": true,
+    "blockingNotes": "Discovery stage reads clearly; tighten dust and popcorn hotspots after final prop art and avoid extra button clutter.",
+    "finalApproval": "pending actor-scale composite proof"
+  }
+}

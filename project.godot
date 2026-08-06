@@ -1,0 +1,14 @@
+; Minimal production-project placeholder.
+; The playable prototype still lives in the Vite app until Godot/Popochiu are pinned.
+
+config_version=5
+
+[application]
+
+config/name="Lost & Underfound"
+run/main_scene="res://src/Main.tscn"
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"

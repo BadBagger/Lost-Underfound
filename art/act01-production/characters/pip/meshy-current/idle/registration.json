@@ -1,0 +1,125 @@
+{
+    "sheet":  "pip-idle-meshy-current",
+    "actor_type":  "walk-plane",
+    "approval_state":  "provisional-meshy-runtime-proof",
+    "source":  "spikes/sprite_render/input/meshy_cast/pip/blue_monster_onesie_0806/idle_proof/out/pip_blue_onesie_idle_manifest.json",
+    "canvas":  {
+                   "width":  512,
+                   "height":  512
+               },
+    "anchor_contract":  "All promoted Meshy runtime frames share the fixed 512 canvas and bottom-center anchor from the sprite alignment pass.",
+    "frames":  [
+                   {
+                       "file":  "pip_meshy_idle_01.png",
+                       "anchor":  [
+                                      256,
+                                      486
+                                  ],
+                       "role":  "idle",
+                       "canonical":  true,
+                       "scale_reference":  [
+                                               256,
+                                               126
+                                           ]
+                   },
+                   {
+                       "file":  "pip_meshy_idle_02.png",
+                       "anchor":  [
+                                      256,
+                                      486
+                                  ],
+                       "role":  "idle",
+                       "canonical":  false
+                   },
+                   {
+                       "file":  "pip_meshy_idle_03.png",
+                       "anchor":  [
+                                      256,
+                                      486
+                                  ],
+                       "role":  "idle",
+                       "canonical":  false
+                   },
+                   {
+                       "file":  "pip_meshy_idle_04.png",
+                       "anchor":  [
+                                      256,
+                                      486
+                                  ],
+                       "role":  "idle",
+                       "canonical":  false
+                   },
+                   {
+                       "file":  "pip_meshy_idle_05.png",
+                       "anchor":  [
+                                      256,
+                                      486
+                                  ],
+                       "role":  "idle",
+                       "canonical":  false
+                   },
+                   {
+                       "file":  "pip_meshy_idle_06.png",
+                       "anchor":  [
+                                      256,
+                                      486
+                                  ],
+                       "role":  "idle",
+                       "canonical":  false
+                   },
+                   {
+                       "file":  "pip_meshy_idle_07.png",
+                       "anchor":  [
+                                      256,
+                                      486
+                                  ],
+                       "role":  "idle",
+                       "canonical":  false
+                   },
+                   {
+                       "file":  "pip_meshy_idle_08.png",
+                       "anchor":  [
+                                      256,
+                                      486
+                                  ],
+                       "role":  "idle",
+                       "canonical":  false
+                   },
+                   {
+                       "file":  "pip_meshy_idle_09.png",
+                       "anchor":  [
+                                      256,
+                                      486
+                                  ],
+                       "role":  "idle",
+                       "canonical":  false
+                   },
+                   {
+                       "file":  "pip_meshy_idle_10.png",
+                       "anchor":  [
+                                      256,
+                                      486
+                                  ],
+                       "role":  "idle",
+                       "canonical":  false
+                   },
+                   {
+                       "file":  "pip_meshy_idle_11.png",
+                       "anchor":  [
+                                      256,
+                                      486
+                                  ],
+                       "role":  "idle",
+                       "canonical":  false
+                   },
+                   {
+                       "file":  "pip_meshy_idle_12.png",
+                       "anchor":  [
+                                      256,
+                                      486
+                                  ],
+                       "role":  "idle",
+                       "canonical":  false
+                   }
+               ]
+}

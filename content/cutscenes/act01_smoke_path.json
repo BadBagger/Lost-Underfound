@@ -1,0 +1,16 @@
+{
+  "id": "act01_smoke_path",
+  "description": "Minimal production-content walkthrough: find the button, learn the toll, pay Bottlecap, exit Act 1.",
+  "steps": [
+    {"cmd": "start", "room": "act01_discovery", "entry": "start"},
+    {"cmd": "interact", "room": "act01_discovery", "hotspot": "dust_clump", "verb": "use"},
+    {"cmd": "assert_inventory", "item": "button"},
+    {"cmd": "exit", "room": "act01_discovery", "exit": "to_clerk"},
+    {"cmd": "interact", "room": "act01_clerk", "hotspot": "bramble", "verb": "talk"},
+    {"cmd": "exit", "room": "act01_clerk", "exit": "to_gate"},
+    {"cmd": "interact", "room": "act01_gate", "hotspot": "toll_gate", "verb": "use", "item": "button"},
+    {"cmd": "assert_flag", "flag": "gate_open"},
+    {"cmd": "exit", "room": "act01_gate", "exit": "to_act02"},
+    {"cmd": "assert_terminal", "reason": "Acts 2 and 3 require script/design pass before production continues."}
+  ]
+}

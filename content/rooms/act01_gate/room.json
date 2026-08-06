@@ -1,0 +1,73 @@
+{
+  "id": "act01_gate",
+  "display_name": "The Toll Grate",
+  "native_size": [1280, 720],
+  "background": "ags/room1/background/gate.png",
+  "walkable_polygon": [[40, 540], [1218, 540], [1230, 690], [40, 690]],
+  "entry_points": {
+    "from_clerk": [130, 620],
+    "from_act02": [1050, 620]
+  },
+  "exits": [
+    {
+      "id": "to_clerk",
+      "to": "act01_clerk",
+      "edge": "left",
+      "region": [[0, 500], [120, 500], [120, 720], [0, 720]],
+      "walk_to": [140, 620],
+      "destination_entry": "from_gate",
+      "exit_animation": "walk_off_left",
+      "entry_animation": "walk_in_right"
+    },
+    {
+      "id": "to_act02",
+      "to": "act02_placeholder",
+      "edge": "right",
+      "requires_flags": ["gate_open"],
+      "region": [[1120, 420], [1280, 420], [1280, 720], [1120, 720]],
+      "walk_to": [1060, 620],
+      "destination_entry": "from_act01",
+      "exit_animation": "duck_through_gate",
+      "entry_animation": "none",
+      "terminal": true
+    }
+  ],
+  "walk_behinds": [
+    {
+      "id": "gate",
+      "baseline_y": 525,
+      "notes": "Bottlecap stands at the grate station; gate occlusion must not hide the whole actor."
+    }
+  ],
+  "actors": [
+    {
+      "id": "old_bottlecap",
+      "anchor": [880, 526],
+      "scale": 0.6,
+      "default_state": "idle"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "toll_gate",
+      "name": "Toll Gate",
+      "shape": [[740, 220], [1080, 220], [1080, 610], [740, 610]],
+      "walk_to": [820, 620],
+      "essential": true,
+      "look_lines": ["act01-037-pip-gate-examine"],
+      "use_item": "button",
+      "success_lines": ["act01-039-bottlecap-toll-accepted", "act01-040-bottlecap-toll-close", "act01-041-pip-lost-and-underfound-joke", "act01-042-bottlecap-go"],
+      "failure_lines": ["act01-038-bottlecap-no-toll"],
+      "sets_flags": ["gate_open"],
+      "consumes_items": ["button"]
+    },
+    {
+      "id": "cobweb_tunnel",
+      "name": "Cobweb Tunnel",
+      "shape": [[930, 115], [1230, 115], [1230, 520], [930, 520]],
+      "walk_to": [980, 620],
+      "essential": false,
+      "look_lines": ["act01-014-pip-cobweb-examine", "act01-015-scuttle-cameo-bark", "act01-016-pip-cobweb-reaction"]
+    }
+  ]
+}

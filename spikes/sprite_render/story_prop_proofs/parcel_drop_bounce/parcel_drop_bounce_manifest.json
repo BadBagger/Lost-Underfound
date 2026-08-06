@@ -1,0 +1,21 @@
+{
+  "name": "parcel_drop_bounce",
+  "frame_count": 8,
+  "fps": 12,
+  "canvas": [
+    256,
+    256
+  ],
+  "role": "isolated prop readability/timing proof; final painterly art must replace or paint over this source",
+  "notes": [
+    "falling",
+    "falling",
+    "pre-impact",
+    "squash impact",
+    "bounce up",
+    "settle rotate",
+    "settled",
+    "hold"
+  ],
+  "warnings": []
+}

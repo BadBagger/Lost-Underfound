@@ -1,0 +1,18 @@
+{
+  "background": "ags\\room1\\background\\clerk.png",
+  "frames_dir": "spikes\\sprite_render\\dialogue_otto_face_overlay",
+  "frame_count": 24,
+  "fps": 12,
+  "actor_height": 805,
+  "actor_position": {
+    "x": 875,
+    "bottom_y": 850
+  },
+  "speaker": "Otto",
+  "line": "Whoa. Okay. That is a lot of down there.",
+  "outputs": [
+    "dialogue_scene_preview.gif",
+    "dialogue_scene_contact.png"
+  ],
+  "purpose": "Mid-shot dialogue/cutscene proof for texture-bound 3D body plus 2D face-card acting."
+}

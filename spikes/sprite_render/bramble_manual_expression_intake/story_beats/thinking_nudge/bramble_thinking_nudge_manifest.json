@@ -1,0 +1,123 @@
+{
+  "name": "thinking_nudge",
+  "source": [
+    "C:\\Users\\KyleB\\OneDrive\\Pictures\\Lost Animation PNGS\\Bramble1.png",
+    "C:\\Users\\KyleB\\OneDrive\\Pictures\\Lost Animation PNGS\\Bramble2.png",
+    "C:\\Users\\KyleB\\OneDrive\\Pictures\\Lost Animation PNGS\\Bramble3.png",
+    "C:\\Users\\KyleB\\OneDrive\\Pictures\\Lost Animation PNGS\\Bramble4.png",
+    "C:\\Users\\KyleB\\OneDrive\\Pictures\\Lost Animation PNGS\\Bramble5.png",
+    "C:\\Users\\KyleB\\OneDrive\\Pictures\\Lost Animation PNGS\\Bramble6.png"
+  ],
+  "frame_count": 15,
+  "fps": 12,
+  "canvas": [
+    512,
+    512
+  ],
+  "anchor_canvas": [
+    256,
+    486
+  ],
+  "target_height": 410,
+  "body_policy": "Bramble1 is the fixed master body; other plates contribute only a feathered face patch.",
+  "generated_features": 0,
+  "timing_policy": "Held expression beats with a single quick 70% in-between on expression changes.",
+  "edge_policy": "RGBA resized through premultiplied alpha to prevent magenta source-background fringe.",
+  "timeline_expression_indices": [
+    0,
+    0,
+    2,
+    2,
+    2,
+    5,
+    5,
+    4,
+    4,
+    0,
+    0
+  ],
+  "face_mask_polygon": [
+    [
+      67,
+      98
+    ],
+    [
+      87,
+      80
+    ],
+    [
+      124,
+      69
+    ],
+    [
+      172,
+      70
+    ],
+    [
+      215,
+      83
+    ],
+    [
+      245,
+      111
+    ],
+    [
+      244,
+      148
+    ],
+    [
+      221,
+      178
+    ],
+    [
+      174,
+      190
+    ],
+    [
+      118,
+      189
+    ],
+    [
+      76,
+      172
+    ],
+    [
+      55,
+      140
+    ]
+  ],
+  "source_alignment": [
+    {
+      "source": "C:\\Users\\KyleB\\OneDrive\\Pictures\\Lost Animation PNGS\\Bramble1.png",
+      "dx": 0,
+      "dy": 0
+    },
+    {
+      "source": "C:\\Users\\KyleB\\OneDrive\\Pictures\\Lost Animation PNGS\\Bramble2.png",
+      "dx": 0,
+      "dy": 0
+    },
+    {
+      "source": "C:\\Users\\KyleB\\OneDrive\\Pictures\\Lost Animation PNGS\\Bramble3.png",
+      "dx": 0,
+      "dy": 0
+    },
+    {
+      "source": "C:\\Users\\KyleB\\OneDrive\\Pictures\\Lost Animation PNGS\\Bramble4.png",
+      "dx": 0,
+      "dy": 0
+    },
+    {
+      "source": "C:\\Users\\KyleB\\OneDrive\\Pictures\\Lost Animation PNGS\\Bramble5.png",
+      "dx": 0,
+      "dy": 0
+    },
+    {
+      "source": "C:\\Users\\KyleB\\OneDrive\\Pictures\\Lost Animation PNGS\\Bramble6.png",
+      "dx": 0,
+      "dy": 0
+    }
+  ],
+  "min_top_margin_px": 73,
+  "warnings": []
+}

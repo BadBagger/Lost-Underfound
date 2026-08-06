@@ -1,0 +1,156 @@
+{
+  "role": "generated replacement art for missing/bad-crop props",
+  "source_sheets": {
+    "marbles": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\generated_missing_prop_art\\source_sheets\\marble_candidates_generated.png",
+    "dust_cobweb_correct_marble": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\generated_missing_prop_art\\source_sheets\\dust_cobweb_correct_marble_generated.png",
+    "clean_cobweb_black_source": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\generated_missing_prop_art\\source_sheets\\cobweb_curtain_generated_black.png"
+  },
+  "items": [
+    {
+      "name": "marble_galaxy_final_candidate",
+      "source_box": [
+        0,
+        250,
+        310,
+        760
+      ],
+      "note": "wrong: galaxy swirl",
+      "path": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\generated_missing_prop_art\\sliced\\marble_galaxy_final_candidate.png",
+      "size": [
+        298,
+        322
+      ],
+      "alpha_policy": "magenta chroma-key review alpha; final admission still needs edge QA"
+    },
+    {
+      "name": "marble_radiator_tag_final_candidate",
+      "source_box": [
+        295,
+        230,
+        625,
+        800
+      ],
+      "note": "wrong: radiator tag",
+      "path": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\generated_missing_prop_art\\sliced\\marble_radiator_tag_final_candidate.png",
+      "size": [
+        315,
+        371
+      ],
+      "alpha_policy": "magenta chroma-key review alpha; final admission still needs edge QA"
+    },
+    {
+      "name": "marble_scratch_decoy_final_candidate",
+      "source_box": [
+        615,
+        265,
+        900,
+        765
+      ],
+      "note": "wrong: scratch/star-decoy mark",
+      "path": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\generated_missing_prop_art\\sliced\\marble_scratch_decoy_final_candidate.png",
+      "size": [
+        285,
+        322
+      ],
+      "alpha_policy": "magenta chroma-key review alpha; final admission still needs edge QA"
+    },
+    {
+      "name": "marble_flawless_final_candidate",
+      "source_box": [
+        890,
+        260,
+        1205,
+        760
+      ],
+      "note": "wrong: clear/flawless",
+      "path": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\generated_missing_prop_art\\sliced\\marble_flawless_final_candidate.png",
+      "size": [
+        303,
+        327
+      ],
+      "alpha_policy": "magenta chroma-key review alpha; final admission still needs edge QA"
+    },
+    {
+      "name": "marble_broken_decoy_final_candidate",
+      "source_box": [
+        1190,
+        285,
+        1536,
+        760
+      ],
+      "note": "wrong: broken shell/dust interior",
+      "path": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\generated_missing_prop_art\\sliced\\marble_broken_decoy_final_candidate.png",
+      "size": [
+        321,
+        329
+      ],
+      "alpha_policy": "magenta chroma-key review alpha; final admission still needs edge QA"
+    },
+    {
+      "name": "dust_button_hidden_final_candidate",
+      "source_box": [
+        0,
+        180,
+        475,
+        720
+      ],
+      "note": "dust clump with button hidden",
+      "path": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\generated_missing_prop_art\\sliced\\dust_button_hidden_final_candidate.png",
+      "size": [
+        449,
+        363
+      ],
+      "alpha_policy": "magenta chroma-key review alpha; final admission still needs edge QA"
+    },
+    {
+      "name": "dust_clump_open_final_candidate",
+      "source_box": [
+        450,
+        155,
+        900,
+        730
+      ],
+      "note": "disturbed hollow dust clump",
+      "path": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\generated_missing_prop_art\\sliced\\dust_clump_open_final_candidate.png",
+      "size": [
+        429,
+        398
+      ],
+      "alpha_policy": "magenta chroma-key review alpha; final admission still needs edge QA"
+    },
+    {
+      "name": "marble_correct_star_nick_final_candidate",
+      "source_box": [
+        1340,
+        175,
+        1831,
+        735
+      ],
+      "note": "correct Pip marble with lopsided star nick",
+      "path": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\generated_missing_prop_art\\sliced\\marble_correct_star_nick_final_candidate.png",
+      "size": [
+        375,
+        374
+      ],
+      "alpha_policy": "magenta chroma-key review alpha; final admission still needs edge QA"
+    },
+    {
+      "name": "cobweb_curtain_final_candidate",
+      "source_box": null,
+      "note": "clean regenerated cobweb curtain; extracted from black source to avoid magenta strand contamination",
+      "path": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\generated_missing_prop_art\\sliced\\cobweb_curtain_final_candidate.png",
+      "size": [
+        928,
+        1098
+      ],
+      "alpha_policy": "partial alpha extracted from black-background source; review over dark and light plates"
+    }
+  ],
+  "contact_sheet": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\generated_missing_prop_art\\generated_missing_props_contact.png",
+  "warnings": [
+    "Fifth marble from five-candidate sheet is a broken decoy, not the correct marble.",
+    "Correct star-nick Pip marble is sourced from the second generated sheet.",
+    "Cobweb uses partial alpha extracted from a black-background source; verify over light and dark plates before admission.",
+    "Dust clump candidates use a dust-only spill deletion pass; automatic magenta-like counts are zero, but fuzzy edges still need visual edge QA."
+  ]
+}

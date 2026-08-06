@@ -1,0 +1,4 @@
+Trigger token: lu_grommet_guardian
+
+GROMMET is deferred. Do not train or generate production sheets until Acts 2-3
+have a real script/design pass and an approved character model sheet.

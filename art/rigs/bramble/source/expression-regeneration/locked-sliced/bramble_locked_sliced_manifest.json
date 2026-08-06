@@ -1,0 +1,70 @@
+{
+  "source": "art/rigs/bramble/source/expression-regeneration/bramble_expression_sheet_6_locked_alpha.png",
+  "size": [
+    1774,
+    887
+  ],
+  "cell_width": 295,
+  "frames": [
+    {
+      "name": "neutral",
+      "source_cell": [
+        0,
+        0,
+        295,
+        887
+      ],
+      "file": "art/rigs/bramble/source/expression-regeneration/locked-sliced/bramble_expr_01_neutral.png"
+    },
+    {
+      "name": "blink",
+      "source_cell": [
+        295,
+        0,
+        590,
+        887
+      ],
+      "file": "art/rigs/bramble/source/expression-regeneration/locked-sliced/bramble_expr_02_blink.png"
+    },
+    {
+      "name": "small_open",
+      "source_cell": [
+        590,
+        0,
+        885,
+        887
+      ],
+      "file": "art/rigs/bramble/source/expression-regeneration/locked-sliced/bramble_expr_03_small_open.png"
+    },
+    {
+      "name": "wide_open",
+      "source_cell": [
+        885,
+        0,
+        1180,
+        887
+      ],
+      "file": "art/rigs/bramble/source/expression-regeneration/locked-sliced/bramble_expr_04_wide_open.png"
+    },
+    {
+      "name": "skeptical",
+      "source_cell": [
+        1180,
+        0,
+        1475,
+        887
+      ],
+      "file": "art/rigs/bramble/source/expression-regeneration/locked-sliced/bramble_expr_05_skeptical.png"
+    },
+    {
+      "name": "pleased",
+      "source_cell": [
+        1475,
+        0,
+        1774,
+        887
+      ],
+      "file": "art/rigs/bramble/source/expression-regeneration/locked-sliced/bramble_expr_06_pleased.png"
+    }
+  ]
+}

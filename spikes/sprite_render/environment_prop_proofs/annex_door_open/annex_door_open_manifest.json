@@ -1,0 +1,25 @@
+{
+  "name": "annex_door_open",
+  "frame_count": 12,
+  "fps": 12,
+  "canvas": [
+    512,
+    288
+  ],
+  "role": "timing proof only; final Annex door painting must replace this drawing",
+  "timing_notes": [
+    "closed hold",
+    "decision hold",
+    "clunk anticipation",
+    "first heavy move",
+    "mid swing",
+    "weight carries",
+    "near open",
+    "overshoot",
+    "settle back",
+    "open hold",
+    "open hold",
+    "open hold"
+  ],
+  "warnings": []
+}

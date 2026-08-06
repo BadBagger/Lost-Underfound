@@ -1,0 +1,251 @@
+{
+  "character": "bramble",
+  "trigger": "lu_bramble_clerk",
+  "canvas": [
+    1024,
+    1024
+  ],
+  "source_policy": "clean generated actor-only pink-background source sheets",
+  "frames": [
+    {
+      "file": "art/lora/datasets/bramble/bramble_001_source_01.png",
+      "caption": "art/lora/datasets/bramble/bramble_001_source_01.txt",
+      "source_sheet": "art/lora/source/bramble/bramble-clean-source-12.png",
+      "source_pose": 1,
+      "normalized_alpha_bbox": [
+        167,
+        102,
+        857,
+        922
+      ]
+    },
+    {
+      "file": "art/lora/datasets/bramble/bramble_002_source_02.png",
+      "caption": "art/lora/datasets/bramble/bramble_002_source_02.txt",
+      "source_sheet": "art/lora/source/bramble/bramble-clean-source-12.png",
+      "source_pose": 2,
+      "normalized_alpha_bbox": [
+        166,
+        102,
+        858,
+        922
+      ]
+    },
+    {
+      "file": "art/lora/datasets/bramble/bramble_003_source_03.png",
+      "caption": "art/lora/datasets/bramble/bramble_003_source_03.txt",
+      "source_sheet": "art/lora/source/bramble/bramble-clean-source-12.png",
+      "source_pose": 3,
+      "normalized_alpha_bbox": [
+        178,
+        102,
+        846,
+        922
+      ]
+    },
+    {
+      "file": "art/lora/datasets/bramble/bramble_004_source_04.png",
+      "caption": "art/lora/datasets/bramble/bramble_004_source_04.txt",
+      "source_sheet": "art/lora/source/bramble/bramble-clean-source-12.png",
+      "source_pose": 4,
+      "normalized_alpha_bbox": [
+        144,
+        102,
+        880,
+        922
+      ]
+    },
+    {
+      "file": "art/lora/datasets/bramble/bramble_005_source_05.png",
+      "caption": "art/lora/datasets/bramble/bramble_005_source_05.txt",
+      "source_sheet": "art/lora/source/bramble/bramble-clean-source-12.png",
+      "source_pose": 5,
+      "normalized_alpha_bbox": [
+        123,
+        102,
+        900,
+        922
+      ]
+    },
+    {
+      "file": "art/lora/datasets/bramble/bramble_006_source_06.png",
+      "caption": "art/lora/datasets/bramble/bramble_006_source_06.txt",
+      "source_sheet": "art/lora/source/bramble/bramble-clean-source-12.png",
+      "source_pose": 6,
+      "normalized_alpha_bbox": [
+        173,
+        102,
+        850,
+        922
+      ]
+    },
+    {
+      "file": "art/lora/datasets/bramble/bramble_007_source_07.png",
+      "caption": "art/lora/datasets/bramble/bramble_007_source_07.txt",
+      "source_sheet": "art/lora/source/bramble/bramble-clean-source-12.png",
+      "source_pose": 7,
+      "normalized_alpha_bbox": [
+        172,
+        102,
+        852,
+        922
+      ]
+    },
+    {
+      "file": "art/lora/datasets/bramble/bramble_008_source_08.png",
+      "caption": "art/lora/datasets/bramble/bramble_008_source_08.txt",
+      "source_sheet": "art/lora/source/bramble/bramble-clean-source-12.png",
+      "source_pose": 8,
+      "normalized_alpha_bbox": [
+        127,
+        102,
+        897,
+        922
+      ]
+    },
+    {
+      "file": "art/lora/datasets/bramble/bramble_009_source_09.png",
+      "caption": "art/lora/datasets/bramble/bramble_009_source_09.txt",
+      "source_sheet": "art/lora/source/bramble/bramble-clean-source-12.png",
+      "source_pose": 9,
+      "normalized_alpha_bbox": [
+        169,
+        102,
+        854,
+        922
+      ]
+    },
+    {
+      "file": "art/lora/datasets/bramble/bramble_010_source_10.png",
+      "caption": "art/lora/datasets/bramble/bramble_010_source_10.txt",
+      "source_sheet": "art/lora/source/bramble/bramble-clean-source-12.png",
+      "source_pose": 10,
+      "normalized_alpha_bbox": [
+        167,
+        102,
+        856,
+        922
+      ]
+    },
+    {
+      "file": "art/lora/datasets/bramble/bramble_011_source_11.png",
+      "caption": "art/lora/datasets/bramble/bramble_011_source_11.txt",
+      "source_sheet": "art/lora/source/bramble/bramble-clean-source-12.png",
+      "source_pose": 11,
+      "normalized_alpha_bbox": [
+        106,
+        102,
+        917,
+        922
+      ]
+    },
+    {
+      "file": "art/lora/datasets/bramble/bramble_012_source_12.png",
+      "caption": "art/lora/datasets/bramble/bramble_012_source_12.txt",
+      "source_sheet": "art/lora/source/bramble/bramble-clean-source-12.png",
+      "source_pose": 12,
+      "normalized_alpha_bbox": [
+        175,
+        102,
+        848,
+        922
+      ]
+    },
+    {
+      "file": "art/lora/datasets/bramble/bramble_013_source_01.png",
+      "caption": "art/lora/datasets/bramble/bramble_013_source_01.txt",
+      "source_sheet": "art/lora/source/bramble/bramble-clean-source-08.png",
+      "source_pose": 1,
+      "normalized_alpha_bbox": [
+        183,
+        102,
+        840,
+        922
+      ]
+    },
+    {
+      "file": "art/lora/datasets/bramble/bramble_014_source_02.png",
+      "caption": "art/lora/datasets/bramble/bramble_014_source_02.txt",
+      "source_sheet": "art/lora/source/bramble/bramble-clean-source-08.png",
+      "source_pose": 2,
+      "normalized_alpha_bbox": [
+        165,
+        102,
+        859,
+        922
+      ]
+    },
+    {
+      "file": "art/lora/datasets/bramble/bramble_015_source_03.png",
+      "caption": "art/lora/datasets/bramble/bramble_015_source_03.txt",
+      "source_sheet": "art/lora/source/bramble/bramble-clean-source-08.png",
+      "source_pose": 3,
+      "normalized_alpha_bbox": [
+        186,
+        102,
+        837,
+        922
+      ]
+    },
+    {
+      "file": "art/lora/datasets/bramble/bramble_016_source_04.png",
+      "caption": "art/lora/datasets/bramble/bramble_016_source_04.txt",
+      "source_sheet": "art/lora/source/bramble/bramble-clean-source-08.png",
+      "source_pose": 4,
+      "normalized_alpha_bbox": [
+        122,
+        102,
+        902,
+        922
+      ]
+    },
+    {
+      "file": "art/lora/datasets/bramble/bramble_017_source_05.png",
+      "caption": "art/lora/datasets/bramble/bramble_017_source_05.txt",
+      "source_sheet": "art/lora/source/bramble/bramble-clean-source-08.png",
+      "source_pose": 5,
+      "normalized_alpha_bbox": [
+        180,
+        102,
+        843,
+        922
+      ]
+    },
+    {
+      "file": "art/lora/datasets/bramble/bramble_018_source_06.png",
+      "caption": "art/lora/datasets/bramble/bramble_018_source_06.txt",
+      "source_sheet": "art/lora/source/bramble/bramble-clean-source-08.png",
+      "source_pose": 6,
+      "normalized_alpha_bbox": [
+        112,
+        102,
+        912,
+        922
+      ]
+    },
+    {
+      "file": "art/lora/datasets/bramble/bramble_019_source_07.png",
+      "caption": "art/lora/datasets/bramble/bramble_019_source_07.txt",
+      "source_sheet": "art/lora/source/bramble/bramble-clean-source-08.png",
+      "source_pose": 7,
+      "normalized_alpha_bbox": [
+        196,
+        102,
+        828,
+        922
+      ]
+    },
+    {
+      "file": "art/lora/datasets/bramble/bramble_020_source_08.png",
+      "caption": "art/lora/datasets/bramble/bramble_020_source_08.txt",
+      "source_sheet": "art/lora/source/bramble/bramble-clean-source-08.png",
+      "source_pose": 8,
+      "normalized_alpha_bbox": [
+        176,
+        102,
+        848,
+        922
+      ]
+    }
+  ]
+}

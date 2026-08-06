@@ -1,0 +1,65 @@
+{
+  "source": "ags\\room2\\background\\annex-threshold.source.png",
+  "output": "ags\\room2\\background\\annex-threshold.png",
+  "source_size": [
+    1672,
+    941
+  ],
+  "target_size": [
+    1280,
+    720
+  ],
+  "crop_box": [
+    0,
+    0,
+    1672,
+    941
+  ],
+  "geometryAuthority": true,
+  "studiesReferenceOnly": true,
+  "gates": {
+    "objectPlacement": "pass",
+    "internalLighting": "pass",
+    "perspectiveEyeLevel": "pass",
+    "finishedSurfaces": "pass",
+    "dimensions": "pass"
+  },
+  "placements": {
+    "grommet": {
+      "x": 700,
+      "y": 190,
+      "width": 340,
+      "height": 430
+    },
+    "annex-threshold": {
+      "x": 700,
+      "y": 130,
+      "width": 420,
+      "height": 490
+    },
+    "maintenance-advisory": {
+      "x": 175,
+      "y": 135,
+      "width": 330,
+      "height": 205
+    },
+    "drafty-citizen-coat": {
+      "x": 220,
+      "y": 405,
+      "width": 210,
+      "height": 112
+    },
+    "annex-door": {
+      "x": 720,
+      "y": 145,
+      "width": 360,
+      "height": 430
+    }
+  },
+  "visualReview": {
+    "status": "intake",
+    "actorProofRequired": true,
+    "blockingNotes": "Threshold plate is clean; Grommet scale and doorway blocking still require proof.",
+    "finalApproval": "pending actor-scale composite proof"
+  }
+}

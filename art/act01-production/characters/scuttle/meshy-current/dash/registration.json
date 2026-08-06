@@ -1,0 +1,70 @@
+{
+  "sheet": "scuttle-dash-meshy-current",
+  "actor_type": "walk-plane",
+  "approval_state": "provisional-meshy-runtime-proof",
+  "canvas": {
+    "width": 512,
+    "height": 512
+  },
+  "anchor_contract": "All promoted Meshy runtime frames share the fixed 512 canvas and bottom-center anchor from the sprite alignment pass.",
+  "frames": [
+    {
+      "file": "scuttle_meshy_dash_01.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "dash",
+      "canonical": true,
+      "scale_reference": [
+        256,
+        126
+      ]
+    },
+    {
+      "file": "scuttle_meshy_dash_02.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "dash",
+      "canonical": false
+    },
+    {
+      "file": "scuttle_meshy_dash_03.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "dash",
+      "canonical": false
+    },
+    {
+      "file": "scuttle_meshy_dash_04.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "dash",
+      "canonical": false
+    },
+    {
+      "file": "scuttle_meshy_dash_05.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "dash",
+      "canonical": false
+    },
+    {
+      "file": "scuttle_meshy_dash_06.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "dash",
+      "canonical": false
+    }
+  ]
+}

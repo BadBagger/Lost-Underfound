@@ -357,6 +357,10 @@ def draw_pip(draw: ImageDraw.ImageDraw, anchor: tuple[int, int], top_y: int, pos
     pose_data = {
         "idle-01": (0, 0, -8, 24, 0),
         "idle-02": (0, -2, -8, 24, 1),
+        "idle-breathe-1": (-2, -3, -10, 22, 2),
+        "idle-breathe-2": (-4, -7, -12, 20, 3),
+        "idle-blink": (1, -2, -8, 24, 4),
+        "idle-alert": (5, -9, -15, 18, 5),
         "walk-left-contact": (-8, 0, -30, 28, 0),
         "walk-left-recoil-down": (-5, 7, -24, 18, 1),
         "walk-left-passing": (0, 10, -8, 4, 2),
@@ -394,7 +398,7 @@ def draw_pip(draw: ImageDraw.ImageDraw, anchor: tuple[int, int], top_y: int, pos
     ellipse(draw, (ax + right_step - 17, ay - 8, ax + right_step + 18, ay + 5), "#2a2724", scale=scale)
     polygon(draw, [(ax - 43 + lean, body_y), (ax + 43 + lean, body_y), (ax + 30, coat_y), (ax - 30, coat_y)], "#315462", "#2a2019", scale)
     polygon(draw, [(ax - 26 + lean, body_y + 10), (ax + 20 + lean, body_y + 10), (ax + 15, coat_y - 8), (ax - 14, coat_y - 6)], "#d7a14e", None, scale)
-    arm_raise = pose in ("found-pop", "cheer", "relief")
+    arm_raise = pose in ("found-pop", "cheer", "relief", "idle-alert")
     reach = pose in ("crouch-reach", "crouch-smear", "crouch-contact", "crouch-rummage")
     toss = pose in ("inspect-button", "toss-windup", "button-release-smear", "toss-follow-through")
     if reach:
@@ -409,16 +413,27 @@ def draw_pip(draw: ImageDraw.ImageDraw, anchor: tuple[int, int], top_y: int, pos
         line(draw, (ax + 31 + lean, body_y + 22, end[0], end[1]), "#e8aa80", 8, scale)
         line(draw, (ax - 31 + lean, body_y + 22, ax - 53, body_y + 56), "#e8aa80", 8, scale)
     elif arm_raise:
-        line(draw, (ax + 31 + lean, body_y + 20, ax + 56, body_y - 28), "#e8aa80", 8, scale)
-        line(draw, (ax - 31 + lean, body_y + 22, ax - 55, body_y - 10), "#e8aa80", 8, scale)
+        right_end = (ax + 56, body_y - 28) if pose != "idle-alert" else (ax + 48, body_y + 3)
+        left_end = (ax - 55, body_y - 10) if pose != "idle-alert" else (ax - 50, body_y + 18)
+        line(draw, (ax + 31 + lean, body_y + 20, right_end[0], right_end[1]), "#e8aa80", 8, scale)
+        line(draw, (ax - 31 + lean, body_y + 22, left_end[0], left_end[1]), "#e8aa80", 8, scale)
     else:
         line(draw, (ax - 32 + lean, body_y + 22, ax - 55, body_y + 66 - phase % 3), "#e8aa80", 8, scale)
         line(draw, (ax + 32 + lean, body_y + 22, ax + 55, body_y + 62 + phase % 3), "#e8aa80", 8, scale)
     ellipse(draw, (ax - 39 + lean, head_y, ax + 39 + lean, head_y + 58), "#efb488", "#2a2019", 4, scale)
     polygon(draw, [(ax - 42 + lean, head_y + 8), (ax - 10 + lean, head_y - 15), (ax + 34 + lean, head_y + 7), (ax + 5 + lean, head_y + 18)], "#6b3a1c", "#2a2019", scale)
-    ellipse(draw, (ax - 17 + lean, head_y + 22, ax - 9 + lean, head_y + 30), "#17120f", scale=scale)
-    ellipse(draw, (ax + 13 + lean, head_y + 22, ax + 21 + lean, head_y + 30), "#17120f", scale=scale)
-    if pose in ("crouch-contact", "found-pop", "cheer"):
+    if pose == "idle-blink":
+        line(draw, (ax - 21 + lean, head_y + 27, ax - 7 + lean, head_y + 28), "#17120f", 3, scale)
+        line(draw, (ax + 9 + lean, head_y + 28, ax + 23 + lean, head_y + 27), "#17120f", 3, scale)
+    elif pose == "idle-alert":
+        ellipse(draw, (ax - 22 + lean, head_y + 17, ax - 6 + lean, head_y + 35), "#f8efe0", "#17120f", 2, scale)
+        ellipse(draw, (ax + 8 + lean, head_y + 17, ax + 24 + lean, head_y + 35), "#f8efe0", "#17120f", 2, scale)
+        ellipse(draw, (ax - 17 + lean, head_y + 23, ax - 10 + lean, head_y + 31), "#17120f", scale=scale)
+        ellipse(draw, (ax + 14 + lean, head_y + 23, ax + 21 + lean, head_y + 31), "#17120f", scale=scale)
+    else:
+        ellipse(draw, (ax - 17 + lean, head_y + 22, ax - 9 + lean, head_y + 30), "#17120f", scale=scale)
+        ellipse(draw, (ax + 13 + lean, head_y + 22, ax + 21 + lean, head_y + 30), "#17120f", scale=scale)
+    if pose in ("crouch-contact", "found-pop", "cheer", "idle-alert"):
         draw.arc(tuple(v * scale for v in (ax - 12 + lean, head_y + 31, ax + 18 + lean, head_y + 50)), 10, 165, fill="#713127", width=3 * scale)
     else:
         line(draw, (ax - 10 + lean, head_y + 43, ax + 14 + lean, head_y + 43), "#713127", 3, scale)
@@ -475,7 +490,9 @@ def make_pip_sheets() -> None:
         frames = []
         for idx, (file, role, pose) in enumerate(roles):
             img, d = canvas(size)
-            if REFERENCE_SHEET.exists():
+            if action == "idle":
+                draw_pip(d, (160, 300), 80, pose)
+            elif REFERENCE_SHEET.exists():
                 cutout_name = "pip-front" if action in ("idle", "dust-reach", "toll-paid") else "pip-walk"
                 if action == "toll-paid" and idx == 1:
                     cutout_name = "pip-run"
@@ -575,21 +592,29 @@ def draw_bramble(draw: ImageDraw.ImageDraw, anchor: tuple[int, int], top_y: int,
         "talk-settle": 1,
     }[pose]
     mouth_open = pose in ("talk-open", "talk-wide")
-    ellipse(draw, (ax - 78, top_y + 50, ax + 78, ay + 16), "#b9b0a5", "#4d453d", 4, scale)
-    ellipse(draw, (ax - 56, top_y + 12, ax + 56, top_y + 112), "#d1cbc0", "#4d453d", 4, scale)
-    ellipse(draw, (ax - 68, top_y, ax - 24, top_y + 44), "#d8d2c8", "#6f675e", 2, scale)
-    ellipse(draw, (ax + 24, top_y, ax + 68, top_y + 44), "#d8d2c8", "#6f675e", 2, scale)
-    ellipse(draw, (ax - 31, top_y + 50, ax - 3, top_y + 78), "#eee7d7", "#473e37", 3, scale)
-    ellipse(draw, (ax + 3, top_y + 50, ax + 31, top_y + 78), "#eee7d7", "#473e37", 3, scale)
-    ellipse(draw, (ax - 17, top_y + 60, ax - 9, top_y + 68), "#17120f", scale=scale)
-    ellipse(draw, (ax + 9, top_y + 60, ax + 17, top_y + 68), "#17120f", scale=scale)
+    breath = {"shuffle-left": -3, "shuffle-right": -6, "stamp-prep": -5, "stamp-up": -2, "stamp-smear": 3, "stamp-down": 5, "stamp-recoil": -2, "idle-breathe-out": 2}.get(pose, 0)
+    lean = {"shuffle-left": -4, "shuffle-right": 3, "stamp-prep": 2, "stamp-up": 1, "stamp-smear": 3, "stamp-down": 0, "stamp-recoil": -3, "idle-breathe-out": -1}.get(pose, 0)
+    body_top = top_y + breath
+    body_bottom = ay + 16
+    ellipse(draw, (ax - 82 + lean, top_y + 50, ax + 82 + lean, ay + 16), "#b9b0a5", "#4d453d", 4, scale)
+    ellipse(draw, (ax - 58 + lean, body_top + 12, ax + 58 + lean, body_bottom - 4), "#d1cbc0", "#4d453d", 4, scale)
+    for hx, hy, r in [(-42, 2, 7), (-22, -4, 6), (0, -6, 7), (22, -4, 5), (40, 4, 6)]:
+        line(draw, (ax + lean + hx, body_top + 10, ax + lean + hx + r, body_top + hy), "#7e7871", 3, scale)
+    ellipse(draw, (ax - 68 + lean, body_top, ax - 24 + lean, body_top + 44), "#d8d2c8", "#6f675e", 2, scale)
+    ellipse(draw, (ax + 24 + lean, body_top, ax + 68 + lean, body_top + 44), "#d8d2c8", "#6f675e", 2, scale)
+    ellipse(draw, (ax - 31 + lean, body_top + 50, ax - 3 + lean, body_top + 78), "#eee7d7", "#473e37", 3, scale)
+    ellipse(draw, (ax + 3 + lean, body_top + 50, ax + 31 + lean, body_top + 78), "#eee7d7", "#473e37", 3, scale)
+    eye_shift = {"shuffle-left": -2, "shuffle-right": 2, "stamp-up": 2, "stamp-down": -1, "stamp-recoil": -2}.get(pose, 0)
+    ellipse(draw, (ax - 17 + lean + eye_shift, body_top + 60, ax - 9 + lean + eye_shift, body_top + 68), "#17120f", scale=scale)
+    ellipse(draw, (ax + 9 + lean + eye_shift, body_top + 60, ax + 17 + lean + eye_shift, body_top + 68), "#17120f", scale=scale)
     if mouth_open:
-        ellipse(draw, (ax - 9, top_y + 83, ax + 9, top_y + 96), "#5b2a2a", scale=scale)
+        ellipse(draw, (ax - 9 + lean, body_top + 83, ax + 9 + lean, body_top + 96), "#5b2a2a", scale=scale)
     else:
-        line(draw, (ax - 13, top_y + 88, ax + 13, top_y + 88), "#5b2a2a", 3, scale)
-    polygon(draw, [(ax - 24, top_y + 99), (ax, top_y + 118), (ax + 24, top_y + 99), (ax + 16, top_y + 130), (ax - 16, top_y + 130)], "#8b3549", "#4d1d2a", scale)
-    line(draw, (ax + 32, top_y + 105, ax + 62, ay - 20 - stamp), "#7a7067", 9, scale)
-    rect(draw, (ax + 50, ay - 45 - stamp, ax + 75, ay - 14 - stamp), "#7b2e2d", "#3d1716", 2, scale)
+        line(draw, (ax - 13 + lean, body_top + 88, ax + 13 + lean, body_top + 88), "#5b2a2a", 3, scale)
+    polygon(draw, [(ax - 24 + lean, body_top + 99), (ax + lean, body_top + 118), (ax + 24 + lean, body_top + 99), (ax + 16 + lean, body_top + 130), (ax - 16 + lean, body_top + 130)], "#8b3549", "#4d1d2a", scale)
+    hand_y = ay - 20 - stamp
+    line(draw, (ax + 32 + lean, body_top + 105, ax + 62 + lean, hand_y), "#7a7067", 9, scale)
+    rect(draw, (ax + 50 + lean, ay - 45 - stamp, ax + 75 + lean, ay - 14 - stamp), "#7b2e2d", "#3d1716", 2, scale)
     draw_bramble_desk_effect(draw, pose, scale)
 
 
@@ -623,7 +648,9 @@ def make_bramble_sheets() -> None:
         frames = []
         for idx, (file, role, pose) in enumerate(roles):
             img, d = canvas(size)
-            if REFERENCE_SHEET.exists():
+            if action == "idle":
+                draw_bramble(d, (160, 205), 18, pose)
+            elif REFERENCE_SHEET.exists():
                 cutout = reference_cutout("bramble-talk" if action == "talk" else "bramble-idle")
                 if cutout:
                     breath = {
@@ -680,15 +707,33 @@ def draw_bottlecap(draw: ImageDraw.ImageDraw, anchor: tuple[int, int], top_y: in
         "approve": 2,
         "settle": 0,
     }[pose]
-    yoff = -5 if pose in ("approve", "settle") else (4 if pose == "refuse-squash" else 0)
+    yoff = {
+        "idle-breathe-1": -3,
+        "idle-breathe-2": -7,
+        "idle-blink": -2,
+        "idle-glance-left": -1,
+        "idle-glance-right": -1,
+        "idle-breathe-out": 3,
+    }.get(pose, -5 if pose in ("approve", "settle") else (4 if pose == "refuse-squash" else 0))
+    squash = 5 if pose in ("idle-breathe-out", "refuse-squash") else 0
+    eye_shift = {"idle-glance-left": -9, "idle-glance-right": 9, "notice": 4, "approve": 3}.get(pose, 0)
     for level, color in enumerate(["#7e4a28", "#4d4b45", "#8b5b2e", "#b08b45"]):
         y = top_y + 92 - level * 24 + yoff
-        ellipse(draw, (ax - 66 + tilt, y, ax + 66 + tilt, y + 34), color, "#2f2117", 4, scale)
-        rect(draw, (ax - 58 + tilt, y + 13, ax + 58 + tilt, y + 27), color, "#2f2117", 2, scale)
-    line(draw, (ax - 36 + tilt, top_y + 83 + yoff, ax - 9 + tilt, top_y + 77 + yoff), "#25190f", 5, scale)
-    line(draw, (ax + 36 + tilt, top_y + 83 + yoff, ax + 9 + tilt, top_y + 77 + yoff), "#25190f", 5, scale)
-    ellipse(draw, (ax - 28 + tilt, top_y + 72 + yoff, ax - 16 + tilt, top_y + 84 + yoff), "#17120f", scale=scale)
-    ellipse(draw, (ax + 16 + tilt, top_y + 72 + yoff, ax + 28 + tilt, top_y + 84 + yoff), "#17120f", scale=scale)
+        width = 66 + (3 if pose == "idle-breathe-2" else 0) + squash
+        ellipse(draw, (ax - width + tilt, y + squash, ax + width + tilt, y + 34 - squash), color, "#2f2117", 4, scale)
+        rect(draw, (ax - 58 - squash + tilt, y + 13 + squash, ax + 58 + squash + tilt, y + 27 - squash), color, "#2f2117", 2, scale)
+        for tooth in range(-52, 53, 17):
+            rect(draw, (ax + tooth + tilt, y + 8 + squash, ax + tooth + 7 + tilt, y + 18 + squash), "#c7a761", "#2f2117", 1, scale)
+    if pose == "idle-blink":
+        line(draw, (ax - 38 + tilt, top_y + 83 + yoff, ax - 8 + tilt, top_y + 86 + yoff), "#25190f", 5, scale)
+        line(draw, (ax + 38 + tilt, top_y + 86 + yoff, ax + 8 + tilt, top_y + 83 + yoff), "#25190f", 5, scale)
+    else:
+        line(draw, (ax - 36 + tilt, top_y + 83 + yoff, ax - 9 + tilt, top_y + 77 + yoff), "#25190f", 5, scale)
+        line(draw, (ax + 36 + tilt, top_y + 83 + yoff, ax + 9 + tilt, top_y + 77 + yoff), "#25190f", 5, scale)
+        ellipse(draw, (ax - 31 + tilt, top_y + 69 + yoff, ax - 11 + tilt, top_y + 89 + yoff), "#e8d6a4", "#25190f", 2, scale)
+        ellipse(draw, (ax + 11 + tilt, top_y + 69 + yoff, ax + 31 + tilt, top_y + 89 + yoff), "#e8d6a4", "#25190f", 2, scale)
+        ellipse(draw, (ax - 24 + tilt + eye_shift, top_y + 75 + yoff, ax - 16 + tilt + eye_shift, top_y + 84 + yoff), "#17120f", scale=scale)
+        ellipse(draw, (ax + 16 + tilt + eye_shift, top_y + 75 + yoff, ax + 24 + tilt + eye_shift, top_y + 84 + yoff), "#17120f", scale=scale)
     line(draw, (ax - 20 + tilt, top_y + 103 + yoff, ax + 20 + tilt, top_y + 103 + yoff), "#25190f", 4, scale)
     if pose in ("notice", "reach-anticipation", "arm-smear", "catch", "inspect", "approve", "settle"):
         bx = {
@@ -749,7 +794,9 @@ def make_bottlecap_sheets() -> None:
         frames = []
         for idx, (file, role, pose) in enumerate(roles):
             img, d = canvas(size)
-            if REFERENCE_SHEET.exists():
+            if action == "idle":
+                draw_bottlecap(d, (160, 210), 78, pose)
+            elif REFERENCE_SHEET.exists():
                 cutout = reference_cutout("old-bottlecap-open" if action == "toll-paid" and idx >= 4 else "old-bottlecap")
                 if cutout:
                     breath = {

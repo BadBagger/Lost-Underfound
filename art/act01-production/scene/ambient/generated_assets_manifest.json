@@ -1,0 +1,79 @@
+{
+  "generated_from": {
+    "spider": "C:\\Users\\KyleB\\.codex\\generated_images\\019fc7c5-b162-7760-b53c-8c20e100dab9\\call_cnXb9eF4JYmvhHlkKqTvxERT.png",
+    "hanging_tag": "C:\\Users\\KyleB\\.codex\\generated_images\\019fc7c5-b162-7760-b53c-8c20e100dab9\\call_qdP7acGr2Crfm3HwB30JEhSe.png",
+    "lamp_glow": "C:\\Users\\KyleB\\.codex\\generated_images\\019fc7c5-b162-7760-b53c-8c20e100dab9\\call_rZWchNhH6EVNqQS3fzzdoybd.png"
+  },
+  "assets": {
+    "spider": {
+      "frames": 6,
+      "frame_files": [
+        "art/act01-production/scene/ambient/spider/spider_00.png",
+        "art/act01-production/scene/ambient/spider/spider_01.png",
+        "art/act01-production/scene/ambient/spider/spider_02.png",
+        "art/act01-production/scene/ambient/spider/spider_03.png",
+        "art/act01-production/scene/ambient/spider/spider_04.png",
+        "art/act01-production/scene/ambient/spider/spider_05.png"
+      ],
+      "source_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "canvas": [
+        240,
+        120
+      ]
+    },
+    "hanging_tag": {
+      "frames": 6,
+      "frame_files": [
+        "art/act01-production/scene/ambient/hanging_tag/hanging_tag_00.png",
+        "art/act01-production/scene/ambient/hanging_tag/hanging_tag_01.png",
+        "art/act01-production/scene/ambient/hanging_tag/hanging_tag_02.png",
+        "art/act01-production/scene/ambient/hanging_tag/hanging_tag_03.png",
+        "art/act01-production/scene/ambient/hanging_tag/hanging_tag_04.png",
+        "art/act01-production/scene/ambient/hanging_tag/hanging_tag_05.png"
+      ],
+      "source_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "canvas": [
+        220,
+        320
+      ]
+    },
+    "lamp_glow": {
+      "frames": 6,
+      "frame_files": [
+        "art/act01-production/scene/ambient/lamp_glow/lamp_glow_00.png",
+        "art/act01-production/scene/ambient/lamp_glow/lamp_glow_01.png",
+        "art/act01-production/scene/ambient/lamp_glow/lamp_glow_02.png",
+        "art/act01-production/scene/ambient/lamp_glow/lamp_glow_03.png",
+        "art/act01-production/scene/ambient/lamp_glow/lamp_glow_04.png",
+        "art/act01-production/scene/ambient/lamp_glow/lamp_glow_05.png"
+      ],
+      "source_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "canvas": [
+        260,
+        220
+      ]
+    }
+  },
+  "contact_sheet": "art/act01-production/scene/ambient/ambient_contact_sheet.png"
+}

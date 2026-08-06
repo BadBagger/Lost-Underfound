@@ -1,0 +1,41 @@
+{
+  "asset": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\input\\meshy_textured\\Meshy_AI_Head_and_shoulders_po_0805160857_texture.glb",
+  "format": "glb",
+  "has_animation": false,
+  "source_frame_range": [
+    1.0,
+    1.0
+  ],
+  "source_fps": 24.0,
+  "target_fps": 12.0,
+  "duration_seconds": 0.08333333333333333,
+  "frame_count": 1,
+  "camera": {
+    "type": "orthographic",
+    "view": "side-left",
+    "angle_deg_above_horizontal": 8.0,
+    "ortho_scale": 2.450000047683716
+  },
+  "material_mode": "source",
+  "source_material_data_present": true,
+  "material_report": [
+    "mesh_node: imported material slots"
+  ],
+  "lighting": {
+    "key": "warm upper-left sun",
+    "fill": "dim cool fill",
+    "cast_shadows": false
+  },
+  "root_motion_samples": [
+    {
+      "index": 0,
+      "source_frame": 1.0,
+      "armature_location": [
+        0,
+        0,
+        0
+      ],
+      "root_bone_location": null
+    }
+  ]
+}

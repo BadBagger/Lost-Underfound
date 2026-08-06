@@ -1,0 +1,113 @@
+{
+  "source_sheet": "spikes\\sprite_render\\dialogue_portrait_face_system\\source_generation\\otto_generated_face_patch_sheet.png",
+  "base_still": "spikes\\sprite_render\\dialogue_portrait_gate\\otto_portrait_gate_still.png",
+  "input_kind": "chroma-patch-sheet",
+  "frame_size": [
+    1920,
+    1080
+  ],
+  "crop": [
+    1160,
+    245,
+    1475,
+    665
+  ],
+  "target_box": [
+    1187,
+    247,
+    1509,
+    687
+  ],
+  "stretch_to_target": true,
+  "states": {
+    "neutral": {
+      "patch": "otto_face_patch_neutral.png",
+      "fitted_patch": "otto_face_patch_fitted_neutral.png",
+      "full_overlay": "otto_face_overlay_full_neutral.png",
+      "composite_preview": "otto_face_composite_neutral.png",
+      "placement": [
+        1187,
+        247
+      ],
+      "fitted_size": [
+        322,
+        440
+      ]
+    },
+    "small_open": {
+      "patch": "otto_face_patch_small_open.png",
+      "fitted_patch": "otto_face_patch_fitted_small_open.png",
+      "full_overlay": "otto_face_overlay_full_small_open.png",
+      "composite_preview": "otto_face_composite_small_open.png",
+      "placement": [
+        1187,
+        247
+      ],
+      "fitted_size": [
+        322,
+        440
+      ]
+    },
+    "wide_open": {
+      "patch": "otto_face_patch_wide_open.png",
+      "fitted_patch": "otto_face_patch_fitted_wide_open.png",
+      "full_overlay": "otto_face_overlay_full_wide_open.png",
+      "composite_preview": "otto_face_composite_wide_open.png",
+      "placement": [
+        1187,
+        247
+      ],
+      "fitted_size": [
+        322,
+        440
+      ]
+    },
+    "teeth": {
+      "patch": "otto_face_patch_teeth.png",
+      "fitted_patch": "otto_face_patch_fitted_teeth.png",
+      "full_overlay": "otto_face_overlay_full_teeth.png",
+      "composite_preview": "otto_face_composite_teeth.png",
+      "placement": [
+        1187,
+        247
+      ],
+      "fitted_size": [
+        322,
+        440
+      ]
+    },
+    "blink": {
+      "patch": "otto_face_patch_blink.png",
+      "fitted_patch": "otto_face_patch_fitted_blink.png",
+      "full_overlay": "otto_face_overlay_full_blink.png",
+      "composite_preview": "otto_face_composite_blink.png",
+      "placement": [
+        1187,
+        247
+      ],
+      "fitted_size": [
+        322,
+        440
+      ]
+    },
+    "skeptical": {
+      "patch": "otto_face_patch_skeptical.png",
+      "fitted_patch": "otto_face_patch_fitted_skeptical.png",
+      "full_overlay": "otto_face_overlay_full_skeptical.png",
+      "composite_preview": "otto_face_composite_skeptical.png",
+      "placement": [
+        1187,
+        247
+      ],
+      "fitted_size": [
+        322,
+        440
+      ]
+    }
+  },
+  "constraints": [
+    "Generated room/background pixels are discarded.",
+    "Output patches contain only a feathered face-region alpha.",
+    "Costume, hood, horns, belly, body, and room remain model/base pixels."
+  ]
+}

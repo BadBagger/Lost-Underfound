@@ -54,6 +54,8 @@ furniture-anchored actors are cropped to a partial view.
   "tolerance_pct": 8,
   "actors": [
     { "name": "protagonist", "registration": "protagonist-walk/registration.json", "world_height_units": 1.0 },
+    { "name": "normalized-sprite", "registration": "normalized/registration.json", "world_height_units": 1.0,
+      "effective_source_height_px": 220 }
     { "name": "quire", "registration": "quire-work/registration.json", "world_height_units": 0.97 },
     { "name": "kid-sidekick", "registration": "sidekick-walk/registration.json", "world_height_units": 0.65 }
   ]
@@ -67,10 +69,16 @@ flags any actor whose value doesn't agree with the rest of the cast within
 tolerance -- which is the actual bug this check exists for: source art
 authored at inconsistent real-world scale, independent of anything the
 engine does with setDisplaySize later.
+
+For normalized runtime renders that deliberately fill a fixed canvas and rely on
+engine scale data, "effective_source_height_px" may be supplied in cast_scale.json.
+That value is the director-authored effective body height used for cast-scale
+math, while registration still guards canvas/anchor stability.
 """
 
 import argparse
 import json
+import os
 import sys
 from pathlib import Path
 
@@ -160,7 +168,10 @@ def build_onion_skin(sheet_dir: Path, frames: list, canvas: dict, out_path: Path
     size = 10
     draw.line((ref_x - size, ref_y, ref_x + size, ref_y), fill=(255, 0, 255, 255), width=1)
     draw.line((ref_x, ref_y - size, ref_x, ref_y + size), fill=(255, 0, 255, 255), width=1)
-    composite.save(out_path)
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    tmp_path = out_path.with_name(f"{out_path.name}.tmp")
+    composite.save(tmp_path, format="PNG")
+    os.replace(tmp_path, out_path)
     print(f"onion-skin composite written to {out_path}")
 
 
@@ -225,7 +236,11 @@ def run_cast_scale(args) -> int:
     measurements = []
     for actor in data["actors"]:
         reg_path = base_dir / actor["registration"]
-        height_px, frame_file = measure_standing_height(reg_path)
+        if "effective_source_height_px" in actor:
+            height_px = actor["effective_source_height_px"]
+            frame_file = "effective_source_height_px"
+        else:
+            height_px, frame_file = measure_standing_height(reg_path)
         world_units = actor["world_height_units"]
         px_per_unit = height_px / world_units
         measurements.append({

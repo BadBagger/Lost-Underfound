@@ -1,0 +1,142 @@
+{
+  "sheet": "pip-inspect-meshy-current",
+  "actor_type": "walk-plane",
+  "approval_state": "provisional-meshy-runtime-proof",
+  "canvas": {
+    "width": 512,
+    "height": 512
+  },
+  "anchor_contract": "All promoted Meshy runtime frames share the fixed 512 canvas and bottom-center anchor from the sprite alignment pass.",
+  "frames": [
+    {
+      "file": "pip_meshy_inspect_01.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "inspect",
+      "canonical": true,
+      "scale_reference": [
+        256,
+        126
+      ]
+    },
+    {
+      "file": "pip_meshy_inspect_02.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "inspect",
+      "canonical": false
+    },
+    {
+      "file": "pip_meshy_inspect_03.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "inspect",
+      "canonical": false
+    },
+    {
+      "file": "pip_meshy_inspect_04.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "inspect",
+      "canonical": false
+    },
+    {
+      "file": "pip_meshy_inspect_05.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "inspect",
+      "canonical": false
+    },
+    {
+      "file": "pip_meshy_inspect_06.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "inspect",
+      "canonical": false
+    },
+    {
+      "file": "pip_meshy_inspect_07.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "inspect",
+      "canonical": false
+    },
+    {
+      "file": "pip_meshy_inspect_08.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "inspect",
+      "canonical": false
+    },
+    {
+      "file": "pip_meshy_inspect_09.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "inspect",
+      "canonical": false
+    },
+    {
+      "file": "pip_meshy_inspect_10.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "inspect",
+      "canonical": false
+    },
+    {
+      "file": "pip_meshy_inspect_11.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "inspect",
+      "canonical": false
+    },
+    {
+      "file": "pip_meshy_inspect_12.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "inspect",
+      "canonical": false
+    },
+    {
+      "file": "pip_meshy_inspect_13.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "inspect",
+      "canonical": false
+    },
+    {
+      "file": "pip_meshy_inspect_14.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "inspect",
+      "canonical": false
+    }
+  ]
+}

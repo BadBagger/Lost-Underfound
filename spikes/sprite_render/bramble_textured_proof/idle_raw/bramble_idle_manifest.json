@@ -1,0 +1,273 @@
+{
+  "asset": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\input\\meshy_bramble\\bramble_meshy_dusty_scholar_textured.glb",
+  "clip": "idle",
+  "fps": 12,
+  "frame_count": 24,
+  "render": {
+    "resolution": [
+      640,
+      640
+    ],
+    "view": "front",
+    "angle_deg": 7.0,
+    "ortho_height_mult": 1.62
+  },
+  "model_bounds": {
+    "min": [
+      -0.8366305232048035,
+      -0.7931045293807983,
+      0.0007255077362060547
+    ],
+    "max": [
+      0.8366305232048035,
+      0.7931045293807983,
+      1.8999464511871338
+    ],
+    "height": 1.8992209434509277,
+    "width": 1.673261046409607
+  },
+  "source_texture_rule": "Meshy packed texture/material is preserved; no synthetic color or face overlays are drawn.",
+  "animation_method": "deterministic mesh deformation from source GLB, because Meshy export has no armature/actions.",
+  "frames": [
+    {
+      "index": 0,
+      "file": "bramble_idle_000.png",
+      "pose": {
+        "breath": 0.0,
+        "talk_jaw": 0.0,
+        "greet": 0.0,
+        "blink": false
+      }
+    },
+    {
+      "index": 1,
+      "file": "bramble_idle_001.png",
+      "pose": {
+        "breath": 0.2588,
+        "talk_jaw": 0.0,
+        "greet": 0.0,
+        "blink": false
+      }
+    },
+    {
+      "index": 2,
+      "file": "bramble_idle_002.png",
+      "pose": {
+        "breath": 0.5,
+        "talk_jaw": 0.0,
+        "greet": 0.0,
+        "blink": false
+      }
+    },
+    {
+      "index": 3,
+      "file": "bramble_idle_003.png",
+      "pose": {
+        "breath": 0.7071,
+        "talk_jaw": 0.0,
+        "greet": 0.0,
+        "blink": false
+      }
+    },
+    {
+      "index": 4,
+      "file": "bramble_idle_004.png",
+      "pose": {
+        "breath": 0.866,
+        "talk_jaw": 0.0,
+        "greet": 0.0,
+        "blink": false
+      }
+    },
+    {
+      "index": 5,
+      "file": "bramble_idle_005.png",
+      "pose": {
+        "breath": 0.9659,
+        "talk_jaw": 0.0,
+        "greet": 0.0,
+        "blink": false
+      }
+    },
+    {
+      "index": 6,
+      "file": "bramble_idle_006.png",
+      "pose": {
+        "breath": 1.0,
+        "talk_jaw": 0.0,
+        "greet": 0.0,
+        "blink": false
+      }
+    },
+    {
+      "index": 7,
+      "file": "bramble_idle_007.png",
+      "pose": {
+        "breath": 0.9659,
+        "talk_jaw": 0.0,
+        "greet": 0.0,
+        "blink": false
+      }
+    },
+    {
+      "index": 8,
+      "file": "bramble_idle_008.png",
+      "pose": {
+        "breath": 0.866,
+        "talk_jaw": 0.0,
+        "greet": 0.0,
+        "blink": false
+      }
+    },
+    {
+      "index": 9,
+      "file": "bramble_idle_009.png",
+      "pose": {
+        "breath": 0.7071,
+        "talk_jaw": 0.0,
+        "greet": 0.0,
+        "blink": true
+      }
+    },
+    {
+      "index": 10,
+      "file": "bramble_idle_010.png",
+      "pose": {
+        "breath": 0.5,
+        "talk_jaw": 0.0,
+        "greet": 0.0,
+        "blink": true
+      }
+    },
+    {
+      "index": 11,
+      "file": "bramble_idle_011.png",
+      "pose": {
+        "breath": 0.2588,
+        "talk_jaw": 0.0,
+        "greet": 0.0,
+        "blink": false
+      }
+    },
+    {
+      "index": 12,
+      "file": "bramble_idle_012.png",
+      "pose": {
+        "breath": 0.0,
+        "talk_jaw": 0.0,
+        "greet": 0.0,
+        "blink": false
+      }
+    },
+    {
+      "index": 13,
+      "file": "bramble_idle_013.png",
+      "pose": {
+        "breath": -0.2588,
+        "talk_jaw": 0.0,
+        "greet": 0.0,
+        "blink": false
+      }
+    },
+    {
+      "index": 14,
+      "file": "bramble_idle_014.png",
+      "pose": {
+        "breath": -0.5,
+        "talk_jaw": 0.0,
+        "greet": 0.0,
+        "blink": false
+      }
+    },
+    {
+      "index": 15,
+      "file": "bramble_idle_015.png",
+      "pose": {
+        "breath": -0.7071,
+        "talk_jaw": 0.0,
+        "greet": 0.0,
+        "blink": false
+      }
+    },
+    {
+      "index": 16,
+      "file": "bramble_idle_016.png",
+      "pose": {
+        "breath": -0.866,
+        "talk_jaw": 0.0,
+        "greet": 0.0,
+        "blink": false
+      }
+    },
+    {
+      "index": 17,
+      "file": "bramble_idle_017.png",
+      "pose": {
+        "breath": -0.9659,
+        "talk_jaw": 0.0,
+        "greet": 0.0,
+        "blink": false
+      }
+    },
+    {
+      "index": 18,
+      "file": "bramble_idle_018.png",
+      "pose": {
+        "breath": -1.0,
+        "talk_jaw": 0.0,
+        "greet": 0.0,
+        "blink": false
+      }
+    },
+    {
+      "index": 19,
+      "file": "bramble_idle_019.png",
+      "pose": {
+        "breath": -0.9659,
+        "talk_jaw": 0.0,
+        "greet": 0.0,
+        "blink": false
+      }
+    },
+    {
+      "index": 20,
+      "file": "bramble_idle_020.png",
+      "pose": {
+        "breath": -0.866,
+        "talk_jaw": 0.0,
+        "greet": 0.0,
+        "blink": false
+      }
+    },
+    {
+      "index": 21,
+      "file": "bramble_idle_021.png",
+      "pose": {
+        "breath": -0.7071,
+        "talk_jaw": 0.0,
+        "greet": 0.0,
+        "blink": false
+      }
+    },
+    {
+      "index": 22,
+      "file": "bramble_idle_022.png",
+      "pose": {
+        "breath": -0.5,
+        "talk_jaw": 0.0,
+        "greet": 0.0,
+        "blink": false
+      }
+    },
+    {
+      "index": 23,
+      "file": "bramble_idle_023.png",
+      "pose": {
+        "breath": -0.2588,
+        "talk_jaw": 0.0,
+        "greet": 0.0,
+        "blink": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,593 @@
+{
+  "face_mode": "overlay",
+  "anchor_method": "blender_projected_bone",
+  "production_anchor_method": "Blender head bone or named face socket projected into render camera",
+  "fps": 12,
+  "frame_count": 24,
+  "face_overlay_offset": [
+    0.0,
+    0.0
+  ],
+  "face_asset_mode": "png_assets",
+  "face_assets_dir": "spikes\\sprite_render\\face_assets\\otto",
+  "clean_face_base": true,
+  "frames": [
+    {
+      "file": "talk_face_000.png",
+      "source": "spikes\\sprite_render\\dialogue_otto_bust_render\\frames_raw\\walk_raw_000.png",
+      "face_anchor": {
+        "center": [
+          360.09,
+          28.41
+        ],
+        "scale": 1.722,
+        "head_pixel_height": 110.21,
+        "head_pixel_width": 39.53,
+        "rotation_degrees": 0.0,
+        "source": "blender_projected_bone",
+        "bone": "headfront"
+      },
+      "face_overlay_offset": [
+        0.0,
+        0.0
+      ],
+      "mouth_channel": "A-F",
+      "eye_channel": "open/half/closed",
+      "face_asset_mode": "png_assets",
+      "clean_face_base": true
+    },
+    {
+      "file": "talk_face_001.png",
+      "source": "spikes\\sprite_render\\dialogue_otto_bust_render\\frames_raw\\walk_raw_001.png",
+      "face_anchor": {
+        "center": [
+          360.09,
+          28.41
+        ],
+        "scale": 1.722,
+        "head_pixel_height": 110.21,
+        "head_pixel_width": 39.53,
+        "rotation_degrees": 0.0,
+        "source": "blender_projected_bone",
+        "bone": "headfront"
+      },
+      "face_overlay_offset": [
+        0.0,
+        0.0
+      ],
+      "mouth_channel": "A-F",
+      "eye_channel": "open/half/closed",
+      "face_asset_mode": "png_assets",
+      "clean_face_base": true
+    },
+    {
+      "file": "talk_face_002.png",
+      "source": "spikes\\sprite_render\\dialogue_otto_bust_render\\frames_raw\\walk_raw_002.png",
+      "face_anchor": {
+        "center": [
+          360.09,
+          28.41
+        ],
+        "scale": 1.722,
+        "head_pixel_height": 110.21,
+        "head_pixel_width": 39.53,
+        "rotation_degrees": 0.0,
+        "source": "blender_projected_bone",
+        "bone": "headfront"
+      },
+      "face_overlay_offset": [
+        0.0,
+        0.0
+      ],
+      "mouth_channel": "A-F",
+      "eye_channel": "open/half/closed",
+      "face_asset_mode": "png_assets",
+      "clean_face_base": true
+    },
+    {
+      "file": "talk_face_003.png",
+      "source": "spikes\\sprite_render\\dialogue_otto_bust_render\\frames_raw\\walk_raw_003.png",
+      "face_anchor": {
+        "center": [
+          360.09,
+          28.41
+        ],
+        "scale": 1.722,
+        "head_pixel_height": 110.21,
+        "head_pixel_width": 39.53,
+        "rotation_degrees": 0.0,
+        "source": "blender_projected_bone",
+        "bone": "headfront"
+      },
+      "face_overlay_offset": [
+        0.0,
+        0.0
+      ],
+      "mouth_channel": "A-F",
+      "eye_channel": "open/half/closed",
+      "face_asset_mode": "png_assets",
+      "clean_face_base": true
+    },
+    {
+      "file": "talk_face_004.png",
+      "source": "spikes\\sprite_render\\dialogue_otto_bust_render\\frames_raw\\walk_raw_004.png",
+      "face_anchor": {
+        "center": [
+          360.09,
+          28.41
+        ],
+        "scale": 1.722,
+        "head_pixel_height": 110.21,
+        "head_pixel_width": 39.53,
+        "rotation_degrees": 0.0,
+        "source": "blender_projected_bone",
+        "bone": "headfront"
+      },
+      "face_overlay_offset": [
+        0.0,
+        0.0
+      ],
+      "mouth_channel": "A-F",
+      "eye_channel": "open/half/closed",
+      "face_asset_mode": "png_assets",
+      "clean_face_base": true
+    },
+    {
+      "file": "talk_face_005.png",
+      "source": "spikes\\sprite_render\\dialogue_otto_bust_render\\frames_raw\\walk_raw_005.png",
+      "face_anchor": {
+        "center": [
+          360.09,
+          28.41
+        ],
+        "scale": 1.722,
+        "head_pixel_height": 110.21,
+        "head_pixel_width": 39.53,
+        "rotation_degrees": 0.0,
+        "source": "blender_projected_bone",
+        "bone": "headfront"
+      },
+      "face_overlay_offset": [
+        0.0,
+        0.0
+      ],
+      "mouth_channel": "A-F",
+      "eye_channel": "open/half/closed",
+      "face_asset_mode": "png_assets",
+      "clean_face_base": true
+    },
+    {
+      "file": "talk_face_006.png",
+      "source": "spikes\\sprite_render\\dialogue_otto_bust_render\\frames_raw\\walk_raw_006.png",
+      "face_anchor": {
+        "center": [
+          360.09,
+          28.41
+        ],
+        "scale": 1.722,
+        "head_pixel_height": 110.21,
+        "head_pixel_width": 39.53,
+        "rotation_degrees": 0.0,
+        "source": "blender_projected_bone",
+        "bone": "headfront"
+      },
+      "face_overlay_offset": [
+        0.0,
+        0.0
+      ],
+      "mouth_channel": "A-F",
+      "eye_channel": "open/half/closed",
+      "face_asset_mode": "png_assets",
+      "clean_face_base": true
+    },
+    {
+      "file": "talk_face_007.png",
+      "source": "spikes\\sprite_render\\dialogue_otto_bust_render\\frames_raw\\walk_raw_007.png",
+      "face_anchor": {
+        "center": [
+          360.09,
+          28.41
+        ],
+        "scale": 1.722,
+        "head_pixel_height": 110.21,
+        "head_pixel_width": 39.53,
+        "rotation_degrees": 0.0,
+        "source": "blender_projected_bone",
+        "bone": "headfront"
+      },
+      "face_overlay_offset": [
+        0.0,
+        0.0
+      ],
+      "mouth_channel": "A-F",
+      "eye_channel": "open/half/closed",
+      "face_asset_mode": "png_assets",
+      "clean_face_base": true
+    },
+    {
+      "file": "talk_face_008.png",
+      "source": "spikes\\sprite_render\\dialogue_otto_bust_render\\frames_raw\\walk_raw_008.png",
+      "face_anchor": {
+        "center": [
+          360.09,
+          28.41
+        ],
+        "scale": 1.722,
+        "head_pixel_height": 110.21,
+        "head_pixel_width": 39.53,
+        "rotation_degrees": 0.0,
+        "source": "blender_projected_bone",
+        "bone": "headfront"
+      },
+      "face_overlay_offset": [
+        0.0,
+        0.0
+      ],
+      "mouth_channel": "A-F",
+      "eye_channel": "open/half/closed",
+      "face_asset_mode": "png_assets",
+      "clean_face_base": true
+    },
+    {
+      "file": "talk_face_009.png",
+      "source": "spikes\\sprite_render\\dialogue_otto_bust_render\\frames_raw\\walk_raw_009.png",
+      "face_anchor": {
+        "center": [
+          360.09,
+          28.41
+        ],
+        "scale": 1.722,
+        "head_pixel_height": 110.21,
+        "head_pixel_width": 39.53,
+        "rotation_degrees": 0.0,
+        "source": "blender_projected_bone",
+        "bone": "headfront"
+      },
+      "face_overlay_offset": [
+        0.0,
+        0.0
+      ],
+      "mouth_channel": "A-F",
+      "eye_channel": "open/half/closed",
+      "face_asset_mode": "png_assets",
+      "clean_face_base": true
+    },
+    {
+      "file": "talk_face_010.png",
+      "source": "spikes\\sprite_render\\dialogue_otto_bust_render\\frames_raw\\walk_raw_010.png",
+      "face_anchor": {
+        "center": [
+          360.09,
+          28.41
+        ],
+        "scale": 1.722,
+        "head_pixel_height": 110.21,
+        "head_pixel_width": 39.53,
+        "rotation_degrees": 0.0,
+        "source": "blender_projected_bone",
+        "bone": "headfront"
+      },
+      "face_overlay_offset": [
+        0.0,
+        0.0
+      ],
+      "mouth_channel": "A-F",
+      "eye_channel": "open/half/closed",
+      "face_asset_mode": "png_assets",
+      "clean_face_base": true
+    },
+    {
+      "file": "talk_face_011.png",
+      "source": "spikes\\sprite_render\\dialogue_otto_bust_render\\frames_raw\\walk_raw_011.png",
+      "face_anchor": {
+        "center": [
+          360.09,
+          28.41
+        ],
+        "scale": 1.722,
+        "head_pixel_height": 110.21,
+        "head_pixel_width": 39.53,
+        "rotation_degrees": 0.0,
+        "source": "blender_projected_bone",
+        "bone": "headfront"
+      },
+      "face_overlay_offset": [
+        0.0,
+        0.0
+      ],
+      "mouth_channel": "A-F",
+      "eye_channel": "open/half/closed",
+      "face_asset_mode": "png_assets",
+      "clean_face_base": true
+    },
+    {
+      "file": "talk_face_012.png",
+      "source": "spikes\\sprite_render\\dialogue_otto_bust_render\\frames_raw\\walk_raw_012.png",
+      "face_anchor": {
+        "center": [
+          360.09,
+          28.41
+        ],
+        "scale": 1.722,
+        "head_pixel_height": 110.21,
+        "head_pixel_width": 39.53,
+        "rotation_degrees": 0.0,
+        "source": "blender_projected_bone",
+        "bone": "headfront"
+      },
+      "face_overlay_offset": [
+        0.0,
+        0.0
+      ],
+      "mouth_channel": "A-F",
+      "eye_channel": "open/half/closed",
+      "face_asset_mode": "png_assets",
+      "clean_face_base": true
+    },
+    {
+      "file": "talk_face_013.png",
+      "source": "spikes\\sprite_render\\dialogue_otto_bust_render\\frames_raw\\walk_raw_013.png",
+      "face_anchor": {
+        "center": [
+          360.09,
+          28.41
+        ],
+        "scale": 1.722,
+        "head_pixel_height": 110.21,
+        "head_pixel_width": 39.53,
+        "rotation_degrees": 0.0,
+        "source": "blender_projected_bone",
+        "bone": "headfront"
+      },
+      "face_overlay_offset": [
+        0.0,
+        0.0
+      ],
+      "mouth_channel": "A-F",
+      "eye_channel": "open/half/closed",
+      "face_asset_mode": "png_assets",
+      "clean_face_base": true
+    },
+    {
+      "file": "talk_face_014.png",
+      "source": "spikes\\sprite_render\\dialogue_otto_bust_render\\frames_raw\\walk_raw_014.png",
+      "face_anchor": {
+        "center": [
+          360.09,
+          28.41
+        ],
+        "scale": 1.722,
+        "head_pixel_height": 110.21,
+        "head_pixel_width": 39.53,
+        "rotation_degrees": 0.0,
+        "source": "blender_projected_bone",
+        "bone": "headfront"
+      },
+      "face_overlay_offset": [
+        0.0,
+        0.0
+      ],
+      "mouth_channel": "A-F",
+      "eye_channel": "open/half/closed",
+      "face_asset_mode": "png_assets",
+      "clean_face_base": true
+    },
+    {
+      "file": "talk_face_015.png",
+      "source": "spikes\\sprite_render\\dialogue_otto_bust_render\\frames_raw\\walk_raw_015.png",
+      "face_anchor": {
+        "center": [
+          360.09,
+          28.41
+        ],
+        "scale": 1.722,
+        "head_pixel_height": 110.21,
+        "head_pixel_width": 39.53,
+        "rotation_degrees": 0.0,
+        "source": "blender_projected_bone",
+        "bone": "headfront"
+      },
+      "face_overlay_offset": [
+        0.0,
+        0.0
+      ],
+      "mouth_channel": "A-F",
+      "eye_channel": "open/half/closed",
+      "face_asset_mode": "png_assets",
+      "clean_face_base": true
+    },
+    {
+      "file": "talk_face_016.png",
+      "source": "spikes\\sprite_render\\dialogue_otto_bust_render\\frames_raw\\walk_raw_016.png",
+      "face_anchor": {
+        "center": [
+          360.09,
+          28.41
+        ],
+        "scale": 1.722,
+        "head_pixel_height": 110.21,
+        "head_pixel_width": 39.53,
+        "rotation_degrees": 0.0,
+        "source": "blender_projected_bone",
+        "bone": "headfront"
+      },
+      "face_overlay_offset": [
+        0.0,
+        0.0
+      ],
+      "mouth_channel": "A-F",
+      "eye_channel": "open/half/closed",
+      "face_asset_mode": "png_assets",
+      "clean_face_base": true
+    },
+    {
+      "file": "talk_face_017.png",
+      "source": "spikes\\sprite_render\\dialogue_otto_bust_render\\frames_raw\\walk_raw_017.png",
+      "face_anchor": {
+        "center": [
+          360.09,
+          28.41
+        ],
+        "scale": 1.722,
+        "head_pixel_height": 110.21,
+        "head_pixel_width": 39.53,
+        "rotation_degrees": 0.0,
+        "source": "blender_projected_bone",
+        "bone": "headfront"
+      },
+      "face_overlay_offset": [
+        0.0,
+        0.0
+      ],
+      "mouth_channel": "A-F",
+      "eye_channel": "open/half/closed",
+      "face_asset_mode": "png_assets",
+      "clean_face_base": true
+    },
+    {
+      "file": "talk_face_018.png",
+      "source": "spikes\\sprite_render\\dialogue_otto_bust_render\\frames_raw\\walk_raw_018.png",
+      "face_anchor": {
+        "center": [
+          360.09,
+          28.41
+        ],
+        "scale": 1.722,
+        "head_pixel_height": 110.21,
+        "head_pixel_width": 39.53,
+        "rotation_degrees": 0.0,
+        "source": "blender_projected_bone",
+        "bone": "headfront"
+      },
+      "face_overlay_offset": [
+        0.0,
+        0.0
+      ],
+      "mouth_channel": "A-F",
+      "eye_channel": "open/half/closed",
+      "face_asset_mode": "png_assets",
+      "clean_face_base": true
+    },
+    {
+      "file": "talk_face_019.png",
+      "source": "spikes\\sprite_render\\dialogue_otto_bust_render\\frames_raw\\walk_raw_019.png",
+      "face_anchor": {
+        "center": [
+          360.09,
+          28.41
+        ],
+        "scale": 1.722,
+        "head_pixel_height": 110.21,
+        "head_pixel_width": 39.53,
+        "rotation_degrees": 0.0,
+        "source": "blender_projected_bone",
+        "bone": "headfront"
+      },
+      "face_overlay_offset": [
+        0.0,
+        0.0
+      ],
+      "mouth_channel": "A-F",
+      "eye_channel": "open/half/closed",
+      "face_asset_mode": "png_assets",
+      "clean_face_base": true
+    },
+    {
+      "file": "talk_face_020.png",
+      "source": "spikes\\sprite_render\\dialogue_otto_bust_render\\frames_raw\\walk_raw_020.png",
+      "face_anchor": {
+        "center": [
+          360.09,
+          28.41
+        ],
+        "scale": 1.722,
+        "head_pixel_height": 110.21,
+        "head_pixel_width": 39.53,
+        "rotation_degrees": 0.0,
+        "source": "blender_projected_bone",
+        "bone": "headfront"
+      },
+      "face_overlay_offset": [
+        0.0,
+        0.0
+      ],
+      "mouth_channel": "A-F",
+      "eye_channel": "open/half/closed",
+      "face_asset_mode": "png_assets",
+      "clean_face_base": true
+    },
+    {
+      "file": "talk_face_021.png",
+      "source": "spikes\\sprite_render\\dialogue_otto_bust_render\\frames_raw\\walk_raw_021.png",
+      "face_anchor": {
+        "center": [
+          360.09,
+          28.41
+        ],
+        "scale": 1.722,
+        "head_pixel_height": 110.21,
+        "head_pixel_width": 39.53,
+        "rotation_degrees": 0.0,
+        "source": "blender_projected_bone",
+        "bone": "headfront"
+      },
+      "face_overlay_offset": [
+        0.0,
+        0.0
+      ],
+      "mouth_channel": "A-F",
+      "eye_channel": "open/half/closed",
+      "face_asset_mode": "png_assets",
+      "clean_face_base": true
+    },
+    {
+      "file": "talk_face_022.png",
+      "source": "spikes\\sprite_render\\dialogue_otto_bust_render\\frames_raw\\walk_raw_022.png",
+      "face_anchor": {
+        "center": [
+          360.09,
+          28.41
+        ],
+        "scale": 1.722,
+        "head_pixel_height": 110.21,
+        "head_pixel_width": 39.53,
+        "rotation_degrees": 0.0,
+        "source": "blender_projected_bone",
+        "bone": "headfront"
+      },
+      "face_overlay_offset": [
+        0.0,
+        0.0
+      ],
+      "mouth_channel": "A-F",
+      "eye_channel": "open/half/closed",
+      "face_asset_mode": "png_assets",
+      "clean_face_base": true
+    },
+    {
+      "file": "talk_face_023.png",
+      "source": "spikes\\sprite_render\\dialogue_otto_bust_render\\frames_raw\\walk_raw_023.png",
+      "face_anchor": {
+        "center": [
+          360.09,
+          28.41
+        ],
+        "scale": 1.722,
+        "head_pixel_height": 110.21,
+        "head_pixel_width": 39.53,
+        "rotation_degrees": 0.0,
+        "source": "blender_projected_bone",
+        "bone": "headfront"
+      },
+      "face_overlay_offset": [
+        0.0,
+        0.0
+      ],
+      "mouth_channel": "A-F",
+      "eye_channel": "open/half/closed",
+      "face_asset_mode": "png_assets",
+      "clean_face_base": true
+    }
+  ],
+  "warnings": []
+}

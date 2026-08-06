@@ -1,0 +1,145 @@
+{
+  "sheet": "pip-talk",
+  "actor_type": "walk-plane",
+  "canvas": {
+    "width": 320,
+    "height": 360
+  },
+  "anchor_tolerance_px": 1,
+  "frames": [
+    {
+      "file": "pip_talk_01.png",
+      "anchor": [
+        160,
+        300
+      ],
+      "role": "talk-closed",
+      "canonical": true,
+      "scale_reference": [
+        160,
+        80
+      ]
+    },
+    {
+      "file": "pip_talk_02.png",
+      "anchor": [
+        160,
+        300
+      ],
+      "role": "talk-small-open"
+    },
+    {
+      "file": "pip_talk_03.png",
+      "anchor": [
+        160,
+        300
+      ],
+      "role": "talk-open"
+    },
+    {
+      "file": "pip_talk_04.png",
+      "anchor": [
+        160,
+        300
+      ],
+      "role": "talk-wide"
+    },
+    {
+      "file": "pip_talk_05.png",
+      "anchor": [
+        160,
+        300
+      ],
+      "role": "talk-wide"
+    },
+    {
+      "file": "pip_talk_06.png",
+      "anchor": [
+        160,
+        300
+      ],
+      "role": "talk-open"
+    },
+    {
+      "file": "pip_talk_07.png",
+      "anchor": [
+        160,
+        300
+      ],
+      "role": "talk-small-open"
+    },
+    {
+      "file": "pip_talk_08.png",
+      "anchor": [
+        160,
+        300
+      ],
+      "role": "talk-closed"
+    },
+    {
+      "file": "pip_talk_09.png",
+      "anchor": [
+        160,
+        300
+      ],
+      "role": "talk-closed"
+    },
+    {
+      "file": "pip_talk_10.png",
+      "anchor": [
+        160,
+        300
+      ],
+      "role": "talk-small-open"
+    },
+    {
+      "file": "pip_talk_11.png",
+      "anchor": [
+        160,
+        300
+      ],
+      "role": "talk-open"
+    },
+    {
+      "file": "pip_talk_12.png",
+      "anchor": [
+        160,
+        300
+      ],
+      "role": "talk-wide"
+    },
+    {
+      "file": "pip_talk_13.png",
+      "anchor": [
+        160,
+        300
+      ],
+      "role": "talk-wide"
+    },
+    {
+      "file": "pip_talk_14.png",
+      "anchor": [
+        160,
+        300
+      ],
+      "role": "talk-open"
+    },
+    {
+      "file": "pip_talk_15.png",
+      "anchor": [
+        160,
+        300
+      ],
+      "role": "talk-small-open"
+    },
+    {
+      "file": "pip_talk_16.png",
+      "anchor": [
+        160,
+        300
+      ],
+      "role": "talk-closed"
+    }
+  ],
+  "approval_state": "runtime-production-pass-derived-from-registered-pip-idle"
+}

@@ -1,0 +1,192 @@
+{
+  "face_mode": "overlay",
+  "anchor_method": "alpha_bbox_heuristic_for_proof",
+  "production_anchor_method": "Blender head bone or named face socket projected into render camera",
+  "fps": 12,
+  "frame_count": 12,
+  "frames": [
+    {
+      "file": "talk_face_000.png",
+      "source": "spikes\\sprite_render\\textured_walk_proof\\textured_walk_R3_000.png",
+      "face_anchor": {
+        "center": [
+          66.58,
+          64.66
+        ],
+        "scale": 0.6893,
+        "rotation_degrees": 0.0,
+        "source": "alpha_bbox_heuristic"
+      },
+      "mouth_channel": "A-F",
+      "eye_channel": "open/half/closed"
+    },
+    {
+      "file": "talk_face_001.png",
+      "source": "spikes\\sprite_render\\textured_walk_proof\\textured_walk_R3_001.png",
+      "face_anchor": {
+        "center": [
+          66.62,
+          65.43
+        ],
+        "scale": 0.6845,
+        "rotation_degrees": 0.0,
+        "source": "alpha_bbox_heuristic"
+      },
+      "mouth_channel": "A-F",
+      "eye_channel": "open/half/closed"
+    },
+    {
+      "file": "talk_face_002.png",
+      "source": "spikes\\sprite_render\\textured_walk_proof\\textured_walk_R3_002.png",
+      "face_anchor": {
+        "center": [
+          66.66,
+          66.43
+        ],
+        "scale": 0.6845,
+        "rotation_degrees": 0.0,
+        "source": "alpha_bbox_heuristic"
+      },
+      "mouth_channel": "A-F",
+      "eye_channel": "open/half/closed"
+    },
+    {
+      "file": "talk_face_003.png",
+      "source": "spikes\\sprite_render\\textured_walk_proof\\textured_walk_R3_003.png",
+      "face_anchor": {
+        "center": [
+          66.68,
+          66.43
+        ],
+        "scale": 0.6845,
+        "rotation_degrees": 0.0,
+        "source": "alpha_bbox_heuristic"
+      },
+      "mouth_channel": "A-F",
+      "eye_channel": "open/half/closed"
+    },
+    {
+      "file": "talk_face_004.png",
+      "source": "spikes\\sprite_render\\textured_walk_proof\\textured_walk_R3_004.png",
+      "face_anchor": {
+        "center": [
+          67.66,
+          65.66
+        ],
+        "scale": 0.6893,
+        "rotation_degrees": 0.0,
+        "source": "alpha_bbox_heuristic"
+      },
+      "mouth_channel": "A-F",
+      "eye_channel": "open/half/closed"
+    },
+    {
+      "file": "talk_face_005.png",
+      "source": "spikes\\sprite_render\\textured_walk_proof\\textured_walk_R3_005.png",
+      "face_anchor": {
+        "center": [
+          66.58,
+          64.66
+        ],
+        "scale": 0.6893,
+        "rotation_degrees": 0.0,
+        "source": "alpha_bbox_heuristic"
+      },
+      "mouth_channel": "A-F",
+      "eye_channel": "open/half/closed"
+    },
+    {
+      "file": "talk_face_006.png",
+      "source": "spikes\\sprite_render\\textured_walk_proof\\textured_walk_R3_006.png",
+      "face_anchor": {
+        "center": [
+          66.99,
+          65.66
+        ],
+        "scale": 0.6893,
+        "rotation_degrees": 0.0,
+        "source": "alpha_bbox_heuristic"
+      },
+      "mouth_channel": "A-F",
+      "eye_channel": "open/half/closed"
+    },
+    {
+      "file": "talk_face_007.png",
+      "source": "spikes\\sprite_render\\textured_walk_proof\\textured_walk_R3_007.png",
+      "face_anchor": {
+        "center": [
+          67.52,
+          66.2
+        ],
+        "scale": 0.6796,
+        "rotation_degrees": 0.0,
+        "source": "alpha_bbox_heuristic"
+      },
+      "mouth_channel": "A-F",
+      "eye_channel": "open/half/closed"
+    },
+    {
+      "file": "talk_face_008.png",
+      "source": "spikes\\sprite_render\\textured_walk_proof\\textured_walk_R3_008.png",
+      "face_anchor": {
+        "center": [
+          66.64,
+          67.97
+        ],
+        "scale": 0.6748,
+        "rotation_degrees": 0.0,
+        "source": "alpha_bbox_heuristic"
+      },
+      "mouth_channel": "A-F",
+      "eye_channel": "open/half/closed"
+    },
+    {
+      "file": "talk_face_009.png",
+      "source": "spikes\\sprite_render\\textured_walk_proof\\textured_walk_R3_009.png",
+      "face_anchor": {
+        "center": [
+          66.66,
+          66.97
+        ],
+        "scale": 0.6748,
+        "rotation_degrees": 0.0,
+        "source": "alpha_bbox_heuristic"
+      },
+      "mouth_channel": "A-F",
+      "eye_channel": "open/half/closed"
+    },
+    {
+      "file": "talk_face_010.png",
+      "source": "spikes\\sprite_render\\textured_walk_proof\\textured_walk_R3_010.png",
+      "face_anchor": {
+        "center": [
+          66.64,
+          67.2
+        ],
+        "scale": 0.6796,
+        "rotation_degrees": 0.0,
+        "source": "alpha_bbox_heuristic"
+      },
+      "mouth_channel": "A-F",
+      "eye_channel": "open/half/closed"
+    },
+    {
+      "file": "talk_face_011.png",
+      "source": "spikes\\sprite_render\\textured_walk_proof\\textured_walk_R3_011.png",
+      "face_anchor": {
+        "center": [
+          66.54,
+          66.97
+        ],
+        "scale": 0.6748,
+        "rotation_degrees": 0.0,
+        "source": "alpha_bbox_heuristic"
+      },
+      "mouth_channel": "A-F",
+      "eye_channel": "open/half/closed"
+    }
+  ],
+  "warnings": [
+    "Proof overlay only: replace heuristic face anchors with Blender socket projection before production admission."
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "character": "old-bottlecap",
+  "status": "engine-export-ready",
+  "character_role": "gate-anchored toll guard",
+  "actor_type": "furniture-anchored",
+  "runtime_canvas": [
+    512,
+    512
+  ],
+  "runtime_anchor": [
+    256,
+    486
+  ],
+  "ags": {
+    "import_note": "Import as a gate-anchored guard. Bottlecap is staged in front of the gate baseline; gate bars are not allowed to crop or hide the actor."
+  },
+  "states": {
+    "idle": {
+      "file": "art/engine-export/old-bottlecap/old-bottlecap_idle.png",
+      "cell": [
+        512,
+        512
+      ],
+      "frames": 24,
+      "sha256": "e2131243aaa6b1b2cc1750e77775f7d35e12a6750b324724f46d5c5c73bf9dfa",
+      "source_hashes": {
+        "art/act01-production/characters/old-bottlecap/meshy-current/idle/old_bottlecap_meshy_idle_01.png": "5f9205f88905fde56d3ffa144c01994cec03fa6c17a860e1cb96798c96f91f6f",
+        "art/act01-production/characters/old-bottlecap/meshy-current/idle/old_bottlecap_meshy_idle_02.png": "cfac7636e95e2ce6d4e5099ce0b268fc14eda9f283d7d53f6671acef01f884ca",
+        "art/act01-production/characters/old-bottlecap/meshy-current/idle/old_bottlecap_meshy_idle_03.png": "48bd413916c5f675e5ef78c2d8b5cb123154dde13ce9f3a02cfcd08d8542f2bf",
+        "art/act01-production/characters/old-bottlecap/meshy-current/idle/old_bottlecap_meshy_idle_04.png": "42481b770dd13606e82d5bab7d4ccebbf9671ae379af5f7f1b065f66dae97bb2",
+        "art/act01-production/characters/old-bottlecap/meshy-current/idle/old_bottlecap_meshy_idle_05.png": "6ed5f99f3ccb1ccac45603c50ee3660722dc858b90cdc867d908c782dd9a6581",
+        "art/act01-production/characters/old-bottlecap/meshy-current/idle/old_bottlecap_meshy_idle_06.png": "d0c82446f5162cc3573a279d73179c3733f6ca6337ebb7fccf5425d84fb382b0",
+        "art/act01-production/characters/old-bottlecap/meshy-current/idle/old_bottlecap_meshy_idle_07.png": "ff70f89a8f0527fc06b27dea7ea152eccbb7caf540a8520bc992424b1c185b4f",
+        "art/act01-production/characters/old-bottlecap/meshy-current/idle/old_bottlecap_meshy_idle_08.png": "3a6a413a9d8e4efc115e32e543425318f400b2ff66d28b654b672decd58e8f08",
+        "art/act01-production/characters/old-bottlecap/meshy-current/idle/old_bottlecap_meshy_idle_09.png": "b86b049228ec5f5e6d78c2d4951a2477aa5617f2ea026bdc1c4192d64d033689",
+        "art/act01-production/characters/old-bottlecap/meshy-current/idle/old_bottlecap_meshy_idle_10.png": "d5a5635099b8a344548bca1c6bfac7ff2846745807634022bc909a2f2d80edd1",
+        "art/act01-production/characters/old-bottlecap/meshy-current/idle/old_bottlecap_meshy_idle_11.png": "aca36ee0c4fb2c20a35dc99e55bcaca375da5d2e63b82a6262165579297cb34a",
+        "art/act01-production/characters/old-bottlecap/meshy-current/idle/old_bottlecap_meshy_idle_12.png": "65110caa83f7b0c40f028060843ffca487ee04aad4ddd4ea9e4775b88df72daa",
+        "art/act01-production/characters/old-bottlecap/meshy-current/idle/old_bottlecap_meshy_idle_13.png": "df91f7ec619340a4a74f3c725aa4317b4aa1aa2f84da783d8e8bde4eaabd852d",
+        "art/act01-production/characters/old-bottlecap/meshy-current/idle/old_bottlecap_meshy_idle_14.png": "dea74878c26ee673f0ca461042e5a3bead8497335f701dcef9a4823d61aaaff5",
+        "art/act01-production/characters/old-bottlecap/meshy-current/idle/old_bottlecap_meshy_idle_15.png": "dd414bae3e2b8ec399934962f6246ff83e6bda539a107e9232428979b4cbc1a2",
+        "art/act01-production/characters/old-bottlecap/meshy-current/idle/old_bottlecap_meshy_idle_16.png": "ee220641f923986b68ad53d6404ff57bb0e160cd49cf71c3f459f9c89e9d6036",
+        "art/act01-production/characters/old-bottlecap/meshy-current/idle/old_bottlecap_meshy_idle_17.png": "8329ea96f4c9c750cd5be1160f2955baecaa0d0904824f859792f70c684a6028",
+        "art/act01-production/characters/old-bottlecap/meshy-current/idle/old_bottlecap_meshy_idle_18.png": "81bfd7ca94a13bdb0dab5e8d89ac77845bdd867eae2acabc64f3d464a736f670",
+        "art/act01-production/characters/old-bottlecap/meshy-current/idle/old_bottlecap_meshy_idle_19.png": "78cb0e8bd1d5a42ee37b8d3b323fff9ee5c06e5d11eeacf31c09c390e4121dfa",
+        "art/act01-production/characters/old-bottlecap/meshy-current/idle/old_bottlecap_meshy_idle_20.png": "ae4959c44521ccbb2d7a32fbd055784594d7a00929c1c33a2223395fab3ae82c",
+        "art/act01-production/characters/old-bottlecap/meshy-current/idle/old_bottlecap_meshy_idle_21.png": "c97cb37c3b4bb97cab24fc68c7ca078f5ef855a7b8a7097de8c28467dcaaf91e",
+        "art/act01-production/characters/old-bottlecap/meshy-current/idle/old_bottlecap_meshy_idle_22.png": "b52bd4b4037eb99497b7f1673f72e681fcbb1ef30042db6e8d81e19f65e56eec",
+        "art/act01-production/characters/old-bottlecap/meshy-current/idle/old_bottlecap_meshy_idle_23.png": "278995eab5b5de65acb0278a85874debc88c15bad438a5bc5e717cfefc65d34a",
+        "art/act01-production/characters/old-bottlecap/meshy-current/idle/old_bottlecap_meshy_idle_24.png": "9fdbf73da55bbfe439cc37d87588060365569b9f20a07ce292956dd42cd51a3b"
+      },
+      "state": "idle",
+      "fps": 12,
+      "loop": true,
+      "ags_view": "BOTTLECAP_IDLE",
+      "registration": "art/act01-production/characters/old-bottlecap/meshy-current/idle/registration.json",
+      "runtime_canvas": [
+        512,
+        512
+      ],
+      "runtime_anchor": [
+        256,
+        486
+      ]
+    },
+    "tollRefused": {
+      "file": "art/engine-export/old-bottlecap/old-bottlecap_tollRefused.png",
+      "cell": [
+        512,
+        512
+      ],
+      "frames": 5,
+      "sha256": "73be5d4cef7fa8b9af81f3653eaa793df2f30e54e969489cb00571d7b9d7a5f5",
+      "source_hashes": {
+        "art/act01-production/characters/old-bottlecap/meshy-current/toll-refused/old_bottlecap_meshy_refuse_01.png": "ce2addc8aa0836f2400bef435f23ad584726b3a8cdf707d4beed83218204153f",
+        "art/act01-production/characters/old-bottlecap/meshy-current/toll-refused/old_bottlecap_meshy_refuse_02.png": "bc13f9260d5f75eca1e4b64a50d03ab77910828844fd04959b51c8897f90160f",
+        "art/act01-production/characters/old-bottlecap/meshy-current/toll-refused/old_bottlecap_meshy_refuse_03.png": "6257602cd1cbc2037fa6bdba58fc606e41386424286a12f9ec015544b4eb454e",
+        "art/act01-production/characters/old-bottlecap/meshy-current/toll-refused/old_bottlecap_meshy_refuse_04.png": "42f29e478cf0b9bb69e3ba662defc6bbb4c1d4598f6bbdb0ceaa034a6541e713",
+        "art/act01-production/characters/old-bottlecap/meshy-current/toll-refused/old_bottlecap_meshy_refuse_05.png": "6abac6e60079c21b20d168d5eb7c3870c18eb171fbd27b59f3ca252b9328ae92"
+      },
+      "state": "tollRefused",
+      "fps": 8,
+      "loop": false,
+      "ags_view": "BOTTLECAP_TOLL_REFUSED",
+      "registration": "art/act01-production/characters/old-bottlecap/meshy-current/toll-refused/registration.json",
+      "runtime_canvas": [
+        512,
+        512
+      ],
+      "runtime_anchor": [
+        256,
+        486
+      ]
+    },
+    "tollPaid": {
+      "file": "art/engine-export/old-bottlecap/old-bottlecap_tollPaid.png",
+      "cell": [
+        512,
+        512
+      ],
+      "frames": 7,
+      "sha256": "020277e074e25b1670863213ba1d6fbdb8a46e819e46d907d764bef02ba33143",
+      "source_hashes": {
+        "art/act01-production/characters/old-bottlecap/meshy-current/toll-paid/old_bottlecap_meshy_paid_01.png": "ce2addc8aa0836f2400bef435f23ad584726b3a8cdf707d4beed83218204153f",
+        "art/act01-production/characters/old-bottlecap/meshy-current/toll-paid/old_bottlecap_meshy_paid_02.png": "bc13f9260d5f75eca1e4b64a50d03ab77910828844fd04959b51c8897f90160f",
+        "art/act01-production/characters/old-bottlecap/meshy-current/toll-paid/old_bottlecap_meshy_paid_03.png": "6257602cd1cbc2037fa6bdba58fc606e41386424286a12f9ec015544b4eb454e",
+        "art/act01-production/characters/old-bottlecap/meshy-current/toll-paid/old_bottlecap_meshy_paid_04.png": "42f29e478cf0b9bb69e3ba662defc6bbb4c1d4598f6bbdb0ceaa034a6541e713",
+        "art/act01-production/characters/old-bottlecap/meshy-current/toll-paid/old_bottlecap_meshy_paid_05.png": "6abac6e60079c21b20d168d5eb7c3870c18eb171fbd27b59f3ca252b9328ae92",
+        "art/act01-production/characters/old-bottlecap/meshy-current/toll-paid/old_bottlecap_meshy_paid_06.png": "80d806bf02a8eae06baa4ea7f9a2284940af95a384f4b716d71e196520553db2",
+        "art/act01-production/characters/old-bottlecap/meshy-current/toll-paid/old_bottlecap_meshy_paid_07.png": "7c790b24165549480ff31d91fc8d5f9f5bbf9099d222086c7e0ce03c1ff91430"
+      },
+      "state": "tollPaid",
+      "fps": 8,
+      "loop": false,
+      "ags_view": "BOTTLECAP_TOLL_PAID",
+      "registration": "art/act01-production/characters/old-bottlecap/meshy-current/toll-paid/registration.json",
+      "runtime_canvas": [
+        512,
+        512
+      ],
+      "runtime_anchor": [
+        256,
+        486
+      ]
+    }
+  },
+  "qa": {
+    "review_sheet": "art/act01-production/qa/old-bottlecap-engine-export-review.png",
+    "export_gate": "npm.cmd run qa:engine:bottlecap"
+  }
+}

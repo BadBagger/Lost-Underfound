@@ -1,0 +1,65 @@
+{
+  "source": "ags\\room2\\background\\audience-chamber.source.png",
+  "output": "ags\\room2\\background\\audience-chamber.png",
+  "source_size": [
+    1672,
+    941
+  ],
+  "target_size": [
+    1280,
+    720
+  ],
+  "crop_box": [
+    0,
+    0,
+    1672,
+    941
+  ],
+  "geometryAuthority": true,
+  "studiesReferenceOnly": true,
+  "gates": {
+    "objectPlacement": "pass",
+    "internalLighting": "pass",
+    "perspectiveEyeLevel": "pass",
+    "finishedSurfaces": "pass",
+    "dimensions": "pass"
+  },
+  "placements": {
+    "chairman-toggle": {
+      "x": 515,
+      "y": 290,
+      "width": 300,
+      "height": 230
+    },
+    "petition-counter": {
+      "x": 430,
+      "y": 390,
+      "width": 460,
+      "height": 230
+    },
+    "stamp": {
+      "x": 750,
+      "y": 375,
+      "width": 72,
+      "height": 76
+    },
+    "button-court-seal": {
+      "x": 110,
+      "y": 120,
+      "width": 230,
+      "height": 230
+    },
+    "toggle-desk": {
+      "x": 455,
+      "y": 415,
+      "width": 395,
+      "height": 180
+    }
+  },
+  "visualReview": {
+    "status": "intake",
+    "actorProofRequired": true,
+    "blockingNotes": "Toggle station reads well; prove Toggle behind counter and keep seal/button motif from becoming wallpaper.",
+    "finalApproval": "pending actor-scale composite proof"
+  }
+}

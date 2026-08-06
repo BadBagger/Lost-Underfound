@@ -1,0 +1,10 @@
+Single horizontal strip, [N] poses left to right, evenly spaced. Flat solid pink
+background (#ff00ff) or mid-grey background (#808080), no grid lines, no borders,
+no text, no cast shadows on the background. Same character, same design, same
+scale, same camera distance and eye level in every pose. Generous empty margin
+between poses. Consistent warm upper-left key light.
+
+Use the character LoRA for identity only. Use pose guidance for the action.
+Do not include furniture, gates, cobwebs, UI, speech bubbles, captions, room
+backgrounds, or baked contact shadows. Every actor part intended for the state
+must be visible before scene occlusion is applied.

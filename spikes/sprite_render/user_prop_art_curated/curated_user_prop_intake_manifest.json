@@ -1,0 +1,143 @@
+{
+  "role": "curated subset of user-provided prop art intake",
+  "status": "partial_accept_for_review",
+  "accepted_review_crops": [
+    {
+      "name": "thread_spool",
+      "source_crop": "inventory_props_00.png",
+      "path": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\user_prop_art_curated\\accepted_review_crops\\thread_spool.png",
+      "size": [
+        387,
+        403
+      ],
+      "admission_status": "review crop only; final alpha cleanup and registration still required"
+    },
+    {
+      "name": "button_dark_two_hole",
+      "source_crop": "inventory_props_01.png",
+      "path": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\user_prop_art_curated\\accepted_review_crops\\button_dark_two_hole.png",
+      "size": [
+        316,
+        290
+      ],
+      "admission_status": "review crop only; final alpha cleanup and registration still required"
+    },
+    {
+      "name": "old_bottlecap_token",
+      "source_crop": "inventory_props_02.png",
+      "path": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\user_prop_art_curated\\accepted_review_crops\\old_bottlecap_token.png",
+      "size": [
+        293,
+        276
+      ],
+      "admission_status": "review crop only; final alpha cleanup and registration still required"
+    },
+    {
+      "name": "needle",
+      "source_crop": "inventory_props_03.png",
+      "path": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\user_prop_art_curated\\accepted_review_crops\\needle.png",
+      "size": [
+        283,
+        347
+      ],
+      "admission_status": "review crop only; final alpha cleanup and registration still required"
+    },
+    {
+      "name": "threaded_needle",
+      "source_crop": "inventory_props_04.png",
+      "path": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\user_prop_art_curated\\accepted_review_crops\\threaded_needle.png",
+      "size": [
+        315,
+        347
+      ],
+      "admission_status": "review crop only; final alpha cleanup and registration still required"
+    },
+    {
+      "name": "intake_parcel",
+      "source_crop": "inventory_props_05.png",
+      "path": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\user_prop_art_curated\\accepted_review_crops\\intake_parcel.png",
+      "size": [
+        451,
+        358
+      ],
+      "admission_status": "review crop only; final alpha cleanup and registration still required"
+    },
+    {
+      "name": "founders_ledger_closed",
+      "source_crop": "inventory_props_06.png",
+      "path": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\user_prop_art_curated\\accepted_review_crops\\founders_ledger_closed.png",
+      "size": [
+        426,
+        408
+      ],
+      "admission_status": "review crop only; final alpha cleanup and registration still required"
+    },
+    {
+      "name": "annotated_evidence_candidate",
+      "source_crop": "inventory_props_07.png",
+      "path": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\user_prop_art_curated\\accepted_review_crops\\annotated_evidence_candidate.png",
+      "size": [
+        454,
+        409
+      ],
+      "admission_status": "review crop only; final alpha cleanup and registration still required"
+    },
+    {
+      "name": "pips_marble_broken_candidate",
+      "source_crop": "inventory_props_08.png",
+      "path": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\user_prop_art_curated\\accepted_review_crops\\pips_marble_broken_candidate.png",
+      "size": [
+        287,
+        312
+      ],
+      "admission_status": "review crop only; final alpha cleanup and registration still required"
+    },
+    {
+      "name": "clerk_counter_station_reference",
+      "source_crop": "room_props_00.png",
+      "path": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\user_prop_art_curated\\accepted_review_crops\\clerk_counter_station_reference.png",
+      "size": [
+        757,
+        502
+      ],
+      "admission_status": "review crop only; final alpha cleanup and registration still required"
+    },
+    {
+      "name": "notice_board_reference",
+      "source_crop": "room_props_01.png",
+      "path": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\user_prop_art_curated\\accepted_review_crops\\notice_board_reference.png",
+      "size": [
+        763,
+        438
+      ],
+      "admission_status": "review crop only; final alpha cleanup and registration still required"
+    },
+    {
+      "name": "station_and_annex_door_reference",
+      "source_crop": "room_props_02.png",
+      "path": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\user_prop_art_curated\\accepted_review_crops\\station_and_annex_door_reference.png",
+      "size": [
+        1525,
+        517
+      ],
+      "admission_status": "review crop only; final alpha cleanup and registration still required"
+    },
+    {
+      "name": "scene_object_sheet_reference",
+      "source_crop": "scene_objects_00.png",
+      "path": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\user_prop_art_curated\\accepted_review_crops\\scene_object_sheet_reference.png",
+      "size": [
+        1509,
+        1000
+      ],
+      "admission_status": "review crop only; final alpha cleanup and registration still required"
+    }
+  ],
+  "rejected_or_needs_manual": [
+    "spikes/sprite_render/user_prop_art_intake/",
+    "marbles_00 grouped all five marbles together; use original marble sheet and hand separate candidates.",
+    "glass/cobweb/dust partial transparency cannot be recovered cleanly from RGB gray-background sheets."
+  ],
+  "next_step": "Use accepted review crops as visual source candidates; hand-separate marble candidates from original sheet and redo alpha cleanup for glass/cobweb/dust.",
+  "contact_sheet": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\user_prop_art_curated\\curated_user_prop_intake_contact.png"
+}

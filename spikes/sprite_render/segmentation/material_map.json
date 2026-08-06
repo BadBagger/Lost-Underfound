@@ -1,0 +1,61 @@
+{
+  "source": "C:/Users/KyleB/Downloads/Meshy_AI__0805150824_part-segmentation.fbx",
+  "review_sheet": "spikes/sprite_render/segmentation/part_segmentation_review.png",
+  "status": "first_pass_visual_mapping",
+  "notes": [
+    "The part-segmentation FBX is static and has no armature, UV texture image, or material slots.",
+    "It provides useful separated mesh parts and vertex colors; treat it as segmentation authority, not final color authority.",
+    "Several tiny/detail parts are hard to classify from the current review sheet and should be verified before baking to the animated mesh.",
+    "QA finding: one hand is cleanly segmented, but the opposite hand is not present as a complete part in the solo-part review. It appears missing or fragmented into tiny pieces. Do not use this segmentation map blindly for hands."
+  ],
+  "qa_flags": {
+    "missing_or_fragmented_right_hand": true,
+    "solo_review_sheet": "spikes/sprite_render/segmentation/part_segmentation_solo_review.png",
+    "recommended_fix": "Use segmentation for large stable regions only, then create/repair hand material groups on the animated mesh manually or by mirroring the intact hand assignment."
+  },
+  "materials": {
+    "blue_costume_cloth": {
+      "color": "#2571c3",
+      "target": "main blue pajama suit / hood / sleeves / legs"
+    },
+    "teal_belly_cloth": {
+      "color": "#4dbfb5",
+      "target": "front belly patch"
+    },
+    "warm_skin": {
+      "color": "#e5a67c",
+      "target": "face and hands"
+    },
+    "teal_horn_accent": {
+      "color": "#2a93b1",
+      "target": "horns / costume accents"
+    },
+    "dark_blue_shoe": {
+      "color": "#184d91",
+      "target": "shoes"
+    },
+    "dark_hair_detail": {
+      "color": "#2a1d18",
+      "target": "hair/fringe/facial interior detail"
+    },
+    "review_unknown": {
+      "color": "#ff00ff",
+      "target": "needs manual review"
+    }
+  },
+  "part_to_material": {
+    "model_part1": "blue_costume_cloth",
+    "model_part4": "teal_belly_cloth",
+    "model_part11": "warm_skin",
+    "model_part7": "warm_skin",
+    "model_part12": "blue_costume_cloth",
+    "model_part3": "teal_horn_accent",
+    "model_part2": "dark_blue_shoe",
+    "model_part5": "dark_blue_shoe",
+    "model_part9": "dark_hair_detail",
+    "model_part0": "review_unknown",
+    "model_part6": "review_unknown",
+    "model_part8": "review_unknown",
+    "model_part10": "review_unknown"
+  }
+}

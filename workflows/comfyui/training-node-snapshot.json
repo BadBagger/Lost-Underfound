@@ -1,0 +1,598 @@
+﻿{
+    "LoadImageTextDataSetFromFolder":  {
+                                           "input":  {
+                                                         "required":  {
+                                                                          "folder":  [
+                                                                                         "COMBO",
+                                                                                         {
+                                                                                             "tooltip":  "The folder to load images and text captions from.",
+                                                                                             "multiselect":  false,
+                                                                                             "options":  [
+                                                                                                             "3d"
+                                                                                                         ]
+                                                                                         }
+                                                                                     ]
+                                                                      }
+                                                     },
+                                           "input_order":  {
+                                                               "required":  [
+                                                                                "folder"
+                                                                            ]
+                                                           },
+                                           "is_input_list":  false,
+                                           "output":  [
+                                                          "IMAGE",
+                                                          "STRING"
+                                                      ],
+                                           "output_is_list":  [
+                                                                  true,
+                                                                  true
+                                                              ],
+                                           "output_name":  [
+                                                               "images",
+                                                               "texts"
+                                                           ],
+                                           "output_tooltips":  [
+                                                                   "List of loaded images",
+                                                                   "List of text captions"
+                                                               ],
+                                           "output_matchtypes":  null,
+                                           "name":  "LoadImageTextDataSetFromFolder",
+                                           "display_name":  "Load Image-Text (from Folder)",
+                                           "description":  "Load a dataset of pairs of images and text captions from a specified folder and return them as a list. Supported formats: PNG, JPG, JPEG, WEBP.",
+                                           "python_module":  "comfy_extras.nodes_dataset",
+                                           "category":  "image",
+                                           "output_node":  false,
+                                           "deprecated":  false,
+                                           "experimental":  true,
+                                           "dev_only":  false,
+                                           "api_node":  false,
+                                           "price_badge":  null,
+                                           "search_aliases":  [
+                                                                  "load folder",
+                                                                  "load from folder",
+                                                                  "load dataset",
+                                                                  "load images",
+                                                                  "import dataset"
+                                                              ],
+                                           "essentials_category":  null,
+                                           "has_intermediate_output":  false
+                                       },
+    "MakeTrainingDataset":  {
+                                "input":  {
+                                              "required":  {
+                                                               "images":  [
+                                                                              "IMAGE",
+                                                                              {
+                                                                                  "tooltip":  "List of images to encode."
+                                                                              }
+                                                                          ],
+                                                               "vae":  [
+                                                                           "VAE",
+                                                                           {
+                                                                               "tooltip":  "VAE model for encoding images to latents."
+                                                                           }
+                                                                       ],
+                                                               "clip":  [
+                                                                            "CLIP",
+                                                                            {
+                                                                                "tooltip":  "CLIP model for encoding text to conditioning."
+                                                                            }
+                                                                        ]
+                                                           },
+                                              "optional":  {
+                                                               "texts":  [
+                                                                             "STRING",
+                                                                             {
+                                                                                 "tooltip":  "List of text captions. Can be length n (matching images), 1 (repeated for all), or omitted (uses empty string).",
+                                                                                 "forceInput":  true,
+                                                                                 "multiline":  false
+                                                                             }
+                                                                         ]
+                                                           }
+                                          },
+                                "input_order":  {
+                                                    "required":  [
+                                                                     "images",
+                                                                     "vae",
+                                                                     "clip"
+                                                                 ],
+                                                    "optional":  [
+                                                                     "texts"
+                                                                 ]
+                                                },
+                                "is_input_list":  true,
+                                "output":  [
+                                               "LATENT",
+                                               "CONDITIONING"
+                                           ],
+                                "output_is_list":  [
+                                                       true,
+                                                       true
+                                                   ],
+                                "output_name":  [
+                                                    "latents",
+                                                    "conditioning"
+                                                ],
+                                "output_tooltips":  [
+                                                        "List of latent dicts",
+                                                        "List of conditioning lists"
+                                                    ],
+                                "output_matchtypes":  null,
+                                "name":  "MakeTrainingDataset",
+                                "display_name":  "Make Training Dataset",
+                                "description":  "Encode images with VAE and texts with CLIP to create a training dataset of latents and conditionings.",
+                                "python_module":  "comfy_extras.nodes_dataset",
+                                "category":  "model/training",
+                                "output_node":  false,
+                                "deprecated":  false,
+                                "experimental":  true,
+                                "dev_only":  false,
+                                "api_node":  false,
+                                "price_badge":  null,
+                                "search_aliases":  [
+                                                       "encode dataset"
+                                                   ],
+                                "essentials_category":  null,
+                                "has_intermediate_output":  false
+                            },
+    "TrainLoraNode":  {
+                          "input":  {
+                                        "required":  {
+                                                         "model":  [
+                                                                       "MODEL",
+                                                                       {
+                                                                           "tooltip":  "The model to train the LoRA on."
+                                                                       }
+                                                                   ],
+                                                         "latents":  [
+                                                                         "LATENT",
+                                                                         {
+                                                                             "tooltip":  "The Latents to use for training, serve as dataset/input of the model."
+                                                                         }
+                                                                     ],
+                                                         "positive":  [
+                                                                          "CONDITIONING",
+                                                                          {
+                                                                              "tooltip":  "The positive conditioning to use for training."
+                                                                          }
+                                                                      ],
+                                                         "batch_size":  [
+                                                                            "INT",
+                                                                            {
+                                                                                "tooltip":  "The batch size to use for training.",
+                                                                                "default":  1,
+                                                                                "min":  1,
+                                                                                "max":  10000
+                                                                            }
+                                                                        ],
+                                                         "grad_accumulation_steps":  [
+                                                                                         "INT",
+                                                                                         {
+                                                                                             "tooltip":  "The number of gradient accumulation steps to use for training.",
+                                                                                             "default":  1,
+                                                                                             "min":  1,
+                                                                                             "max":  1024
+                                                                                         }
+                                                                                     ],
+                                                         "steps":  [
+                                                                       "INT",
+                                                                       {
+                                                                           "tooltip":  "The number of steps to train the LoRA for.",
+                                                                           "default":  16,
+                                                                           "min":  1,
+                                                                           "max":  100000
+                                                                       }
+                                                                   ],
+                                                         "learning_rate":  [
+                                                                               "FLOAT",
+                                                                               {
+                                                                                   "tooltip":  "The learning rate to use for training.",
+                                                                                   "default":  0.0005,
+                                                                                   "min":  1E-07,
+                                                                                   "max":  1.0,
+                                                                                   "step":  1E-07
+                                                                               }
+                                                                           ],
+                                                         "rank":  [
+                                                                      "INT",
+                                                                      {
+                                                                          "tooltip":  "The rank of the LoRA layers.",
+                                                                          "default":  8,
+                                                                          "min":  1,
+                                                                          "max":  128
+                                                                      }
+                                                                  ],
+                                                         "optimizer":  [
+                                                                           "COMBO",
+                                                                           {
+                                                                               "tooltip":  "The optimizer to use for training.",
+                                                                               "default":  "AdamW",
+                                                                               "multiselect":  false,
+                                                                               "options":  [
+                                                                                               "AdamW",
+                                                                                               "Adam",
+                                                                                               "SGD",
+                                                                                               "RMSprop"
+                                                                                           ]
+                                                                           }
+                                                                       ],
+                                                         "loss_function":  [
+                                                                               "COMBO",
+                                                                               {
+                                                                                   "tooltip":  "The loss function to use for training.",
+                                                                                   "default":  "MSE",
+                                                                                   "multiselect":  false,
+                                                                                   "options":  [
+                                                                                                   "MSE",
+                                                                                                   "L1",
+                                                                                                   "Huber",
+                                                                                                   "SmoothL1"
+                                                                                               ]
+                                                                               }
+                                                                           ],
+                                                         "seed":  [
+                                                                      "INT",
+                                                                      {
+                                                                          "tooltip":  "The seed to use for training (used in generator for LoRA weight initialization and noise sampling)",
+                                                                          "default":  0,
+                                                                          "min":  0,
+                                                                          "max":  18446744073709551615
+                                                                      }
+                                                                  ],
+                                                         "training_dtype":  [
+                                                                                "COMBO",
+                                                                                {
+                                                                                    "tooltip":  "The dtype to use for training. \u0027none\u0027 preserves the model\u0027s native compute dtype instead of overriding it. For fp16 models, GradScaler is automatically enabled.",
+                                                                                    "default":  "bf16",
+                                                                                    "multiselect":  false,
+                                                                                    "options":  [
+                                                                                                    "bf16",
+                                                                                                    "fp32",
+                                                                                                    "none"
+                                                                                                ]
+                                                                                }
+                                                                            ],
+                                                         "lora_dtype":  [
+                                                                            "COMBO",
+                                                                            {
+                                                                                "tooltip":  "The dtype to use for lora.",
+                                                                                "default":  "bf16",
+                                                                                "multiselect":  false,
+                                                                                "options":  [
+                                                                                                "bf16",
+                                                                                                "fp32"
+                                                                                            ]
+                                                                            }
+                                                                        ],
+                                                         "quantized_backward":  [
+                                                                                    "BOOLEAN",
+                                                                                    {
+                                                                                        "tooltip":  "When using training_dtype \u0027none\u0027 and training on quantized model, doing backward with quantized matmul when enabled.",
+                                                                                        "default":  false
+                                                                                    }
+                                                                                ],
+                                                         "algorithm":  [
+                                                                           "COMBO",
+                                                                           {
+                                                                               "tooltip":  "The algorithm to use for training.",
+                                                                               "default":  "LoRA",
+                                                                               "multiselect":  false,
+                                                                               "options":  [
+                                                                                               "LoRA",
+                                                                                               "LoHa",
+                                                                                               "LoKr",
+                                                                                               "OFT"
+                                                                                           ]
+                                                                           }
+                                                                       ],
+                                                         "gradient_checkpointing":  [
+                                                                                        "BOOLEAN",
+                                                                                        {
+                                                                                            "tooltip":  "Use gradient checkpointing for training.",
+                                                                                            "default":  true
+                                                                                        }
+                                                                                    ],
+                                                         "checkpoint_depth":  [
+                                                                                  "INT",
+                                                                                  {
+                                                                                      "tooltip":  "Depth level for gradient checkpointing.",
+                                                                                      "default":  1,
+                                                                                      "min":  1,
+                                                                                      "max":  5
+                                                                                  }
+                                                                              ],
+                                                         "offloading":  [
+                                                                            "BOOLEAN",
+                                                                            {
+                                                                                "tooltip":  "Offload model weights to CPU during training to save GPU memory.",
+                                                                                "default":  false
+                                                                            }
+                                                                        ],
+                                                         "existing_lora":  [
+                                                                               "COMBO",
+                                                                               {
+                                                                                   "tooltip":  "The existing LoRA to append to. Set to None for new LoRA.",
+                                                                                   "default":  "[None]",
+                                                                                   "multiselect":  false,
+                                                                                   "options":  [
+                                                                                                   "IconsRedmondV2-Icons.safetensors",
+                                                                                                   "ashcrownzero_style_lora-000002.safetensors",
+                                                                                                   "ashcrownzero_style_lora-000004.safetensors",
+                                                                                                   "ashcrownzero_style_lora-000006.safetensors",
+                                                                                                   "ashcrownzero_style_lora_continued-000001.safetensors",
+                                                                                                   "ashcrownzero_style_lora_continued.safetensors",
+                                                                                                   "ilya_acz_lora.safetensors",
+                                                                                                   "kairocrown_acz_lora.safetensors",
+                                                                                                   "mara_acz_lora.safetensors",
+                                                                                                   "noa_acz_lora_continued.safetensors",
+                                                                                                   "riven_acz_lora.safetensors",
+                                                                                                   "sera_acz_lora.safetensors",
+                                                                                                   "teacher_clayclassroom_lora.safetensors",
+                                                                                                   "veyra_lux_afterlight_teaser.safetensors",
+                                                                                                   "veyra_lux_identity_clean20.safetensors",
+                                                                                                   "veyra_lux_identity_proof.safetensors",
+                                                                                                   "[None]"
+                                                                                               ]
+                                                                               }
+                                                                           ],
+                                                         "bucket_mode":  [
+                                                                             "BOOLEAN",
+                                                                             {
+                                                                                 "tooltip":  "Enable resolution bucket mode. When enabled, expects pre-bucketed latents from ResolutionBucket node.",
+                                                                                 "default":  false
+                                                                             }
+                                                                         ],
+                                                         "bypass_mode":  [
+                                                                             "BOOLEAN",
+                                                                             {
+                                                                                 "tooltip":  "Enable bypass mode for training. When enabled, adapters are applied via forward hooks instead of weight modification. Useful for quantized models where weights cannot be directly modified.",
+                                                                                 "default":  false
+                                                                             }
+                                                                         ]
+                                                     }
+                                    },
+                          "input_order":  {
+                                              "required":  [
+                                                               "model",
+                                                               "latents",
+                                                               "positive",
+                                                               "batch_size",
+                                                               "grad_accumulation_steps",
+                                                               "steps",
+                                                               "learning_rate",
+                                                               "rank",
+                                                               "optimizer",
+                                                               "loss_function",
+                                                               "seed",
+                                                               "training_dtype",
+                                                               "lora_dtype",
+                                                               "quantized_backward",
+                                                               "algorithm",
+                                                               "gradient_checkpointing",
+                                                               "checkpoint_depth",
+                                                               "offloading",
+                                                               "existing_lora",
+                                                               "bucket_mode",
+                                                               "bypass_mode"
+                                                           ]
+                                          },
+                          "is_input_list":  true,
+                          "output":  [
+                                         "LORA_MODEL",
+                                         "LOSS_MAP",
+                                         "INT"
+                                     ],
+                          "output_is_list":  [
+                                                 false,
+                                                 false,
+                                                 false
+                                             ],
+                          "output_name":  [
+                                              "lora",
+                                              "loss_map",
+                                              "steps"
+                                          ],
+                          "output_tooltips":  [
+                                                  "LoRA weights",
+                                                  "Loss history",
+                                                  "Total training steps"
+                                              ],
+                          "output_matchtypes":  null,
+                          "name":  "TrainLoraNode",
+                          "display_name":  "Train LoRA",
+                          "description":  "",
+                          "python_module":  "comfy_extras.nodes_train",
+                          "category":  "model/training",
+                          "output_node":  false,
+                          "deprecated":  false,
+                          "experimental":  true,
+                          "dev_only":  false,
+                          "api_node":  false,
+                          "price_badge":  null,
+                          "search_aliases":  null,
+                          "essentials_category":  null,
+                          "has_intermediate_output":  false
+                      },
+    "SaveLoRA":  {
+                     "input":  {
+                                   "required":  {
+                                                    "lora":  [
+                                                                 "LORA_MODEL",
+                                                                 {
+                                                                     "tooltip":  "The LoRA model to save. Do not use the model with LoRA layers."
+                                                                 }
+                                                             ],
+                                                    "prefix":  [
+                                                                   "STRING",
+                                                                   {
+                                                                       "tooltip":  "The prefix to use for the saved LoRA file.",
+                                                                       "default":  "loras/ComfyUI_trained_lora",
+                                                                       "multiline":  false
+                                                                   }
+                                                               ]
+                                                },
+                                   "optional":  {
+                                                    "steps":  [
+                                                                  "INT",
+                                                                  {
+                                                                      "tooltip":  "Optional: The number of steps the LoRA has been trained for, used to name the saved file."
+                                                                  }
+                                                              ]
+                                                },
+                                   "hidden":  {
+                                                  "prompt":  [
+                                                                 "PROMPT"
+                                                             ],
+                                                  "extra_pnginfo":  [
+                                                                        "EXTRA_PNGINFO"
+                                                                    ]
+                                              }
+                               },
+                     "input_order":  {
+                                         "required":  [
+                                                          "lora",
+                                                          "prefix"
+                                                      ],
+                                         "optional":  [
+                                                          "steps"
+                                                      ],
+                                         "hidden":  [
+                                                        "prompt",
+                                                        "extra_pnginfo"
+                                                    ]
+                                     },
+                     "is_input_list":  false,
+                     "output":  [
+
+                                ],
+                     "output_is_list":  [
+
+                                        ],
+                     "output_name":  [
+
+                                     ],
+                     "output_tooltips":  [
+
+                                         ],
+                     "output_matchtypes":  null,
+                     "name":  "SaveLoRA",
+                     "display_name":  "Save LoRA Weights",
+                     "description":  "",
+                     "python_module":  "comfy_extras.nodes_train",
+                     "category":  "model/merging",
+                     "output_node":  true,
+                     "deprecated":  false,
+                     "experimental":  true,
+                     "dev_only":  false,
+                     "api_node":  false,
+                     "price_badge":  null,
+                     "search_aliases":  [
+                                            "export lora"
+                                        ],
+                     "essentials_category":  null,
+                     "has_intermediate_output":  false
+                 },
+    "LoraLoader":  {
+                       "input":  {
+                                     "required":  {
+                                                      "model":  [
+                                                                    "MODEL",
+                                                                    {
+                                                                        "tooltip":  "The diffusion model the LoRA will be applied to."
+                                                                    }
+                                                                ],
+                                                      "clip":  [
+                                                                   "CLIP",
+                                                                   {
+                                                                       "tooltip":  "The CLIP model the LoRA will be applied to."
+                                                                   }
+                                                               ],
+                                                      "lora_name":  [
+                                                                        [
+                                                                            "IconsRedmondV2-Icons.safetensors",
+                                                                            "ashcrownzero_style_lora-000002.safetensors",
+                                                                            "ashcrownzero_style_lora-000004.safetensors",
+                                                                            "ashcrownzero_style_lora-000006.safetensors",
+                                                                            "ashcrownzero_style_lora_continued-000001.safetensors",
+                                                                            "ashcrownzero_style_lora_continued.safetensors",
+                                                                            "ilya_acz_lora.safetensors",
+                                                                            "kairocrown_acz_lora.safetensors",
+                                                                            "mara_acz_lora.safetensors",
+                                                                            "noa_acz_lora_continued.safetensors",
+                                                                            "riven_acz_lora.safetensors",
+                                                                            "sera_acz_lora.safetensors",
+                                                                            "teacher_clayclassroom_lora.safetensors",
+                                                                            "veyra_lux_afterlight_teaser.safetensors",
+                                                                            "veyra_lux_identity_clean20.safetensors",
+                                                                            "veyra_lux_identity_proof.safetensors"
+                                                                        ],
+                                                                        {
+                                                                            "tooltip":  "The name of the LoRA."
+                                                                        }
+                                                                    ],
+                                                      "strength_model":  [
+                                                                             "FLOAT",
+                                                                             {
+                                                                                 "default":  1.0,
+                                                                                 "min":  -100.0,
+                                                                                 "max":  100.0,
+                                                                                 "step":  0.01,
+                                                                                 "tooltip":  "How strongly to modify the diffusion model. This value can be negative."
+                                                                             }
+                                                                         ],
+                                                      "strength_clip":  [
+                                                                            "FLOAT",
+                                                                            {
+                                                                                "default":  1.0,
+                                                                                "min":  -100.0,
+                                                                                "max":  100.0,
+                                                                                "step":  0.01,
+                                                                                "tooltip":  "How strongly to modify the CLIP model. This value can be negative."
+                                                                            }
+                                                                        ]
+                                                  }
+                                 },
+                       "input_order":  {
+                                           "required":  [
+                                                            "model",
+                                                            "clip",
+                                                            "lora_name",
+                                                            "strength_model",
+                                                            "strength_clip"
+                                                        ]
+                                       },
+                       "is_input_list":  false,
+                       "output":  [
+                                      "MODEL",
+                                      "CLIP"
+                                  ],
+                       "output_is_list":  [
+                                              false,
+                                              false
+                                          ],
+                       "output_name":  [
+                                           "MODEL",
+                                           "CLIP"
+                                       ],
+                       "name":  "LoraLoader",
+                       "display_name":  "Load LoRA (Model and CLIP)",
+                       "description":  "This LoRA loader is used to modify both diffusion and CLIP models, altering the way in which latents are denoised such as applying styles. Multiple LoRA nodes can be linked together.",
+                       "python_module":  "nodes",
+                       "category":  "model/loaders",
+                       "output_node":  false,
+                       "has_intermediate_output":  false,
+                       "output_tooltips":  [
+                                               "The modified diffusion model.",
+                                               "The modified CLIP model."
+                                           ],
+                       "search_aliases":  [
+                                              "lora",
+                                              "load lora",
+                                              "apply lora",
+                                              "lora loader",
+                                              "lora model"
+                                          ],
+                       "essentials_category":  "Image Generation"
+                   }
+}

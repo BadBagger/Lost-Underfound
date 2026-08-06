@@ -1,0 +1,20 @@
+{
+  "asset_set": "otto_face_parts_v1",
+  "canonical_face_width": 80,
+  "files": [
+    "eyes_open.png",
+    "eyes_half.png",
+    "eyes_closed.png",
+    "nose.png",
+    "mouth_A.png",
+    "mouth_B.png",
+    "mouth_C.png",
+    "mouth_D.png",
+    "mouth_E.png",
+    "mouth_F.png"
+  ],
+  "notes": [
+    "Transparent face-part assets for overlay proofing.",
+    "Eyes are intentionally wider-spaced than the procedural prototype."
+  ]
+}

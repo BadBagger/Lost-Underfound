@@ -1,0 +1,411 @@
+{
+  "prefix": "bramble_idle",
+  "fps": 12,
+  "canvas": [
+    512,
+    512
+  ],
+  "target_height": 360,
+  "frame_count": 24,
+  "sheet_size": [
+    12288,
+    512
+  ],
+  "anchor_canvas": [
+    256,
+    486
+  ],
+  "frames": [
+    {
+      "index": 0,
+      "anchor": [
+        256.154,
+        486
+      ],
+      "anchor_delta_px": 0.0,
+      "source_size": [
+        403,
+        360
+      ],
+      "offset": [
+        59,
+        126
+      ]
+    },
+    {
+      "index": 1,
+      "anchor": [
+        256.154,
+        486
+      ],
+      "anchor_delta_px": 0.0,
+      "source_size": [
+        400,
+        360
+      ],
+      "offset": [
+        60,
+        126
+      ]
+    },
+    {
+      "index": 2,
+      "anchor": [
+        255.876,
+        486
+      ],
+      "anchor_delta_px": 0.278,
+      "source_size": [
+        400,
+        360
+      ],
+      "offset": [
+        60,
+        126
+      ]
+    },
+    {
+      "index": 3,
+      "anchor": [
+        256.204,
+        486
+      ],
+      "anchor_delta_px": 0.328,
+      "source_size": [
+        399,
+        360
+      ],
+      "offset": [
+        61,
+        126
+      ]
+    },
+    {
+      "index": 4,
+      "anchor": [
+        255.617,
+        486
+      ],
+      "anchor_delta_px": 0.587,
+      "source_size": [
+        397,
+        360
+      ],
+      "offset": [
+        61,
+        126
+      ]
+    },
+    {
+      "index": 5,
+      "anchor": [
+        256.22,
+        486
+      ],
+      "anchor_delta_px": 0.604,
+      "source_size": [
+        395,
+        360
+      ],
+      "offset": [
+        63,
+        126
+      ]
+    },
+    {
+      "index": 6,
+      "anchor": [
+        256.462,
+        486
+      ],
+      "anchor_delta_px": 0.242,
+      "source_size": [
+        396,
+        360
+      ],
+      "offset": [
+        63,
+        126
+      ]
+    },
+    {
+      "index": 7,
+      "anchor": [
+        255.684,
+        486
+      ],
+      "anchor_delta_px": 0.778,
+      "source_size": [
+        396,
+        360
+      ],
+      "offset": [
+        62,
+        126
+      ]
+    },
+    {
+      "index": 8,
+      "anchor": [
+        256.305,
+        486
+      ],
+      "anchor_delta_px": 0.621,
+      "source_size": [
+        397,
+        360
+      ],
+      "offset": [
+        62,
+        126
+      ]
+    },
+    {
+      "index": 9,
+      "anchor": [
+        255.618,
+        486
+      ],
+      "anchor_delta_px": 0.686,
+      "source_size": [
+        398,
+        360
+      ],
+      "offset": [
+        60,
+        126
+      ]
+    },
+    {
+      "index": 10,
+      "anchor": [
+        255.635,
+        486
+      ],
+      "anchor_delta_px": 0.016,
+      "source_size": [
+        400,
+        360
+      ],
+      "offset": [
+        59,
+        126
+      ]
+    },
+    {
+      "index": 11,
+      "anchor": [
+        256.223,
+        486
+      ],
+      "anchor_delta_px": 0.588,
+      "source_size": [
+        401,
+        360
+      ],
+      "offset": [
+        59,
+        126
+      ]
+    },
+    {
+      "index": 12,
+      "anchor": [
+        255.669,
+        486
+      ],
+      "anchor_delta_px": 0.553,
+      "source_size": [
+        404,
+        360
+      ],
+      "offset": [
+        57,
+        126
+      ]
+    },
+    {
+      "index": 13,
+      "anchor": [
+        256.099,
+        486
+      ],
+      "anchor_delta_px": 0.43,
+      "source_size": [
+        404,
+        360
+      ],
+      "offset": [
+        57,
+        126
+      ]
+    },
+    {
+      "index": 14,
+      "anchor": [
+        255.959,
+        486
+      ],
+      "anchor_delta_px": 0.14,
+      "source_size": [
+        404,
+        360
+      ],
+      "offset": [
+        57,
+        126
+      ]
+    },
+    {
+      "index": 15,
+      "anchor": [
+        256.426,
+        486
+      ],
+      "anchor_delta_px": 0.467,
+      "source_size": [
+        404,
+        360
+      ],
+      "offset": [
+        57,
+        126
+      ]
+    },
+    {
+      "index": 16,
+      "anchor": [
+        256.2,
+        486
+      ],
+      "anchor_delta_px": 0.226,
+      "source_size": [
+        404,
+        360
+      ],
+      "offset": [
+        57,
+        126
+      ]
+    },
+    {
+      "index": 17,
+      "anchor": [
+        255.993,
+        486
+      ],
+      "anchor_delta_px": 0.207,
+      "source_size": [
+        404,
+        360
+      ],
+      "offset": [
+        57,
+        126
+      ]
+    },
+    {
+      "index": 18,
+      "anchor": [
+        255.767,
+        486
+      ],
+      "anchor_delta_px": 0.225,
+      "source_size": [
+        404,
+        360
+      ],
+      "offset": [
+        57,
+        126
+      ]
+    },
+    {
+      "index": 19,
+      "anchor": [
+        255.51,
+        486
+      ],
+      "anchor_delta_px": 0.258,
+      "source_size": [
+        404,
+        360
+      ],
+      "offset": [
+        57,
+        126
+      ]
+    },
+    {
+      "index": 20,
+      "anchor": [
+        256.337,
+        486
+      ],
+      "anchor_delta_px": 0.827,
+      "source_size": [
+        403,
+        360
+      ],
+      "offset": [
+        58,
+        126
+      ]
+    },
+    {
+      "index": 21,
+      "anchor": [
+        256.097,
+        486
+      ],
+      "anchor_delta_px": 0.24,
+      "source_size": [
+        404,
+        360
+      ],
+      "offset": [
+        57,
+        126
+      ]
+    },
+    {
+      "index": 22,
+      "anchor": [
+        256.357,
+        486
+      ],
+      "anchor_delta_px": 0.26,
+      "source_size": [
+        403,
+        360
+      ],
+      "offset": [
+        58,
+        126
+      ]
+    },
+    {
+      "index": 23,
+      "anchor": [
+        255.997,
+        486
+      ],
+      "anchor_delta_px": 0.36,
+      "source_size": [
+        404,
+        360
+      ],
+      "offset": [
+        58,
+        126
+      ]
+    }
+  ],
+  "warnings": [],
+  "rules": [
+    "All frames normalized to fixed canvas.",
+    "Anchor derived from bottom alpha band and locked to anchor_canvas.",
+    "Warm 3px outline added after normalization.",
+    "No costume, face, or color overlays are drawn."
+  ]
+}

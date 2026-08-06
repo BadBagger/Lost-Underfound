@@ -1,0 +1,97 @@
+{
+  "sheet": "bramble-idle",
+  "actor_type": "furniture-anchored",
+  "canvas": {
+    "width": 320,
+    "height": 260
+  },
+  "anchor_tolerance_px": 1,
+  "frames": [
+    {
+      "file": "bramble_idle_01.png",
+      "anchor": [
+        160,
+        205
+      ],
+      "role": "breath-neutral-desk",
+      "canonical": true,
+      "scale_reference": [
+        160,
+        18
+      ]
+    },
+    {
+      "file": "bramble_idle_02.png",
+      "anchor": [
+        160,
+        205
+      ],
+      "role": "breath-in-paper-slide"
+    },
+    {
+      "file": "bramble_idle_03.png",
+      "anchor": [
+        160,
+        205
+      ],
+      "role": "breath-full-paper-settle"
+    },
+    {
+      "file": "bramble_idle_04.png",
+      "anchor": [
+        160,
+        205
+      ],
+      "role": "stamp-preparation"
+    },
+    {
+      "file": "bramble_idle_05.png",
+      "anchor": [
+        160,
+        205
+      ],
+      "role": "stamp-up-anticipation"
+    },
+    {
+      "file": "bramble_idle_06.png",
+      "anchor": [
+        160,
+        205
+      ],
+      "role": "single-stamp-smear"
+    },
+    {
+      "file": "bramble_idle_07.png",
+      "anchor": [
+        160,
+        205
+      ],
+      "role": "stamp-impact-contact"
+    },
+    {
+      "file": "bramble_idle_08.png",
+      "anchor": [
+        160,
+        205
+      ],
+      "role": "stamp-recoil-settle"
+    },
+    {
+      "file": "bramble_idle_09.png",
+      "anchor": [
+        160,
+        205
+      ],
+      "role": "breath-out-ease"
+    },
+    {
+      "file": "bramble_idle_10.png",
+      "anchor": [
+        160,
+        205
+      ],
+      "role": "return-neutral"
+    }
+  ],
+  "approval_state": "provisional-production-pass"
+}

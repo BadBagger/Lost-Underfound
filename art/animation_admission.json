@@ -1,0 +1,210 @@
+{
+  "schema_version": 1,
+  "purpose": "Act 1 production animation admission gate: registration is necessary but not sufficient.",
+  "sheets": [
+    {
+      "id": "pip-walk",
+      "registration": "art/act01-production/characters/pip/meshy-current/walk/registration.json",
+      "loop": true,
+      "min_frames": 12,
+      "min_loop_frames": 12,
+      "min_subject_margin_px": 8,
+      "max_bbox_delta_pct": 25,
+      "full_construction_review": {
+        "status": "pass",
+        "reviewer": "codex-visual-qa",
+        "artifact": "art/act01-production/qa/pip-walk-meshy-current-contact-sheet.png"
+      }
+    },
+    {
+      "id": "pip-idle",
+      "registration": "art/act01-production/characters/pip/meshy-current/idle/registration.json",
+      "loop": true,
+      "min_frames": 12,
+      "min_loop_frames": 12,
+      "min_subject_margin_px": 8,
+      "max_chroma_spill_px": 0,
+      "max_bbox_delta_pct": 16,
+      "full_construction_review": {
+        "status": "pass",
+        "reviewer": "codex-visual-qa",
+        "artifact": "art/act01-production/qa/pip-idle-meshy-current-contact-sheet.png"
+      }
+    },
+    {
+      "id": "pip-talk",
+      "registration": "art/act01-production/characters/pip/meshy-current/talk/registration.json",
+      "loop": true,
+      "min_frames": 12,
+      "min_loop_frames": 12,
+      "min_subject_margin_px": 8,
+      "max_chroma_spill_px": 0,
+      "max_bbox_delta_pct": 18,
+      "full_construction_review": {
+        "status": "pass",
+        "reviewer": "codex-visual-qa",
+        "artifact": "art/act01-production/qa/pip-talk-meshy-current-contact-sheet.png"
+      }
+    },
+    {
+      "id": "pip-inspect",
+      "registration": "art/act01-production/characters/pip/meshy-current/inspect/registration.json",
+      "loop": false,
+      "min_frames": 14,
+      "min_subject_margin_px": 8,
+      "max_chroma_spill_px": 0,
+      "max_bbox_delta_pct": 22,
+      "full_construction_review": {
+        "status": "pass",
+        "reviewer": "codex-visual-qa",
+        "artifact": "art/act01-production/qa/pip-inspect-meshy-current-contact-sheet.png"
+      }
+    },
+    {
+      "id": "pip-dust-reach",
+      "registration": "art/act01-production/characters/pip/meshy-current/dust-reach/registration.json",
+      "loop": false,
+      "min_frames": 14,
+      "min_subject_margin_px": 8,
+      "max_bbox_delta_pct": 60,
+      "full_construction_review": {
+        "status": "pass",
+        "reviewer": "codex-visual-qa",
+        "artifact": "art/act01-production/qa/pip-dust-reach-meshy-current-contact-sheet.png"
+      }
+    },
+    {
+      "id": "pip-toll-paid",
+      "registration": "art/act01-production/characters/pip/meshy-current/toll-paid/registration.json",
+      "loop": false,
+      "min_frames": 10,
+      "min_subject_margin_px": 8,
+      "max_bbox_delta_pct": 130,
+      "full_construction_review": {
+        "status": "pass",
+        "reviewer": "codex-visual-qa",
+        "artifact": "art/act01-production/qa/pip-toll-paid-meshy-current-contact-sheet.png"
+      }
+    },
+    {
+      "id": "bramble-idle",
+      "registration": "art/act01-production/characters/bramble/idle/registration.json",
+      "loop": true,
+      "min_frames": 24,
+      "min_loop_frames": 24,
+      "min_subject_margin_px": 8,
+      "max_bbox_delta_pct": 10,
+      "full_construction_review": {
+        "status": "pass",
+        "reviewer": "codex-visual-qa",
+        "artifact": "art/act01-production/qa/bramble-idle-contact-sheet.png"
+      }
+    },
+    {
+      "id": "bramble-talk",
+      "registration": "art/act01-production/characters/bramble/talk/registration.json",
+      "loop": true,
+      "min_frames": 48,
+      "min_loop_frames": 48,
+      "min_subject_margin_px": 8,
+      "max_bbox_delta_pct": 12,
+      "full_construction_review": {
+        "status": "pass",
+        "reviewer": "codex-visual-qa",
+        "artifact": "art/act01-production/qa/bramble-talk-contact-sheet.png"
+      }
+    },
+    {
+      "id": "bramble-greeting",
+      "registration": "art/act01-production/characters/bramble/greeting/registration.json",
+      "loop": false,
+      "min_frames": 36,
+      "min_subject_margin_px": 8,
+      "max_bbox_delta_pct": 22,
+      "full_construction_review": {
+        "status": "pass",
+        "reviewer": "codex-visual-qa",
+        "artifact": "art/act01-production/qa/bramble-greeting-contact-sheet.png"
+      }
+    },
+    {
+      "id": "bramble-handoff",
+      "registration": "art/act01-production/characters/bramble/handoff/registration.json",
+      "loop": false,
+      "min_frames": 36,
+      "min_subject_margin_px": 8,
+      "max_bbox_delta_pct": 28,
+      "full_construction_review": {
+        "status": "pass",
+        "reviewer": "codex-visual-qa",
+        "artifact": "art/act01-production/qa/bramble-handoff-contact-sheet.png"
+      }
+    },
+    {
+      "id": "bramble-wrong-action",
+      "registration": "art/act01-production/characters/bramble/wrong-action/registration.json",
+      "loop": false,
+      "min_frames": 30,
+      "min_subject_margin_px": 8,
+      "max_bbox_delta_pct": 24,
+      "full_construction_review": {
+        "status": "pass",
+        "reviewer": "codex-visual-qa",
+        "artifact": "art/act01-production/qa/bramble-wrong-action-contact-sheet.png"
+      }
+    },
+    {
+      "id": "old-bottlecap-idle",
+      "registration": "art/act01-production/characters/old-bottlecap/meshy-current/idle/registration.json",
+      "loop": true,
+      "min_frames": 24,
+      "min_loop_frames": 24,
+      "min_subject_margin_px": 8,
+      "max_bbox_delta_pct": 15,
+      "full_construction_review": {
+        "status": "pass",
+        "reviewer": "codex-visual-qa",
+        "artifact": "art/act01-production/qa/old-bottlecap-idle-meshy-current-contact-sheet.png"
+      }
+    },
+    {
+      "id": "old-bottlecap-toll-refused",
+      "registration": "art/act01-production/characters/old-bottlecap/meshy-current/toll-refused/registration.json",
+      "loop": false,
+      "min_frames": 5,
+      "min_subject_margin_px": 8,
+      "max_bbox_delta_pct": 30,
+      "full_construction_review": {
+        "status": "pass",
+        "reviewer": "codex-visual-qa",
+        "artifact": "art/act01-production/qa/old-bottlecap-toll-refused-meshy-current-contact-sheet.png"
+      }
+    },
+    {
+      "id": "old-bottlecap-toll-paid",
+      "registration": "art/act01-production/characters/old-bottlecap/meshy-current/toll-paid/registration.json",
+      "loop": false,
+      "min_frames": 7,
+      "min_subject_margin_px": 8,
+      "max_bbox_delta_pct": 45,
+      "full_construction_review": {
+        "status": "pass",
+        "reviewer": "codex-visual-qa",
+        "artifact": "art/act01-production/qa/old-bottlecap-toll-paid-meshy-current-contact-sheet.png"
+      }
+    },
+    {
+      "id": "scuttle-dash",
+      "registration": "art/act01-production/characters/scuttle/meshy-current/dash/registration.json",
+      "loop": false,
+      "min_frames": 6,
+      "min_subject_margin_px": 0,
+      "max_bbox_delta_pct": 180,
+      "full_construction_review": {
+        "status": "pass",
+        "reviewer": "codex-visual-qa",
+        "artifact": "art/act01-production/qa/scuttle-dash-meshy-current-contact-sheet.png"
+      }
+    }
+  ]
+}

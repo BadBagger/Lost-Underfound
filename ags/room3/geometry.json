@@ -1,0 +1,132 @@
+{
+  "act": 3,
+  "architecture": "discrete-screens",
+  "nativeSize": { "width": 1280, "height": 720 },
+  "start": { "screenId": "annex-interior", "entryPoint": "from-annex-threshold" },
+  "actorReference": {
+    "pipHeight": 230,
+    "brambleMobileHeight": 195,
+    "scuttleHeight": 78,
+    "grommetHeight": 420,
+    "chairmanToggleHeight": 190,
+    "oldBottlecapHeight": 116
+  },
+  "screens": [
+    {
+      "id": "annex-interior",
+      "title": "The Annex - Confiscated Shine",
+      "background": "background/annex-interior.png",
+      "walkableArea": [[18, 514], [1262, 514], [1276, 684], [12, 684]],
+      "entryPoints": {
+        "from-annex-threshold": { "x": 80, "y": 666, "facing": "right" },
+        "from-confrontation": { "x": 970, "y": 666, "facing": "left" }
+      },
+      "standingPositions": {
+        "pip-marble-search": { "x": 490, "y": 654, "facing": "down" },
+        "bramble-annex-witness": { "x": 315, "y": 650, "facing": "right" },
+        "toggle-confrontation": { "x": 930, "y": 626, "facing": "left" },
+        "grommet-doorway": { "x": 142, "y": 618, "facing": "right" }
+      },
+      "hotspots": [
+        { "id": "annex-interior", "rect": { "x": 80, "y": 90, "width": 1060, "height": 330 } },
+        { "id": "marble-pile", "rect": { "x": 315, "y": 515, "width": 485, "height": 120 } },
+        { "id": "marble-candidate-galaxy", "rect": { "x": 330, "y": 548, "width": 80, "height": 70 } },
+        { "id": "marble-candidate-radiator", "rect": { "x": 430, "y": 548, "width": 86, "height": 70 } },
+        { "id": "marble-candidate-scratch", "rect": { "x": 536, "y": 548, "width": 80, "height": 70 } },
+        { "id": "marble-candidate-flawless", "rect": { "x": 640, "y": 548, "width": 80, "height": 70 } },
+        { "id": "marble-candidate-correct", "rect": { "x": 740, "y": 548, "width": 80, "height": 70 } },
+        { "id": "chairman-toggle", "rect": { "x": 850, "y": 420, "width": 210, "height": 220 } }
+      ],
+      "separateProps": [
+        { "id": "marble-candidate-galaxy", "asset": "generated_missing_prop_art/sliced/marble_galaxy_final_candidate.png", "x": 370, "y": 585 },
+        { "id": "marble-candidate-radiator", "asset": "generated_missing_prop_art/sliced/marble_radiator_tag_final_candidate.png", "x": 472, "y": 585 },
+        { "id": "marble-candidate-scratch", "asset": "generated_missing_prop_art/sliced/marble_scratch_decoy_final_candidate.png", "x": 576, "y": 585 },
+        { "id": "marble-candidate-flawless", "asset": "generated_missing_prop_art/sliced/marble_flawless_final_candidate.png", "x": 680, "y": 585 },
+        { "id": "marble-candidate-correct", "asset": "generated_missing_prop_art/sliced/marble_correct_star_nick_final_candidate.png", "x": 780, "y": 585 }
+      ],
+      "exits": [
+        {
+          "id": "to-escape-concourse",
+          "exitHotspot": { "x": 0, "y": 500, "width": 42, "height": 182 },
+          "destinationScreenId": "escape-concourse",
+          "entryPoint": "from-annex",
+          "exitAnimation": "urgent-walk-left-offscreen",
+          "entryAnimation": "urgent-enter-left"
+        }
+      ]
+    },
+    {
+      "id": "escape-concourse",
+      "title": "Button Court - Tremor Escape",
+      "background": "background/escape-concourse.png",
+      "walkableArea": [[10, 512], [1268, 512], [1276, 684], [8, 684]],
+      "entryPoints": {
+        "from-annex": { "x": 1140, "y": 666, "facing": "left" },
+        "from-grate": { "x": 88, "y": 666, "facing": "right" }
+      },
+      "standingPositions": {
+        "grommet-guardian-block": { "x": 935, "y": 610, "facing": "left" },
+        "pip-escape": { "x": 470, "y": 660, "facing": "left" },
+        "bramble-escape": { "x": 360, "y": 656, "facing": "left" },
+        "scuttle-guide": { "x": 210, "y": 650, "facing": "left" }
+      },
+      "hotspots": [
+        { "id": "escape-route", "rect": { "x": 0, "y": 498, "width": 1280, "height": 190 } },
+        { "id": "filing-booth-route", "rect": { "x": 160, "y": 240, "width": 265, "height": 250 } },
+        { "id": "roar-light", "rect": { "x": 965, "y": 90, "width": 260, "height": 500 } }
+      ],
+      "exits": [
+        {
+          "id": "to-grate-revisit",
+          "exitHotspot": { "x": 0, "y": 500, "width": 42, "height": 182 },
+          "destinationScreenId": "grate-revisit",
+          "entryPoint": "from-concourse",
+          "exitAnimation": "urgent-walk-left-offscreen",
+          "entryAnimation": "urgent-enter-left"
+        }
+      ]
+    },
+    {
+      "id": "grate-revisit",
+      "title": "The Grate Revisited",
+      "background": "background/grate-revisit.png",
+      "walkableArea": [[18, 512], [1262, 512], [1276, 684], [10, 684]],
+      "walkBehinds": [
+        {
+          "id": "open-grate",
+          "rect": { "x": 770, "y": 272, "width": 330, "height": 340 },
+          "baseline": 586,
+          "note": "Old Bottlecap remains in front of the gate structure; open passage reads behind him."
+        }
+      ],
+      "entryPoints": {
+        "from-concourse": { "x": 112, "y": 666, "facing": "right" }
+      },
+      "standingPositions": {
+        "pip-bottlecap": { "x": 642, "y": 654, "facing": "right" },
+        "old-bottlecap-revisit": { "x": 890, "y": 584 },
+        "grommet-goodbye": { "x": 405, "y": 618, "facing": "right" },
+        "bramble-goodbye": { "x": 530, "y": 650, "facing": "right" }
+      },
+      "hotspots": [
+        { "id": "old-bottlecap", "rect": { "x": 825, "y": 462, "width": 150, "height": 125 } },
+        { "id": "open-grate", "rect": { "x": 760, "y": 265, "width": 350, "height": 360 } },
+        { "id": "exit-crack", "rect": { "x": 1030, "y": 220, "width": 175, "height": 260 } }
+      ],
+      "exits": [
+        {
+          "id": "through-grate-ending",
+          "exitHotspot": { "x": 760, "y": 265, "width": 350, "height": 360 },
+          "destinationScreenId": "ending",
+          "entryPoint": "shrink-back-up",
+          "exitAnimation": "duck-through-open-gate",
+          "entryAnimation": "shrink-back-up"
+        }
+      ]
+    }
+  ],
+  "linkMap": [
+    { "from": "annex-interior:to-escape-concourse", "to": "escape-concourse:from-annex" },
+    { "from": "escape-concourse:to-grate-revisit", "to": "grate-revisit:from-concourse" }
+  ]
+}

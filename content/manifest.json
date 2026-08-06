@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "project": "Lost & Underfound",
+  "engine_target": {
+    "engine": "Godot 4",
+    "adventure_framework": "Popochiu",
+    "status": "scaffold-only",
+    "note": "Godot, Popochiu, and GUT are not vendored yet. This manifest validates the Codex-editable content layer first."
+  },
+  "rooms": [
+    "content/rooms/act01_discovery/room.json",
+    "content/rooms/act01_clerk/room.json",
+    "content/rooms/act01_gate/room.json"
+  ],
+  "items": [
+    "content/items/button.json"
+  ],
+  "randomization": "content/randomization.json",
+  "combine_table": "content/systems/combine_table.json",
+  "cutscenes": [
+    "content/cutscenes/act01_smoke_path.json"
+  ],
+  "dialogue_source": "script/ACT_01_SCRIPT.json",
+  "act_scope": "act-01-only"
+}

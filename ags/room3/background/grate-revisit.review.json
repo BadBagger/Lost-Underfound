@@ -1,0 +1,53 @@
+{
+  "source": "ags\\room3\\background\\grate-revisit.source.png",
+  "output": "ags\\room3\\background\\grate-revisit.png",
+  "source_size": [
+    1672,
+    941
+  ],
+  "target_size": [
+    1280,
+    720
+  ],
+  "crop_box": [
+    0,
+    0,
+    1672,
+    941
+  ],
+  "geometryAuthority": true,
+  "studiesReferenceOnly": true,
+  "gates": {
+    "objectPlacement": "pass",
+    "internalLighting": "pass",
+    "perspectiveEyeLevel": "pass",
+    "finishedSurfaces": "pass",
+    "dimensions": "pass"
+  },
+  "placements": {
+    "old-bottlecap": {
+      "x": 825,
+      "y": 462,
+      "width": 150,
+      "height": 125
+    },
+    "open-grate": {
+      "x": 770,
+      "y": 272,
+      "width": 330,
+      "height": 340
+    },
+    "exit-crack": {
+      "x": 1030,
+      "y": 220,
+      "width": 175,
+      "height": 260
+    }
+  },
+  "visualReview": {
+    "status": "intake",
+    "actorProofRequired": true,
+    "blockingNotes": "Quiet gate revisit plate works; prove Bottlecap revisit placement and final gate/open-passage click target.",
+    "finalApproval": "pending actor-scale composite proof"
+  }
+}

@@ -1,0 +1,9 @@
+Trigger token: lu_scuttle_courier
+
+SCUTTLE - a tiny roly-poly courier bug, twitchy and self-important, always
+mid-delivery. Small segmented body, readable eyes, little legs, warm painterly
+storybook rendering, soft warm key light from upper-left. Same body construction,
+satchel/detailing, proportions, and camera distance in every generation.
+
+Actor-only. Never draw cobwebs, room background, UI, speech text, labels, cast
+shadows, or other characters in Scuttle source strips.

@@ -4,8 +4,8 @@
   "nativeSize": { "width": 1280, "height": 720 },
   "start": { "screenId": "discovery", "entryPoint": "cold-open" },
   "actorReference": {
-    "pipHeight": 194,
-    "brambleTalkingHeadHeight": 160,
+    "pipHeight": 330,
+    "brambleTalkingHeadHeight": 250,
     "oldBottlecapHeight": 116,
     "scuttleHeight": 68
   },
@@ -44,9 +44,10 @@
       "walkBehinds": [
         {
           "id": "bramble-desk",
-          "rect": { "x": 160, "y": 488, "width": 460, "height": 154 },
-          "baseline": 614,
-          "counterTopY": 488,
+          "rect": { "x": 70, "y": 360, "width": 720, "height": 285 },
+          "baseline": 642,
+          "counterTopY": 360,
+          "frontOccluderPolygon": [[115, 379], [735, 352], [739, 559], [115, 604]],
           "note": "Solid painted desk. Bramble uses a talking-head sprite registered so only head and hands clear the counter."
         }
       ],
@@ -55,14 +56,14 @@
         "from-gate": { "x": 1170, "y": 666, "facing": "left" }
       },
       "standingPositions": {
-        "pip-talk-bramble": { "x": 440, "y": 584 },
-        "bramble-talking-head": { "x": 280, "y": 510 }
+        "pip-talk-bramble": { "x": 900, "y": 666, "facing": "left" },
+        "bramble-talking-head": { "x": 444, "y": 362 }
       },
       "hotspots": [
         { "id": "wall-note", "rect": { "x": 760, "y": 202, "width": 142, "height": 74 } },
         { "id": "sign-in-log", "rect": { "x": 10, "y": 310, "width": 118, "height": 128 } },
         { "id": "service-bell", "rect": { "x": 488, "y": 454, "width": 54, "height": 32 } },
-        { "id": "bramble-desk", "rect": { "x": 160, "y": 440, "width": 460, "height": 202 } }
+        { "id": "bramble-desk", "rect": { "x": 70, "y": 360, "width": 720, "height": 285 } }
       ],
       "exits": [
         {
@@ -97,7 +98,7 @@
         }
       ],
       "entryPoints": {
-        "from-clerk": { "x": 82, "y": 666, "facing": "right" }
+        "from-clerk": { "x": 450, "y": 666, "facing": "right" }
       },
       "standingPositions": {
         "pip-gate": { "x": 690, "y": 592 },

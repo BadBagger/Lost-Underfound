@@ -40,17 +40,18 @@ def main() -> int:
 
     required_ids = {
         "background-plate",
-        "cubby-wall",
-        "cobweb-curtain",
-        "popcorn-boulder",
+        "ambient-motion",
+        "actor-shadow",
         "dust-prop",
-        "desk-back",
-        "gate-back",
+        "gate-animation",
+        "desk-front-occluder",
         "bramble-body",
-        "desk-foreground",
         "old-bottlecap-body",
-        "gate-foreground",
         "pip-body",
+        "cobweb-disturbance",
+        "button-flight",
+        "scuttle-dash",
+        "post-pass",
         "hotspot-masks",
     }
     found_ids = {layer.get("id") for layer in layers}
@@ -73,11 +74,41 @@ def main() -> int:
     css = (ROOT / "src" / "styles.css").read_text(encoding="utf-8")
     z_indexes = css_z_indexes(css)
     manifest_z = {layer["id"]: layer.get("z") for layer in layers}
+    if manifest_z["background-plate"] >= manifest_z["ambient-motion"]:
+        fail("ambient-motion must draw above background-plate")
+    if manifest_z["ambient-motion"] >= manifest_z["dust-prop"]:
+        fail("ambient-motion must draw below interactive props and actors")
+    ambient = next(layer for layer in layers if layer.get("id") == "ambient-motion")
+    if ambient.get("kind") != "ambient-motion-layer":
+        fail("ambient-motion must be declared as kind ambient-motion-layer")
+    if ambient.get("non_interactive") is not True:
+        fail("ambient-motion must be marked non_interactive")
+    if int(ambient.get("max_drift_px", 999)) > 4:
+        fail("ambient-motion max_drift_px must stay at or below 4")
+    if ".ambient-motion-layer" not in css or "pointer-events: none;" not in css:
+        fail("ambient-motion runtime CSS must be non-interactive")
+    for layer_id in ("desk-front-occluder", "button-flight", "scuttle-dash", "cobweb-disturbance"):
+        layer = next(layer for layer in layers if layer.get("id") == layer_id)
+        if layer.get("non_interactive") is not True:
+            fail(f"{layer_id} must be marked non_interactive")
+    if manifest_z["gate-animation"] >= manifest_z["cobweb-disturbance"]:
+        fail("cobweb-disturbance must draw above the gate animation")
+    if manifest_z["cobweb-disturbance"] >= manifest_z["old-bottlecap-body"]:
+        fail("cobweb-disturbance must draw below fixed actors")
+    if manifest_z["old-bottlecap-body"] >= manifest_z["button-flight"]:
+        fail("button-flight must draw above Bottlecap for the toll handoff")
+    if manifest_z["button-flight"] >= manifest_z["scuttle-dash"]:
+        fail("scuttle-dash must draw above the button-flight layer")
     for layer_id in sorted(required_ids - {"hotspot-masks"}):
         class_match = re.search(
-            rf'class="(?P<classes>[^"]+)"\s+data-layer="{re.escape(layer_id)}"',
+            rf'class="(?P<classes>[^"]+)"[^>]*data-layer="{re.escape(layer_id)}"',
             src,
         )
+        if not class_match:
+            class_match = re.search(
+                rf'data-layer="{re.escape(layer_id)}"[^>]*class="(?P<classes>[^"]+)"',
+                src,
+            )
         if not class_match:
             continue
         classes = class_match.group("classes").split()

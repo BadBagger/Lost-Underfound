@@ -1,0 +1,32 @@
+{
+  "name": "first_tremor_overlay",
+  "frame_count": 18,
+  "fps": 12,
+  "canvas": [
+    512,
+    288
+  ],
+  "role": "transparent full-screen overlay timing proof; draw over the finished room, not baked into background art",
+  "intensity": 0.45,
+  "timing_notes": [
+    "envelope=0.00, flicker=0.55",
+    "envelope=0.18, flicker=0.87",
+    "envelope=0.36, flicker=0.10",
+    "envelope=0.53, flicker=0.86",
+    "envelope=0.67, flicker=0.56",
+    "envelope=0.80, flicker=0.22",
+    "envelope=0.90, flicker=1.00",
+    "envelope=0.96, flicker=0.25",
+    "envelope=1.00, flicker=0.53",
+    "envelope=1.00, flicker=0.89",
+    "envelope=0.96, flicker=0.10",
+    "envelope=0.90, flicker=0.85",
+    "envelope=0.80, flicker=0.58",
+    "envelope=0.67, flicker=0.21",
+    "envelope=0.53, flicker=1.00",
+    "envelope=0.36, flicker=0.26",
+    "envelope=0.18, flicker=0.51",
+    "envelope=0.00, flicker=0.90"
+  ],
+  "warnings": []
+}

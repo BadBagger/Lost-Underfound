@@ -1,0 +1,17 @@
+{
+  "plate": "ags\\room1\\background\\discovery.png",
+  "actor_height": 215,
+  "foot": [
+    660,
+    666
+  ],
+  "frame_count": 12,
+  "outputs": [
+    "texture_only_contact.png",
+    "face_overlay_contact.png",
+    "texture_vs_overlay_contact.png",
+    "texture_only_preview.gif",
+    "face_overlay_preview.gif"
+  ],
+  "purpose": "Judge whether face overlay is worth production work at true gameplay scale on the approved AGS plate."
+}

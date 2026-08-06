@@ -1,0 +1,410 @@
+{
+  "role": "REJECTED first-pass user-provided art candidate intake",
+  "status": "rejected",
+  "rejection_reason": "Manual crop boxes cut through neighboring objects or clipped important transparent/glass/cobweb details. Keep source sheets, but do not production-admit these crops.",
+  "source_sheets": {
+    "marble_candidates_sheet": {
+      "original": "C:\\Users\\KyleB\\Downloads\\Codex Image Aug 5, 2026, 07_24_26 PM.png",
+      "stored": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\user_prop_art_intake\\source_sheets\\marble_candidates_sheet.png",
+      "size": [
+        1536,
+        1024
+      ]
+    },
+    "room_prop_sheet": {
+      "original": "C:\\Users\\KyleB\\Downloads\\Codex Image Aug 5, 2026, 07_23_22 PM.png",
+      "stored": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\user_prop_art_intake\\source_sheets\\room_prop_sheet.png",
+      "size": [
+        1536,
+        1024
+      ]
+    },
+    "inventory_prop_sheet": {
+      "original": "C:\\Users\\KyleB\\Downloads\\Codex Image Aug 5, 2026, 07_22_36 PM.png",
+      "stored": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\user_prop_art_intake\\source_sheets\\inventory_prop_sheet.png",
+      "size": [
+        1254,
+        1254
+      ]
+    },
+    "scene_object_sheet": {
+      "original": "C:\\Users\\KyleB\\Downloads\\Codex Image Aug 5, 2026, 07_22_33 PM.png",
+      "stored": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\user_prop_art_intake\\source_sheets\\scene_object_sheet.png",
+      "size": [
+        1536,
+        1024
+      ]
+    }
+  },
+  "crops": [
+    {
+      "name": "marble_galaxy_candidate",
+      "source": "marble_candidates_sheet",
+      "box": [
+        20,
+        405,
+        320,
+        795
+      ],
+      "note": "wrong candidate: galaxy swirl",
+      "alpha_policy": "conservative gray-background key for review only; manual alpha cleanup still required before final admission",
+      "path": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\user_prop_art_intake\\crops\\marble_galaxy_candidate.png"
+    },
+    {
+      "name": "marble_radiator_tag_candidate",
+      "source": "marble_candidates_sheet",
+      "box": [
+        335,
+        250,
+        635,
+        675
+      ],
+      "note": "wrong candidate: radiator tag",
+      "alpha_policy": "conservative gray-background key for review only; manual alpha cleanup still required before final admission",
+      "path": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\user_prop_art_intake\\crops\\marble_radiator_tag_candidate.png"
+    },
+    {
+      "name": "marble_lopsided_star_candidate",
+      "source": "marble_candidates_sheet",
+      "box": [
+        635,
+        440,
+        890,
+        725
+      ],
+      "note": "correct/near-correct star-mark candidate; review whether this is nick or scratch",
+      "alpha_policy": "conservative gray-background key for review only; manual alpha cleanup still required before final admission",
+      "path": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\user_prop_art_intake\\crops\\marble_lopsided_star_candidate.png"
+    },
+    {
+      "name": "marble_flawless_candidate",
+      "source": "marble_candidates_sheet",
+      "box": [
+        900,
+        315,
+        1195,
+        645
+      ],
+      "note": "wrong candidate: clear/flawless",
+      "alpha_policy": "conservative gray-background key for review only; manual alpha cleanup still required before final admission",
+      "path": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\user_prop_art_intake\\crops\\marble_flawless_candidate.png"
+    },
+    {
+      "name": "marble_broken_decoy_candidate",
+      "source": "marble_candidates_sheet",
+      "box": [
+        1205,
+        450,
+        1495,
+        760
+      ],
+      "note": "wrong candidate: broken shell/dust interior",
+      "alpha_policy": "conservative gray-background key for review only; manual alpha cleanup still required before final admission",
+      "path": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\user_prop_art_intake\\crops\\marble_broken_decoy_candidate.png"
+    },
+    {
+      "name": "button_dark_two_hole",
+      "source": "inventory_prop_sheet",
+      "box": [
+        45,
+        155,
+        340,
+        360
+      ],
+      "note": "Act 1/prop button candidate",
+      "alpha_policy": "conservative gray-background key for review only; manual alpha cleanup still required before final admission",
+      "path": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\user_prop_art_intake\\crops\\button_dark_two_hole.png"
+    },
+    {
+      "name": "old_bottlecap_token",
+      "source": "inventory_prop_sheet",
+      "box": [
+        410,
+        135,
+        710,
+        355
+      ],
+      "note": "bottlecap/button standard token candidate",
+      "alpha_policy": "conservative gray-background key for review only; manual alpha cleanup still required before final admission",
+      "path": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\user_prop_art_intake\\crops\\old_bottlecap_token.png"
+    },
+    {
+      "name": "thread_spool",
+      "source": "inventory_prop_sheet",
+      "box": [
+        785,
+        105,
+        1135,
+        420
+      ],
+      "note": "thread item candidate",
+      "alpha_policy": "conservative gray-background key for review only; manual alpha cleanup still required before final admission",
+      "path": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\user_prop_art_intake\\crops\\thread_spool.png"
+    },
+    {
+      "name": "needle",
+      "source": "inventory_prop_sheet",
+      "box": [
+        40,
+        455,
+        365,
+        790
+      ],
+      "note": "needle item candidate",
+      "alpha_policy": "conservative gray-background key for review only; manual alpha cleanup still required before final admission",
+      "path": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\user_prop_art_intake\\crops\\needle.png"
+    },
+    {
+      "name": "threaded_needle",
+      "source": "inventory_prop_sheet",
+      "box": [
+        420,
+        455,
+        720,
+        785
+      ],
+      "note": "threaded needle combine-result candidate",
+      "alpha_policy": "conservative gray-background key for review only; manual alpha cleanup still required before final admission",
+      "path": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\user_prop_art_intake\\crops\\threaded_needle.png"
+    },
+    {
+      "name": "intake_parcel",
+      "source": "inventory_prop_sheet",
+      "box": [
+        800,
+        445,
+        1210,
+        805
+      ],
+      "note": "intake parcel item candidate",
+      "alpha_policy": "conservative gray-background key for review only; manual alpha cleanup still required before final admission",
+      "path": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\user_prop_art_intake\\crops\\intake_parcel.png"
+    },
+    {
+      "name": "founders_ledger_closed",
+      "source": "inventory_prop_sheet",
+      "box": [
+        15,
+        850,
+        390,
+        1235
+      ],
+      "note": "founder's ledger closed candidate",
+      "alpha_policy": "conservative gray-background key for review only; manual alpha cleanup still required before final admission",
+      "path": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\user_prop_art_intake\\crops\\founders_ledger_closed.png"
+    },
+    {
+      "name": "pips_marble_broken_candidate",
+      "source": "inventory_prop_sheet",
+      "box": [
+        545,
+        845,
+        810,
+        1215
+      ],
+      "note": "marble candidate from inventory sheet",
+      "alpha_policy": "conservative gray-background key for review only; manual alpha cleanup still required before final admission",
+      "path": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\user_prop_art_intake\\crops\\pips_marble_broken_candidate.png"
+    },
+    {
+      "name": "annotated_evidence_candidate",
+      "source": "inventory_prop_sheet",
+      "box": [
+        855,
+        865,
+        1235,
+        1235
+      ],
+      "note": "combined parcel/ledger/evidence candidate",
+      "alpha_policy": "conservative gray-background key for review only; manual alpha cleanup still required before final admission",
+      "path": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\user_prop_art_intake\\crops\\annotated_evidence_candidate.png"
+    },
+    {
+      "name": "clerk_counter_station_candidate",
+      "source": "room_prop_sheet",
+      "box": [
+        20,
+        95,
+        650,
+        430
+      ],
+      "note": "desk/counter station candidate; includes dressing",
+      "alpha_policy": "conservative gray-background key for review only; manual alpha cleanup still required before final admission",
+      "path": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\user_prop_art_intake\\crops\\clerk_counter_station_candidate.png"
+    },
+    {
+      "name": "notice_board_candidate",
+      "source": "room_prop_sheet",
+      "box": [
+        760,
+        95,
+        1485,
+        430
+      ],
+      "note": "notice board candidate",
+      "alpha_policy": "conservative gray-background key for review only; manual alpha cleanup still required before final admission",
+      "path": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\user_prop_art_intake\\crops\\notice_board_candidate.png"
+    },
+    {
+      "name": "bottlecap_bramble_booths_candidate",
+      "source": "room_prop_sheet",
+      "box": [
+        20,
+        500,
+        610,
+        960
+      ],
+      "note": "NPC booths/stations candidate",
+      "alpha_policy": "conservative gray-background key for review only; manual alpha cleanup still required before final admission",
+      "path": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\user_prop_art_intake\\crops\\bottlecap_bramble_booths_candidate.png"
+    },
+    {
+      "name": "annex_door_closed_candidate",
+      "source": "room_prop_sheet",
+      "box": [
+        665,
+        505,
+        1070,
+        980
+      ],
+      "note": "Annex door closed candidate",
+      "alpha_policy": "conservative gray-background key for review only; manual alpha cleanup still required before final admission",
+      "path": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\user_prop_art_intake\\crops\\annex_door_closed_candidate.png"
+    },
+    {
+      "name": "annex_door_open_candidate",
+      "source": "room_prop_sheet",
+      "box": [
+        1100,
+        505,
+        1515,
+        980
+      ],
+      "note": "Annex door open candidate",
+      "alpha_policy": "conservative gray-background key for review only; manual alpha cleanup still required before final admission",
+      "path": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\user_prop_art_intake\\crops\\annex_door_open_candidate.png"
+    },
+    {
+      "name": "dust_button_hidden",
+      "source": "scene_object_sheet",
+      "box": [
+        40,
+        70,
+        390,
+        300
+      ],
+      "note": "dust clump with hidden button",
+      "alpha_policy": "conservative gray-background key for review only; manual alpha cleanup still required before final admission",
+      "path": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\user_prop_art_intake\\crops\\dust_button_hidden.png"
+    },
+    {
+      "name": "dust_clump_open",
+      "source": "scene_object_sheet",
+      "box": [
+        420,
+        55,
+        750,
+        315
+      ],
+      "note": "disturbed dust clump",
+      "alpha_policy": "conservative gray-background key for review only; manual alpha cleanup still required before final admission",
+      "path": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\user_prop_art_intake\\crops\\dust_clump_open.png"
+    },
+    {
+      "name": "cubby_wall_candidate",
+      "source": "scene_object_sheet",
+      "box": [
+        800,
+        20,
+        1515,
+        410
+      ],
+      "note": "cubby wall candidate",
+      "alpha_policy": "conservative gray-background key for review only; manual alpha cleanup still required before final admission",
+      "path": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\user_prop_art_intake\\crops\\cubby_wall_candidate.png"
+    },
+    {
+      "name": "gate_closed_candidate",
+      "source": "scene_object_sheet",
+      "box": [
+        20,
+        365,
+        390,
+        635
+      ],
+      "note": "gate/grate closed candidate",
+      "alpha_policy": "conservative gray-background key for review only; manual alpha cleanup still required before final admission",
+      "path": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\user_prop_art_intake\\crops\\gate_closed_candidate.png"
+    },
+    {
+      "name": "gate_open_candidate",
+      "source": "scene_object_sheet",
+      "box": [
+        420,
+        355,
+        760,
+        635
+      ],
+      "note": "gate/grate open candidate",
+      "alpha_policy": "conservative gray-background key for review only; manual alpha cleanup still required before final admission",
+      "path": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\user_prop_art_intake\\crops\\gate_open_candidate.png"
+    },
+    {
+      "name": "founders_ledger_open_scene",
+      "source": "scene_object_sheet",
+      "box": [
+        790,
+        360,
+        1510,
+        640
+      ],
+      "note": "open ledger scene prop candidate",
+      "alpha_policy": "conservative gray-background key for review only; manual alpha cleanup still required before final admission",
+      "path": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\user_prop_art_intake\\crops\\founders_ledger_open_scene.png"
+    },
+    {
+      "name": "popcorn_boulder_candidate",
+      "source": "scene_object_sheet",
+      "box": [
+        40,
+        690,
+        375,
+        1000
+      ],
+      "note": "popcorn boulder prop candidate",
+      "alpha_policy": "conservative gray-background key for review only; manual alpha cleanup still required before final admission",
+      "path": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\user_prop_art_intake\\crops\\popcorn_boulder_candidate.png"
+    },
+    {
+      "name": "cobweb_curtain_candidate",
+      "source": "scene_object_sheet",
+      "box": [
+        445,
+        690,
+        760,
+        1010
+      ],
+      "note": "cobweb curtain candidate; partial alpha will need hand cleanup",
+      "alpha_policy": "conservative gray-background key for review only; manual alpha cleanup still required before final admission",
+      "path": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\user_prop_art_intake\\crops\\cobweb_curtain_candidate.png"
+    },
+    {
+      "name": "couch_underdesk_candidate",
+      "source": "scene_object_sheet",
+      "box": [
+        800,
+        690,
+        1510,
+        1015
+      ],
+      "note": "couch underside/large furniture candidate",
+      "alpha_policy": "conservative gray-background key for review only; manual alpha cleanup still required before final admission",
+      "path": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\user_prop_art_intake\\crops\\couch_underdesk_candidate.png"
+    }
+  ],
+  "contact_sheet": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\user_prop_art_intake\\user_prop_art_intake_contact.png",
+  "warnings": [
+    "Input sheets are RGB on gray, not true alpha; crop alpha is intake quality only.",
+    "Cobweb and dust details need hand alpha cleanup because partial transparency cannot be recovered perfectly from flattened gray sheets."
+  ]
+}

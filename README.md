@@ -10,52 +10,52 @@ first playable web scaffold (Act 1 only, so far).
 
 ## What's Here
 
-- **`docs/GAME_CONCEPT.md`** — the pitch: premise, tone, full cast with personalities,
+- **`docs/GAME_CONCEPT.md`** ? the pitch: premise, tone, full cast with personalities,
   and the target ~1 hour, 3-act structure.
-- **`docs/STORY_ARC.md`** — the finalized overarching story: the central mystery
+- **`docs/STORY_ARC.md`** ? the finalized overarching story: the central mystery
   behind Pip's missing marble, the Act 2/3 antagonist (Chairman Toggle and the
   Button Court), every character's arc across all three acts, and exactly how each
   of Act 1's planted hooks (the Sign-In Log, Bramble's deflection, Old Bottlecap's
-  age) pays off later — written to require zero changes to Act 1's already-recorded
+  age) pays off later ? written to require zero changes to Act 1's already-recorded
   script and audio.
-- **`docs/ANIMATION_BIBLE.md`** — binding animation production rules synced from
-  [`BadBagger/Animation-Bible`](https://github.com/BadBagger/Animation-Bible), the
-  shared source of truth across projects — edit rules upstream there, not here.
-- **`docs/CODEX_BUILD_PROMPT.md`** — the build brief and required build order.
-- **`tools/check_registration.py`** — the hard QA gate for per-sheet frame
-  registration and cast-scale parity, also sourced from `BadBagger/Animation-Bible`.
-- **`art/cast_scale.json`** — the cast's declared relative scale (Pip = 1.0 baseline,
-  Grommet = 2.4 deliberately huge, Scuttle = 0.35 deliberately tiny, etc).
-- **`script/ACT_01_SCRIPT.json`** — the full 49-line Act 1 script ("The Crack Under
-  the Couch"): location intro, every hotspot's examine/use text (including
-  failure/success variants), Bramble's full dialogue tree, the Old Bottlecap toll-gate
-  puzzle exchange, idle/fallback lines, and the transition out.
-- **`docs/ACT_01_DESIGN.md`** — Act 1 hotspot, item, topic, event, puzzle, and
-  animation-cue structure the script plugs into.
-- **`script/ACT_02_SCRIPT.json`** + **`docs/ACT_02_DESIGN.md`** — Act 2 ("The
-  Button Sovereignty"), same format as Act 1: 72-line script and matching
-  hotspot/item/topic/event/animation-cue design doc, now fully voiced too (see
-  `script/ACT_02_DIALOGUE.json` and "Voice Audio" below) — not yet scored or built.
-  Puzzle difficulty targets Monkey Island/King's Quest-style lateral thinking, not
-  the easier Act 1 benchmark — see `docs/STORY_ARC.md`'s difficulty-target note.
-- **`script/ACT_03_SCRIPT.json`** + **`docs/ACT_03_DESIGN.md`** — Act 3 ("The
-  Roar"), 58-line script and design doc, closes out the story, also fully voiced
-  (`script/ACT_03_DIALOGUE.json`). Same difficulty target as Act 2, same
-  not-yet-scored/-built status.
-- **`script/ACT_01_DIALOGUE.json`** + **`public/audio/voice/act-01/*.ogg`** — real
-  recorded voice for all 49 of Act 1's lines (ElevenLabs, `eleven_multilingual_v2`,
-  paid Creator tier — commercial use permitted). See "Voice Audio" below for the
-  attribution requirement that still applies, and for Pip's voice specifically — it's
-  a pitch-shifted premade voice, not a stock pick, worth reading before regenerating
-  any of Pip's lines.
-- **`public/audio/AUDIO_MANIFEST.json`** + **`public/audio/music/`** / **`sfx/`** —
+- **`docs/ACT_01_DESIGN.md`**, **`docs/ACT_02_DESIGN.md`**, and
+  **`docs/ACT_03_DESIGN.md`** ? the complete beat-by-beat room, puzzle, hotspot,
+  state, and animation design for all three acts.
+- **`script/ACT_01_SCRIPT.json`**, **`script/ACT_02_SCRIPT.json`**, and
+  **`script/ACT_03_SCRIPT.json`** ? the structured dialogue and event scripts.
+- **`script/ACT_01_DIALOGUE.json`**, **`script/ACT_02_DIALOGUE.json`**, and
+  **`script/ACT_03_DIALOGUE.json`** ? the voiced-dialogue manifests, including file
+  paths, ElevenLabs voice IDs, durations, and line text.
+- **`docs/ANIMATION_BIBLE.md`** ? binding animation production rules synced from
+  `BadBagger/Animation-Bible`. Edit rules upstream, not here.
+- **`docs/CODEX_BUILD_PROMPT.md`** ? the build brief and required build order.
+- **`tools/check_registration.py`** ? the hard QA gate for per-sheet frame
+  registration and cast-scale parity.
+- **`tools/align_sprite_frames.py`** ? a non-destructive sprite alignment tool that
+  alpha-cuts, anchor-locks, previews, and manifests jittery AI frame folders before
+  they enter AGS/Aseprite/runtime use.
+- **`docs/COMFYUI_LORA_PIPELINE.md`** and **`art/lora/manifest.json`** ? the local
+  Bramble LoRA proof pipeline, dataset manifest, and offline training handoff for
+  ComfyUI/sd-scripts.
+- **`AUDIO_CREDITS.md`** ? source/license/processing ledger for music, SFX, and TTS.
+- **`VISUAL_ASSET_CREDITS.md`** ? provenance and usage-rights ledger for generated
+  visual assets.
+- **`public/audio/AUDIO_MANIFEST.json`** + **`public/audio/music/`** / **`sfx/`** ?
   Act 1 music and SFX, sourced from Freesound (CC0/CC-BY), gain-matched by
   functional category from the start; see `AUDIO_CREDITS.md` for full attribution.
-- **`art/act01-production/`** — Act 1 production visual source art, scene plates,
+- **`art/act01-production/`** ? Act 1 production visual source art, scene plates,
   registered character/prop sheets, onion skins, contact sheets, and loop captures;
   see `VISUAL_ASSET_CREDITS.md`.
-- **`src/`** — the current Vite/TypeScript playable Act 1 scaffold.
-- **`art/qa-placeholder`** and **`art/qa-broken`** — fixtures proving the registration
+- **`project.godot`**, **`content/`**, and
+  **`docs/GODOT_POPOCHIU_PRODUCTION_PLAN.md`** ? the new Godot/Popochiu production
+  scaffold and Codex-editable content layer. This does not replace the playable web
+  prototype yet; it creates the data-driven room/hotspot/item/walkthrough model the
+  production version will import.
+- **`tools/check_godot_content_manifest.py`** ? validates the Godot production content
+  scaffold: room links, entry points, hotspot polygons, asset paths, and Act 1 script
+  line references.
+- **`src/`** ? the current Vite/TypeScript playable Act 1 scaffold.
+- **`art/qa-placeholder`** and **`art/qa-broken`** ? fixtures proving the registration
   gate passes clean art and rejects bad art.
 
 ## Voice Audio
@@ -162,9 +162,10 @@ Act 1 is now a playable local web slice built from `script/ACT_01_SCRIPT.json` a
 `docs/ACT_01_DESIGN.md`, fully voiced (49/49 lines) and fully scored (all music/SFX
 for Act 1's hotspots and UI), with the recorded audio pass available in
 `public/audio/` and a provisional production visual pass in `art/act01-production/`.
-The project scaffold wires the registration gate into `npm test`, GitHub Actions, and
-per-sheet QA scripts. The production visual pass is still provisional pending human
-review of the required Animation Bible evidence, but it is registered from the start:
+The project scaffold wires the registration gate, runtime visual QA, and the new
+Godot content-manifest gate into `npm test`, GitHub Actions, and per-sheet QA
+scripts. The production visual pass is still provisional pending human review of the
+required Animation Bible evidence, but it is registered from the start:
 
 - `art/qa-placeholder` proves the frame gate passes a clean placeholder sheet.
 - `art/qa-broken` is an intentionally bad fixture that fails on canvas size and
@@ -177,6 +178,9 @@ review of the required Animation Bible evidence, but it is registered from the s
   reveal, grate opening, and QA evidence.
 - `art/cast_scale.json` now resolves Act 1 production registration paths and passes
   cast-scale. Grommet remains placeholder scale art only; Acts 2 and 3 are not built.
+- `content/` mirrors the Act 1 room graph as production data: discovery screen, clerk
+  screen, gate screen, button item, fixed Act 1 randomization state, and a smoke
+  walkthrough ending at the Act 2 blocker.
 
 Acts 2 ("The Button Sovereignty") and 3 ("The Roar") now have the same script/design
 pass Act 1 has — `script/ACT_02_SCRIPT.json` + `docs/ACT_02_DESIGN.md` and

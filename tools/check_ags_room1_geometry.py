@@ -26,6 +26,9 @@ def main() -> None:
         fail("Room 1 must contain discovery, clerk, and gate screens")
     if spec.get("start") != {"screenId": "discovery", "entryPoint": "cold-open"}:
         fail("Pip must begin the cold open in the discovery screen")
+    pip_height = spec.get("actorReference", {}).get("pipHeight")
+    if not (315 <= pip_height <= 345):
+        fail("Pip registered body height must stay calibrated to the painted rooms, target range 315-345px")
 
     for screen_id, screen in screens.items():
         if screen["background"] != f"background/{screen_id}.png":
@@ -41,15 +44,25 @@ def main() -> None:
 
     clerk = screens["clerk"]
     desk = clerk["walkBehinds"][0]
-    if desk["id"] != "bramble-desk" or desk["baseline"] != 614:
-        fail("clerk screen desk baseline must remain 614")
-    if desk["rect"] != {"x": 160, "y": 488, "width": 460, "height": 154}:
-        fail("clerk desk footprint must remain 160,488,460x154")
-    if clerk["standingPositions"]["bramble-talking-head"] != {"x": 280, "y": 510}:
-        fail("Bramble must be registered as a counter-height talking head")
+    if desk["id"] != "bramble-desk" or desk["baseline"] != 642:
+        fail("clerk screen desk baseline must remain 642")
+    if desk["rect"] != {"x": 70, "y": 360, "width": 720, "height": 285}:
+        fail("clerk desk footprint must remain 70,360,720x285")
     pip_talk = clerk["standingPositions"]["pip-talk-bramble"]
-    if not (0.42 * spec["actorReference"]["pipHeight"] <= pip_talk["y"] - desk["counterTopY"] <= 0.58 * spec["actorReference"]["pipHeight"]):
-        fail("desk counter must meet Pip around mid-torso")
+    bramble = clerk["standingPositions"]["bramble-talking-head"]
+    desk_rect = desk["rect"]
+    bramble_window_left = desk_rect["x"] + 0.36 * desk_rect["width"]
+    bramble_window_right = desk_rect["x"] + 0.70 * desk_rect["width"]
+    if not (bramble_window_left <= bramble["x"] <= bramble_window_right):
+        fail("Bramble must be registered inside the desk talking-head window")
+    if not (desk["counterTopY"] <= bramble["y"] <= desk["baseline"]):
+        fail("Bramble must be registered as a counter-height talking head")
+    if "frontOccluderPolygon" not in desk or len(desk["frontOccluderPolygon"]) < 4:
+        fail("clerk desk must declare a desk-front occluder polygon for actor proofing")
+    if not (pip_talk["x"] > desk_rect["x"] + desk_rect["width"] + 20):
+        fail("Pip must stand beside the desk face, not on the desk")
+    if not (desk["baseline"] <= pip_talk["y"] <= 690):
+        fail("Pip talk position must stay on the walkable floor in front of the desk")
 
     gate = screens["gate"]
     gate_object = gate["walkBehinds"][0]

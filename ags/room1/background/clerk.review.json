@@ -1,0 +1,59 @@
+{
+  "source": "ags\\room1\\background\\clerk.source.png",
+  "output": "ags\\room1\\background\\clerk.png",
+  "source_size": [
+    1672,
+    941
+  ],
+  "target_size": [
+    1280,
+    720
+  ],
+  "crop_box": [
+    0,
+    0,
+    1672,
+    941
+  ],
+  "geometryAuthority": true,
+  "studiesReferenceOnly": true,
+  "gates": {
+    "objectPlacement": "pass",
+    "internalLighting": "pass",
+    "perspectiveEyeLevel": "pass",
+    "finishedSurfaces": "pass",
+    "dimensions": "pass"
+  },
+  "placements": {
+    "wall-note": {
+      "x": 760,
+      "y": 202,
+      "width": 142,
+      "height": 74
+    },
+    "sign-in-log": {
+      "x": 10,
+      "y": 310,
+      "width": 118,
+      "height": 128
+    },
+    "service-bell": {
+      "x": 488,
+      "y": 454,
+      "width": 54,
+      "height": 32
+    },
+    "bramble-desk": {
+      "x": 70,
+      "y": 360,
+      "width": 720,
+      "height": 285
+    }
+  },
+  "visualReview": {
+    "status": "intake",
+    "actorProofRequired": true,
+    "blockingNotes": "Clerk office plate is strong; Bramble head/hands and Pip counter height still require actor-scale proof.",
+    "finalApproval": "pending actor-scale composite proof"
+  }
+}

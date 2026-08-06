@@ -1,0 +1,507 @@
+{
+  "prefix": "bramble_talk",
+  "fps": 12,
+  "canvas": [
+    512,
+    512
+  ],
+  "target_height": 360,
+  "frame_count": 30,
+  "sheet_size": [
+    15360,
+    512
+  ],
+  "anchor_canvas": [
+    256,
+    486
+  ],
+  "frames": [
+    {
+      "index": 0,
+      "anchor": [
+        256.154,
+        486
+      ],
+      "anchor_delta_px": 0.0,
+      "source_size": [
+        403,
+        360
+      ],
+      "offset": [
+        59,
+        126
+      ]
+    },
+    {
+      "index": 1,
+      "anchor": [
+        256.065,
+        486
+      ],
+      "anchor_delta_px": 0.089,
+      "source_size": [
+        400,
+        360
+      ],
+      "offset": [
+        60,
+        126
+      ]
+    },
+    {
+      "index": 2,
+      "anchor": [
+        255.755,
+        486
+      ],
+      "anchor_delta_px": 0.31,
+      "source_size": [
+        400,
+        360
+      ],
+      "offset": [
+        60,
+        126
+      ]
+    },
+    {
+      "index": 3,
+      "anchor": [
+        255.996,
+        486
+      ],
+      "anchor_delta_px": 0.241,
+      "source_size": [
+        398,
+        360
+      ],
+      "offset": [
+        61,
+        126
+      ]
+    },
+    {
+      "index": 4,
+      "anchor": [
+        256.2,
+        486
+      ],
+      "anchor_delta_px": 0.204,
+      "source_size": [
+        397,
+        360
+      ],
+      "offset": [
+        62,
+        126
+      ]
+    },
+    {
+      "index": 5,
+      "anchor": [
+        255.957,
+        486
+      ],
+      "anchor_delta_px": 0.242,
+      "source_size": [
+        396,
+        360
+      ],
+      "offset": [
+        62,
+        126
+      ]
+    },
+    {
+      "index": 6,
+      "anchor": [
+        255.716,
+        486
+      ],
+      "anchor_delta_px": 0.241,
+      "source_size": [
+        395,
+        360
+      ],
+      "offset": [
+        62,
+        126
+      ]
+    },
+    {
+      "index": 7,
+      "anchor": [
+        255.818,
+        486
+      ],
+      "anchor_delta_px": 0.103,
+      "source_size": [
+        394,
+        360
+      ],
+      "offset": [
+        63,
+        126
+      ]
+    },
+    {
+      "index": 8,
+      "anchor": [
+        255.939,
+        486
+      ],
+      "anchor_delta_px": 0.12,
+      "source_size": [
+        395,
+        360
+      ],
+      "offset": [
+        63,
+        126
+      ]
+    },
+    {
+      "index": 9,
+      "anchor": [
+        256.11,
+        486
+      ],
+      "anchor_delta_px": 0.171,
+      "source_size": [
+        395,
+        360
+      ],
+      "offset": [
+        63,
+        126
+      ]
+    },
+    {
+      "index": 10,
+      "anchor": [
+        255.783,
+        486
+      ],
+      "anchor_delta_px": 0.327,
+      "source_size": [
+        396,
+        360
+      ],
+      "offset": [
+        62,
+        126
+      ]
+    },
+    {
+      "index": 11,
+      "anchor": [
+        256.407,
+        486
+      ],
+      "anchor_delta_px": 0.624,
+      "source_size": [
+        397,
+        360
+      ],
+      "offset": [
+        62,
+        126
+      ]
+    },
+    {
+      "index": 12,
+      "anchor": [
+        255.598,
+        486
+      ],
+      "anchor_delta_px": 0.809,
+      "source_size": [
+        398,
+        360
+      ],
+      "offset": [
+        60,
+        126
+      ]
+    },
+    {
+      "index": 13,
+      "anchor": [
+        255.686,
+        486
+      ],
+      "anchor_delta_px": 0.088,
+      "source_size": [
+        400,
+        360
+      ],
+      "offset": [
+        59,
+        126
+      ]
+    },
+    {
+      "index": 14,
+      "anchor": [
+        256.168,
+        486
+      ],
+      "anchor_delta_px": 0.482,
+      "source_size": [
+        401,
+        360
+      ],
+      "offset": [
+        59,
+        126
+      ]
+    },
+    {
+      "index": 15,
+      "anchor": [
+        255.669,
+        486
+      ],
+      "anchor_delta_px": 0.499,
+      "source_size": [
+        404,
+        360
+      ],
+      "offset": [
+        57,
+        126
+      ]
+    },
+    {
+      "index": 16,
+      "anchor": [
+        255.685,
+        486
+      ],
+      "anchor_delta_px": 0.016,
+      "source_size": [
+        403,
+        360
+      ],
+      "offset": [
+        57,
+        126
+      ]
+    },
+    {
+      "index": 17,
+      "anchor": [
+        256.477,
+        486
+      ],
+      "anchor_delta_px": 0.792,
+      "source_size": [
+        403,
+        360
+      ],
+      "offset": [
+        58,
+        126
+      ]
+    },
+    {
+      "index": 18,
+      "anchor": [
+        255.924,
+        486
+      ],
+      "anchor_delta_px": 0.553,
+      "source_size": [
+        404,
+        360
+      ],
+      "offset": [
+        57,
+        126
+      ]
+    },
+    {
+      "index": 19,
+      "anchor": [
+        255.767,
+        486
+      ],
+      "anchor_delta_px": 0.156,
+      "source_size": [
+        403,
+        360
+      ],
+      "offset": [
+        57,
+        126
+      ]
+    },
+    {
+      "index": 20,
+      "anchor": [
+        255.627,
+        486
+      ],
+      "anchor_delta_px": 0.14,
+      "source_size": [
+        403,
+        360
+      ],
+      "offset": [
+        57,
+        126
+      ]
+    },
+    {
+      "index": 21,
+      "anchor": [
+        256.418,
+        486
+      ],
+      "anchor_delta_px": 0.791,
+      "source_size": [
+        403,
+        360
+      ],
+      "offset": [
+        58,
+        126
+      ]
+    },
+    {
+      "index": 22,
+      "anchor": [
+        256.211,
+        486
+      ],
+      "anchor_delta_px": 0.208,
+      "source_size": [
+        403,
+        360
+      ],
+      "offset": [
+        58,
+        126
+      ]
+    },
+    {
+      "index": 23,
+      "anchor": [
+        256.091,
+        486
+      ],
+      "anchor_delta_px": 0.12,
+      "source_size": [
+        403,
+        360
+      ],
+      "offset": [
+        58,
+        126
+      ]
+    },
+    {
+      "index": 24,
+      "anchor": [
+        255.852,
+        486
+      ],
+      "anchor_delta_px": 0.24,
+      "source_size": [
+        403,
+        360
+      ],
+      "offset": [
+        58,
+        126
+      ]
+    },
+    {
+      "index": 25,
+      "anchor": [
+        255.731,
+        486
+      ],
+      "anchor_delta_px": 0.12,
+      "source_size": [
+        402,
+        360
+      ],
+      "offset": [
+        58,
+        126
+      ]
+    },
+    {
+      "index": 26,
+      "anchor": [
+        256.491,
+        486
+      ],
+      "anchor_delta_px": 0.76,
+      "source_size": [
+        402,
+        360
+      ],
+      "offset": [
+        59,
+        126
+      ]
+    },
+    {
+      "index": 27,
+      "anchor": [
+        256.441,
+        486
+      ],
+      "anchor_delta_px": 0.05,
+      "source_size": [
+        403,
+        360
+      ],
+      "offset": [
+        58,
+        126
+      ]
+    },
+    {
+      "index": 28,
+      "anchor": [
+        255.666,
+        486
+      ],
+      "anchor_delta_px": 0.774,
+      "source_size": [
+        403,
+        360
+      ],
+      "offset": [
+        58,
+        126
+      ]
+    },
+    {
+      "index": 29,
+      "anchor": [
+        256.48,
+        486
+      ],
+      "anchor_delta_px": 0.814,
+      "source_size": [
+        403,
+        360
+      ],
+      "offset": [
+        59,
+        126
+      ]
+    }
+  ],
+  "warnings": [],
+  "rules": [
+    "All frames normalized to fixed canvas.",
+    "Anchor derived from bottom alpha band and locked to anchor_canvas.",
+    "Warm 3px outline added after normalization.",
+    "No costume, face, or color overlays are drawn."
+  ]
+}

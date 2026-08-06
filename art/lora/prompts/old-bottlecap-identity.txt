@@ -1,0 +1,11 @@
+Trigger token: lu_old_bottlecap_guard
+
+OLD BOTTLECAP - an ancient sentient stack of bottle caps guarding a toll point.
+Grumpy, deadpan, visually weighty, with complete stacked-cap construction visible
+in source frames. Warm painterly storybook rendering, soft warm key light from
+upper-left. Same cap stack, face, metal wear, proportions, and camera distance in
+every generation.
+
+Actor-only. Never crop the lower cap stack. Never draw gate bars, grate frame,
+room background, UI, speech text, labels, cast shadows, or other characters in
+Bottlecap source strips.

@@ -1,0 +1,221 @@
+{
+  "schema_version": 1,
+  "deterministic": true,
+  "viseme_map": {
+    "X": "mouth_closed.png",
+    "A": "mouth_wide_open.png",
+    "B": "mouth_closed.png",
+    "C": "mouth_small_open.png",
+    "D": "mouth_wide_open.png",
+    "E": "mouth_oo.png",
+    "F": "mouth_frown.png"
+  },
+  "states": {
+    "idle": {
+      "frames": 24,
+      "fps": 12,
+      "loop": true,
+      "curves": {
+        "breath": {
+          "amp_px": 14,
+          "scale_amp": 0.035,
+          "period_frames": 48
+        },
+        "blink_frames": [
+          7,
+          8
+        ],
+        "eye_shift": {
+          "amp_px": 4,
+          "period_frames": 72
+        },
+        "lint_drift": {
+          "amp_px": 5,
+          "alpha_amp": 0.12,
+          "period_frames": 37
+        },
+        "hand_micro": {
+          "amp_px": 9,
+          "period_frames": 31
+        }
+      }
+    },
+    "talkBase": {
+      "frames": 48,
+      "fps": 12,
+      "loop": true,
+      "curves": {
+        "breath": {
+          "amp_px": 16,
+          "scale_amp": 0.04,
+          "period_frames": 36
+        },
+        "blink_frames": [
+          18,
+          19,
+          43
+        ],
+        "eye_shift": {
+          "amp_px": 5,
+          "period_frames": 54
+        },
+        "brow_pulses": [
+          6,
+          14,
+          28,
+          38
+        ],
+        "hand_micro": {
+          "amp_px": 16,
+          "period_frames": 24
+        },
+        "lint_drift": {
+          "amp_px": 7,
+          "alpha_amp": 0.16,
+          "period_frames": 41
+        }
+      }
+    },
+    "greeting": {
+      "frames": 36,
+      "fps": 12,
+      "loop": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "body_y": 8,
+          "body_scale": 0.98,
+          "eyes": "half",
+          "brows": "neutral",
+          "left_hand": "rest",
+          "right_hand": "rest",
+          "mouth": "closed"
+        },
+        {
+          "frame": 8,
+          "body_y": 0,
+          "body_scale": 1.02,
+          "eyes": "open",
+          "brows": "worried",
+          "left_hand": "rest",
+          "right_hand": "rest",
+          "mouth": "small_open"
+        },
+        {
+          "frame": 18,
+          "body_y": -12,
+          "body_scale": 1.04,
+          "eyes": "open",
+          "brows": "proud",
+          "left_hand": "point",
+          "right_hand": "rest",
+          "mouth": "wide_open"
+        },
+        {
+          "frame": 35,
+          "body_y": 0,
+          "body_scale": 1.0,
+          "eyes": "open",
+          "brows": "neutral",
+          "left_hand": "rest",
+          "right_hand": "rest",
+          "mouth": "closed"
+        }
+      ]
+    },
+    "handoff": {
+      "frames": 36,
+      "fps": 12,
+      "loop": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "body_y": 0,
+          "body_scale": 1.0,
+          "eyes": "open",
+          "brows": "neutral",
+          "left_hand": "rest",
+          "right_hand": "rest",
+          "mouth": "closed"
+        },
+        {
+          "frame": 10,
+          "body_y": -6,
+          "body_scale": 1.02,
+          "eyes": "open",
+          "brows": "proud",
+          "left_hand": "rest",
+          "right_hand": "handoff",
+          "mouth": "small_open"
+        },
+        {
+          "frame": 22,
+          "body_y": -2,
+          "body_scale": 1.01,
+          "eyes": "half",
+          "brows": "proud",
+          "left_hand": "rest",
+          "right_hand": "handoff",
+          "mouth": "closed"
+        },
+        {
+          "frame": 35,
+          "body_y": 0,
+          "body_scale": 1.0,
+          "eyes": "open",
+          "brows": "neutral",
+          "left_hand": "rest",
+          "right_hand": "rest",
+          "mouth": "closed"
+        }
+      ]
+    },
+    "wrongAction": {
+      "frames": 30,
+      "fps": 12,
+      "loop": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "body_y": 0,
+          "body_scale": 1.0,
+          "eyes": "open",
+          "brows": "neutral",
+          "left_hand": "rest",
+          "right_hand": "rest",
+          "mouth": "closed"
+        },
+        {
+          "frame": 7,
+          "body_y": -4,
+          "body_scale": 1.01,
+          "eyes": "half",
+          "brows": "worried",
+          "left_hand": "point",
+          "right_hand": "rest",
+          "mouth": "frown"
+        },
+        {
+          "frame": 16,
+          "body_y": -8,
+          "body_scale": 1.02,
+          "eyes": "open",
+          "brows": "worried",
+          "left_hand": "point",
+          "right_hand": "rest",
+          "mouth": "wide_open"
+        },
+        {
+          "frame": 29,
+          "body_y": 0,
+          "body_scale": 1.0,
+          "eyes": "open",
+          "brows": "neutral",
+          "left_hand": "rest",
+          "right_hand": "rest",
+          "mouth": "closed"
+        }
+      ]
+    }
+  }
+}

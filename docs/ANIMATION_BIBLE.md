@@ -272,6 +272,28 @@ plate, never baked into it.
    something that should just be a continuous loop, and don't build an always-on
    loop for something a player is actually supposed to trigger.
 
+## Interactable and changeable layer contract
+
+Static dressing may be baked into a background plate only when it never changes,
+never occludes an actor, never receives a moving prop, and never needs an alternate
+state. Anything the player can change, open, reveal, disturb, pay into, pass through,
+or see animate must be declared as its own change layer before production art is
+accepted.
+
+The contract applies to desk/counter fronts that hide actors, gates, grates, doors,
+latches, curtains, cobwebs, dust clumps, tossed or held items, stamps, needles,
+marble candidates, tremor/light effects, and any other interactable that has more
+than one visual state. Every change layer declaration must name its room/screen, id,
+kind, bound hotspot or walk-behind, z-order, runtime `data-layer` when applicable,
+and whether it is production-ready or planned. Change layers are visual only:
+hotspot masks handle clicking, so change layers must be non-interactive and must not
+steal pointer events.
+
+A baked state swap is a failure. If QA cannot name the layer that changes or occludes
+the actor, QA did not prove the scene. A desk mask that is not declared, a gate that
+opens only by swapping the whole background, or a dust reveal baked into the room
+plate is rejected even if it looks acceptable in one still frame.
+
 ## Talk-loop contract
 
 Do not run one short six-frame talk gesture as an identical infinite treadmill for a
@@ -368,6 +390,12 @@ review artifact (source strip plus extracted-frame contact sheet) and the review
 approved it. A state without that review is provisional and cannot be bound to a
 playable export.
 
+`tools/check_animation_admission.py` is the executable gate for this contract. It
+must run as part of project QA for production character states, and it must reject
+states that lack review artifacts, have too few frames for their declared loop/action,
+crowd the canvas edge without an explicit smear/prop exception, or drift in visible
+construction beyond the state's declared tolerance.
+
 ## Known failure definitions
 
 These are hard rejects, even if the loop looks busy at full speed:
@@ -417,6 +445,13 @@ These are hard rejects, even if the loop looks busy at full speed:
   prop. This is a hard reject for the whole affected state, not a crop/scale problem
   for the runtime to hide. Quarantine it, regenerate with generous margins, and pass a
   fresh full-construction review before using it.
+- **Runtime preview crop:** a frame is complete on disk but is clipped by an importer,
+  thumbnail, Forge/AGS preview cell, object-fit rule, canvas viewport, or generated
+  atlas rect. This is also a hard reject. A QA surface that shows only the top of Old
+  Bottlecap or cuts off Pip's feet proves the runtime contract is wrong, even if the
+  PNG itself has the missing pixels. Fix the atlas rect, preview cell, registration,
+  or display transform; never approve the state while any review/export surface hides
+  required construction.
 
 ## Furniture and counter actor QA
 
@@ -551,14 +586,54 @@ provisional pending the evidence above.
 
 | Sheet | Actor type | State | Evidence |
 |---|---|---|---|
-| `characters/pip/walk`, `idle`, `dust-reach`, `toll-paid` | walk-plane | provisional-production/pass | 9-key walk and staged idle, pickup, and handoff sheets; production QA passes. |
-| `characters/bramble/idle`, `talk` | furniture-anchored | provisional-production/pass | Desk loop and talk gesture sheets; production QA passes. |
-| `characters/old-bottlecap/idle`, `toll-refused`, `toll-paid` | furniture-anchored | provisional-production/pass | Weighted guard reactions; production QA passes. |
-| `characters/scuttle/dash` | walk-plane | provisional-production/pass | Dash with readable solid poses around smears; production QA passes. |
+| `characters/pip/walk`, `idle`, `dust-reach`, `toll-paid` | walk-plane | production/pass | 9-key walk and staged idle, pickup, and handoff sheets; production QA and `npm run qa:engine:pip` pass with engine strips in `art/engine-export/pip/`. |
+| `characters/bramble/idle`, `talk`, `greeting`, `handoff`, `wrong-action` | furniture-anchored | production/pass | Deterministic part-rig export with 24/48/36/36/30 frames, separate X/A/B/C/D/E/F mouth overlays, engine strips in `art/engine-export/bramble/`, and `npm run qa:rig:bramble` + `npm run qa:engine:bramble` passing. |
+| `characters/old-bottlecap/idle`, `toll-refused`, `toll-paid` | furniture-anchored | production/pass | Weighted guard reactions; production QA and `npm run qa:engine:bottlecap` pass with strict edge-margin checks to reject cropped cap-stack frames. |
+| `characters/scuttle/dash` | walk-plane | production/pass | Dash with readable solid poses around smears; production QA and `npm run qa:engine:scuttle` pass with engine strips in `art/engine-export/scuttle/`. |
 | `props/dust-clump-reveal`, `props/grate-open` | furniture-anchored prop | provisional-production/pass | Reveal and mechanical-open clips; production QA passes. |
 | `characters-sprite-v2/old-bottlecap/talk` | furniture-anchored | **rejected/quarantined** | 2026-08-03: every extracted cel truncates the lower cap stack. Registration cannot waive incomplete geometry. Removed from Forge and importer; regenerate a complete actor-only strip and obtain a signed full-construction review before binding. |
 
-Forge currently uses the complete Bottlecap idle construction as a temporary talk
-fallback. It is deliberately not a final talk-animation approval. `npm run qa:cast`
-passes with Act 1 production sheets for Pip, Bramble, Scuttle, and Old Bottlecap, and
-the existing Grommet placeholder.
+`npm run qa:engine:characters` is the Act 1 character handoff gate. It verifies
+Pip, Bramble, Old Bottlecap, and Scuttle engine strips, source hashes, alpha-safe
+canvases, and review sheets. Runtime scene QA must also match each engine export's
+declared frame counts so short-loop substitutions cannot slip into preview. `npm
+run qa:cast` still passes with the existing Grommet placeholder, but Grommet is not
+production-approved for playable content until Acts 2-3 receive script/design detail.
+
+### Runtime sprite-flow hard gate
+
+Act 1 also requires `npm run qa:sprite-flow` before any sprite or animation timing
+change is accepted into the playable scene. Registration, cast scale, and engine
+export checks prove the source sheets are valid; this gate proves the actual game is
+using them correctly in flow.
+
+The runtime sprite-flow gate samples the rendered browser scene while driving a real
+play path through idle, walk, talk, item reveal, Bramble dialogue, and Bottlecap
+staging. It must reject:
+
+- blank, incomplete, or popping sprite samples;
+- a character showing the wrong state sheet during dialogue or action;
+- dialogue portraits or talk states falling back to stale/wrong-color sprites;
+- loops with too few unique frames for their declared state;
+- idle or talk loops cycling so fast they read as janky flicker;
+- walk movement that teleports, zips through the scene, or disagrees with the
+  declared click-to-walk speed budget.
+
+For Lost & Underfound, `npm run qa:sprite-flow` writes its proof to
+`art/act01-production/qa/runtime-sprite-flow/` and is wired into `npm test`. If this
+gate is red, the animation is not admitted even when the static sheet QA passes.
+
+### ComfyUI/LoRA identity lane
+
+LoRA production is scaffolded in `docs/COMFYUI_LORA_PIPELINE.md` and
+`art/lora/manifest.json`. This lane may be used to stabilize character identity for
+new source strips, but it does not change the hard gate above: LoRA generations are
+source material only until sliced, normalized, full-construction reviewed, and passed
+through registration and cast-scale QA.
+
+2026-08-04 Bramble update: visual proof generations from
+`lu_bramble_clerk_proof.safetensors` were rejected because the model snapped toward
+rabbit/fox-like neighboring priors and deformed at higher LoRA strength. Bramble is
+therefore not approved for diffusion-per-frame runtime animation. Use
+`docs/BRAMBLE_RIG_PIPELINE.md` and `npm.cmd run qa:rig:bramble` to create a
+deterministic part rig first, then export registered AGS frames from that rig.

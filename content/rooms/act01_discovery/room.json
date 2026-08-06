@@ -1,0 +1,62 @@
+{
+  "id": "act01_discovery",
+  "display_name": "The Lost Shelf",
+  "native_size": [1280, 720],
+  "background": "ags/room1/background/discovery.png",
+  "walkable_polygon": [[46, 540], [1216, 540], [1230, 690], [40, 690]],
+  "entry_points": {
+    "start": [410, 610],
+    "from_clerk": [1120, 620]
+  },
+  "exits": [
+    {
+      "id": "to_clerk",
+      "to": "act01_clerk",
+      "edge": "right",
+      "region": [[1160, 500], [1280, 500], [1280, 720], [1160, 720]],
+      "walk_to": [1130, 620],
+      "destination_entry": "from_discovery",
+      "exit_animation": "walk_off_right",
+      "entry_animation": "walk_in_left"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "cubby_wall",
+      "name": "Cubbies",
+      "shape": [[55, 130], [352, 130], [352, 548], [55, 548]],
+      "walk_to": [270, 625],
+      "essential": false,
+      "look_lines": ["act01-007-pip-cubbywall-examine-1st"],
+      "gag_pool": ["act01-008-pip-cubbywall-rotate-1", "act01-009-pip-cubbywall-rotate-2", "act01-010-pip-cubbywall-rotate-3"]
+    },
+    {
+      "id": "dust_clump",
+      "name": "Dust Clump",
+      "shape": [[520, 505], [720, 505], [720, 640], [520, 640]],
+      "walk_to": [560, 620],
+      "essential": true,
+      "look_lines": ["act01-004-pip-dustclump-examine"],
+      "use_lines": ["act01-005-pip-dustclump-search-success", "act01-006-pip-dustclump-search-again"],
+      "sets_flags": ["dust_searched"],
+      "grants_items": ["button"]
+    },
+    {
+      "id": "popcorn_boulder",
+      "name": "Popcorn Kernel Boulder",
+      "shape": [[770, 350], [1010, 350], [1010, 610], [770, 610]],
+      "walk_to": [790, 620],
+      "essential": false,
+      "look_lines": ["act01-012-pip-popcorn-examine"],
+      "use_lines": ["act01-013-pip-popcorn-use-fail"]
+    },
+    {
+      "id": "ceiling_crack",
+      "name": "Crack Above",
+      "shape": [[430, 40], [860, 40], [860, 145], [430, 145]],
+      "walk_to": [620, 610],
+      "essential": false,
+      "look_lines": ["act01-003-pip-ceiling-examine"]
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "id": "button",
+  "name": "Found Button",
+  "icon": "art/act01-production/scene/layered-v2/button/icon.png",
+  "look_lines": ["act01-041-pip-lost-and-underfound-joke"],
+  "tags": ["toll", "found-object"]
+}

@@ -1,0 +1,142 @@
+{
+  "sheet": "pip-dust-reach-meshy-current",
+  "actor_type": "walk-plane",
+  "approval_state": "provisional-meshy-runtime-proof",
+  "canvas": {
+    "width": 512,
+    "height": 512
+  },
+  "anchor_contract": "All promoted Meshy runtime frames share the fixed 512 canvas and bottom-center anchor from the sprite alignment pass.",
+  "frames": [
+    {
+      "file": "pip_meshy_dust_01.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "dust-reach",
+      "canonical": true,
+      "scale_reference": [
+        256,
+        126
+      ]
+    },
+    {
+      "file": "pip_meshy_dust_02.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "dust-reach",
+      "canonical": false
+    },
+    {
+      "file": "pip_meshy_dust_03.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "dust-reach",
+      "canonical": false
+    },
+    {
+      "file": "pip_meshy_dust_04.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "dust-reach",
+      "canonical": false
+    },
+    {
+      "file": "pip_meshy_dust_05.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "dust-reach",
+      "canonical": false
+    },
+    {
+      "file": "pip_meshy_dust_06.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "dust-reach",
+      "canonical": false
+    },
+    {
+      "file": "pip_meshy_dust_07.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "dust-reach",
+      "canonical": false
+    },
+    {
+      "file": "pip_meshy_dust_08.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "dust-reach",
+      "canonical": false
+    },
+    {
+      "file": "pip_meshy_dust_09.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "dust-reach",
+      "canonical": false
+    },
+    {
+      "file": "pip_meshy_dust_10.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "dust-reach",
+      "canonical": false
+    },
+    {
+      "file": "pip_meshy_dust_11.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "dust-reach",
+      "canonical": false
+    },
+    {
+      "file": "pip_meshy_dust_12.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "dust-reach",
+      "canonical": false
+    },
+    {
+      "file": "pip_meshy_dust_13.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "dust-reach",
+      "canonical": false
+    },
+    {
+      "file": "pip_meshy_dust_14.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "dust-reach",
+      "canonical": false
+    }
+  ]
+}

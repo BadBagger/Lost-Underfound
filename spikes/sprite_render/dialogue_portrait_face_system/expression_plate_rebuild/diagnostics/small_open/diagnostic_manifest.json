@@ -1,0 +1,49 @@
+{
+  "expression": "small_open",
+  "source_sheet": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\dialogue_portrait_face_system\\source_generation\\otto_generated_face_patch_sheet.png",
+  "outputs": [
+    "source_tile_raw.png",
+    "source_alpha_mask.png",
+    "source_face_only.png",
+    "transform_debug.png"
+  ],
+  "source_bbox": [
+    46,
+    23,
+    429,
+    485
+  ],
+  "transform_bbox": [
+    130,
+    44,
+    431,
+    402
+  ],
+  "pupils": [
+    [
+      145.63803680981596,
+      281.07361963190186
+    ],
+    [
+      294.52150537634407,
+      284.86021505376345
+    ]
+  ],
+  "transform": {
+    "dx": 46.92,
+    "dy": -37.967,
+    "rotation_deg": -1.457,
+    "scale": 0.77934,
+    "source_ipd_px": 148.932,
+    "source_roll_deg": 1.457,
+    "affine_inverse_matrix": [
+      1.282715,
+      -0.032624,
+      -114.412386,
+      0.032624,
+      1.282715,
+      -40.008819
+    ]
+  },
+  "note": "Diagnostic-only dump. No base compositing and no QA were run."
+}

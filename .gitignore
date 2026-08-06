@@ -1,9 +1,15 @@
 node_modules/
 dist/
 .vite/
+out/
+.godot/
 .codex-remote-attachments/
 ags/LostUnderfound/Compiled/
 ags/LostUnderfound/AudioCache/
 ags/LostUnderfound/Game.agf.bak
 ags/LostUnderfound/Game.agf.user
 ags/LostUnderfound/_OpenInEditor.lock
+__pycache__/
+*.pyc
+art/lora/models/*.safetensors
+spikes/sprite_render/input/

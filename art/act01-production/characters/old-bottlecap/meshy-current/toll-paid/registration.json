@@ -1,0 +1,79 @@
+{
+  "sheet": "old-bottlecap-toll-paid-meshy-current",
+  "actor_type": "furniture-anchored",
+  "approval_state": "provisional-meshy-runtime-proof",
+  "canvas": {
+    "width": 512,
+    "height": 512
+  },
+  "anchor_contract": "All promoted Meshy runtime frames share the fixed 512 canvas and bottom-center anchor from the sprite alignment pass.",
+  "frames": [
+    {
+      "file": "old_bottlecap_meshy_paid_01.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "toll-paid",
+      "canonical": true,
+      "scale_reference": [
+        256,
+        126
+      ]
+    },
+    {
+      "file": "old_bottlecap_meshy_paid_02.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "toll-paid",
+      "canonical": false
+    },
+    {
+      "file": "old_bottlecap_meshy_paid_03.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "toll-paid",
+      "canonical": false
+    },
+    {
+      "file": "old_bottlecap_meshy_paid_04.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "toll-paid",
+      "canonical": false
+    },
+    {
+      "file": "old_bottlecap_meshy_paid_05.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "toll-paid",
+      "canonical": false
+    },
+    {
+      "file": "old_bottlecap_meshy_paid_06.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "toll-paid",
+      "canonical": false
+    },
+    {
+      "file": "old_bottlecap_meshy_paid_07.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "toll-paid",
+      "canonical": false
+    }
+  ]
+}

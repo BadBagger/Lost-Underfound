@@ -1,0 +1,232 @@
+{
+  "sheet": "old-bottlecap-idle-meshy-current",
+  "actor_type": "furniture-anchored",
+  "approval_state": "provisional-meshy-runtime-proof",
+  "canvas": {
+    "width": 512,
+    "height": 512
+  },
+  "anchor_contract": "All promoted Meshy runtime frames share the fixed 512 canvas and bottom-center anchor from the sprite alignment pass.",
+  "frames": [
+    {
+      "file": "old_bottlecap_meshy_idle_01.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "idle",
+      "canonical": true,
+      "scale_reference": [
+        256,
+        126
+      ]
+    },
+    {
+      "file": "old_bottlecap_meshy_idle_02.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "idle",
+      "canonical": false
+    },
+    {
+      "file": "old_bottlecap_meshy_idle_03.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "idle",
+      "canonical": false
+    },
+    {
+      "file": "old_bottlecap_meshy_idle_04.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "idle",
+      "canonical": false
+    },
+    {
+      "file": "old_bottlecap_meshy_idle_05.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "idle",
+      "canonical": false
+    },
+    {
+      "file": "old_bottlecap_meshy_idle_06.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "idle",
+      "canonical": false
+    },
+    {
+      "file": "old_bottlecap_meshy_idle_07.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "idle",
+      "canonical": false
+    },
+    {
+      "file": "old_bottlecap_meshy_idle_08.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "idle",
+      "canonical": false
+    },
+    {
+      "file": "old_bottlecap_meshy_idle_09.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "idle",
+      "canonical": false
+    },
+    {
+      "file": "old_bottlecap_meshy_idle_10.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "idle",
+      "canonical": false
+    },
+    {
+      "file": "old_bottlecap_meshy_idle_11.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "idle",
+      "canonical": false
+    },
+    {
+      "file": "old_bottlecap_meshy_idle_12.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "idle",
+      "canonical": false
+    },
+    {
+      "file": "old_bottlecap_meshy_idle_13.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "idle",
+      "canonical": false
+    },
+    {
+      "file": "old_bottlecap_meshy_idle_14.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "idle",
+      "canonical": false
+    },
+    {
+      "file": "old_bottlecap_meshy_idle_15.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "idle",
+      "canonical": false
+    },
+    {
+      "file": "old_bottlecap_meshy_idle_16.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "idle",
+      "canonical": false
+    },
+    {
+      "file": "old_bottlecap_meshy_idle_17.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "idle",
+      "canonical": false
+    },
+    {
+      "file": "old_bottlecap_meshy_idle_18.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "idle",
+      "canonical": false
+    },
+    {
+      "file": "old_bottlecap_meshy_idle_19.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "idle",
+      "canonical": false
+    },
+    {
+      "file": "old_bottlecap_meshy_idle_20.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "idle",
+      "canonical": false
+    },
+    {
+      "file": "old_bottlecap_meshy_idle_21.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "idle",
+      "canonical": false
+    },
+    {
+      "file": "old_bottlecap_meshy_idle_22.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "idle",
+      "canonical": false
+    },
+    {
+      "file": "old_bottlecap_meshy_idle_23.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "idle",
+      "canonical": false
+    },
+    {
+      "file": "old_bottlecap_meshy_idle_24.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "idle",
+      "canonical": false
+    }
+  ]
+}

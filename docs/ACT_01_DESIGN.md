@@ -88,6 +88,11 @@ On `toll-paid`, after the `039`/`040`/`041`/`042` exchange plays out, cut to Act
 the scene change per the same pattern `department-impossible-complaints` uses
 (`sceneChanged: true` with a short delay before the cut, not an instant hard cut).
 
+Runtime QA: `npm run qa:act1-playthrough` is the Act 1 progression gate. It
+checks the discrete-screen link map, the dust-clump -> button -> Bottlecap toll
+route, the gated Act 2 transition, the required script line IDs, dialogue
+lockout, inventory selection, and hidden release hitboxes.
+
 ## Animation cue table
 
 Per `docs/ANIMATION_BIBLE.md` — this is what needs an authored sequence, not just a

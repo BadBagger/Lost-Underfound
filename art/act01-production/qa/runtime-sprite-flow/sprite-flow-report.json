@@ -1,0 +1,173 @@
+{
+  "checks": [
+    {
+      "name": "pip idle",
+      "uniqueFrames": 6,
+      "changes": 5,
+      "changesPerSecond": 3.3852403520649963,
+      "sources": [
+        "pip_meshy_idle_09-CaUhmfxm.png",
+        "pip_meshy_idle_10-DKaUcMvA.png",
+        "pip_meshy_idle_10-DKaUcMvA.png",
+        "pip_meshy_idle_11-Poc20cM9.png",
+        "pip_meshy_idle_11-Poc20cM9.png",
+        "pip_meshy_idle_11-Poc20cM9.png",
+        "pip_meshy_idle_12-CsUCfyji.png",
+        "pip_meshy_idle_12-CsUCfyji.png",
+        "pip_meshy_idle_12-CsUCfyji.png",
+        "pip_meshy_idle_12-CsUCfyji.png",
+        "pip_meshy_idle_01-BAsGBwJb.png",
+        "pip_meshy_idle_01-BAsGBwJb.png",
+        "pip_meshy_idle_01-BAsGBwJb.png",
+        "pip_meshy_idle_02-CocBgERO.png"
+      ],
+      "scale": {
+        "avgHeight": 426.296875,
+        "avgStageHeightRatio": 0.6498582759688444
+      },
+      "color": {
+        "blueCoverage": 0.6715820946977453,
+        "saturation": 0.5373751778152615,
+        "avgB": 106.56243411492217
+      }
+    },
+    {
+      "name": "pip walk to dust",
+      "uniqueFrames": 10,
+      "changes": 9,
+      "changesPerSecond": 7.805724197745013,
+      "sources": [
+        "pip_meshy_walk_12-Y8n3Rm9N.png",
+        "pip_meshy_walk_01-BV32t-8G.png",
+        "pip_meshy_walk_03-B86stL50.png",
+        "pip_meshy_walk_04-JXmP5yZy.png",
+        "pip_meshy_walk_05-BIBxDhzb.png",
+        "pip_meshy_walk_05-BIBxDhzb.png",
+        "pip_meshy_walk_06-Bcz4wwHF.png",
+        "pip_meshy_walk_08-BK-kuADC.png",
+        "pip_meshy_walk_09-DHQlH6-L.png",
+        "pip_meshy_walk_10-Bt0h7c-X.png",
+        "pip_meshy_walk_11-Dul4Ox65.png"
+      ],
+      "motion": {
+        "totalDistance": 203.21875,
+        "speed": 176.2521682567216,
+        "biggestJump": 27.046875,
+        "maxStepSpeed": 252.5058962264151
+      },
+      "color": {
+        "blueCoverage": 0.6223599992424763,
+        "saturation": 0.5377144157747675,
+        "avgB": 97.75485562038821
+      }
+    },
+    {
+      "name": "pip talk",
+      "uniqueFrames": 8,
+      "changes": 7,
+      "changesPerSecond": 8.7173100871731,
+      "sources": [
+        "pip_meshy_talk_11-BnPyv4ET.png",
+        "pip_meshy_talk_12-CgTygiVT.png",
+        "pip_meshy_talk_01-DpTXIYER.png",
+        "pip_meshy_talk_02-D8OaKPMx.png",
+        "pip_meshy_talk_02-D8OaKPMx.png",
+        "pip_meshy_talk_03-CDEbaOR_.png",
+        "pip_meshy_talk_04-RNnWkgiI.png",
+        "pip_meshy_talk_05-8i_9edGH.png",
+        "pip_meshy_talk_06-CThPczpf.png"
+      ],
+      "color": {
+        "blueCoverage": 0.6467860773815698,
+        "saturation": 0.5227000361143114,
+        "avgB": 102.83378776008084
+      }
+    },
+    {
+      "name": "bramble idle",
+      "uniqueFrames": 7,
+      "changes": 6,
+      "changesPerSecond": 3.7593984962406015,
+      "sources": [
+        "bramble_idle_21-DNMmqQ1A.png",
+        "bramble_idle_22-CMnMPuAL.png",
+        "bramble_idle_22-CMnMPuAL.png",
+        "bramble_idle_23-BVQDwe0-.png",
+        "bramble_idle_23-BVQDwe0-.png",
+        "bramble_idle_24-B6hinGIf.png",
+        "bramble_idle_01-B8Ah-amh.png",
+        "bramble_idle_01-B8Ah-amh.png",
+        "bramble_idle_02-CMeqdP9m.png",
+        "bramble_idle_02-CMeqdP9m.png",
+        "bramble_idle_03-Bpz7-YBO.png",
+        "bramble_idle_03-Bpz7-YBO.png"
+      ]
+    },
+    {
+      "name": "bramble greeting/talk flow",
+      "uniqueFrames": 8,
+      "changes": 7,
+      "changesPerSecond": 7.717750826901874,
+      "sources": [
+        "bramble_greeting_05-Os7MDOXG.png",
+        "bramble_greeting_06-BIjsWkrD.png",
+        "bramble_greeting_08-CwfITHHO.png",
+        "bramble_greeting_09-zBBxbYmJ.png",
+        "bramble_greeting_11-DntFj0zb.png",
+        "bramble_greeting_12-Bvg0MU1Q.png",
+        "bramble_greeting_14-C-5vDASO.png",
+        "bramble_greeting_15-aVbYeANY.png",
+        "bramble_greeting_15-aVbYeANY.png"
+      ]
+    },
+    {
+      "name": "old bottlecap idle",
+      "uniqueFrames": 5,
+      "changes": 4,
+      "changesPerSecond": 2.4330900243309004,
+      "sources": [
+        "old_bottlecap_meshy_idle_03-BjHAweKv.png",
+        "old_bottlecap_meshy_idle_03-BjHAweKv.png",
+        "old_bottlecap_meshy_idle_05-D4FWtZeD.png",
+        "old_bottlecap_meshy_idle_05-D4FWtZeD.png",
+        "old_bottlecap_meshy_idle_07-VqDdzpzs.png",
+        "old_bottlecap_meshy_idle_07-VqDdzpzs.png",
+        "old_bottlecap_meshy_idle_09-L-HG4-1I.png",
+        "old_bottlecap_meshy_idle_09-L-HG4-1I.png",
+        "old_bottlecap_meshy_idle_11-DOGcq2cH.png",
+        "old_bottlecap_meshy_idle_11-DOGcq2cH.png"
+      ]
+    },
+    {
+      "name": "mobile portrait pip idle",
+      "uniqueFrames": 5,
+      "changes": 4,
+      "changesPerSecond": 2.7266530334014996,
+      "sources": [
+        "pip_meshy_idle_05-CWOzIIFi.png",
+        "pip_meshy_idle_05-CWOzIIFi.png",
+        "pip_meshy_idle_06-DCdI-gEn.png",
+        "pip_meshy_idle_06-DCdI-gEn.png",
+        "pip_meshy_idle_06-DCdI-gEn.png",
+        "pip_meshy_idle_06-DCdI-gEn.png",
+        "pip_meshy_idle_07-BPFo4Wzq.png",
+        "pip_meshy_idle_07-BPFo4Wzq.png",
+        "pip_meshy_idle_08-UTwhzwyq.png",
+        "pip_meshy_idle_08-UTwhzwyq.png",
+        "pip_meshy_idle_08-UTwhzwyq.png",
+        "pip_meshy_idle_09-CaUhmfxm.png",
+        "pip_meshy_idle_09-CaUhmfxm.png",
+        "pip_meshy_idle_09-CaUhmfxm.png"
+      ],
+      "scale": {
+        "avgHeight": 141.6875,
+        "avgStageHeightRatio": 0.6458689458689458
+      },
+      "color": {
+        "blueCoverage": 0.6703957523212084,
+        "saturation": 0.5368820968435092,
+        "avgB": 106.61747666089646
+      }
+    }
+  ]
+}

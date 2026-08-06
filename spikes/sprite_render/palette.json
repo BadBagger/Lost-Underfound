@@ -1,0 +1,14 @@
+{
+  "hero": {
+    "outline": "#160c0d",
+    "blue_costume": "#2571c3",
+    "blue_costume_shadow": "#184d91",
+    "teal_belly": "#4dbfb5",
+    "teal_shadow": "#2a93b1",
+    "warm_skin": "#e5a67c",
+    "warm_skin_shadow": "#9e6f41",
+    "warm_highlight": "#f1d785",
+    "room_brown": "#604028",
+    "room_dark": "#2a1d18"
+  }
+}

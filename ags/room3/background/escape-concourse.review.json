@@ -1,0 +1,53 @@
+{
+  "source": "ags\\room3\\background\\escape-concourse.source.png",
+  "output": "ags\\room3\\background\\escape-concourse.png",
+  "source_size": [
+    1672,
+    941
+  ],
+  "target_size": [
+    1280,
+    720
+  ],
+  "crop_box": [
+    0,
+    0,
+    1672,
+    941
+  ],
+  "geometryAuthority": true,
+  "studiesReferenceOnly": true,
+  "gates": {
+    "objectPlacement": "pass",
+    "internalLighting": "pass",
+    "perspectiveEyeLevel": "pass",
+    "finishedSurfaces": "pass",
+    "dimensions": "pass"
+  },
+  "placements": {
+    "escape-route": {
+      "x": 0,
+      "y": 498,
+      "width": 1280,
+      "height": 190
+    },
+    "filing-booth-route": {
+      "x": 160,
+      "y": 240,
+      "width": 265,
+      "height": 250
+    },
+    "roar-light": {
+      "x": 965,
+      "y": 90,
+      "width": 260,
+      "height": 500
+    }
+  },
+  "visualReview": {
+    "status": "intake",
+    "actorProofRequired": true,
+    "blockingNotes": "Stable room plate, not an action-frame explosion; prove Grommet block and Pip escape route.",
+    "finalApproval": "pending actor-scale composite proof"
+  }
+}

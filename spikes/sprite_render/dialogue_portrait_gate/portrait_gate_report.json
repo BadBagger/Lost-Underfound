@@ -1,0 +1,74 @@
+{
+  "status": "portrait_gate_pending_user_approval",
+  "output": "spikes\\sprite_render\\dialogue_portrait_gate\\otto_portrait_gate_still.png",
+  "sprite_output": "spikes\\sprite_render\\dialogue_portrait_gate\\otto_portrait_gate_sprite_r3.png",
+  "raw_frame": "spikes\\sprite_render\\dialogue_portrait_source_native\\frames_raw\\walk_raw_000.png",
+  "background": "ags\\room1\\background\\clerk.png",
+  "dimensions": [
+    1920,
+    1080
+  ],
+  "camera": {
+    "type": "orthographic",
+    "view": "side-left",
+    "angle_deg_above_horizontal": 4.0,
+    "ortho_scale": 3.6999998092651367,
+    "target_z_frac": 0.5,
+    "shift": [
+      0.18,
+      0.58
+    ]
+  },
+  "face_measurements": {
+    "face_width_px": 75.1,
+    "source_head_pixel_height": 275.52,
+    "source_head_pixel_width": 98.81,
+    "eye_width_range_px": [
+      11.26,
+      13.52
+    ],
+    "eye_center_separation_px": 33.04,
+    "eye_y_from_face_top_px": 39.8,
+    "pupil_width_range_px": [
+      1.35,
+      1.88
+    ],
+    "pupil_to_eye_width_ratio": "about 1:7",
+    "anchor": [
+      554.63,
+      764.62
+    ]
+  },
+  "display_measurements": {
+    "trimmed_source_bbox": [
+      448,
+      621,
+      748,
+      1080
+    ],
+    "display_scale": 1.8736,
+    "display_portrait_height_px": 860,
+    "display_position_px": [
+      1135,
+      95
+    ],
+    "display_face_width_px_est": 140.71
+  },
+  "treatment": "source-outline",
+  "derived_asset_targets": {
+    "single_sclera_width_px": [
+      21.1,
+      25.33
+    ],
+    "eye_center_separation_px": 61.91,
+    "pupil_width_px": [
+      2.53,
+      3.52
+    ],
+    "pupil_rule": "small dot, not iris disc; roughly 1:7 against sclera width"
+  },
+  "assumptions": [
+    "Otto placed on right third to leave room on the left for a second speaker."
+  ],
+  "gate": "Do not create final dialogue face assets until this still is approved."
+}

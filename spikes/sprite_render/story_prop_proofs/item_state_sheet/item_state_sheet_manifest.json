@@ -1,0 +1,22 @@
+{
+  "name": "item_state_sheet",
+  "frame_count": 9,
+  "fps": 12,
+  "canvas": [
+    256,
+    256
+  ],
+  "role": "isolated prop readability/timing proof; final painterly art must replace or paint over this source",
+  "notes": [
+    "needle inventory/held",
+    "thread inventory",
+    "threaded-needle combine result",
+    "intake parcel inventory",
+    "intake parcel dropped floor state",
+    "intake parcel presented to Toggle/Bramble",
+    "founder's ledger closed inventory",
+    "founder's ledger readable/open",
+    "annotated evidence combined item"
+  ],
+  "warnings": []
+}

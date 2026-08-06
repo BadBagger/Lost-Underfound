@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "authority": "docs/AMBIENT_MOTION_LAYER_CONTRACT.md",
+  "coordinate_space": {
+    "width": 1280,
+    "height": 720
+  },
+  "clips": [
+    {
+      "id": "discovery-lint-spider-crawl",
+      "screen": "discovery",
+      "kind": "ambient-creature-loop",
+      "data_layer": "ambient-motion",
+      "folder": "art/act01-production/scene/ambient/spider",
+      "prefix": "spider",
+      "frames": 6,
+      "fps": 4,
+      "loop": true,
+      "non_interactive": true,
+      "position": { "x": 105, "y": 352, "width": 88, "height": 44 },
+      "path": { "dx": 52, "dy": -3, "duration_s": 22 },
+      "opacity": 0.78,
+      "note": "Tiny goofy lint-spider on the discovery-side dressing; never crosses the walk plane."
+    },
+    {
+      "id": "clerk-lamp-glow-flicker",
+      "screen": "clerk",
+      "kind": "ambient-light-loop",
+      "data_layer": "ambient-motion",
+      "folder": "art/act01-production/scene/ambient/lamp_glow",
+      "prefix": "lamp_glow",
+      "frames": 6,
+      "fps": 3,
+      "loop": true,
+      "non_interactive": true,
+      "position": { "x": 36, "y": 118, "width": 190, "height": 150 },
+      "path": { "dx": 0, "dy": 0, "duration_s": 13 },
+      "opacity": 0.5,
+      "blend": "screen",
+      "note": "Subtle warm lamp breathing over the left wall lamp, below actors and hotspots."
+    },
+    {
+      "id": "clerk-question-tag-sway",
+      "screen": "clerk",
+      "kind": "ambient-hanging-prop-loop",
+      "data_layer": "ambient-motion",
+      "folder": "art/act01-production/scene/ambient/hanging_tag",
+      "prefix": "hanging_tag",
+      "frames": 6,
+      "fps": 1.5,
+      "loop": true,
+      "non_interactive": true,
+      "position": { "x": 1164, "y": 145, "width": 62, "height": 132 },
+      "path": { "dx": 0, "dy": 0, "duration_s": 18 },
+      "opacity": 0.82,
+      "note": "Slow shelf tag sway; readable as set dressing, not an inspectable target."
+    },
+    {
+      "id": "gate-cobweb-spider-crawl",
+      "screen": "gate",
+      "kind": "ambient-creature-loop",
+      "data_layer": "ambient-motion",
+      "folder": "art/act01-production/scene/ambient/spider",
+      "prefix": "spider",
+      "frames": 6,
+      "fps": 4,
+      "loop": true,
+      "non_interactive": true,
+      "position": { "x": 238, "y": 292, "width": 72, "height": 36 },
+      "path": { "dx": 34, "dy": 9, "duration_s": 19 },
+      "opacity": 0.72,
+      "note": "Tiny background life near the cobweb curtain; separate from Scuttle's scripted dash."
+    },
+    {
+      "id": "gate-tag-sway",
+      "screen": "gate",
+      "kind": "ambient-hanging-prop-loop",
+      "data_layer": "ambient-motion",
+      "folder": "art/act01-production/scene/ambient/hanging_tag",
+      "prefix": "hanging_tag",
+      "frames": 6,
+      "fps": 1.25,
+      "loop": true,
+      "non_interactive": true,
+      "position": { "x": 1090, "y": 148, "width": 56, "height": 122 },
+      "path": { "dx": 0, "dy": 0, "duration_s": 21 },
+      "opacity": 0.76,
+      "note": "Very slow question-tag sway near the toll-gate dressing."
+    }
+  ],
+  "admission": {
+    "min_loop_frames": 6,
+    "max_fps": 5,
+    "max_path_dx_px": 64,
+    "max_path_dy_px": 16,
+    "requires_non_interactive": true
+  }
+}

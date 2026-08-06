@@ -4,8 +4,9 @@
   "actors": [
     {
       "name": "pip",
-      "registration": "act01-production/characters-sprite-v2/pip/walk/registration.json",
-      "world_height_units": 1.0
+      "registration": "act01-production/characters/pip/meshy-current/walk/registration.json",
+      "world_height_units": 1.0,
+      "effective_source_height_px": 220
     },
     {
       "name": "bramble",
@@ -19,13 +20,15 @@
     },
     {
       "name": "scuttle",
-      "registration": "act01-production/characters-sprite-v2/scuttle/dash/registration.json",
-      "world_height_units": 0.35
+      "registration": "act01-production/characters/scuttle/meshy-current/dash/registration.json",
+      "world_height_units": 0.35,
+      "effective_source_height_px": 77
     },
     {
       "name": "old-bottlecap",
-      "registration": "act01-production/characters-sprite-v2/old-bottlecap/idle/registration.json",
-      "world_height_units": 0.6
+      "registration": "act01-production/characters/old-bottlecap/meshy-current/idle/registration.json",
+      "world_height_units": 0.6,
+      "effective_source_height_px": 132
     }
   ]
 }

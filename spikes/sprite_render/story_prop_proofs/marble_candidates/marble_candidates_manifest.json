@@ -1,0 +1,18 @@
+{
+  "name": "marble_candidates",
+  "frame_count": 5,
+  "fps": 12,
+  "canvas": [
+    256,
+    256
+  ],
+  "role": "isolated prop readability/timing proof; final painterly art must replace or paint over this source",
+  "notes": [
+    "wrong: galaxy marble",
+    "wrong: radiator-tagged marble",
+    "wrong: scratch decoy, not star nick",
+    "wrong: flawless marble",
+    "correct: lopsided star nick"
+  ],
+  "warnings": []
+}

@@ -1,0 +1,306 @@
+{
+  "sheet": "bramble-greeting",
+  "actor_type": "furniture-anchored",
+  "canvas": {
+    "width": 320,
+    "height": 260
+  },
+  "anchor_tolerance_px": 1,
+  "frames": [
+    {
+      "file": "bramble_greeting_01.png",
+      "anchor": [
+        160,
+        205
+      ],
+      "role": "greeting-01",
+      "canonical": true,
+      "scale_reference": [
+        160,
+        18
+      ]
+    },
+    {
+      "file": "bramble_greeting_02.png",
+      "anchor": [
+        160,
+        205
+      ],
+      "role": "greeting-02"
+    },
+    {
+      "file": "bramble_greeting_03.png",
+      "anchor": [
+        160,
+        205
+      ],
+      "role": "greeting-03"
+    },
+    {
+      "file": "bramble_greeting_04.png",
+      "anchor": [
+        160,
+        205
+      ],
+      "role": "greeting-04"
+    },
+    {
+      "file": "bramble_greeting_05.png",
+      "anchor": [
+        160,
+        205
+      ],
+      "role": "greeting-05"
+    },
+    {
+      "file": "bramble_greeting_06.png",
+      "anchor": [
+        160,
+        205
+      ],
+      "role": "greeting-06"
+    },
+    {
+      "file": "bramble_greeting_07.png",
+      "anchor": [
+        160,
+        205
+      ],
+      "role": "greeting-07"
+    },
+    {
+      "file": "bramble_greeting_08.png",
+      "anchor": [
+        160,
+        205
+      ],
+      "role": "greeting-08"
+    },
+    {
+      "file": "bramble_greeting_09.png",
+      "anchor": [
+        160,
+        205
+      ],
+      "role": "greeting-09"
+    },
+    {
+      "file": "bramble_greeting_10.png",
+      "anchor": [
+        160,
+        205
+      ],
+      "role": "greeting-10"
+    },
+    {
+      "file": "bramble_greeting_11.png",
+      "anchor": [
+        160,
+        205
+      ],
+      "role": "greeting-11"
+    },
+    {
+      "file": "bramble_greeting_12.png",
+      "anchor": [
+        160,
+        205
+      ],
+      "role": "greeting-12"
+    },
+    {
+      "file": "bramble_greeting_13.png",
+      "anchor": [
+        160,
+        205
+      ],
+      "role": "greeting-13"
+    },
+    {
+      "file": "bramble_greeting_14.png",
+      "anchor": [
+        160,
+        205
+      ],
+      "role": "greeting-14"
+    },
+    {
+      "file": "bramble_greeting_15.png",
+      "anchor": [
+        160,
+        205
+      ],
+      "role": "greeting-15"
+    },
+    {
+      "file": "bramble_greeting_16.png",
+      "anchor": [
+        160,
+        205
+      ],
+      "role": "greeting-16"
+    },
+    {
+      "file": "bramble_greeting_17.png",
+      "anchor": [
+        160,
+        205
+      ],
+      "role": "greeting-17"
+    },
+    {
+      "file": "bramble_greeting_18.png",
+      "anchor": [
+        160,
+        205
+      ],
+      "role": "greeting-18"
+    },
+    {
+      "file": "bramble_greeting_19.png",
+      "anchor": [
+        160,
+        205
+      ],
+      "role": "greeting-19"
+    },
+    {
+      "file": "bramble_greeting_20.png",
+      "anchor": [
+        160,
+        205
+      ],
+      "role": "greeting-20"
+    },
+    {
+      "file": "bramble_greeting_21.png",
+      "anchor": [
+        160,
+        205
+      ],
+      "role": "greeting-21"
+    },
+    {
+      "file": "bramble_greeting_22.png",
+      "anchor": [
+        160,
+        205
+      ],
+      "role": "greeting-22"
+    },
+    {
+      "file": "bramble_greeting_23.png",
+      "anchor": [
+        160,
+        205
+      ],
+      "role": "greeting-23"
+    },
+    {
+      "file": "bramble_greeting_24.png",
+      "anchor": [
+        160,
+        205
+      ],
+      "role": "greeting-24"
+    },
+    {
+      "file": "bramble_greeting_25.png",
+      "anchor": [
+        160,
+        205
+      ],
+      "role": "greeting-25"
+    },
+    {
+      "file": "bramble_greeting_26.png",
+      "anchor": [
+        160,
+        205
+      ],
+      "role": "greeting-26"
+    },
+    {
+      "file": "bramble_greeting_27.png",
+      "anchor": [
+        160,
+        205
+      ],
+      "role": "greeting-27"
+    },
+    {
+      "file": "bramble_greeting_28.png",
+      "anchor": [
+        160,
+        205
+      ],
+      "role": "greeting-28"
+    },
+    {
+      "file": "bramble_greeting_29.png",
+      "anchor": [
+        160,
+        205
+      ],
+      "role": "greeting-29"
+    },
+    {
+      "file": "bramble_greeting_30.png",
+      "anchor": [
+        160,
+        205
+      ],
+      "role": "greeting-30"
+    },
+    {
+      "file": "bramble_greeting_31.png",
+      "anchor": [
+        160,
+        205
+      ],
+      "role": "greeting-31"
+    },
+    {
+      "file": "bramble_greeting_32.png",
+      "anchor": [
+        160,
+        205
+      ],
+      "role": "greeting-32"
+    },
+    {
+      "file": "bramble_greeting_33.png",
+      "anchor": [
+        160,
+        205
+      ],
+      "role": "greeting-33"
+    },
+    {
+      "file": "bramble_greeting_34.png",
+      "anchor": [
+        160,
+        205
+      ],
+      "role": "greeting-34"
+    },
+    {
+      "file": "bramble_greeting_35.png",
+      "anchor": [
+        160,
+        205
+      ],
+      "role": "greeting-35"
+    },
+    {
+      "file": "bramble_greeting_36.png",
+      "anchor": [
+        160,
+        205
+      ],
+      "role": "greeting-36"
+    }
+  ],
+  "approval_state": "rig-exported-pending-visual-review",
+  "source": "art/rigs/bramble/manifest.json + art/rigs/bramble/poses.json"
+}

@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "character": "scuttle",
+  "status": "engine-export-ready",
+  "character_role": "walk-plane courier cameo",
+  "actor_type": "walk-plane",
+  "runtime_canvas": [
+    512,
+    512
+  ],
+  "runtime_anchor": [
+    256,
+    486
+  ],
+  "ags": {
+    "import_note": "Import as a one-shot dash. Frames 1 and 5 must stay readable solid poses; frames 3 and 4 are smear frames."
+  },
+  "states": {
+    "dash": {
+      "file": "art/engine-export/scuttle/scuttle_dash.png",
+      "cell": [
+        512,
+        512
+      ],
+      "frames": 6,
+      "sha256": "ab438d49219db8641a03a6bcf884f188c5edc4777a784a2fe25538d69af90425",
+      "source_hashes": {
+        "art/act01-production/characters/scuttle/meshy-current/dash/scuttle_meshy_dash_01.png": "f87de17e3820d1a3d2b2dc82b8a91cbee42b890bbf2d6f2a6aca85fd7ca64625",
+        "art/act01-production/characters/scuttle/meshy-current/dash/scuttle_meshy_dash_02.png": "b5b9c55abeedd256a9d997cd45197ca5b372bf65bbb1b26e412239b1ab68bf42",
+        "art/act01-production/characters/scuttle/meshy-current/dash/scuttle_meshy_dash_03.png": "813ec6a84d25f9a59a021b5578dba8897665266580ca6bd6b3a50f453f66fa3a",
+        "art/act01-production/characters/scuttle/meshy-current/dash/scuttle_meshy_dash_04.png": "35b694a7d4394be1bd43cce7b2713513904d09be2bb44bf327ef503cf4a96f83",
+        "art/act01-production/characters/scuttle/meshy-current/dash/scuttle_meshy_dash_05.png": "2cc288f40413cc46e9a7e194fd740b4a4cc0451fc4d79f07c70578730630806d",
+        "art/act01-production/characters/scuttle/meshy-current/dash/scuttle_meshy_dash_06.png": "cb722578ec4aa8442f1eff60d20989948db2e3ecfc36659f71c8d6b091c1143a"
+      },
+      "state": "dash",
+      "fps": 16,
+      "loop": false,
+      "ags_view": "SCUTTLE_DASH",
+      "registration": "art/act01-production/characters/scuttle/meshy-current/dash/registration.json",
+      "runtime_canvas": [
+        512,
+        512
+      ],
+      "runtime_anchor": [
+        256,
+        486
+      ]
+    }
+  },
+  "qa": {
+    "review_sheet": "art/act01-production/qa/scuttle-engine-export-review.png",
+    "export_gate": "npm.cmd run qa:engine:scuttle"
+  }
+}

@@ -1,87 +1,102 @@
 {
-  "scene": "act01-entry-chamber",
+  "scene": "act01-room1-discrete-reference",
+  "architecture": "discrete-screens",
   "coordinate_space": {
-    "width": 1600,
-    "height": 900
+    "width": 1280,
+    "height": 720
   },
+  "authority": "ags/room1/geometry.json",
   "layers": [
     {
       "id": "background-plate",
-      "kind": "background",
-      "asset": "entry-chamber-bg.png",
+      "kind": "opaque-background",
+      "source": "ags/room1/background/{screen}.png",
       "z": 1
     },
     {
-      "id": "cubby-wall",
-      "kind": "midground-prop",
-      "asset": "entry-chamber-cubby-wall.png",
-      "z": 4
+      "id": "ambient-motion",
+      "kind": "ambient-motion-layer",
+      "source": "src/styles.css",
+      "z": 4,
+      "non_interactive": true,
+      "max_drift_px": 4,
+      "opacity_range": [0.04, 0.16]
     },
     {
-      "id": "cobweb-curtain",
-      "kind": "midground-prop",
-      "asset": "entry-chamber-cobweb-curtain.png",
-      "z": 4
-    },
-    {
-      "id": "popcorn-boulder",
-      "kind": "midground-prop",
-      "asset": "entry-chamber-popcorn-boulder.png",
-      "z": 5
+      "id": "actor-shadow",
+      "kind": "dynamic-contact-shadow",
+      "asset": "layered-v2/fx/soft_oval_shadow.png",
+      "z": 10
     },
     {
       "id": "dust-prop",
-      "kind": "midground-prop",
-      "slot": "floor-left",
-      "z": 6
+      "kind": "interactive-floor-prop",
+      "slot": "discovery:dust-clump",
+      "z": 9
     },
     {
-      "id": "desk-back",
-      "kind": "furniture-back",
-      "asset": "entry-chamber-desk-back.png",
-      "z": 7
+      "id": "gate-animation",
+      "kind": "interactive-prop-animation",
+      "slot": "gate:toll-gate",
+      "z": 9
     },
     {
-      "id": "gate-back",
-      "kind": "furniture-back",
-      "asset": "entry-chamber-gate-back.png",
-      "z": 7
+      "id": "desk-front-occluder",
+      "kind": "foreground-occluder",
+      "slot": "clerk:bramble-desk",
+      "z": 12,
+      "non_interactive": true
     },
     {
       "id": "bramble-body",
       "kind": "furniture-anchored-actor",
-      "slot": "behind-desk",
-      "z": 8
-    },
-    {
-      "id": "desk-foreground",
-      "kind": "foreground-occluder",
-      "asset": "entry-chamber-desk-foreground.png",
-      "z": 10
-    },
-    {
-      "id": "gate-foreground",
-      "kind": "foreground-occluder",
-      "asset": "entry-chamber-gate-foreground.png",
-      "z": 11
-    },
-    {
-      "id": "old-bottlecap-body",
-      "kind": "furniture-anchored-actor",
-      "slot": "at-gate-front",
+      "slot": "clerk:bramble-talking-head",
       "z": 12
     },
     {
       "id": "pip-body",
       "kind": "walk-plane-actor",
       "slot": "floor",
-      "z": 12
+      "z": 13
+    },
+    {
+      "id": "old-bottlecap-body",
+      "kind": "furniture-anchored-actor",
+      "slot": "gate:old-bottlecap-guard",
+      "z": 15
+    },
+    {
+      "id": "cobweb-disturbance",
+      "kind": "foreground-disturbance",
+      "slot": "gate:cobweb-curtain",
+      "z": 14,
+      "non_interactive": true
+    },
+    {
+      "id": "button-flight",
+      "kind": "moving-inventory-prop",
+      "slot": "gate:toll-gate",
+      "z": 16,
+      "non_interactive": true
+    },
+    {
+      "id": "scuttle-dash",
+      "kind": "cameo-actor-burst",
+      "slot": "gate:cobweb-curtain",
+      "z": 17,
+      "non_interactive": true
+    },
+    {
+      "id": "post-pass",
+      "kind": "global-color-grain-vignette",
+      "source": "src/styles.css",
+      "z": 30
     },
     {
       "id": "hotspot-masks",
       "kind": "interaction-mask",
-      "source": "src/main.ts",
-      "z": 20
+      "source": "ags/room1/geometry.json",
+      "z": 40
     }
   ]
 }

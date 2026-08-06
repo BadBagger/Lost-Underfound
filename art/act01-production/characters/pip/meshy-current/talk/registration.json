@@ -1,0 +1,124 @@
+{
+  "sheet": "pip-talk-meshy-current",
+  "actor_type": "walk-plane",
+  "approval_state": "provisional-meshy-runtime-proof",
+  "canvas": {
+    "width": 512,
+    "height": 512
+  },
+  "anchor_contract": "All promoted Meshy runtime frames share the fixed 512 canvas and bottom-center anchor from the sprite alignment pass.",
+  "frames": [
+    {
+      "file": "pip_meshy_talk_01.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "talk",
+      "canonical": true,
+      "scale_reference": [
+        256,
+        126
+      ]
+    },
+    {
+      "file": "pip_meshy_talk_02.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "talk",
+      "canonical": false
+    },
+    {
+      "file": "pip_meshy_talk_03.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "talk",
+      "canonical": false
+    },
+    {
+      "file": "pip_meshy_talk_04.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "talk",
+      "canonical": false
+    },
+    {
+      "file": "pip_meshy_talk_05.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "talk",
+      "canonical": false
+    },
+    {
+      "file": "pip_meshy_talk_06.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "talk",
+      "canonical": false
+    },
+    {
+      "file": "pip_meshy_talk_07.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "talk",
+      "canonical": false
+    },
+    {
+      "file": "pip_meshy_talk_08.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "talk",
+      "canonical": false
+    },
+    {
+      "file": "pip_meshy_talk_09.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "talk",
+      "canonical": false
+    },
+    {
+      "file": "pip_meshy_talk_10.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "talk",
+      "canonical": false
+    },
+    {
+      "file": "pip_meshy_talk_11.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "talk",
+      "canonical": false
+    },
+    {
+      "file": "pip_meshy_talk_12.png",
+      "anchor": [
+        256,
+        486
+      ],
+      "role": "talk",
+      "canonical": false
+    }
+  ]
+}

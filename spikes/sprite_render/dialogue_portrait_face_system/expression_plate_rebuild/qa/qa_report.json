@@ -1,0 +1,251 @@
+{
+  "status": "pass",
+  "rig": {
+    "pupil_left": {
+      "x": 1261,
+      "y": 450
+    },
+    "pupil_right": {
+      "x": 1377,
+      "y": 454
+    },
+    "anchor": {
+      "x": 1319,
+      "y": 452
+    },
+    "ipd_px": 116.069,
+    "roll_deg": 0.0,
+    "source_roll_deg": 1.975,
+    "canvas": {
+      "width": 1920,
+      "height": 1080
+    },
+    "aperture_bbox": {
+      "x": 1194,
+      "y": 320,
+      "w": 287,
+      "h": 284
+    },
+    "brow_cut_y": 319,
+    "jaw_cut_y": 605,
+    "source_neutral": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\dialogue_portrait_gate\\otto_portrait_gate_still.png",
+    "source_expression_sheet": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\dialogue_portrait_face_system\\source_generation\\otto_generated_face_patch_sheet.png",
+    "aperture_mask_path": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\dialogue_portrait_face_system\\expression_plate_rebuild\\qa\\aperture_mask.png",
+    "aperture_mask_original_path": "C:\\Users\\KyleB\\Documents\\Codex\\2026-08-03\\you-re-starting-a-new-project\\spikes\\sprite_render\\dialogue_portrait_face_system\\expression_plate_rebuild\\qa\\aperture_mask_original.png",
+    "aperture_adjustment": {
+      "original_aperture_pixels": 73571,
+      "adjusted_aperture_pixels": 64119,
+      "shrink_pixels": 9452,
+      "neutral_missing_before_adjust_px": 6855,
+      "small_open_missing_before_adjust_px": 399,
+      "wide_open_missing_before_adjust_px": 0,
+      "meh_missing_before_adjust_px": 6,
+      "blink_missing_before_adjust_px": 911,
+      "skeptical_missing_before_adjust_px": 0
+    }
+  },
+  "transforms": {
+    "neutral": {
+      "dx": 1075.739,
+      "dy": 168.886,
+      "rotation_deg": -1.439,
+      "scale": 0.78406,
+      "source_ipd_px": 148.035,
+      "source_roll_deg": 1.439,
+      "affine_inverse_matrix": [
+        1.275007,
+        -0.032035,
+        -1423.993102,
+        0.032035,
+        1.275007,
+        -335.443684
+      ]
+    },
+    "small_open": {
+      "dx": 1098.92,
+      "dy": 169.033,
+      "rotation_deg": -1.457,
+      "scale": 0.77934,
+      "source_ipd_px": 148.932,
+      "source_roll_deg": 1.457,
+      "affine_inverse_matrix": [
+        1.282715,
+        -0.032624,
+        -1457.075662,
+        0.032624,
+        1.282715,
+        -339.850951
+      ]
+    },
+    "wide_open": {
+      "dx": 1075.718,
+      "dy": 171.433,
+      "rotation_deg": -1.383,
+      "scale": 0.7845,
+      "source_ipd_px": 147.952,
+      "source_roll_deg": 1.383,
+      "affine_inverse_matrix": [
+        1.27432,
+        -0.030756,
+        -1423.643904,
+        0.030756,
+        1.27432,
+        -335.992985
+      ]
+    },
+    "meh": {
+      "dx": 1098.47,
+      "dy": 171.608,
+      "rotation_deg": -1.418,
+      "scale": 0.78264,
+      "source_ipd_px": 148.305,
+      "source_roll_deg": 1.418,
+      "affine_inverse_matrix": [
+        1.277339,
+        -0.031614,
+        -1449.990694,
+        0.031614,
+        1.277339,
+        -338.664311
+      ]
+    },
+    "blink": {
+      "dx": 1075.739,
+      "dy": 168.886,
+      "rotation_deg": -1.439,
+      "scale": 0.78406,
+      "source_ipd_px": 148.035,
+      "source_roll_deg": 1.439,
+      "affine_inverse_matrix": [
+        1.275007,
+        -0.032035,
+        -1423.993102,
+        0.032035,
+        1.275007,
+        -335.443684
+      ],
+      "source_gap": "blink has no pupil landmarks; reused neutral source transform"
+    },
+    "skeptical": {
+      "dx": 1098.562,
+      "dy": 174.903,
+      "rotation_deg": -1.507,
+      "scale": 0.78244,
+      "source_ipd_px": 148.342,
+      "source_roll_deg": 1.507,
+      "affine_inverse_matrix": [
+        1.277604,
+        -0.033616,
+        -1449.527256,
+        0.033616,
+        1.277604,
+        -344.719352
+      ]
+    }
+  },
+  "metrics": [
+    {
+      "expression": "neutral",
+      "source_transform_valid": true,
+      "source_ipd_px": 148.035,
+      "source_roll_deg": 1.439,
+      "applied_rotation_deg": -1.439,
+      "applied_scale": 0.78406,
+      "forbidden_alpha_above_brow_cut": 0,
+      "forbidden_alpha_below_jaw_cut": 0,
+      "hair_hood_pixels_in_face_plate": 0,
+      "aperture_soft_gap_pixels": 0,
+      "aperture_core_gap_pixels": 0,
+      "magenta_fringe_pixels": 0,
+      "source_landmarks_present": true,
+      "pass": true
+    },
+    {
+      "expression": "small_open",
+      "source_transform_valid": true,
+      "source_ipd_px": 148.932,
+      "source_roll_deg": 1.457,
+      "applied_rotation_deg": -1.457,
+      "applied_scale": 0.77934,
+      "forbidden_alpha_above_brow_cut": 0,
+      "forbidden_alpha_below_jaw_cut": 0,
+      "hair_hood_pixels_in_face_plate": 0,
+      "aperture_soft_gap_pixels": 0,
+      "aperture_core_gap_pixels": 0,
+      "magenta_fringe_pixels": 0,
+      "source_landmarks_present": true,
+      "pass": true
+    },
+    {
+      "expression": "wide_open",
+      "source_transform_valid": true,
+      "source_ipd_px": 147.952,
+      "source_roll_deg": 1.383,
+      "applied_rotation_deg": -1.383,
+      "applied_scale": 0.7845,
+      "forbidden_alpha_above_brow_cut": 0,
+      "forbidden_alpha_below_jaw_cut": 0,
+      "hair_hood_pixels_in_face_plate": 0,
+      "aperture_soft_gap_pixels": 0,
+      "aperture_core_gap_pixels": 0,
+      "magenta_fringe_pixels": 0,
+      "source_landmarks_present": true,
+      "pass": true
+    },
+    {
+      "expression": "meh",
+      "source_transform_valid": true,
+      "source_ipd_px": 148.305,
+      "source_roll_deg": 1.418,
+      "applied_rotation_deg": -1.418,
+      "applied_scale": 0.78264,
+      "forbidden_alpha_above_brow_cut": 0,
+      "forbidden_alpha_below_jaw_cut": 0,
+      "hair_hood_pixels_in_face_plate": 0,
+      "aperture_soft_gap_pixels": 0,
+      "aperture_core_gap_pixels": 0,
+      "magenta_fringe_pixels": 0,
+      "source_landmarks_present": true,
+      "pass": true
+    },
+    {
+      "expression": "blink",
+      "source_transform_valid": true,
+      "source_ipd_px": 148.035,
+      "source_roll_deg": 1.439,
+      "applied_rotation_deg": -1.439,
+      "applied_scale": 0.78406,
+      "forbidden_alpha_above_brow_cut": 0,
+      "forbidden_alpha_below_jaw_cut": 0,
+      "hair_hood_pixels_in_face_plate": 0,
+      "aperture_soft_gap_pixels": 0,
+      "aperture_core_gap_pixels": 0,
+      "magenta_fringe_pixels": 0,
+      "source_landmarks_present": true,
+      "pass": true
+    },
+    {
+      "expression": "skeptical",
+      "source_transform_valid": true,
+      "source_ipd_px": 148.342,
+      "source_roll_deg": 1.507,
+      "applied_rotation_deg": -1.507,
+      "applied_scale": 0.78244,
+      "forbidden_alpha_above_brow_cut": 0,
+      "forbidden_alpha_below_jaw_cut": 0,
+      "hair_hood_pixels_in_face_plate": 0,
+      "aperture_soft_gap_pixels": 0,
+      "aperture_core_gap_pixels": 0,
+      "magenta_fringe_pixels": 0,
+      "source_landmarks_present": true,
+      "pass": true
+    }
+  ],
+  "source_gaps": [],
+  "judgment_calls": [
+    "Only the flattened chroma source sheet was found; no clean original alpha expression renders were available.",
+    "The expression source tiles are registered first, then clipped with the base aperture stencil; no hair/hood color classifier is used.",
+    "The base aperture is measured from the neutral render, then shrunk only where the registered source tiles cannot cover it. No source art is stretched or inpainted."
+  ],
+  "zero_generated_pixels_confirmation": "All face_plate RGB pixels originate from the chroma-keyed source expression sheet after transform and mask operations."
+}

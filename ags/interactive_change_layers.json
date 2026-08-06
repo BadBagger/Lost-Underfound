@@ -1,0 +1,169 @@
+{
+  "contract": "docs/INTERACTABLE_CHANGE_LAYER_CONTRACT.md",
+  "bible_section": "docs/ANIMATION_BIBLE.md#interactable-and-changeable-layer-contract",
+  "layers": [
+    {
+      "room": "room1",
+      "screen": "discovery",
+      "id": "dust-clump-reveal",
+      "kind": "interactive-reveal-prop",
+      "binds_to": "dust-clump",
+      "data_layer": "dust-prop",
+      "asset_pattern": "art/act01-production/scene/layered-v2/dust/reveal_*.png",
+      "z": 9,
+      "non_interactive": true,
+      "stateful": true,
+      "status": "production-ready"
+    },
+    {
+      "room": "room1",
+      "screen": "clerk",
+      "id": "bramble-desk-front-occluder",
+      "kind": "foreground-occluder",
+      "binds_to": "bramble-desk",
+      "data_layer": "desk-front-occluder",
+      "source": "background-polygon",
+      "z": 12,
+      "non_interactive": true,
+      "stateful": false,
+      "status": "production-ready"
+    },
+    {
+      "room": "room1",
+      "screen": "gate",
+      "id": "toll-gate-open",
+      "kind": "interactive-open-prop",
+      "binds_to": "toll-gate",
+      "data_layer": "gate-animation",
+      "asset_pattern": "art/act01-production/scene/layered-v2/grate/open_*.png",
+      "z": 9,
+      "non_interactive": true,
+      "stateful": true,
+      "status": "production-ready"
+    },
+    {
+      "room": "room1",
+      "screen": "gate",
+      "id": "button-flight",
+      "kind": "moving-inventory-prop",
+      "binds_to": "toll-gate",
+      "data_layer": "button-flight",
+      "asset": "art/act01-production/scene/layered-v2/button/tossed.png",
+      "z": 16,
+      "non_interactive": true,
+      "stateful": true,
+      "status": "production-ready"
+    },
+    {
+      "room": "room1",
+      "screen": "gate",
+      "id": "cobweb-disturbance",
+      "kind": "foreground-disturbance",
+      "binds_to": "cobweb-curtain",
+      "data_layer": "cobweb-disturbance",
+      "source": "src/styles.css",
+      "z": 14,
+      "non_interactive": true,
+      "stateful": true,
+      "status": "production-ready"
+    },
+    {
+      "room": "room1",
+      "screen": "gate",
+      "id": "scuttle-dash",
+      "kind": "cameo-actor-burst",
+      "binds_to": "cobweb-curtain",
+      "data_layer": "scuttle-dash",
+      "asset_pattern": "art/act01-production/characters/scuttle/meshy-current/dash/scuttle_meshy_dash_*.png",
+      "z": 17,
+      "non_interactive": true,
+      "stateful": true,
+      "status": "production-ready"
+    },
+    {
+      "room": "room2",
+      "screen": "concourse",
+      "id": "needle-prop",
+      "kind": "collectible-floor-prop",
+      "binds_to": "needle",
+      "z": 9,
+      "non_interactive": true,
+      "stateful": true,
+      "status": "planned"
+    },
+    {
+      "room": "room2",
+      "screen": "annex-threshold",
+      "id": "annex-door-open",
+      "kind": "interactive-open-prop",
+      "binds_to": "annex-door",
+      "z": 9,
+      "non_interactive": true,
+      "stateful": true,
+      "status": "planned"
+    },
+    {
+      "room": "room2",
+      "screen": "audience-chamber",
+      "id": "toggle-desk-front-occluder",
+      "kind": "foreground-occluder",
+      "binds_to": "toggle-desk",
+      "z": 12,
+      "non_interactive": true,
+      "stateful": false,
+      "status": "planned"
+    },
+    {
+      "room": "room2",
+      "screen": "audience-chamber",
+      "id": "stamp-action",
+      "kind": "interactive-work-prop",
+      "binds_to": "stamp",
+      "z": 16,
+      "non_interactive": true,
+      "stateful": true,
+      "status": "planned"
+    },
+    {
+      "room": "room3",
+      "screen": "annex-interior",
+      "id": "marble-candidates",
+      "kind": "interactive-candidate-props",
+      "binds_to": "marble-pile",
+      "z": 9,
+      "non_interactive": true,
+      "stateful": true,
+      "status": "planned"
+    },
+    {
+      "room": "room3",
+      "screen": "escape-concourse",
+      "id": "roar-light-tremor",
+      "kind": "environment-threat-effect",
+      "binds_to": "roar-light",
+      "z": 18,
+      "non_interactive": true,
+      "stateful": true,
+      "status": "planned"
+    },
+    {
+      "room": "room3",
+      "screen": "grate-revisit",
+      "id": "open-grate-exit",
+      "kind": "interactive-open-prop",
+      "binds_to": "open-grate",
+      "z": 9,
+      "non_interactive": true,
+      "stateful": true,
+      "status": "planned"
+    }
+  ],
+  "required_production_ids": [
+    "dust-clump-reveal",
+    "bramble-desk-front-occluder",
+    "toll-gate-open",
+    "button-flight",
+    "cobweb-disturbance",
+    "scuttle-dash"
+  ]
+}

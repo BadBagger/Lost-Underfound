@@ -1,0 +1,219 @@
+{
+  "character": "bramble",
+  "trigger": "lu_bramble_clerk",
+  "canvas": [
+    1024,
+    1024
+  ],
+  "source_policy": "registered actor frames only; quarantined sources rejected",
+  "frames": [
+    {
+      "file": "art/lora/datasets/bramble/bramble_001_idle_01.png",
+      "caption": "art/lora/datasets/bramble/bramble_001_idle_01.txt",
+      "source": "art/act01-production/characters/bramble/idle/bramble_idle_01.png",
+      "source_role": "breath-neutral-desk",
+      "clip": "idle",
+      "normalized_alpha_bbox": [
+        188,
+        102,
+        836,
+        922
+      ]
+    },
+    {
+      "file": "art/lora/datasets/bramble/bramble_002_idle_02.png",
+      "caption": "art/lora/datasets/bramble/bramble_002_idle_02.txt",
+      "source": "art/act01-production/characters/bramble/idle/bramble_idle_02.png",
+      "source_role": "breath-in-paper-slide",
+      "clip": "idle",
+      "normalized_alpha_bbox": [
+        202,
+        102,
+        822,
+        922
+      ]
+    },
+    {
+      "file": "art/lora/datasets/bramble/bramble_003_idle_03.png",
+      "caption": "art/lora/datasets/bramble/bramble_003_idle_03.txt",
+      "source": "art/act01-production/characters/bramble/idle/bramble_idle_03.png",
+      "source_role": "breath-full-paper-settle",
+      "clip": "idle",
+      "normalized_alpha_bbox": [
+        213,
+        102,
+        811,
+        922
+      ]
+    },
+    {
+      "file": "art/lora/datasets/bramble/bramble_004_idle_04.png",
+      "caption": "art/lora/datasets/bramble/bramble_004_idle_04.txt",
+      "source": "art/act01-production/characters/bramble/idle/bramble_idle_04.png",
+      "source_role": "stamp-preparation",
+      "clip": "idle",
+      "normalized_alpha_bbox": [
+        202,
+        102,
+        822,
+        922
+      ]
+    },
+    {
+      "file": "art/lora/datasets/bramble/bramble_005_idle_05.png",
+      "caption": "art/lora/datasets/bramble/bramble_005_idle_05.txt",
+      "source": "art/act01-production/characters/bramble/idle/bramble_idle_05.png",
+      "source_role": "stamp-up-anticipation",
+      "clip": "idle",
+      "normalized_alpha_bbox": [
+        191,
+        102,
+        833,
+        922
+      ]
+    },
+    {
+      "file": "art/lora/datasets/bramble/bramble_006_idle_06.png",
+      "caption": "art/lora/datasets/bramble/bramble_006_idle_06.txt",
+      "source": "art/act01-production/characters/bramble/idle/bramble_idle_06.png",
+      "source_role": "single-stamp-smear",
+      "clip": "idle",
+      "normalized_alpha_bbox": [
+        183,
+        102,
+        841,
+        922
+      ]
+    },
+    {
+      "file": "art/lora/datasets/bramble/bramble_007_idle_07.png",
+      "caption": "art/lora/datasets/bramble/bramble_007_idle_07.txt",
+      "source": "art/act01-production/characters/bramble/idle/bramble_idle_07.png",
+      "source_role": "stamp-impact-contact",
+      "clip": "idle",
+      "normalized_alpha_bbox": [
+        180,
+        102,
+        844,
+        922
+      ]
+    },
+    {
+      "file": "art/lora/datasets/bramble/bramble_008_idle_08.png",
+      "caption": "art/lora/datasets/bramble/bramble_008_idle_08.txt",
+      "source": "art/act01-production/characters/bramble/idle/bramble_idle_08.png",
+      "source_role": "stamp-recoil-settle",
+      "clip": "idle",
+      "normalized_alpha_bbox": [
+        191,
+        102,
+        833,
+        922
+      ]
+    },
+    {
+      "file": "art/lora/datasets/bramble/bramble_009_idle_09.png",
+      "caption": "art/lora/datasets/bramble/bramble_009_idle_09.txt",
+      "source": "art/act01-production/characters/bramble/idle/bramble_idle_09.png",
+      "source_role": "breath-out-ease",
+      "clip": "idle",
+      "normalized_alpha_bbox": [
+        185,
+        102,
+        839,
+        922
+      ]
+    },
+    {
+      "file": "art/lora/datasets/bramble/bramble_010_idle_10.png",
+      "caption": "art/lora/datasets/bramble/bramble_010_idle_10.txt",
+      "source": "art/act01-production/characters/bramble/idle/bramble_idle_10.png",
+      "source_role": "return-neutral",
+      "clip": "idle",
+      "normalized_alpha_bbox": [
+        188,
+        102,
+        836,
+        922
+      ]
+    },
+    {
+      "file": "art/lora/datasets/bramble/bramble_011_talk_01.png",
+      "caption": "art/lora/datasets/bramble/bramble_011_talk_01.txt",
+      "source": "art/act01-production/characters/bramble/talk/bramble_talk_01.png",
+      "source_role": "talk-closed-mouth",
+      "clip": "talk",
+      "normalized_alpha_bbox": [
+        102,
+        171,
+        922,
+        853
+      ]
+    },
+    {
+      "file": "art/lora/datasets/bramble/bramble_012_talk_02.png",
+      "caption": "art/lora/datasets/bramble/bramble_012_talk_02.txt",
+      "source": "art/act01-production/characters/bramble/talk/bramble_talk_02.png",
+      "source_role": "talk-open-mouth",
+      "clip": "talk",
+      "normalized_alpha_bbox": [
+        102,
+        171,
+        922,
+        853
+      ]
+    },
+    {
+      "file": "art/lora/datasets/bramble/bramble_013_talk_03.png",
+      "caption": "art/lora/datasets/bramble/bramble_013_talk_03.txt",
+      "source": "art/act01-production/characters/bramble/talk/bramble_talk_03.png",
+      "source_role": "talk-wide-emphasis",
+      "clip": "talk",
+      "normalized_alpha_bbox": [
+        102,
+        128,
+        922,
+        895
+      ]
+    },
+    {
+      "file": "art/lora/datasets/bramble/bramble_014_talk_04.png",
+      "caption": "art/lora/datasets/bramble/bramble_014_talk_04.txt",
+      "source": "art/act01-production/characters/bramble/talk/bramble_talk_04.png",
+      "source_role": "talk-return-passing",
+      "clip": "talk",
+      "normalized_alpha_bbox": [
+        102,
+        171,
+        922,
+        853
+      ]
+    },
+    {
+      "file": "art/lora/datasets/bramble/bramble_015_talk_05.png",
+      "caption": "art/lora/datasets/bramble/bramble_015_talk_05.txt",
+      "source": "art/act01-production/characters/bramble/talk/bramble_talk_05.png",
+      "source_role": "talk-settle-paper",
+      "clip": "talk",
+      "normalized_alpha_bbox": [
+        102,
+        118,
+        922,
+        906
+      ]
+    },
+    {
+      "file": "art/lora/datasets/bramble/bramble_016_talk_06.png",
+      "caption": "art/lora/datasets/bramble/bramble_016_talk_06.txt",
+      "source": "art/act01-production/characters/bramble/talk/bramble_talk_06.png",
+      "source_role": "talk-neutral-hold",
+      "clip": "talk",
+      "normalized_alpha_bbox": [
+        102,
+        171,
+        922,
+        853
+      ]
+    }
+  ]
+}
