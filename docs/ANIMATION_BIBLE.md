@@ -224,6 +224,54 @@ something. An instant, un-animated state swap is only acceptable when the design
 never intended the change to be seen happening — a light that's simply on or off, not
 a mechanism whose motion is the point.
 
+## Ambient motion-layer contract
+
+The Scene-prop state contract governs elements with a discrete state a player
+action changes (a gate: closed or open). This contract governs the opposite case:
+continuous, undirected background life — rain, drifting dust, water shimmer, a
+flickering lamp, distant steam — that plays constantly and isn't triggered by
+anything. Twelve principles #12 (appeal) already requires a scene to "feel like an
+inhabited cartoon, not portraits placed over a background"; this is the concrete
+mechanism for the environment half of that requirement, the same way the walk-cycle
+and talk-loop contracts are the concrete mechanism for the character half.
+
+The background plate still never changes — same rule as every other contract in this
+section. What's different here is the fix: not a state-patch swapped in on a
+trigger, but a thin, separate, always-on loop layer rendered on top of the fixed
+plate, never baked into it.
+
+1. **The ambient layer is its own render pass, never part of the plate.** Painting
+   static rain streaks directly into a background plate produces a "raining" scene
+   that's exactly as frozen as one without any weather at all — it looks like
+   motion in a single still frame and reads as dead the moment the player's eye
+   rests on it. The plate stays plain; the motion lives entirely in a layer above
+   it.
+2. **Procedural generation is allowed here — deliberately unlike everywhere else in
+   this Bible.** Every other contract requires deliberately authored key poses;
+   generative filler is a hard reject for character and prop animation. Ambient
+   phenomena are the one exception, because rain, dust, and shimmer have no "key
+   poses" to speak of — a seeded, continuously-regenerated pattern (scrolling lines,
+   drifting particles, a pulsing light radius) is the correct implementation, not a
+   shortcut standing in for one. This exception is scoped to atmosphere only: a
+   character, prop, or anything with an intended silhouette still falls under the
+   normal no-generative-filler rule everywhere else in this document.
+3. **The layer must actually loop.** A seamless scroll/seed cycle, not a
+   fixed-length clip that visibly restarts or pops. If the loop point is audible or
+   visible as a seam, it fails the same way a fake in-between fails elsewhere in
+   this Bible — motion that draws attention to its own mechanism instead of
+   supporting the scene.
+4. **Ambient layers never occlude gameplay.** Staging (principle #3) already
+   requires dialogue and hotspots to read at a glance; an ambient layer that
+   darkens, obscures, or visually competes with a hotspot, a speaking character's
+   face, or active UI has failed staging regardless of how good it looks on its
+   own. Keep ambient opacity and z-order low enough that it never has to be
+   reasoned about during actual play.
+5. **If the motion is something a player action causes, it isn't this contract.**
+   A door that opens on interaction is the Scene-prop state contract. A lamp that's
+   always gently flickering is this one. Don't build a discrete state machine for
+   something that should just be a continuous loop, and don't build an always-on
+   loop for something a player is actually supposed to trigger.
+
 ## Talk-loop contract
 
 Do not run one short six-frame talk gesture as an identical infinite treadmill for a
@@ -340,6 +388,15 @@ These are hard rejects, even if the loop looks busy at full speed:
   background plate at its boundary. Reads as a visible sticker rather than the scene
   actually changing. The patch was generated independently instead of as an edit of
   the source plate.
+- **Baked ambience:** rain, dust, shimmer, or any other continuous atmospheric
+  motion (see the Ambient motion-layer contract) painted directly into the
+  background plate instead of rendered as a separate loop layer. Reads as a single
+  frozen instant of weather, not weather — exactly as dead as a scene with no
+  atmosphere at all, just busier.
+- **Occluding ambience:** an ambient layer whose opacity, density, or z-order
+  competes with a hotspot, a speaking character's face, or active UI. Correct on
+  its own, a staging failure in context — principle #3 governs it regardless of how
+  the layer was produced.
 - **Fake in-between:** a frame has the same pose as the previous frame with only
   redraw shimmer, texture noise, or tiny clothing flicker. More of these frames makes
   the animation worse, not smoother.
