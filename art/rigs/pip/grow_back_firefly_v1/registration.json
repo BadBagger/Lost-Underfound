@@ -1,0 +1,694 @@
+{
+  "sheet": "pip-grow-back-firefly-v1",
+  "actor_type": "walk-plane",
+  "approval_state": "provisional-firefly-runtime-proof",
+  "source": {
+    "generator": "Adobe Firefly (video, 2D adventure game / Pajama Sam-Deponia style prompt)",
+    "clip": "7cc97f40-Firefly_2D_adventure_game_style_Pajama_Sam__Deponia_vibe_storybook_painterly_celshading_warm_so_3.mp4",
+    "clip_duration_s": 5.04,
+    "sampled_fps": 12,
+    "story_beat": "Act 3 ending -- 'shrink-back-up' per ags/room3/geometry.json's through-grate-ending exit and docs/ACT_03_DESIGN.md ('Pip shrinks back up in place'). Growth from tiny to full size, held calm/satisfied final pose.",
+    "extraction_note": "Background removed via hue-based chroma-key restricted to border-connected regions only (same fix as the idle-talk sequence -- avoids speckled false-transparency inside the character)."
+  },
+  "canvas": {
+    "width": 720,
+    "height": 820
+  },
+  "anchor_tolerance_px": 1,
+  "anchor_note": "Unlike the idle-talk sheet, the raw source footage did NOT have a naturally fixed ground-contact point -- measured bottom_y drifted from 449 to 675 (a ~226px downward walk) as the character grew, likely an artifact of how the video model handled the scale change rather than intentional motion. This sheet's anchor is an engineered correction, not a natural constant: every frame was shifted (both axes) so the character's feet land on the same fixed point, matching the project's fixed-anchor convention for a ground-planted character. Post-correction: bottom_y std 0.60px, center_x std 0.26px, both within the 1px tolerance.",
+  "design_note": "Includes the small spiky tail confirmed as canon on the idle-talk sheet (2026-08-31) -- consistent between the two Firefly-sourced sheets.",
+  "not_finalized": "This is a one-shot transformation (not a loop) covering the Act 3 ending beat only. Has not been through the golden review test or a full production pass. relative_scale is measured directly from each frame's alpha bounding-box height as a fraction of the tallest frame -- useful for picking held-frame candidates (e.g. quarter-grown, half-grown) but not a substitute for real registration review.",
+  "frames": [
+    {
+      "file": "pip_growback_001_0.00s.png",
+      "anchor": [
+        360,
+        800
+      ],
+      "role": "grow-progress",
+      "canonical": false,
+      "source_timestamp_s": 0.0,
+      "relative_scale": 0.044
+    },
+    {
+      "file": "pip_growback_002_0.08s.png",
+      "anchor": [
+        360,
+        800
+      ],
+      "role": "grow-progress",
+      "canonical": false,
+      "source_timestamp_s": 0.08,
+      "relative_scale": 0.06
+    },
+    {
+      "file": "pip_growback_003_0.17s.png",
+      "anchor": [
+        360,
+        800
+      ],
+      "role": "grow-progress",
+      "canonical": false,
+      "source_timestamp_s": 0.17,
+      "relative_scale": 0.08
+    },
+    {
+      "file": "pip_growback_004_0.25s.png",
+      "anchor": [
+        360,
+        800
+      ],
+      "role": "grow-progress",
+      "canonical": false,
+      "source_timestamp_s": 0.25,
+      "relative_scale": 0.103
+    },
+    {
+      "file": "pip_growback_005_0.33s.png",
+      "anchor": [
+        360,
+        800
+      ],
+      "role": "grow-progress",
+      "canonical": false,
+      "source_timestamp_s": 0.33,
+      "relative_scale": 0.132
+    },
+    {
+      "file": "pip_growback_006_0.42s.png",
+      "anchor": [
+        360,
+        800
+      ],
+      "role": "grow-progress",
+      "canonical": false,
+      "source_timestamp_s": 0.42,
+      "relative_scale": 0.168
+    },
+    {
+      "file": "pip_growback_007_0.50s.png",
+      "anchor": [
+        360,
+        800
+      ],
+      "role": "grow-progress",
+      "canonical": false,
+      "source_timestamp_s": 0.5,
+      "relative_scale": 0.197
+    },
+    {
+      "file": "pip_growback_008_0.58s.png",
+      "anchor": [
+        360,
+        800
+      ],
+      "role": "grow-progress",
+      "canonical": false,
+      "source_timestamp_s": 0.58,
+      "relative_scale": 0.217
+    },
+    {
+      "file": "pip_growback_009_0.67s.png",
+      "anchor": [
+        360,
+        800
+      ],
+      "role": "grow-progress",
+      "canonical": false,
+      "source_timestamp_s": 0.67,
+      "relative_scale": 0.237
+    },
+    {
+      "file": "pip_growback_010_0.75s.png",
+      "anchor": [
+        360,
+        800
+      ],
+      "role": "grow-progress",
+      "canonical": false,
+      "source_timestamp_s": 0.75,
+      "relative_scale": 0.253
+    },
+    {
+      "file": "pip_growback_011_0.83s.png",
+      "anchor": [
+        360,
+        800
+      ],
+      "role": "grow-progress",
+      "canonical": false,
+      "source_timestamp_s": 0.83,
+      "relative_scale": 0.272
+    },
+    {
+      "file": "pip_growback_012_0.92s.png",
+      "anchor": [
+        360,
+        800
+      ],
+      "role": "grow-progress",
+      "canonical": false,
+      "source_timestamp_s": 0.92,
+      "relative_scale": 0.289
+    },
+    {
+      "file": "pip_growback_013_1.00s.png",
+      "anchor": [
+        360,
+        800
+      ],
+      "role": "grow-progress",
+      "canonical": false,
+      "source_timestamp_s": 1.0,
+      "relative_scale": 0.308
+    },
+    {
+      "file": "pip_growback_014_1.08s.png",
+      "anchor": [
+        360,
+        800
+      ],
+      "role": "grow-progress",
+      "canonical": false,
+      "source_timestamp_s": 1.08,
+      "relative_scale": 0.325
+    },
+    {
+      "file": "pip_growback_015_1.17s.png",
+      "anchor": [
+        360,
+        800
+      ],
+      "role": "grow-progress",
+      "canonical": false,
+      "source_timestamp_s": 1.17,
+      "relative_scale": 0.344
+    },
+    {
+      "file": "pip_growback_016_1.25s.png",
+      "anchor": [
+        360,
+        800
+      ],
+      "role": "grow-progress",
+      "canonical": false,
+      "source_timestamp_s": 1.25,
+      "relative_scale": 0.361
+    },
+    {
+      "file": "pip_growback_017_1.33s.png",
+      "anchor": [
+        360,
+        800
+      ],
+      "role": "grow-progress",
+      "canonical": false,
+      "source_timestamp_s": 1.33,
+      "relative_scale": 0.38
+    },
+    {
+      "file": "pip_growback_018_1.42s.png",
+      "anchor": [
+        360,
+        800
+      ],
+      "role": "grow-progress",
+      "canonical": false,
+      "source_timestamp_s": 1.42,
+      "relative_scale": 0.4
+    },
+    {
+      "file": "pip_growback_019_1.50s.png",
+      "anchor": [
+        360,
+        800
+      ],
+      "role": "grow-progress",
+      "canonical": false,
+      "source_timestamp_s": 1.5,
+      "relative_scale": 0.419
+    },
+    {
+      "file": "pip_growback_020_1.58s.png",
+      "anchor": [
+        360,
+        800
+      ],
+      "role": "grow-progress",
+      "canonical": false,
+      "source_timestamp_s": 1.58,
+      "relative_scale": 0.439
+    },
+    {
+      "file": "pip_growback_021_1.67s.png",
+      "anchor": [
+        360,
+        800
+      ],
+      "role": "grow-progress",
+      "canonical": false,
+      "source_timestamp_s": 1.67,
+      "relative_scale": 0.458
+    },
+    {
+      "file": "pip_growback_022_1.75s.png",
+      "anchor": [
+        360,
+        800
+      ],
+      "role": "grow-progress",
+      "canonical": false,
+      "source_timestamp_s": 1.75,
+      "relative_scale": 0.481
+    },
+    {
+      "file": "pip_growback_023_1.83s.png",
+      "anchor": [
+        360,
+        800
+      ],
+      "role": "grow-progress",
+      "canonical": false,
+      "source_timestamp_s": 1.83,
+      "relative_scale": 0.501
+    },
+    {
+      "file": "pip_growback_024_1.92s.png",
+      "anchor": [
+        360,
+        800
+      ],
+      "role": "grow-progress",
+      "canonical": false,
+      "source_timestamp_s": 1.92,
+      "relative_scale": 0.517
+    },
+    {
+      "file": "pip_growback_025_2.00s.png",
+      "anchor": [
+        360,
+        800
+      ],
+      "role": "grow-progress",
+      "canonical": false,
+      "source_timestamp_s": 2.0,
+      "relative_scale": 0.537
+    },
+    {
+      "file": "pip_growback_026_2.08s.png",
+      "anchor": [
+        360,
+        800
+      ],
+      "role": "grow-progress",
+      "canonical": false,
+      "source_timestamp_s": 2.08,
+      "relative_scale": 0.556
+    },
+    {
+      "file": "pip_growback_027_2.17s.png",
+      "anchor": [
+        360,
+        800
+      ],
+      "role": "grow-progress",
+      "canonical": false,
+      "source_timestamp_s": 2.17,
+      "relative_scale": 0.576
+    },
+    {
+      "file": "pip_growback_028_2.25s.png",
+      "anchor": [
+        360,
+        800
+      ],
+      "role": "grow-progress",
+      "canonical": false,
+      "source_timestamp_s": 2.25,
+      "relative_scale": 0.592
+    },
+    {
+      "file": "pip_growback_029_2.33s.png",
+      "anchor": [
+        360,
+        800
+      ],
+      "role": "grow-progress",
+      "canonical": false,
+      "source_timestamp_s": 2.33,
+      "relative_scale": 0.612
+    },
+    {
+      "file": "pip_growback_030_2.42s.png",
+      "anchor": [
+        360,
+        800
+      ],
+      "role": "grow-progress",
+      "canonical": false,
+      "source_timestamp_s": 2.42,
+      "relative_scale": 0.628
+    },
+    {
+      "file": "pip_growback_031_2.50s.png",
+      "anchor": [
+        360,
+        800
+      ],
+      "role": "grow-progress",
+      "canonical": false,
+      "source_timestamp_s": 2.5,
+      "relative_scale": 0.648
+    },
+    {
+      "file": "pip_growback_032_2.58s.png",
+      "anchor": [
+        360,
+        800
+      ],
+      "role": "grow-progress",
+      "canonical": false,
+      "source_timestamp_s": 2.58,
+      "relative_scale": 0.664
+    },
+    {
+      "file": "pip_growback_033_2.67s.png",
+      "anchor": [
+        360,
+        800
+      ],
+      "role": "grow-progress",
+      "canonical": false,
+      "source_timestamp_s": 2.67,
+      "relative_scale": 0.68
+    },
+    {
+      "file": "pip_growback_034_2.75s.png",
+      "anchor": [
+        360,
+        800
+      ],
+      "role": "grow-progress",
+      "canonical": false,
+      "source_timestamp_s": 2.75,
+      "relative_scale": 0.7
+    },
+    {
+      "file": "pip_growback_035_2.83s.png",
+      "anchor": [
+        360,
+        800
+      ],
+      "role": "grow-progress",
+      "canonical": false,
+      "source_timestamp_s": 2.83,
+      "relative_scale": 0.716
+    },
+    {
+      "file": "pip_growback_036_2.92s.png",
+      "anchor": [
+        360,
+        800
+      ],
+      "role": "grow-progress",
+      "canonical": false,
+      "source_timestamp_s": 2.92,
+      "relative_scale": 0.736
+    },
+    {
+      "file": "pip_growback_037_3.00s.png",
+      "anchor": [
+        360,
+        800
+      ],
+      "role": "grow-progress",
+      "canonical": false,
+      "source_timestamp_s": 3.0,
+      "relative_scale": 0.752
+    },
+    {
+      "file": "pip_growback_038_3.08s.png",
+      "anchor": [
+        360,
+        800
+      ],
+      "role": "grow-progress",
+      "canonical": false,
+      "source_timestamp_s": 3.08,
+      "relative_scale": 0.768
+    },
+    {
+      "file": "pip_growback_039_3.17s.png",
+      "anchor": [
+        360,
+        800
+      ],
+      "role": "grow-progress",
+      "canonical": false,
+      "source_timestamp_s": 3.17,
+      "relative_scale": 0.785
+    },
+    {
+      "file": "pip_growback_040_3.25s.png",
+      "anchor": [
+        360,
+        800
+      ],
+      "role": "grow-progress",
+      "canonical": false,
+      "source_timestamp_s": 3.25,
+      "relative_scale": 0.801
+    },
+    {
+      "file": "pip_growback_041_3.33s.png",
+      "anchor": [
+        360,
+        800
+      ],
+      "role": "grow-progress",
+      "canonical": false,
+      "source_timestamp_s": 3.33,
+      "relative_scale": 0.814
+    },
+    {
+      "file": "pip_growback_042_3.42s.png",
+      "anchor": [
+        360,
+        800
+      ],
+      "role": "grow-progress",
+      "canonical": false,
+      "source_timestamp_s": 3.42,
+      "relative_scale": 0.83
+    },
+    {
+      "file": "pip_growback_043_3.50s.png",
+      "anchor": [
+        360,
+        800
+      ],
+      "role": "grow-progress",
+      "canonical": false,
+      "source_timestamp_s": 3.5,
+      "relative_scale": 0.843
+    },
+    {
+      "file": "pip_growback_044_3.58s.png",
+      "anchor": [
+        360,
+        800
+      ],
+      "role": "grow-progress",
+      "canonical": false,
+      "source_timestamp_s": 3.58,
+      "relative_scale": 0.856
+    },
+    {
+      "file": "pip_growback_045_3.67s.png",
+      "anchor": [
+        360,
+        800
+      ],
+      "role": "grow-progress",
+      "canonical": false,
+      "source_timestamp_s": 3.67,
+      "relative_scale": 0.873
+    },
+    {
+      "file": "pip_growback_046_3.75s.png",
+      "anchor": [
+        360,
+        800
+      ],
+      "role": "grow-progress",
+      "canonical": false,
+      "source_timestamp_s": 3.75,
+      "relative_scale": 0.886
+    },
+    {
+      "file": "pip_growback_047_3.83s.png",
+      "anchor": [
+        360,
+        800
+      ],
+      "role": "grow-progress",
+      "canonical": false,
+      "source_timestamp_s": 3.83,
+      "relative_scale": 0.899
+    },
+    {
+      "file": "pip_growback_048_3.92s.png",
+      "anchor": [
+        360,
+        800
+      ],
+      "role": "grow-progress",
+      "canonical": false,
+      "source_timestamp_s": 3.92,
+      "relative_scale": 0.909
+    },
+    {
+      "file": "pip_growback_049_4.00s.png",
+      "anchor": [
+        360,
+        800
+      ],
+      "role": "grow-progress",
+      "canonical": false,
+      "source_timestamp_s": 4.0,
+      "relative_scale": 0.918
+    },
+    {
+      "file": "pip_growback_050_4.08s.png",
+      "anchor": [
+        360,
+        800
+      ],
+      "role": "grow-progress",
+      "canonical": false,
+      "source_timestamp_s": 4.08,
+      "relative_scale": 0.935
+    },
+    {
+      "file": "pip_growback_051_4.17s.png",
+      "anchor": [
+        360,
+        800
+      ],
+      "role": "grow-progress",
+      "canonical": false,
+      "source_timestamp_s": 4.17,
+      "relative_scale": 0.948
+    },
+    {
+      "file": "pip_growback_052_4.25s.png",
+      "anchor": [
+        360,
+        800
+      ],
+      "role": "grow-progress",
+      "canonical": false,
+      "source_timestamp_s": 4.25,
+      "relative_scale": 0.961
+    },
+    {
+      "file": "pip_growback_053_4.33s.png",
+      "anchor": [
+        360,
+        800
+      ],
+      "role": "grow-progress",
+      "canonical": false,
+      "source_timestamp_s": 4.33,
+      "relative_scale": 0.971
+    },
+    {
+      "file": "pip_growback_054_4.42s.png",
+      "anchor": [
+        360,
+        800
+      ],
+      "role": "grow-progress",
+      "canonical": false,
+      "source_timestamp_s": 4.42,
+      "relative_scale": 0.98
+    },
+    {
+      "file": "pip_growback_055_4.50s.png",
+      "anchor": [
+        360,
+        800
+      ],
+      "role": "grow-progress",
+      "canonical": false,
+      "source_timestamp_s": 4.5,
+      "relative_scale": 0.987
+    },
+    {
+      "file": "pip_growback_056_4.58s.png",
+      "anchor": [
+        360,
+        800
+      ],
+      "role": "grow-progress",
+      "canonical": false,
+      "source_timestamp_s": 4.58,
+      "relative_scale": 0.997
+    },
+    {
+      "file": "pip_growback_057_4.67s.png",
+      "anchor": [
+        360,
+        800
+      ],
+      "role": "grow-progress",
+      "canonical": false,
+      "source_timestamp_s": 4.67,
+      "relative_scale": 1.0
+    },
+    {
+      "file": "pip_growback_058_4.75s.png",
+      "anchor": [
+        360,
+        800
+      ],
+      "role": "grow-progress",
+      "canonical": false,
+      "source_timestamp_s": 4.75,
+      "relative_scale": 1.0
+    },
+    {
+      "file": "pip_growback_059_4.83s.png",
+      "anchor": [
+        360,
+        800
+      ],
+      "role": "grow-progress",
+      "canonical": false,
+      "source_timestamp_s": 4.83,
+      "relative_scale": 1.0
+    },
+    {
+      "file": "pip_growback_060_4.92s.png",
+      "anchor": [
+        360,
+        800
+      ],
+      "role": "grow-progress",
+      "canonical": false,
+      "source_timestamp_s": 4.92,
+      "relative_scale": 1.0
+    },
+    {
+      "file": "pip_growback_061_5.00s.png",
+      "anchor": [
+        360,
+        800
+      ],
+      "role": "grow-progress",
+      "canonical": true,
+      "source_timestamp_s": 5.0,
+      "relative_scale": 1.0
+    }
+  ]
+}
