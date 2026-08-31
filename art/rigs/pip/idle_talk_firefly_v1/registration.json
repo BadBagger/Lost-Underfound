@@ -7,7 +7,7 @@
     "clip": "a16a0446-Firefly_2D_adventure_game_style_Pajama_Sam__Deponia_vibe_storybook_painterly_celshading_warm_so_1.mp4",
     "clip_duration_s": 15.04,
     "sampled_fps": 3,
-    "extraction_note": "Frames sampled at 3fps from the source clip, background removed via hue-based chroma-key (not simple color-distance -- that left a magenta cast on the drop shadow in an earlier pass), recentered on a shared bounding box, then cropped to a single shared box across all frames."
+    "extraction_note": "Frames sampled at 3fps, background removed via hue-based chroma-key restricted to regions connected to the frame border (scipy connected-component labeling) -- a pure per-pixel hue threshold left speckled false-transparent holes scattered inside the character (visible on eye whites, cheeks, hood edge) wherever a pixel's hue coincidentally matched the background band; border-connectivity fixes that because an isolated interior pixel can't be background no matter its hue. Recentered on a shared bounding box, cropped to one shared box across all frames."
   },
   "canvas": {
     "width": 609,
@@ -21,7 +21,7 @@
     {
       "file": "pip_idletalk_001_0.00s.png",
       "anchor": [
-        304,
+        303,
         1047
       ],
       "role": "idle-hold",
@@ -29,9 +29,9 @@
       "source_timestamp_s": 0.0
     },
     {
-      "file": "pip_idletalk_003_0.33s.png",
+      "file": "pip_idletalk_002_0.33s.png",
       "anchor": [
-        304,
+        303,
         1047
       ],
       "role": "idle-hold",
@@ -39,9 +39,9 @@
       "source_timestamp_s": 0.33
     },
     {
-      "file": "pip_idletalk_005_0.67s.png",
+      "file": "pip_idletalk_003_0.67s.png",
       "anchor": [
-        304,
+        303,
         1047
       ],
       "role": "idle-hold",
@@ -49,9 +49,9 @@
       "source_timestamp_s": 0.67
     },
     {
-      "file": "pip_idletalk_007_1.00s.png",
+      "file": "pip_idletalk_004_1.00s.png",
       "anchor": [
-        304,
+        303,
         1047
       ],
       "role": "idle-hold",
@@ -59,9 +59,9 @@
       "source_timestamp_s": 1.0
     },
     {
-      "file": "pip_idletalk_009_1.33s.png",
+      "file": "pip_idletalk_005_1.33s.png",
       "anchor": [
-        304,
+        303,
         1047
       ],
       "role": "idle-hold",
@@ -69,9 +69,9 @@
       "source_timestamp_s": 1.33
     },
     {
-      "file": "pip_idletalk_011_1.67s.png",
+      "file": "pip_idletalk_006_1.67s.png",
       "anchor": [
-        304,
+        303,
         1047
       ],
       "role": "idle-hold",
@@ -79,9 +79,9 @@
       "source_timestamp_s": 1.67
     },
     {
-      "file": "pip_idletalk_013_2.00s.png",
+      "file": "pip_idletalk_007_2.00s.png",
       "anchor": [
-        304,
+        303,
         1047
       ],
       "role": "idle-hold",
@@ -89,9 +89,9 @@
       "source_timestamp_s": 2.0
     },
     {
-      "file": "pip_idletalk_015_2.33s.png",
+      "file": "pip_idletalk_008_2.33s.png",
       "anchor": [
-        304,
+        303,
         1047
       ],
       "role": "idle-hold",
@@ -99,9 +99,9 @@
       "source_timestamp_s": 2.33
     },
     {
-      "file": "pip_idletalk_017_2.67s.png",
+      "file": "pip_idletalk_009_2.67s.png",
       "anchor": [
-        304,
+        303,
         1047
       ],
       "role": "idle-hold",
@@ -109,9 +109,9 @@
       "source_timestamp_s": 2.67
     },
     {
-      "file": "pip_idletalk_019_3.00s.png",
+      "file": "pip_idletalk_010_3.00s.png",
       "anchor": [
-        304,
+        303,
         1047
       ],
       "role": "idle-hold",
@@ -119,9 +119,9 @@
       "source_timestamp_s": 3.0
     },
     {
-      "file": "pip_idletalk_021_3.33s.png",
+      "file": "pip_idletalk_011_3.33s.png",
       "anchor": [
-        304,
+        303,
         1047
       ],
       "role": "idle-hold",
@@ -129,9 +129,9 @@
       "source_timestamp_s": 3.33
     },
     {
-      "file": "pip_idletalk_023_3.67s.png",
+      "file": "pip_idletalk_012_3.67s.png",
       "anchor": [
-        304,
+        303,
         1047
       ],
       "role": "idle-hold",
@@ -139,9 +139,9 @@
       "source_timestamp_s": 3.67
     },
     {
-      "file": "pip_idletalk_025_4.00s.png",
+      "file": "pip_idletalk_013_4.00s.png",
       "anchor": [
-        304,
+        303,
         1047
       ],
       "role": "idle-hold",
@@ -149,9 +149,9 @@
       "source_timestamp_s": 4.0
     },
     {
-      "file": "pip_idletalk_027_4.33s.png",
+      "file": "pip_idletalk_014_4.33s.png",
       "anchor": [
-        304,
+        303,
         1047
       ],
       "role": "idle-hold",
@@ -159,9 +159,9 @@
       "source_timestamp_s": 4.33
     },
     {
-      "file": "pip_idletalk_029_4.67s.png",
+      "file": "pip_idletalk_015_4.67s.png",
       "anchor": [
-        304,
+        303,
         1047
       ],
       "role": "idle-hold",
@@ -169,9 +169,9 @@
       "source_timestamp_s": 4.67
     },
     {
-      "file": "pip_idletalk_031_5.00s.png",
+      "file": "pip_idletalk_016_5.00s.png",
       "anchor": [
-        304,
+        303,
         1047
       ],
       "role": "idle-hold",
@@ -179,9 +179,9 @@
       "source_timestamp_s": 5.0
     },
     {
-      "file": "pip_idletalk_033_5.33s.png",
+      "file": "pip_idletalk_017_5.33s.png",
       "anchor": [
-        304,
+        303,
         1047
       ],
       "role": "idle-hold",
@@ -189,9 +189,9 @@
       "source_timestamp_s": 5.33
     },
     {
-      "file": "pip_idletalk_035_5.67s.png",
+      "file": "pip_idletalk_018_5.67s.png",
       "anchor": [
-        304,
+        303,
         1047
       ],
       "role": "idle-hold",
@@ -199,9 +199,9 @@
       "source_timestamp_s": 5.67
     },
     {
-      "file": "pip_idletalk_037_6.00s.png",
+      "file": "pip_idletalk_019_6.00s.png",
       "anchor": [
-        304,
+        303,
         1047
       ],
       "role": "idle-hold",
@@ -209,9 +209,9 @@
       "source_timestamp_s": 6.0
     },
     {
-      "file": "pip_idletalk_039_6.33s.png",
+      "file": "pip_idletalk_020_6.33s.png",
       "anchor": [
-        304,
+        303,
         1047
       ],
       "role": "idle-hold",
@@ -219,9 +219,9 @@
       "source_timestamp_s": 6.33
     },
     {
-      "file": "pip_idletalk_041_6.67s.png",
+      "file": "pip_idletalk_021_6.67s.png",
       "anchor": [
-        304,
+        303,
         1047
       ],
       "role": "idle-hold",
@@ -229,9 +229,9 @@
       "source_timestamp_s": 6.67
     },
     {
-      "file": "pip_idletalk_043_7.00s.png",
+      "file": "pip_idletalk_022_7.00s.png",
       "anchor": [
-        304,
+        303,
         1047
       ],
       "role": "gesture-explain",
@@ -239,9 +239,9 @@
       "source_timestamp_s": 7.0
     },
     {
-      "file": "pip_idletalk_045_7.33s.png",
+      "file": "pip_idletalk_023_7.33s.png",
       "anchor": [
-        304,
+        303,
         1047
       ],
       "role": "gesture-explain",
@@ -249,9 +249,9 @@
       "source_timestamp_s": 7.33
     },
     {
-      "file": "pip_idletalk_047_7.67s.png",
+      "file": "pip_idletalk_024_7.67s.png",
       "anchor": [
-        304,
+        303,
         1047
       ],
       "role": "gesture-explain",
@@ -259,9 +259,9 @@
       "source_timestamp_s": 7.67
     },
     {
-      "file": "pip_idletalk_049_8.00s.png",
+      "file": "pip_idletalk_025_8.00s.png",
       "anchor": [
-        304,
+        303,
         1047
       ],
       "role": "gesture-explain",
@@ -269,9 +269,9 @@
       "source_timestamp_s": 8.0
     },
     {
-      "file": "pip_idletalk_051_8.33s.png",
+      "file": "pip_idletalk_026_8.33s.png",
       "anchor": [
-        304,
+        303,
         1047
       ],
       "role": "gesture-explain",
@@ -279,9 +279,9 @@
       "source_timestamp_s": 8.33
     },
     {
-      "file": "pip_idletalk_053_8.67s.png",
+      "file": "pip_idletalk_027_8.67s.png",
       "anchor": [
-        304,
+        303,
         1047
       ],
       "role": "idle-hold",
@@ -289,9 +289,9 @@
       "source_timestamp_s": 8.67
     },
     {
-      "file": "pip_idletalk_055_9.00s.png",
+      "file": "pip_idletalk_028_9.00s.png",
       "anchor": [
-        304,
+        303,
         1047
       ],
       "role": "idle-hold",
@@ -299,9 +299,9 @@
       "source_timestamp_s": 9.0
     },
     {
-      "file": "pip_idletalk_057_9.33s.png",
+      "file": "pip_idletalk_029_9.33s.png",
       "anchor": [
-        304,
+        303,
         1047
       ],
       "role": "idle-hold",
@@ -309,9 +309,9 @@
       "source_timestamp_s": 9.33
     },
     {
-      "file": "pip_idletalk_059_9.67s.png",
+      "file": "pip_idletalk_030_9.67s.png",
       "anchor": [
-        304,
+        303,
         1047
       ],
       "role": "idle-hold",
@@ -319,9 +319,9 @@
       "source_timestamp_s": 9.67
     },
     {
-      "file": "pip_idletalk_061_10.00s.png",
+      "file": "pip_idletalk_031_10.00s.png",
       "anchor": [
-        304,
+        303,
         1047
       ],
       "role": "idle-hold",
@@ -329,9 +329,9 @@
       "source_timestamp_s": 10.0
     },
     {
-      "file": "pip_idletalk_063_10.33s.png",
+      "file": "pip_idletalk_032_10.33s.png",
       "anchor": [
-        304,
+        303,
         1047
       ],
       "role": "idle-hold",
@@ -339,9 +339,9 @@
       "source_timestamp_s": 10.33
     },
     {
-      "file": "pip_idletalk_065_10.67s.png",
+      "file": "pip_idletalk_033_10.67s.png",
       "anchor": [
-        304,
+        303,
         1047
       ],
       "role": "idle-hold",
@@ -349,9 +349,9 @@
       "source_timestamp_s": 10.67
     },
     {
-      "file": "pip_idletalk_067_11.00s.png",
+      "file": "pip_idletalk_034_11.00s.png",
       "anchor": [
-        304,
+        303,
         1047
       ],
       "role": "idle-hold",
@@ -359,9 +359,9 @@
       "source_timestamp_s": 11.0
     },
     {
-      "file": "pip_idletalk_069_11.33s.png",
+      "file": "pip_idletalk_035_11.33s.png",
       "anchor": [
-        304,
+        303,
         1047
       ],
       "role": "idle-hold",
@@ -369,9 +369,9 @@
       "source_timestamp_s": 11.33
     },
     {
-      "file": "pip_idletalk_071_11.67s.png",
+      "file": "pip_idletalk_036_11.67s.png",
       "anchor": [
-        304,
+        303,
         1047
       ],
       "role": "idle-hold",
@@ -379,9 +379,9 @@
       "source_timestamp_s": 11.67
     },
     {
-      "file": "pip_idletalk_073_12.00s.png",
+      "file": "pip_idletalk_037_12.00s.png",
       "anchor": [
-        304,
+        303,
         1047
       ],
       "role": "idle-hold",
@@ -389,9 +389,9 @@
       "source_timestamp_s": 12.0
     },
     {
-      "file": "pip_idletalk_075_12.33s.png",
+      "file": "pip_idletalk_038_12.33s.png",
       "anchor": [
-        304,
+        303,
         1047
       ],
       "role": "idle-hold",
@@ -399,9 +399,9 @@
       "source_timestamp_s": 12.33
     },
     {
-      "file": "pip_idletalk_077_12.67s.png",
+      "file": "pip_idletalk_039_12.67s.png",
       "anchor": [
-        304,
+        303,
         1047
       ],
       "role": "idle-hold",
@@ -409,9 +409,9 @@
       "source_timestamp_s": 12.67
     },
     {
-      "file": "pip_idletalk_079_13.00s.png",
+      "file": "pip_idletalk_040_13.00s.png",
       "anchor": [
-        304,
+        303,
         1047
       ],
       "role": "idle-hold",
@@ -419,9 +419,9 @@
       "source_timestamp_s": 13.0
     },
     {
-      "file": "pip_idletalk_081_13.33s.png",
+      "file": "pip_idletalk_041_13.33s.png",
       "anchor": [
-        304,
+        303,
         1047
       ],
       "role": "idle-hold",
@@ -429,9 +429,9 @@
       "source_timestamp_s": 13.33
     },
     {
-      "file": "pip_idletalk_083_13.67s.png",
+      "file": "pip_idletalk_042_13.67s.png",
       "anchor": [
-        304,
+        303,
         1047
       ],
       "role": "idle-hold",
@@ -439,9 +439,9 @@
       "source_timestamp_s": 13.67
     },
     {
-      "file": "pip_idletalk_085_14.00s.png",
+      "file": "pip_idletalk_043_14.00s.png",
       "anchor": [
-        304,
+        303,
         1047
       ],
       "role": "idle-hold",
@@ -449,9 +449,9 @@
       "source_timestamp_s": 14.0
     },
     {
-      "file": "pip_idletalk_087_14.33s.png",
+      "file": "pip_idletalk_044_14.33s.png",
       "anchor": [
-        304,
+        303,
         1047
       ],
       "role": "idle-hold",
@@ -459,9 +459,9 @@
       "source_timestamp_s": 14.33
     },
     {
-      "file": "pip_idletalk_089_14.67s.png",
+      "file": "pip_idletalk_045_14.67s.png",
       "anchor": [
-        304,
+        303,
         1047
       ],
       "role": "idle-hold",
