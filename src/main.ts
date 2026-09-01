@@ -167,7 +167,9 @@ const characterImageModules = {
   ...import.meta.glob("../art/rigs/old-bottlecap/tollpaid_firefly_v1/frame_*.png", { eager: true, query: "?url", import: "default" }),
   ...import.meta.glob("../art/rigs/old-bottlecap/tollrefused_firefly_v1/frame_*.png", { eager: true, query: "?url", import: "default" }),
   ...import.meta.glob("../art/rigs/chairman-toggle/greeting_firefly_v1/frame_*.png", { eager: true, query: "?url", import: "default" }),
+  ...import.meta.glob("../art/rigs/chairman-toggle/deflecting_firefly_v1/frame_*.png", { eager: true, query: "?url", import: "default" }),
   ...import.meta.glob("../art/rigs/chairman-toggle/reaction_shocked_firefly_v1/frame_*.png", { eager: true, query: "?url", import: "default" }),
+  ...import.meta.glob("../art/rigs/chairman-toggle/reaction_deflating_firefly_v1/frame_*.png", { eager: true, query: "?url", import: "default" }),
   ...import.meta.glob("../art/rigs/chairman-toggle/reaction_conceding_firefly_v1/frame_*.png", { eager: true, query: "?url", import: "default" }),
   ...import.meta.glob("../art/act01-production/characters/scuttle/meshy-current/dash/scuttle_meshy_dash_*.png", { eager: true, query: "?url", import: "default" }),
 } as Record<string, string>;
@@ -274,7 +276,9 @@ const assets = {
   bottlecapTollPaidFirefly: characterFrames("old-bottlecap", "tollpaid_firefly"),
   bottlecapTollRefusedFirefly: characterFrames("old-bottlecap", "tollrefused_firefly"),
   toggleGreetingFirefly: characterFrames("chairman-toggle", "greeting_firefly"),
+  toggleDeflectingFirefly: characterFrames("chairman-toggle", "deflecting_firefly"),
   toggleReactionShockedFirefly: characterFrames("chairman-toggle", "reaction_shocked_firefly"),
+  toggleReactionDeflatingFirefly: characterFrames("chairman-toggle", "reaction_deflating_firefly"),
   toggleReactionConcedingFirefly: characterFrames("chairman-toggle", "reaction_conceding_firefly"),
   scuttleDash: characterFrames("scuttle", "dash"),
   dustReveal: Array.from({ length: 6 }, (_, index) => `reveal_${String(index + 1).padStart(2, "0")}.png`).map(

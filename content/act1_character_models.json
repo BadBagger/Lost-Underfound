@@ -242,7 +242,7 @@
     },
     "chairman-toggle": {
       "admission": "provisional-runtime",
-      "note": "Firefly-generated animations for Act 2/3 (greeting, shocked, conceding). Additional animations (deflecting, deflating) pending.",
+      "note": "Complete set of Firefly-generated animations for Act 2/3 bureaucratic character interactions.",
       "engine_manifest": "art/engine-export/chairman-toggle/chairman-toggle.engine.json",
       "runtime_scale_ref": "ags/room2/geometry.json#/actorReference/chairmanToggleHeight",
       "states": {
@@ -254,9 +254,25 @@
           "fps": 4,
           "loop": false
         },
+        "deflecting_firefly": {
+          "frames": 24,
+          "folder": "art/rigs/chairman-toggle/deflecting_firefly_v1",
+          "prefix": "frame",
+          "pad": 4,
+          "fps": 4,
+          "loop": false
+        },
         "reaction_shocked_firefly": {
           "frames": 24,
           "folder": "art/rigs/chairman-toggle/reaction_shocked_firefly_v1",
+          "prefix": "frame",
+          "pad": 4,
+          "fps": 4,
+          "loop": false
+        },
+        "reaction_deflating_firefly": {
+          "frames": 24,
+          "folder": "art/rigs/chairman-toggle/reaction_deflating_firefly_v1",
           "prefix": "frame",
           "pad": 4,
           "fps": 4,
