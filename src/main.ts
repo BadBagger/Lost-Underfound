@@ -161,6 +161,11 @@ const characterImageModules = {
   ...import.meta.glob("../art/act01-production/characters/old-bottlecap/meshy-current/idle/old_bottlecap_meshy_idle_*.png", { eager: true, query: "?url", import: "default" }),
   ...import.meta.glob("../art/act01-production/characters/old-bottlecap/meshy-current/toll-refused/old_bottlecap_meshy_refuse_*.png", { eager: true, query: "?url", import: "default" }),
   ...import.meta.glob("../art/act01-production/characters/old-bottlecap/meshy-current/toll-paid/old_bottlecap_meshy_paid_*.png", { eager: true, query: "?url", import: "default" }),
+  ...import.meta.glob("../art/rigs/old-bottlecap/idle_firefly_v1/frame_*.png", { eager: true, query: "?url", import: "default" }),
+  ...import.meta.glob("../art/rigs/old-bottlecap/gesture_firefly_v1/frame_*.png", { eager: true, query: "?url", import: "default" }),
+  ...import.meta.glob("../art/rigs/old-bottlecap/reaction_surprised_firefly_v1/frame_*.png", { eager: true, query: "?url", import: "default" }),
+  ...import.meta.glob("../art/rigs/old-bottlecap/tollpaid_firefly_v1/frame_*.png", { eager: true, query: "?url", import: "default" }),
+  ...import.meta.glob("../art/rigs/old-bottlecap/tollrefused_firefly_v1/frame_*.png", { eager: true, query: "?url", import: "default" }),
   ...import.meta.glob("../art/act01-production/characters/scuttle/meshy-current/dash/scuttle_meshy_dash_*.png", { eager: true, query: "?url", import: "default" }),
 } as Record<string, string>;
 const ambientImageModules = {
@@ -260,6 +265,11 @@ const assets = {
   bottlecapIdle: characterFrames("old-bottlecap", "idle"),
   bottlecapRefused: characterFrames("old-bottlecap", "tollRefused"),
   bottlecapPaid: characterFrames("old-bottlecap", "tollPaid"),
+  bottlecapIdleFirefly: characterFrames("old-bottlecap", "idle_firefly"),
+  bottlecapGestureFirefly: characterFrames("old-bottlecap", "gesture_firefly"),
+  bottlecapReactionSurprised: characterFrames("old-bottlecap", "reaction_surprised_firefly"),
+  bottlecapTollPaidFirefly: characterFrames("old-bottlecap", "tollpaid_firefly"),
+  bottlecapTollRefusedFirefly: characterFrames("old-bottlecap", "tollrefused_firefly"),
   scuttleDash: characterFrames("scuttle", "dash"),
   dustReveal: Array.from({ length: 6 }, (_, index) => `reveal_${String(index + 1).padStart(2, "0")}.png`).map(
     (name) => new URL(`../art/act01-production/scene/layered-v2/dust/${name}`, import.meta.url).href,
@@ -961,6 +971,14 @@ const pipFrameForState = () => {
 };
 
 const bottlecapFrameForState = () => {
+  const reactionSurprised = actionProgress("bottlecap-reaction-surprised");
+  if (reactionSurprised !== null) return frameProgress(assets.bottlecapReactionSurprised, reactionSurprised);
+  const gesture = actionProgress("bottlecap-gesture");
+  if (gesture !== null) return frameProgress(assets.bottlecapGestureFirefly, gesture);
+  const tollPaidFirefly = actionProgress("bottlecap-tollpaid-firefly");
+  if (tollPaidFirefly !== null) return frameProgress(assets.bottlecapTollPaidFirefly, tollPaidFirefly);
+  const tollRefusedFirefly = actionProgress("bottlecap-tollrefused-firefly");
+  if (tollRefusedFirefly !== null) return frameProgress(assets.bottlecapTollRefusedFirefly, tollRefusedFirefly);
   const tollRefusedProgress = actionProgress("toll-refused");
   const tollPaidProgress = actionProgress("toll-paid");
   const bottlecapFrames =

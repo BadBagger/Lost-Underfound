@@ -181,6 +181,46 @@
           "pad": 2,
           "fps": 8,
           "loop": false
+        },
+        "idle_firefly": {
+          "frames": 24,
+          "folder": "art/rigs/old-bottlecap/idle_firefly_v1",
+          "prefix": "frame",
+          "pad": 4,
+          "fps": 4,
+          "loop": true
+        },
+        "gesture_firefly": {
+          "frames": 24,
+          "folder": "art/rigs/old-bottlecap/gesture_firefly_v1",
+          "prefix": "frame",
+          "pad": 4,
+          "fps": 4,
+          "loop": false
+        },
+        "reaction_surprised_firefly": {
+          "frames": 24,
+          "folder": "art/rigs/old-bottlecap/reaction_surprised_firefly_v1",
+          "prefix": "frame",
+          "pad": 4,
+          "fps": 4,
+          "loop": false
+        },
+        "tollpaid_firefly": {
+          "frames": 24,
+          "folder": "art/rigs/old-bottlecap/tollpaid_firefly_v1",
+          "prefix": "frame",
+          "pad": 4,
+          "fps": 4,
+          "loop": false
+        },
+        "tollrefused_firefly": {
+          "frames": 24,
+          "folder": "art/rigs/old-bottlecap/tollrefused_firefly_v1",
+          "prefix": "frame",
+          "pad": 4,
+          "fps": 4,
+          "loop": false
         }
       }
     },
