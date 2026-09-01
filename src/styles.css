@@ -313,6 +313,7 @@ h1 {
   height: 100%;
   left: 0;
   top: 0;
+  transition: opacity 250ms ease-in-out;
 }
 
 .bramble.mouth {

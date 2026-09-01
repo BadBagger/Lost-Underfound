@@ -153,6 +153,11 @@ const characterImageModules = {
   ...import.meta.glob("../art/act01-production/characters/bramble/handoff/bramble_handoff_*.png", { eager: true, query: "?url", import: "default" }),
   ...import.meta.glob("../art/act01-production/characters/bramble/wrong-action/bramble_wrong_*.png", { eager: true, query: "?url", import: "default" }),
   ...import.meta.glob("../art/act01-production/characters/bramble/mouths/bramble_mouth_*.png", { eager: true, query: "?url", import: "default" }),
+  ...import.meta.glob("../art/rigs/bramble/idle_firefly_v1/frame_*.png", { eager: true, query: "?url", import: "default" }),
+  ...import.meta.glob("../art/rigs/bramble/gesture_firefly_v1/frame_*.png", { eager: true, query: "?url", import: "default" }),
+  ...import.meta.glob("../art/rigs/bramble/reaction_concerned_firefly_v1/frame_*.png", { eager: true, query: "?url", import: "default" }),
+  ...import.meta.glob("../art/rigs/bramble/reaction_listening_firefly_v1/frame_*.png", { eager: true, query: "?url", import: "default" }),
+  ...import.meta.glob("../art/rigs/bramble/reaction_surprised_firefly_v1/frame_*.png", { eager: true, query: "?url", import: "default" }),
   ...import.meta.glob("../art/act01-production/characters/old-bottlecap/meshy-current/idle/old_bottlecap_meshy_idle_*.png", { eager: true, query: "?url", import: "default" }),
   ...import.meta.glob("../art/act01-production/characters/old-bottlecap/meshy-current/toll-refused/old_bottlecap_meshy_refuse_*.png", { eager: true, query: "?url", import: "default" }),
   ...import.meta.glob("../art/act01-production/characters/old-bottlecap/meshy-current/toll-paid/old_bottlecap_meshy_paid_*.png", { eager: true, query: "?url", import: "default" }),
@@ -247,6 +252,11 @@ const assets = {
   brambleHandoff: characterFrames("bramble", "handoff"),
   brambleWrong: characterFrames("bramble", "wrongAction"),
   brambleMouths: brambleMouthFrames(),
+  brambleIdleFirefly: characterFrames("bramble", "idle_firefly"),
+  brambleGestureFirefly: characterFrames("bramble", "gesture_firefly"),
+  brambleReactionConcerned: characterFrames("bramble", "reaction_concerned"),
+  brambleReactionListening: characterFrames("bramble", "reaction_listening"),
+  brambleReactionSurprised: characterFrames("bramble", "reaction_surprised"),
   bottlecapIdle: characterFrames("old-bottlecap", "idle"),
   bottlecapRefused: characterFrames("old-bottlecap", "tollRefused"),
   bottlecapPaid: characterFrames("old-bottlecap", "tollPaid"),
@@ -868,6 +878,14 @@ const brambleStateFrame = () => {
   if (handoff !== null) return frameProgress(assets.brambleHandoff, handoff);
   const wrong = actionProgress("bramble-wrong");
   if (wrong !== null) return frameProgress(assets.brambleWrong, wrong);
+  const reactionConcerned = actionProgress("bramble-reaction-concerned");
+  if (reactionConcerned !== null) return frameProgress(assets.brambleReactionConcerned, reactionConcerned);
+  const reactionListening = actionProgress("bramble-reaction-listening");
+  if (reactionListening !== null) return frameProgress(assets.brambleReactionListening, reactionListening);
+  const reactionSurprised = actionProgress("bramble-reaction-surprised");
+  if (reactionSurprised !== null) return frameProgress(assets.brambleReactionSurprised, reactionSurprised);
+  const gesture = actionProgress("bramble-gesture");
+  if (gesture !== null) return frameProgress(assets.brambleGestureFirefly, gesture);
   return state.current?.speaker === "BRAMBLE" ? brambleTalkFrame() : frameAt(assets.brambleIdle, BRAMBLE_IDLE_FRAME_MS);
 };
 

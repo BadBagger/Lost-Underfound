@@ -104,6 +104,46 @@
           "pad": 2,
           "fps": 12,
           "loop": false
+        },
+        "idle_firefly": {
+          "frames": 36,
+          "folder": "art/rigs/bramble/idle_firefly_v1",
+          "prefix": "frame",
+          "pad": 4,
+          "fps": 3,
+          "loop": true
+        },
+        "gesture_firefly": {
+          "frames": 44,
+          "folder": "art/rigs/bramble/gesture_firefly_v1",
+          "prefix": "frame",
+          "pad": 4,
+          "fps": 4,
+          "loop": false
+        },
+        "reaction_concerned": {
+          "frames": 24,
+          "folder": "art/rigs/bramble/reaction_concerned_firefly_v1",
+          "prefix": "frame",
+          "pad": 4,
+          "fps": 4,
+          "loop": false
+        },
+        "reaction_listening": {
+          "frames": 24,
+          "folder": "art/rigs/bramble/reaction_listening_firefly_v1",
+          "prefix": "frame",
+          "pad": 4,
+          "fps": 4,
+          "loop": false
+        },
+        "reaction_surprised": {
+          "frames": 24,
+          "folder": "art/rigs/bramble/reaction_surprised_firefly_v1",
+          "prefix": "frame",
+          "pad": 4,
+          "fps": 4,
+          "loop": false
         }
       },
       "mouths": {
