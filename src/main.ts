@@ -152,6 +152,7 @@ const characterImageModules = {
   ...import.meta.glob("../art/rigs/pip/take_item_firefly_v1/frame_*.png", { eager: true, query: "?url", import: "default" }),
   ...import.meta.glob("../art/rigs/pip/push_try_firefly_v1/frame_*.png", { eager: true, query: "?url", import: "default" }),
   ...import.meta.glob("../art/rigs/pip/combined_use_firefly_v1/frame_*.png", { eager: true, query: "?url", import: "default" }),
+  ...import.meta.glob("../art/rigs/pip/reaching_up_firefly_v1/frame_*.png", { eager: true, query: "?url", import: "default" }),
   ...import.meta.glob("../art/act01-production/characters/bramble/idle/bramble_idle_*.png", { eager: true, query: "?url", import: "default" }),
   ...import.meta.glob("../art/act01-production/characters/bramble/talk/bramble_talk_*.png", { eager: true, query: "?url", import: "default" }),
   ...import.meta.glob("../art/act01-production/characters/bramble/greeting/bramble_greeting_*.png", { eager: true, query: "?url", import: "default" }),
@@ -266,6 +267,7 @@ const assets = {
   pipTakingFirefly: characterFrames("pip", "taking_firefly"),
   pipPushingFirefly: characterFrames("pip", "pushing_firefly"),
   pipCombiningFirefly: characterFrames("pip", "combining_firefly"),
+  pipReachingFirefly: characterFrames("pip", "reaching_firefly"),
   brambleIdle: characterFrames("bramble", "idle"),
   brambleTalk: characterFrames("bramble", "talk"),
   brambleGreeting: characterFrames("bramble", "greeting"),
@@ -988,6 +990,8 @@ const pipFrameForState = () => {
   if (pushingProgress !== null) return frameProgress(assets.pipPushingFirefly, pushingProgress);
   const combiningProgress = actionProgress("pip-combining");
   if (combiningProgress !== null) return frameProgress(assets.pipCombiningFirefly, combiningProgress);
+  const reachingProgress = actionProgress("pip-reaching");
+  if (reachingProgress !== null) return frameProgress(assets.pipReachingFirefly, reachingProgress);
   const dustProgress = actionProgress("found-button");
   const tollPaidProgress = actionProgress("toll-paid");
   const inspectProgress = actionProgress("pip-inspect");

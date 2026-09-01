@@ -96,6 +96,14 @@
           "pad": 4,
           "fps": 4,
           "loop": false
+        },
+        "reaching_firefly": {
+          "frames": 36,
+          "folder": "art/rigs/pip/reaching_up_firefly_v1",
+          "prefix": "frame",
+          "pad": 4,
+          "fps": 4,
+          "loop": false
         }
       }
     },
