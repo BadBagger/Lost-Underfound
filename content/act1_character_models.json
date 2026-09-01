@@ -288,6 +288,54 @@
         }
       }
     },
+    "grommet": {
+      "admission": "provisional-runtime",
+      "note": "Firefly-generated animations for Act 2/3. Shy gentle giant character with performance-critical emotional beats.",
+      "engine_manifest": "art/engine-export/grommet/grommet.engine.json",
+      "runtime_scale_ref": "ags/room2/geometry.json#/actorReference/grommetHeight",
+      "states": {
+        "preclue_idle_firefly": {
+          "frames": 60,
+          "folder": "art/rigs/grommet/preclue_idle_firefly_v1",
+          "prefix": "frame",
+          "pad": 4,
+          "fps": 4,
+          "loop": true
+        },
+        "postclue_idle_firefly": {
+          "frames": 60,
+          "folder": "art/rigs/grommet/postclue_idle_firefly_v1",
+          "prefix": "frame",
+          "pad": 4,
+          "fps": 4,
+          "loop": true
+        },
+        "mended_climax_firefly": {
+          "frames": 60,
+          "folder": "art/rigs/grommet/mended_climax_firefly_v1",
+          "prefix": "frame",
+          "pad": 4,
+          "fps": 4,
+          "loop": false
+        },
+        "guardian_strain_firefly": {
+          "frames": 60,
+          "folder": "art/rigs/grommet/guardian_strain_firefly_v1",
+          "prefix": "frame",
+          "pad": 4,
+          "fps": 4,
+          "loop": true
+        },
+        "post_danger_relief_firefly": {
+          "frames": 60,
+          "folder": "art/rigs/grommet/post_danger_relief_firefly_v1",
+          "prefix": "frame",
+          "pad": 4,
+          "fps": 4,
+          "loop": false
+        }
+      }
+    },
     "chairman-toggle": {
       "admission": "provisional-runtime",
       "note": "Complete set of Firefly-generated animations for Act 2/3 bureaucratic character interactions.",

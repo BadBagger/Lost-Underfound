@@ -153,6 +153,11 @@ const characterImageModules = {
   ...import.meta.glob("../art/rigs/pip/push_try_firefly_v1/frame_*.png", { eager: true, query: "?url", import: "default" }),
   ...import.meta.glob("../art/rigs/pip/combined_use_firefly_v1/frame_*.png", { eager: true, query: "?url", import: "default" }),
   ...import.meta.glob("../art/rigs/pip/reaching_up_firefly_v1/frame_*.png", { eager: true, query: "?url", import: "default" }),
+  ...import.meta.glob("../art/rigs/grommet/preclue_idle_firefly_v1/frame_*.png", { eager: true, query: "?url", import: "default" }),
+  ...import.meta.glob("../art/rigs/grommet/postclue_idle_firefly_v1/frame_*.png", { eager: true, query: "?url", import: "default" }),
+  ...import.meta.glob("../art/rigs/grommet/mended_climax_firefly_v1/frame_*.png", { eager: true, query: "?url", import: "default" }),
+  ...import.meta.glob("../art/rigs/grommet/guardian_strain_firefly_v1/frame_*.png", { eager: true, query: "?url", import: "default" }),
+  ...import.meta.glob("../art/rigs/grommet/post_danger_relief_firefly_v1/frame_*.png", { eager: true, query: "?url", import: "default" }),
   ...import.meta.glob("../art/act01-production/characters/bramble/idle/bramble_idle_*.png", { eager: true, query: "?url", import: "default" }),
   ...import.meta.glob("../art/act01-production/characters/bramble/talk/bramble_talk_*.png", { eager: true, query: "?url", import: "default" }),
   ...import.meta.glob("../art/act01-production/characters/bramble/greeting/bramble_greeting_*.png", { eager: true, query: "?url", import: "default" }),
@@ -268,6 +273,11 @@ const assets = {
   pipPushingFirefly: characterFrames("pip", "pushing_firefly"),
   pipCombiningFirefly: characterFrames("pip", "combining_firefly"),
   pipReachingFirefly: characterFrames("pip", "reaching_firefly"),
+  grommetPreclueIdle: characterFrames("grommet", "preclue_idle_firefly"),
+  grommetPostclueIdle: characterFrames("grommet", "postclue_idle_firefly"),
+  grommetMendedClimaxFirefly: characterFrames("grommet", "mended_climax_firefly"),
+  grommetGuardianStrain: characterFrames("grommet", "guardian_strain_firefly"),
+  grommetPostDangerRelief: characterFrames("grommet", "post_danger_relief_firefly"),
   brambleIdle: characterFrames("bramble", "idle"),
   brambleTalk: characterFrames("bramble", "talk"),
   brambleGreeting: characterFrames("bramble", "greeting"),
@@ -1020,6 +1030,18 @@ const bottlecapFrameForState = () => {
   return tollPaidProgress !== null || tollRefusedProgress !== null
     ? frameProgress(bottlecapFrames, tollPaidProgress ?? tollRefusedProgress ?? 0)
     : frameAt(bottlecapFrames, 180);
+};
+
+const grommetFrameForState = () => {
+  const mendedClimaxProgress = actionProgress("grommet-mended-climax");
+  if (mendedClimaxProgress !== null) return frameProgress(assets.grommetMendedClimaxFirefly, mendedClimaxProgress);
+  const guardianStrainProgress = actionProgress("grommet-guardian-strain");
+  if (guardianStrainProgress !== null) return frameForFps(assets.grommetGuardianStrain, 4);
+  const postDangerReliefProgress = actionProgress("grommet-post-danger-relief");
+  if (postDangerReliefProgress !== null) return frameProgress(assets.grommetPostDangerRelief, postDangerReliefProgress);
+  const postclueIdleProgress = actionProgress("grommet-postclue-idle");
+  if (postclueIdleProgress !== null) return frameForFps(assets.grommetPostclueIdle, 4);
+  return frameForFps(assets.grommetPreclueIdle, 4);
 };
 
 const updateImageSource = (selector: string, source: string | null) => {
