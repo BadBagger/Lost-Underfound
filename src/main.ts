@@ -153,6 +153,7 @@ const characterImageModules = {
   ...import.meta.glob("../art/rigs/pip/push_try_firefly_v1/frame_*.png", { eager: true, query: "?url", import: "default" }),
   ...import.meta.glob("../art/rigs/pip/combined_use_firefly_v1/frame_*.png", { eager: true, query: "?url", import: "default" }),
   ...import.meta.glob("../art/rigs/pip/reaching_up_firefly_v1/frame_*.png", { eager: true, query: "?url", import: "default" }),
+  ...import.meta.glob("../art/rigs/pip/walk_firefly_v1/frame_*.png", { eager: true, query: "?url", import: "default" }),
   ...import.meta.glob("../art/rigs/grommet/preclue_idle_firefly_v1/frame_*.png", { eager: true, query: "?url", import: "default" }),
   ...import.meta.glob("../art/rigs/grommet/postclue_idle_firefly_v1/frame_*.png", { eager: true, query: "?url", import: "default" }),
   ...import.meta.glob("../art/rigs/grommet/mended_climax_firefly_v1/frame_*.png", { eager: true, query: "?url", import: "default" }),
@@ -273,6 +274,7 @@ const assets = {
   pipPushingFirefly: characterFrames("pip", "pushing_firefly"),
   pipCombiningFirefly: characterFrames("pip", "combining_firefly"),
   pipReachingFirefly: characterFrames("pip", "reaching_firefly"),
+  pipWalkFirefly: characterFrames("pip", "walk_firefly"),
   grommetPreclueIdle: characterFrames("grommet", "preclue_idle_firefly"),
   grommetPostclueIdle: characterFrames("grommet", "postclue_idle_firefly"),
   grommetMendedClimaxFirefly: characterFrames("grommet", "mended_climax_firefly"),
@@ -1009,7 +1011,7 @@ const pipFrameForState = () => {
   if (dustProgress !== null) return frameProgress(assets.pipDust, dustProgress);
   if (tollPaidProgress !== null) return frameProgress(assets.pipToll, tollPaidProgress);
   if (inspectProgress !== null) return frameProgress(assets.pipInspect, inspectProgress);
-  if (walkingProgress !== null) return frameAt(assets.pipWalk, PIP_WALK_FRAME_MS);
+  if (walkingProgress !== null) return frameForFps(assets.pipWalkFirefly, 4);
   if (state.current?.speaker === "PIP") return frameAt(assets.pipTalk, PIP_TALK_FRAME_MS);
   return frameAt(assets.pipIdle, PIP_IDLE_FRAME_MS);
 };

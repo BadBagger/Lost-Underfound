@@ -25,6 +25,14 @@
           "fps": 12,
           "loop": true
         },
+        "walk_firefly": {
+          "frames": 36,
+          "folder": "art/rigs/pip/walk_firefly_v1",
+          "prefix": "frame",
+          "pad": 4,
+          "fps": 4,
+          "loop": true
+        },
         "talk": {
           "frames": 12,
           "folder": "art/act01-production/characters/pip/meshy-current/talk",
