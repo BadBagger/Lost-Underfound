@@ -147,6 +147,11 @@ const characterImageModules = {
   ...import.meta.glob("../art/act01-production/characters/pip/meshy-current/inspect/pip_meshy_inspect_*.png", { eager: true, query: "?url", import: "default" }),
   ...import.meta.glob("../art/act01-production/characters/pip/meshy-current/dust-reach/pip_meshy_dust_*.png", { eager: true, query: "?url", import: "default" }),
   ...import.meta.glob("../art/act01-production/characters/pip/meshy-current/toll-paid/pip_meshy_toll_*.png", { eager: true, query: "?url", import: "default" }),
+  ...import.meta.glob("../art/rigs/pip/crouching_down_firefly_v1/frame_*.png", { eager: true, query: "?url", import: "default" }),
+  ...import.meta.glob("../art/rigs/pip/search_dig_firefly_v1/frame_*.png", { eager: true, query: "?url", import: "default" }),
+  ...import.meta.glob("../art/rigs/pip/take_item_firefly_v1/frame_*.png", { eager: true, query: "?url", import: "default" }),
+  ...import.meta.glob("../art/rigs/pip/push_try_firefly_v1/frame_*.png", { eager: true, query: "?url", import: "default" }),
+  ...import.meta.glob("../art/rigs/pip/combined_use_firefly_v1/frame_*.png", { eager: true, query: "?url", import: "default" }),
   ...import.meta.glob("../art/act01-production/characters/bramble/idle/bramble_idle_*.png", { eager: true, query: "?url", import: "default" }),
   ...import.meta.glob("../art/act01-production/characters/bramble/talk/bramble_talk_*.png", { eager: true, query: "?url", import: "default" }),
   ...import.meta.glob("../art/act01-production/characters/bramble/greeting/bramble_greeting_*.png", { eager: true, query: "?url", import: "default" }),
@@ -256,6 +261,11 @@ const assets = {
   pipInspect: characterFrames("pip", "inspect"),
   pipDust: characterFrames("pip", "dustReach"),
   pipToll: characterFrames("pip", "tollPaid"),
+  pipCrouchingFirefly: characterFrames("pip", "crouching_firefly"),
+  pipSearchFirefly: characterFrames("pip", "search_firefly"),
+  pipTakingFirefly: characterFrames("pip", "taking_firefly"),
+  pipPushingFirefly: characterFrames("pip", "pushing_firefly"),
+  pipCombiningFirefly: characterFrames("pip", "combining_firefly"),
   brambleIdle: characterFrames("bramble", "idle"),
   brambleTalk: characterFrames("bramble", "talk"),
   brambleGreeting: characterFrames("bramble", "greeting"),
@@ -968,6 +978,16 @@ const shadowStyle = (point: GeometryPoint, width: number, opacity = 0.42) =>
   `left:${pctX(point.x)}%;top:${pctY(point.y)}%;width:${pctX(width)}%;opacity:${opacity};`;
 
 const pipFrameForState = () => {
+  const crouchingProgress = actionProgress("pip-crouching");
+  if (crouchingProgress !== null) return frameProgress(assets.pipCrouchingFirefly, crouchingProgress);
+  const searchProgress = actionProgress("pip-search");
+  if (searchProgress !== null) return frameProgress(assets.pipSearchFirefly, searchProgress);
+  const takingProgress = actionProgress("pip-taking");
+  if (takingProgress !== null) return frameProgress(assets.pipTakingFirefly, takingProgress);
+  const pushingProgress = actionProgress("pip-pushing");
+  if (pushingProgress !== null) return frameProgress(assets.pipPushingFirefly, pushingProgress);
+  const combiningProgress = actionProgress("pip-combining");
+  if (combiningProgress !== null) return frameProgress(assets.pipCombiningFirefly, combiningProgress);
   const dustProgress = actionProgress("found-button");
   const tollPaidProgress = actionProgress("toll-paid");
   const inspectProgress = actionProgress("pip-inspect");

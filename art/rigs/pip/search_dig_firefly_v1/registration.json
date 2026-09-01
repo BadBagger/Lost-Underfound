@@ -1,0 +1,187 @@
+{
+  "character": "Pip",
+  "animation_type": "interaction",
+  "animation_name": "search_dig_firefly_v1",
+  "source": "Adobe Firefly (6-second interaction prompt)",
+  "total_frames": 24,
+  "fps": 4,
+  "canvas_size": [
+    1280,
+    720
+  ],
+  "anchor_point": [
+    640,
+    720
+  ],
+  "frames": [
+    {
+      "frame_number": 1,
+      "file": "frame_0001.png",
+      "roles": [
+        "search_dig"
+      ]
+    },
+    {
+      "frame_number": 2,
+      "file": "frame_0002.png",
+      "roles": [
+        "search_dig"
+      ]
+    },
+    {
+      "frame_number": 3,
+      "file": "frame_0003.png",
+      "roles": [
+        "search_dig"
+      ]
+    },
+    {
+      "frame_number": 4,
+      "file": "frame_0004.png",
+      "roles": [
+        "search_dig"
+      ]
+    },
+    {
+      "frame_number": 5,
+      "file": "frame_0005.png",
+      "roles": [
+        "search_dig"
+      ]
+    },
+    {
+      "frame_number": 6,
+      "file": "frame_0006.png",
+      "roles": [
+        "search_dig"
+      ]
+    },
+    {
+      "frame_number": 7,
+      "file": "frame_0007.png",
+      "roles": [
+        "search_dig"
+      ]
+    },
+    {
+      "frame_number": 8,
+      "file": "frame_0008.png",
+      "roles": [
+        "search_dig"
+      ]
+    },
+    {
+      "frame_number": 9,
+      "file": "frame_0009.png",
+      "roles": [
+        "search_dig"
+      ]
+    },
+    {
+      "frame_number": 10,
+      "file": "frame_0010.png",
+      "roles": [
+        "search_dig"
+      ]
+    },
+    {
+      "frame_number": 11,
+      "file": "frame_0011.png",
+      "roles": [
+        "search_dig"
+      ]
+    },
+    {
+      "frame_number": 12,
+      "file": "frame_0012.png",
+      "roles": [
+        "search_dig"
+      ]
+    },
+    {
+      "frame_number": 13,
+      "file": "frame_0013.png",
+      "roles": [
+        "search_dig"
+      ]
+    },
+    {
+      "frame_number": 14,
+      "file": "frame_0014.png",
+      "roles": [
+        "search_dig"
+      ]
+    },
+    {
+      "frame_number": 15,
+      "file": "frame_0015.png",
+      "roles": [
+        "search_dig"
+      ]
+    },
+    {
+      "frame_number": 16,
+      "file": "frame_0016.png",
+      "roles": [
+        "search_dig"
+      ]
+    },
+    {
+      "frame_number": 17,
+      "file": "frame_0017.png",
+      "roles": [
+        "search_dig"
+      ]
+    },
+    {
+      "frame_number": 18,
+      "file": "frame_0018.png",
+      "roles": [
+        "search_dig"
+      ]
+    },
+    {
+      "frame_number": 19,
+      "file": "frame_0019.png",
+      "roles": [
+        "search_dig"
+      ]
+    },
+    {
+      "frame_number": 20,
+      "file": "frame_0020.png",
+      "roles": [
+        "search_dig"
+      ]
+    },
+    {
+      "frame_number": 21,
+      "file": "frame_0021.png",
+      "roles": [
+        "search_dig"
+      ]
+    },
+    {
+      "frame_number": 22,
+      "file": "frame_0022.png",
+      "roles": [
+        "search_dig"
+      ]
+    },
+    {
+      "frame_number": 23,
+      "file": "frame_0023.png",
+      "roles": [
+        "search_dig"
+      ]
+    },
+    {
+      "frame_number": 24,
+      "file": "frame_0024.png",
+      "roles": [
+        "search_dig"
+      ]
+    }
+  ],
+  "notes": "Searching and digging through dust clump or items"
+}

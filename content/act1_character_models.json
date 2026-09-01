@@ -56,6 +56,46 @@
           "pad": 2,
           "fps": 12,
           "loop": false
+        },
+        "crouching_firefly": {
+          "frames": 24,
+          "folder": "art/rigs/pip/crouching_down_firefly_v1",
+          "prefix": "frame",
+          "pad": 4,
+          "fps": 4,
+          "loop": false
+        },
+        "search_firefly": {
+          "frames": 24,
+          "folder": "art/rigs/pip/search_dig_firefly_v1",
+          "prefix": "frame",
+          "pad": 4,
+          "fps": 4,
+          "loop": false
+        },
+        "taking_firefly": {
+          "frames": 24,
+          "folder": "art/rigs/pip/take_item_firefly_v1",
+          "prefix": "frame",
+          "pad": 4,
+          "fps": 4,
+          "loop": false
+        },
+        "pushing_firefly": {
+          "frames": 24,
+          "folder": "art/rigs/pip/push_try_firefly_v1",
+          "prefix": "frame",
+          "pad": 4,
+          "fps": 4,
+          "loop": false
+        },
+        "combining_firefly": {
+          "frames": 24,
+          "folder": "art/rigs/pip/combined_use_firefly_v1",
+          "prefix": "frame",
+          "pad": 4,
+          "fps": 4,
+          "loop": false
         }
       }
     },
