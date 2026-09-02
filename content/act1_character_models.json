@@ -112,6 +112,22 @@
           "pad": 4,
           "fps": 4,
           "loop": false
+        },
+        "idle_firefly": {
+          "frames": 60,
+          "folder": "art/rigs/pip/idle_firefly",
+          "prefix": "frame",
+          "pad": 4,
+          "fps": 4,
+          "loop": true
+        },
+        "idle_firefly_v2": {
+          "frames": 36,
+          "folder": "art/rigs/pip/idle_firefly_v2",
+          "prefix": "frame",
+          "pad": 4,
+          "fps": 4,
+          "loop": true
         }
       }
     },
@@ -200,6 +216,102 @@
           "pad": 4,
           "fps": 4,
           "loop": false
+        },
+        "reaching_firefly": {
+          "frames": 36,
+          "folder": "art/rigs/bramble/reaching_firefly",
+          "prefix": "frame",
+          "pad": 4,
+          "fps": 4,
+          "loop": false
+        },
+        "holding_items_firefly": {
+          "frames": 36,
+          "folder": "art/rigs/bramble/holding_items_firefly",
+          "prefix": "frame",
+          "pad": 4,
+          "fps": 4,
+          "loop": false
+        },
+        "pushing_firefly": {
+          "frames": 36,
+          "folder": "art/rigs/bramble/pushing_firefly",
+          "prefix": "frame",
+          "pad": 4,
+          "fps": 4,
+          "loop": false
+        },
+        "reaching_firefly_v2": {
+          "frames": 36,
+          "folder": "art/rigs/bramble/reaching_firefly_v2",
+          "prefix": "frame",
+          "pad": 4,
+          "fps": 4,
+          "loop": false
+        },
+        "digging_firefly": {
+          "frames": 36,
+          "folder": "art/rigs/bramble/digging_firefly",
+          "prefix": "frame",
+          "pad": 4,
+          "fps": 4,
+          "loop": false
+        },
+        "crouching_firefly": {
+          "frames": 36,
+          "folder": "art/rigs/bramble/crouching_firefly",
+          "prefix": "frame",
+          "pad": 4,
+          "fps": 4,
+          "loop": false
+        },
+        "reaching_up_firefly": {
+          "frames": 24,
+          "folder": "art/rigs/bramble/reaching_up_firefly",
+          "prefix": "frame",
+          "pad": 4,
+          "fps": 4,
+          "loop": false
+        },
+        "listening_firefly": {
+          "frames": 60,
+          "folder": "art/rigs/bramble/listening_firefly",
+          "prefix": "frame",
+          "pad": 4,
+          "fps": 4,
+          "loop": true
+        },
+        "concerned_firefly": {
+          "frames": 24,
+          "folder": "art/rigs/bramble/concerned_firefly",
+          "prefix": "frame",
+          "pad": 4,
+          "fps": 4,
+          "loop": false
+        },
+        "pointing_firefly": {
+          "frames": 44,
+          "folder": "art/rigs/bramble/pointing_firefly",
+          "prefix": "frame",
+          "pad": 4,
+          "fps": 4,
+          "loop": false
+        },
+        "idle_firefly": {
+          "frames": 60,
+          "folder": "art/rigs/bramble/idle_firefly",
+          "prefix": "frame",
+          "pad": 4,
+          "fps": 4,
+          "loop": true
+        },
+        "idle_firefly_v2": {
+          "frames": 60,
+          "folder": "art/rigs/bramble/idle_firefly_v2",
+          "prefix": "frame",
+          "pad": 4,
+          "fps": 4,
+          "loop": true
         }
       },
       "mouths": {
@@ -277,6 +389,86 @@
           "pad": 4,
           "fps": 4,
           "loop": false
+        },
+        "dismissive_gesture_firefly": {
+          "frames": 24,
+          "folder": "art/rigs/old-bottlecap/dismissive_gesture_firefly",
+          "prefix": "frame",
+          "pad": 4,
+          "fps": 4,
+          "loop": false
+        },
+        "losing_confidence_firefly": {
+          "frames": 24,
+          "folder": "art/rigs/old-bottlecap/losing_confidence_firefly",
+          "prefix": "frame",
+          "pad": 4,
+          "fps": 4,
+          "loop": false
+        },
+        "accepting_defeat_firefly": {
+          "frames": 24,
+          "folder": "art/rigs/old-bottlecap/accepting_defeat_firefly",
+          "prefix": "frame",
+          "pad": 4,
+          "fps": 4,
+          "loop": false
+        },
+        "losing_confidence_firefly_v2": {
+          "frames": 24,
+          "folder": "art/rigs/old-bottlecap/losing_confidence_firefly_v2",
+          "prefix": "frame",
+          "pad": 4,
+          "fps": 4,
+          "loop": false
+        },
+        "startled_firefly": {
+          "frames": 24,
+          "folder": "art/rigs/old-bottlecap/startled_firefly",
+          "prefix": "frame",
+          "pad": 4,
+          "fps": 4,
+          "loop": false
+        },
+        "accepting_defeat_firefly_v2": {
+          "frames": 24,
+          "folder": "art/rigs/old-bottlecap/accepting_defeat_firefly_v2",
+          "prefix": "frame",
+          "pad": 4,
+          "fps": 4,
+          "loop": false
+        },
+        "losing_confidence_firefly_v3": {
+          "frames": 24,
+          "folder": "art/rigs/old-bottlecap/losing_confidence_firefly_v3",
+          "prefix": "frame",
+          "pad": 4,
+          "fps": 4,
+          "loop": false
+        },
+        "startled_firefly_v2": {
+          "frames": 24,
+          "folder": "art/rigs/old-bottlecap/startled_firefly_v2",
+          "prefix": "frame",
+          "pad": 4,
+          "fps": 4,
+          "loop": false
+        },
+        "greeting_firefly": {
+          "frames": 24,
+          "folder": "art/rigs/old-bottlecap/greeting_firefly",
+          "prefix": "frame",
+          "pad": 4,
+          "fps": 4,
+          "loop": false
+        },
+        "idle_firefly": {
+          "frames": 60,
+          "folder": "art/rigs/old-bottlecap/idle_firefly",
+          "prefix": "frame",
+          "pad": 4,
+          "fps": 4,
+          "loop": true
         }
       }
     },
@@ -292,6 +484,30 @@
           "prefix": "scuttle_meshy_dash",
           "pad": 2,
           "fps": 16,
+          "loop": false
+        },
+        "idle_firefly": {
+          "frames": 60,
+          "folder": "art/rigs/scuttle/idle_firefly",
+          "prefix": "frame",
+          "pad": 4,
+          "fps": 4,
+          "loop": true
+        },
+        "pointing_firefly": {
+          "frames": 24,
+          "folder": "art/rigs/scuttle/pointing_firefly",
+          "prefix": "frame",
+          "pad": 4,
+          "fps": 4,
+          "loop": false
+        },
+        "pleased_firefly": {
+          "frames": 24,
+          "folder": "art/rigs/scuttle/pleased_firefly",
+          "prefix": "frame",
+          "pad": 4,
+          "fps": 4,
           "loop": false
         }
       }
@@ -385,6 +601,30 @@
         "reaction_conceding_firefly": {
           "frames": 24,
           "folder": "art/rigs/chairman-toggle/reaction_conceding_firefly_v1",
+          "prefix": "frame",
+          "pad": 4,
+          "fps": 4,
+          "loop": false
+        },
+        "surprised_delighted_firefly": {
+          "frames": 24,
+          "folder": "art/rigs/chairman-toggle/surprised_delighted_firefly",
+          "prefix": "frame",
+          "pad": 4,
+          "fps": 4,
+          "loop": false
+        },
+        "surprised_delighted_firefly_v2": {
+          "frames": 24,
+          "folder": "art/rigs/chairman-toggle/surprised_delighted_firefly_v2",
+          "prefix": "frame",
+          "pad": 4,
+          "fps": 4,
+          "loop": false
+        },
+        "surprised_delighted_firefly_v3": {
+          "frames": 24,
+          "folder": "art/rigs/chairman-toggle/surprised_delighted_firefly_v3",
           "prefix": "frame",
           "pad": 4,
           "fps": 4,
